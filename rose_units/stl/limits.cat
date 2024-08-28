@@ -1,0 +1,1580 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "limits"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DB22401FB"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Parameterized_Class "numeric_limits"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	57))
+	    quid       	"370C85140240"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"370C8514025D"
+		    supplier   	"Logical View::include::limits::_Num_base"
+		    quidu      	"370C85140201"))
+	    operations 	(list Operations
+		(object Operation "min"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"31FFA37BFEED"
+		    result     	"_Ty"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "max"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"E0D93FB3FEED"
+		    result     	"_Ty"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "epsilon"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"6978C96EFEED"
+		    result     	"_Ty"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "round_error"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"7F8B4772FEED"
+		    result     	"_Ty"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "denorm_min"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"915327C5FEED"
+		    result     	"_Ty"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "infinity"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"B745495EFEED"
+		    result     	"_Ty"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "quiet_NaN"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"724F9F08FEED"
+		    result     	"_Ty"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "signaling_NaN"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"C099D468FEED"
+		    result     	"_Ty"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Instantiated_Class "(numeric_limits< long double >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	406))
+	    quid       	"370C851402B8"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "long double")))
+	(object Instantiated_Class "(numeric_limits< double >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	379))
+	    quid       	"370C851402B6"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "double")))
+	(object Instantiated_Class "(numeric_limits< float >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	352))
+	    quid       	"370C851402B3"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "float")))
+	(object Instantiated_Class "(numeric_limits< unsigned long >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	327))
+	    quid       	"370C851402B1"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "unsigned long")))
+	(object Instantiated_Class "(numeric_limits< unsigned int >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	277))
+	    quid       	"370C851402AD"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "unsigned int")))
+	(object Instantiated_Class "(numeric_limits< long >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	302))
+	    quid       	"370C851402AF"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "long")))
+	(object Class "float_round_style"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	27)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"enum {round_indeterminate=-1, round_toward_zero=, round_to_nearest=, round_toward_infinity=, round_toward_neg_infinity=}"))
+	    quid       	"370C851401F7"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    nonclassname 	"enum {round_indeterminate=-1, round_toward_zero=, round_to_nearest=, round_toward_infinity=, round_toward_neg_infinity=}")
+	(object Class "_Num_base"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	32)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85140201"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    nestedClasses 	(list nestedClasses
+		(object Class "$UNNAMED$0"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	33)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_denorm=}"))
+		    quid       	"370C8514020B"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_denorm=}")
+		(object Class "$UNNAMED$1"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	34)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_denorm_loss=}"))
+		    quid       	"370C8514020C"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_denorm_loss=}")
+		(object Class "$UNNAMED$2"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	35)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_infinity=}"))
+		    quid       	"370C85140215"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_infinity=}")
+		(object Class "$UNNAMED$3"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	36)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_quiet_NaN=}"))
+		    quid       	"370C85140216"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_quiet_NaN=}")
+		(object Class "$UNNAMED$4"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	37)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_signaling_NaN=}"))
+		    quid       	"370C85140217"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_signaling_NaN=}")
+		(object Class "$UNNAMED$5"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	38)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_bounded=}"))
+		    quid       	"370C85140218"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_bounded=}")
+		(object Class "$UNNAMED$6"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	39)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_exact=}"))
+		    quid       	"370C8514021F"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_exact=}")
+		(object Class "$UNNAMED$7"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	40)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_iec559=}"))
+		    quid       	"370C85140220"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_iec559=}")
+		(object Class "$UNNAMED$8"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	41)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_integer=}"))
+		    quid       	"370C85140221"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_integer=}")
+		(object Class "$UNNAMED$9"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	42)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_modulo=}"))
+		    quid       	"370C85140222"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_modulo=}")
+		(object Class "$UNNAMED$10"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	43)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_signed=}"))
+		    quid       	"370C85140223"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_signed=}")
+		(object Class "$UNNAMED$11"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	44)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_specialized=}"))
+		    quid       	"370C85140229"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_specialized=}")
+		(object Class "$UNNAMED$12"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	45)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {tinyness_before=}"))
+		    quid       	"370C8514022A"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {tinyness_before=}")
+		(object Class "$UNNAMED$13"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	46)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {traps=}"))
+		    quid       	"370C8514022B"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {traps=}")
+		(object Class "$UNNAMED$14"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	47)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {round_style=}"))
+		    quid       	"370C85140233"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {round_style=}")
+		(object Class "$UNNAMED$15"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	48)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {digits=}"))
+		    quid       	"370C85140234"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {digits=}")
+		(object Class "$UNNAMED$16"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	49)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {digits10=}"))
+		    quid       	"370C85140235"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {digits10=}")
+		(object Class "$UNNAMED$17"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	50)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {max_exponent=}"))
+		    quid       	"370C85140236"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {max_exponent=}")
+		(object Class "$UNNAMED$18"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	51)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {max_exponent10=}"))
+		    quid       	"370C85140237"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {max_exponent10=}")
+		(object Class "$UNNAMED$19"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	52)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {min_exponent=}"))
+		    quid       	"370C8514023D"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {min_exponent=}")
+		(object Class "$UNNAMED$20"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	53)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {min_exponent10=}"))
+		    quid       	"370C8514023E"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {min_exponent10=}")
+		(object Class "$UNNAMED$21"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	54)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {radix=}"))
+		    quid       	"370C8514023F"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {radix=}")))
+	(object Instantiated_Class "(numeric_limits< char >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	105))
+	    quid       	"370C85140299"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")))
+	(object Instantiated_Class "(numeric_limits< bool >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	130))
+	    quid       	"370C8514029B"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "bool")))
+	(object Instantiated_Class "(numeric_limits< signed char >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	154))
+	    quid       	"370C851402A1"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "signed char")))
+	(object Instantiated_Class "(numeric_limits< unsigned char >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	178))
+	    quid       	"370C851402A3"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "unsigned char")))
+	(object Instantiated_Class "(numeric_limits< unsigned short >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	227))
+	    quid       	"370C851402A7"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "unsigned short")))
+	(object Instantiated_Class "(numeric_limits< short >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	202))
+	    quid       	"370C851402A5"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "short")))
+	(object Class "_Num_float_base"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	86)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85140271"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"370C85140298"
+		    supplier   	"Logical View::include::limits::_Num_base"
+		    quidu      	"370C85140201"))
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    nestedClasses 	(list nestedClasses
+		(object Class "$UNNAMED$22"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	87)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_denorm=}"))
+		    quid       	"370C85140272"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_denorm=}")
+		(object Class "$UNNAMED$23"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	88)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_denorm_loss=}"))
+		    quid       	"370C85140273"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_denorm_loss=}")
+		(object Class "$UNNAMED$24"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	89)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_infinity=}"))
+		    quid       	"370C85140279"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_infinity=}")
+		(object Class "$UNNAMED$25"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	90)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_quiet_NaN=}"))
+		    quid       	"370C8514027A"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_quiet_NaN=}")
+		(object Class "$UNNAMED$26"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	91)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {has_signaling_NaN=}"))
+		    quid       	"370C8514027B"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {has_signaling_NaN=}")
+		(object Class "$UNNAMED$27"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	92)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_bounded=}"))
+		    quid       	"370C8514027C"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_bounded=}")
+		(object Class "$UNNAMED$28"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	93)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_exact=}"))
+		    quid       	"370C85140283"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_exact=}")
+		(object Class "$UNNAMED$29"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	94)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_iec559=}"))
+		    quid       	"370C85140284"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_iec559=}")
+		(object Class "$UNNAMED$30"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	95)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_integer=}"))
+		    quid       	"370C85140285"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_integer=}")
+		(object Class "$UNNAMED$31"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	96)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_modulo=}"))
+		    quid       	"370C85140286"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_modulo=}")
+		(object Class "$UNNAMED$32"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	97)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_signed=}"))
+		    quid       	"370C8514028D"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_signed=}")
+		(object Class "$UNNAMED$33"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	98)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_specialized=}"))
+		    quid       	"370C8514028E"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_specialized=}")
+		(object Class "$UNNAMED$34"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	99)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {tinyness_before=}"))
+		    quid       	"370C8514028F"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {tinyness_before=}")
+		(object Class "$UNNAMED$35"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	100)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {traps=}"))
+		    quid       	"370C85140290"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {traps=}")
+		(object Class "$UNNAMED$36"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	101)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {round_style=}"))
+		    quid       	"370C85140291"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {round_style=}")
+		(object Class "$UNNAMED$37"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	102)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {radix=}"))
+		    quid       	"370C85140297"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {radix=}")))
+	(object Class "_Num_int_base"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	77)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C8514025E"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"370C85140270"
+		    supplier   	"Logical View::include::limits::_Num_base"
+		    quidu      	"370C85140201"))
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    nestedClasses 	(list nestedClasses
+		(object Class "$UNNAMED$38"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	78)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_bounded=}"))
+		    quid       	"370C85140265"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_bounded=}")
+		(object Class "$UNNAMED$39"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	79)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_exact=}"))
+		    quid       	"370C85140266"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_exact=}")
+		(object Class "$UNNAMED$40"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	80)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_integer=}"))
+		    quid       	"370C85140267"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_integer=}")
+		(object Class "$UNNAMED$41"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	81)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_modulo=}"))
+		    quid       	"370C85140268"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_modulo=}")
+		(object Class "$UNNAMED$42"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	82)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {is_specialized=}"))
+		    quid       	"370C85140269"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {is_specialized=}")
+		(object Class "$UNNAMED$43"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	83)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {radix=}"))
+		    quid       	"370C8514026F"
+		    module     	"Component View::STL::limits (module spec)"
+		    quidu      	"370C85140175"
+		    language   	"C++"
+		    nonclassname 	"enum {radix=}")))
+	(object Instantiated_Class "(numeric_limits< int >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	252))
+	    quid       	"370C851402AB"
+	    module     	"Component View::STL::limits (module spec)"
+	    quidu      	"370C85140175"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "int"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "limits"
+	    quid       	"370DE0600327"
+	    title      	"limits"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ParameterizedClass" "Logical View::include::limits::numeric_limits" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1232, 624)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(1083, 594)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	298
+			justify    	0
+			label      	"numeric_limits")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85140240"
+		    width      	316
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< long double >)" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(384, 896)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(83, 845)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	602
+			justify    	0
+			label      	"(numeric_limits< long double >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402B8"
+		    width      	620
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< double >)" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1104, 896)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(847, 845)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	514
+			justify    	0
+			label      	"(numeric_limits< double >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402B6"
+		    width      	532
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< float >)" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1776, 896)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1533, 845)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	486
+			justify    	0
+			label      	"(numeric_limits< float >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402B3"
+		    width      	504
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< unsigned long >)" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2512, 896)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(2189, 845)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	646
+			justify    	0
+			label      	"(numeric_limits< unsigned long >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402B1"
+		    width      	664
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< unsigned int >)" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(3312, 896)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(3007, 845)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	610
+			justify    	0
+			label      	"(numeric_limits< unsigned int >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402AD"
+		    width      	628
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< long >)" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(4032, 896)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(3789, 845)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	486
+			justify    	0
+			label      	"(numeric_limits< long >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402AF"
+		    width      	504
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::include::limits::float_round_style" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(4608, 896)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(4441, 845)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	334
+			justify    	0
+			label      	"float_round_style")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851401F7"
+		    width      	352
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::include::limits::_Num_base" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(752, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(626, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	252
+			justify    	0
+			label      	"_Num_base")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85140201"
+		    width      	270
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C8514025D"
+		    client     	@1
+		    supplier   	@9
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< char >)" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(320, 1136)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(77, 1085)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	486
+			justify    	0
+			label      	"(numeric_limits< char >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85140299"
+		    width      	504
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< bool >)" @12
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(976, 1136)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(733, 1085)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	486
+			justify    	0
+			label      	"(numeric_limits< bool >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8514029B"
+		    width      	504
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< signed char >)" @13
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1696, 1136)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1387, 1085)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	618
+			justify    	0
+			label      	"(numeric_limits< signed char >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402A1"
+		    width      	636
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< unsigned char >)" @14
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2496, 1136)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(2173, 1085)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	646
+			justify    	0
+			label      	"(numeric_limits< unsigned char >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402A3"
+		    width      	664
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< unsigned short >)" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(3328, 1136)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(2995, 1085)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	666
+			justify    	0
+			label      	"(numeric_limits< unsigned short >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402A7"
+		    width      	684
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< short >)" @16
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(4080, 1136)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(3829, 1085)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	502
+			justify    	0
+			label      	"(numeric_limits< short >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402A5"
+		    width      	520
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::include::limits::_Num_float_base" @17
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(256, 560)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(86, 509)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	340
+			justify    	0
+			label      	"_Num_float_base")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85140271"
+		    width      	358
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85140298"
+		    client     	@17
+		    supplier   	@9
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::include::limits::_Num_int_base" @19
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(752, 560)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(588, 509)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	328
+			justify    	0
+			label      	"_Num_int_base")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8514025E"
+		    width      	346
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85140270"
+		    client     	@19
+		    supplier   	@9
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::limits::(numeric_limits< int >)" @21
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(4720, 1136)
+		    label      	(object ItemLabel
+			Parent_View 	@21
+			location   	(4495, 1085)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"(numeric_limits< int >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851402AB"
+		    width      	468
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)))))

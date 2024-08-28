@@ -1,0 +1,3397 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object SubSystem "STL"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"Traversal"
+	    name       	"CodeFile"
+	    value      	"$MSVC60\\vc98\\include"))
+    quid       	"370C850F02B8"
+    documentation 	"d:\\program files\\microsoft visual studio\\vc98\\include"
+    physical_models 	(list unit_reference_list
+	(object module "algorithm" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\algorithm")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"algorithm")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C850F02B9"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C850F02CD"
+		    supplier   	"Component View::STL::memory"
+		    quidu      	"370C850F02CC"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\algorithm"
+	    language   	"C++")
+	(object module "memory" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\memory")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"memory")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|element_type
+|iterator_type
+|element_type
+|auto_ptr
+|_Bufpar
+|_Temp_iterator
+|_Pty
+|raw_storage_iterator
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C850F02CC"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851601B5"
+		    supplier   	"Component View::STL::xmemory"
+		    quidu      	"370C851601B4"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\memory"
+	    language   	"C++")
+	(object module "bitset" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\bitset")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"bitset")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|bitset_00020
+|_Ty
+|bitset_00010
+|element_type
+|reference
+|bitset
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C850F0312"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\bitset"
+	    language   	"C++")
+	(object module "cassert" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cassert")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cassert")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C851000ED"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cassert"
+	    language   	"C++")
+	(object module "cctype" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cctype")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cctype")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85100101"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cctype"
+	    language   	"C++")
+	(object module "cerrno" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cerrno")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cerrno")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85100115"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cerrno"
+	    language   	"C++")
+	(object module "certsrv" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\certsrv")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"certsrv")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InclusionProtectionSymbol"
+		    value      	"_CERTSRV_H_")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85100129"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\certsrv"
+	    language   	"C++")
+	(object module "cfloat" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cfloat")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cfloat")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85100151"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cfloat"
+	    language   	"C++")
+	(object module "ciso646" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\ciso646")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"ciso646")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85100165"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\ciso646"
+	    language   	"C++")
+	(object module "climits" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\climits")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"climits")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85100179"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\climits"
+	    language   	"C++")
+	(object module "clocale" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\clocale")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"clocale")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C8510018D"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\clocale"
+	    language   	"C++")
+	(object module "cmath" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cmath")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cmath")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C851001A1"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cmath"
+	    language   	"C++")
+	(object module "complex" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\complex")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"complex")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|.ti7complex.f.
+|_Ty
+|.ti4_Ctr.d.
+|complex
+|_Complex_base< double >
+|.ti4_Ctr.r.
+|_Ty
+|value_type
+|_Myctr
+|value_type
+|_Myt
+|_Ty
+|_Complex_base
+|_Ty
+|_Myt
+|_Ctr< _Ty >
+|value_type
+|_U
+|.ti7complex.r.
+|_Complex_base< float >
+|_Myctr
+|_Ty
+|_Complex_base< long double >
+|_Ty
+|_Myctr
+|.ti7complex.d.
+|.ti4_Ctr.f.
+|_Myt
+|_Complex_base< _Ty >
+|_Ctr
+|value_type
+|
+		    ))
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"CallType"
+		    value      	"__cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl __cdecl "))
+	    quid       	"370C851001BF"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851001E7"
+		    label      	"type 3"
+		    supplier   	"Component View::STL::xcomplex"
+		    quidu      	"370C851001DD"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370C851001F2"
+		    supplier   	"Component View::STL::ymath"
+		    quidu      	"370C851001F1"))
+	    path       	"$MSVC60\\vc98\\include\\complex"
+	    language   	"C++")
+	(object module "xcomplex" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xcomplex")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xcomplex")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C851001DD"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\xcomplex"
+	    language   	"C++")
+	(object module "ymath" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\ymath.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"ymath.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|ymath_h_00010
+|_Dconst
+|
+		    )))
+	    quid       	"370C851001F1"
+	    stereotype 	"Package Body"
+	    path       	"$MSVC60\\vc98\\include\\ymath.h"
+	    language   	"C++")
+	(object module "csetjmp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\csetjmp")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"csetjmp")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C851003BE"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\csetjmp"
+	    language   	"C++")
+	(object module "csignal" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\csignal")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"csignal")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C851003D2"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\csignal"
+	    language   	"C++")
+	(object module "cstdarg" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cstdarg")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cstdarg")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C851003E6"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cstdarg"
+	    language   	"C++")
+	(object module "cstddef" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cstddef")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cstddef")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85110012"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cstddef"
+	    language   	"C++")
+	(object module "cstdio" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cstdio")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cstdio")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85110026"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cstdio"
+	    language   	"C++")
+	(object module "cstdlib" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cstdlib")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cstdlib")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C8511003A"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cstdlib"
+	    language   	"C++")
+	(object module "cstring" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cstring")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cstring")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C8511004E"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cstring"
+	    language   	"C++")
+	(object module "ctime" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\ctime")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"ctime")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85110062"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\ctime"
+	    language   	"C++")
+	(object module "cwchar" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cwchar")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cwchar")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85110080"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cwchar"
+	    language   	"C++")
+	(object module "cwctype" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\cwctype")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"cwctype")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C85110094"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\cwctype"
+	    language   	"C++")
+	(object module "deque" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\deque")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"deque")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_It
+|deque< _Ty,_A >
+|reverse_iterator< deque::const_iterator,deque::value_type,deque::const_reference,deque::_Ctptr,deque::difference_type >
+|_Mapptr
+|_Tptr
+|reverse_iterator< deque::iterator,deque::value_type,deque::reference,deque::_Tptr,deque::difference_type >
+|const_reference
+|deque
+|_Ctptr
+|const_iterator
+|reference
+|value_type
+|size_type
+|allocator_type
+|difference_type
+|iterator
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    )))
+	    quid       	"370C851100A8"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\deque"
+	    language   	"C++")
+	(object module "exception" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\exception")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"exception")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|__exString
+|bad_exception
+|exception
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C8511027F"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C85110293"
+		    supplier   	"Component View::STL::xstddef"
+		    quidu      	"370C85110289"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370C8511029E"
+		    supplier   	"Component View::STL::eh"
+		    quidu      	"370C8511029D"))
+	    path       	"$MSVC60\\vc98\\include\\exception"
+	    language   	"C++")
+	(object module "xstddef" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xstddef")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xstddef")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Uninitialized
+|
+		    )))
+	    quid       	"370C85110289"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851D01A0"
+		    supplier   	"Component View::STL::yvals"
+		    quidu      	"370C851A02D2"))
+	    path       	"$MSVC60\\vc98\\include\\xstddef"
+	    language   	"C++")
+	(object module "eh" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\eh.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"eh.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|unexpected_function
+|terminate_function
+|unexpected_handler
+|terminate_handler
+|_se_translator_function
+|
+		    )))
+	    quid       	"370C8511029D"
+	    stereotype 	"Package Body"
+	    path       	"$MSVC60\\vc98\\include\\eh.h"
+	    language   	"C++")
+	(object module "fstream" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\fstream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"fstream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|basic_filebuf< _E,_Tr >
+|_Initfl
+|basic_ifstream< _E,_Tr >
+|basic_ifstream
+|basic_fstream
+|codecvt< _E,char,_Tr::state_type >
+|basic_filebuf< _E,_Tr >
+|basic_ofstream< _E,_Tr >
+|basic_streambuf< _E,_Tr >
+|basic_ofstream
+|basic_filebuf< _E,_Tr >
+|basic_filebuf
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C851102F7"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C85110329"
+		    supplier   	"Component View::STL::istream"
+		    quidu      	"370C85110315"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\fstream"
+	    language   	"C++")
+	(object module "istream" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\istream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"istream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Mysb
+|basic_istream
+|basic_istream< _E,_Tr >
+|num_get< _E,basic_istream::_Iter >
+|_Iter
+|_Myt
+|_Myios
+|_Nget
+|basic_streambuf< _E,_Tr >
+|basic_iostream
+|_Mysb
+|_Nget
+|basic_istream< char,char_traits< char > >
+|sentry
+|istreambuf_iterator< _E,_Tr >
+|sentry
+|ctype< _E >
+|_Iter
+|_Ctype
+|_Myt
+|basic_ios< _E,_Tr >
+|sentry
+|_Myios
+|_Ctype
+|basic_istream< wchar_t,char_traits< wchar_t > >
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C85110315"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C8513028C"
+		    supplier   	"Component View::STL::ostream"
+		    quidu      	"370C851200FE"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\istream"
+	    language   	"C++")
+	(object module "xlocale" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xlocale")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xlocale")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|to_type
+|from_type
+|from_type
+|_E
+|id
+|.ti5ctype.c.
+|to_type
+|ctype
+|ctype_base
+|ctype_byname
+|mask
+|state_type
+|category
+|_To
+|_E
+|_Mask
+|_Category
+|locale
+|char_type
+|codecvt_base
+|state_type
+|codecvt_byname
+|_St
+|_Locimp
+|.ti7codecvt.Usci.
+|codecvt
+|_Result
+|result
+|_Tidyfac
+|char_type
+|facet
+|
+		    ))
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"CallType"
+		    value      	"__cdecl "))
+	    quid       	"370C85120031"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851B0126"
+		    supplier   	"Component View::STL::xlocinfo"
+		    quidu      	"370C851B0125"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\xlocale"
+	    language   	"C++")
+	(object module "stdio" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\stdio.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"stdio.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|wctype_t
+|fpos_t
+|wint_t
+|va_list
+|FILE
+|_iobuf
+|size_t
+|wchar_t
+|
+		    )))
+	    quid       	"370C85120096"
+	    stereotype 	"Package Body"
+	    path       	"$MSVC60\\vc98\\include\\stdio.h"
+	    language   	"C++")
+	(object module "streambuf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\streambuf")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"streambuf")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|basic_streambuf
+|traits_type
+|char_type
+|basic_streambuf< _E,_Tr >
+|off_type
+|pos_type
+|int_type
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851200C0"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\streambuf"
+	    language   	"C++")
+	(object module "ostream" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\ostream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"ostream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|ostreambuf_iterator< _E,_Tr >
+|basic_streambuf< _E,_Tr >
+|_Nput
+|_Myios
+|num_put< _E,basic_ostream::_Iter >
+|_Mysb
+|_Myt
+|basic_ostream
+|basic_ios< _E,_Tr >
+|sentry
+|_Iter
+|basic_ostream< wchar_t,char_traits< wchar_t > >
+|_Nput
+|sentry
+|sentry
+|basic_ostream< _E,_Tr >
+|basic_ostream< char,char_traits< char > >
+|_Myios
+|_Mysb
+|_Myt
+|_Iter
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851200FE"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C85160308"
+		    supplier   	"Component View::STL::ios"
+		    quidu      	"370C8512038F"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\ostream"
+	    language   	"C++")
+	(object module "functional" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\functional")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"functional")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|equal_to
+|logical_not
+|logical_and
+|modulus
+|unary_negate
+|argument_type
+|first_argument_type
+|second_argument_type
+|binary_negate
+|divides
+|result_type
+|less_equal
+|unary_function
+|negate
+|plus
+|mem_fun_t
+|logical_or
+|greater_equal
+|mem_fun1_ref_t
+|minus
+|not_equal_to
+|pointer_to_unary_function
+|result_type
+|binary_function
+|binder1st
+|pointer_to_binary_function
+|greater
+|multiplies
+|mem_fun1_t
+|less
+|mem_fun_ref_t
+|binder2nd
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C85120136"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\functional"
+	    language   	"C++")
+	(object module "iomanip" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\iomanip")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"iomanip")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Fillobj
+|_Smanip
+|_Smanip< ios_base::fmtflags >
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C8512024D"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C8512024E"
+		    supplier   	"Component View::STL::istream"
+		    quidu      	"370C85110315"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\iomanip"
+	    language   	"C++")
+	(object module "ios" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\ios")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"ios")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|ctype< _E >
+|traits_type
+|off_type
+|int_type
+|basic_ostream< _E,_Tr >
+|char_type
+|basic_ios
+|basic_streambuf< _E,_Tr >
+|basic_ios< _E,_Tr >
+|pos_type
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C8512038F"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C85120399"
+		    supplier   	"Component View::STL::streambuf"
+		    quidu      	"370C851200C0"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\ios"
+	    language   	"C++")
+	(object module "xiosbase" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xiosbase")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xiosbase")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Fnarray
+|open_mode
+|openmode
+|_Fmtflags
+|_Openmode
+|fmtflags
+|iostate
+|failure
+|event
+|io_state
+|event_callback
+|_Iostate
+|_Iosarray
+|ios_base
+|seekdir
+|seek_dir
+|Init
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C85130105"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851A034A"
+		    supplier   	"Component View::STL::xlocale"
+		    quidu      	"370C85120031"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\xiosbase"
+	    language   	"C++")
+	(object module "iosfwd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\iosfwd")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"iosfwd")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|state_type
+|char_traits
+|basic_ostream< char,char_traits< char > >
+|pos_type
+|basic_stringstream< char,char_traits< char >,allocator< char > >
+|int_type
+|basic_stringbuf< wchar_t,char_traits< wchar_t >,allocator< wchar_t > >
+|basic_ostream< wchar_t,char_traits< wchar_t > >
+|basic_ofstream< wchar_t,char_traits< wchar_t > >
+|basic_fstream< wchar_t,char_traits< wchar_t > >
+|basic_ios< wchar_t,char_traits< wchar_t > >
+|char_type
+|pos_type
+|basic_iostream< char,char_traits< char > >
+|int_type
+|basic_ios< char,char_traits< char > >
+|basic_stringstream< wchar_t,char_traits< wchar_t >,allocator< wchar_t > >
+|char_type
+|off_type
+|streamsize
+|basic_ifstream< wchar_t,char_traits< wchar_t > >
+|.ti11char_traits.c.
+|basic_streambuf< char,char_traits< char > >
+|basic_istringstream< char,char_traits< char >,allocator< char > >
+|char_type
+|pos_type
+|.ti11char_traits.Us.
+|off_type
+|off_type
+|basic_istringstream< wchar_t,char_traits< wchar_t >,allocator< wchar_t > >
+|streamoff
+|basic_iostream< wchar_t,char_traits< wchar_t > >
+|basic_ofstream< char,char_traits< char > >
+|basic_fstream< char,char_traits< char > >
+|basic_streambuf< wchar_t,char_traits< wchar_t > >
+|_Myt
+|state_type
+|_E
+|_E
+|wstreampos
+|basic_istream< wchar_t,char_traits< wchar_t > >
+|basic_filebuf< wchar_t,char_traits< wchar_t > >
+|int_type
+|fpos< _St >
+|basic_ifstream< char,char_traits< char > >
+|basic_istream< char,char_traits< char > >
+|basic_stringbuf< char,char_traits< char >,allocator< char > >
+|basic_filebuf< char,char_traits< char > >
+|state_type
+|fpos
+|basic_ostringstream< char,char_traits< char >,allocator< char > >
+|basic_ostringstream< wchar_t,char_traits< wchar_t >,allocator< wchar_t > >
+|fpos< mbstate_t >
+|fpos< mbstate_t >
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C85130123"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\iosfwd"
+	    language   	"C++")
+	(object module "iostream" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\iostream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"iostream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Winit
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C8513026C"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\iostream"
+	    language   	"C++")
+	(object module "iterator" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\iterator")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"iterator")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|container_type
+|insert_iterator
+|traits_type
+|basic_ostream< _E,_Tr >
+|back_insert_iterator
+|reverse_bidirectional_iterator< _BI,_Ty,_Rt,_Pt,_D >
+|char_type
+|container_type
+|traits_type
+|container_type
+|value_type
+|front_insert_iterator
+|char_type
+|ostream_iterator
+|value_type
+|pointer_type
+|value_type
+|basic_istream< _E,_Tr >
+|reverse_bidirectional_iterator
+|reference_type
+|value_type
+|istream_iterator
+|iter_type
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C85140048"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C85140066"
+		    supplier   	"Component View::STL::utility"
+		    quidu      	"370C8514005C"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\iterator"
+	    language   	"C++")
+	(object module "utility" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\utility")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"utility")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|istreambuf_iterator
+|distance_type
+|pair
+|char_type
+|pointer_type
+|input_iterator_tag
+|reference_type
+|basic_istream< _E,_Tr >
+|int_type
+|output_iterator_tag
+|iterator_category
+|basic_streambuf< _E,_Tr >
+|iter_type
+|forward_iterator_tag
+|distance_type
+|value_type
+|second_type
+|random_access_iterator_tag
+|first_type
+|iterator
+|istreambuf_iterator< _E,_Tr >
+|char_type
+|value_type
+|iterator_traits
+|basic_streambuf< _E,_Tr >
+|bidirectional_iterator_tag
+|_Bidit
+|traits_type
+|basic_ostream< _E,_Tr >
+|reverse_iterator
+|_Ranit
+|iterator_category
+|reverse_iterator< _RI,_Ty,_Rt,_Pt,_D >
+|traits_type
+|ostreambuf_iterator< _E,_Tr >
+|ostreambuf_iterator
+|
+		    ))
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"CallType"
+		    value      	"__cdecl __cdecl __cdecl __cdecl __cdecl ")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C8514005C"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C85190303"
+		    supplier   	"Component View::STL::iosfwd"
+		    quidu      	"370C85130123"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\utility"
+	    language   	"C++")
+	(object module "limits" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\limits")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"limits")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|limits_00360
+|limits_00820
+|float_round_style
+|limits_00050
+|limits_00910
+|limits_00270
+|limits_00340
+|limits_00710
+|limits_00750
+|limits_00280
+|limits_00590
+|_Ty
+|limits_00030
+|limits_00610
+|limits_00930
+|limits_00540
+|limits_00620
+|.ti14numeric_limits.r.
+|_Ty
+|.ti14numeric_limits.c.
+|limits_00700
+|limits_00670
+|limits_00690
+|limits_00520
+|limits_00860
+|limits_00400
+|limits_00140
+|limits_00180
+|.ti14numeric_limits.Ul.
+|limits_00380
+|limits_00190
+|limits_00480
+|limits_00070
+|limits_00100
+|limits_00790
+|.ti14numeric_limits.Us.
+|limits_00020
+|limits_00870
+|limits_00460
+|limits_00220
+|limits_00250
+|limits_00810
+|limits_00900
+|limits_00080
+|limits_00680
+|limits_00240
+|limits_00160
+|limits_00800
+|limits_00130
+|limits_00730
+|limits_00570
+|.ti14numeric_limits.Uc.
+|limits_00600
+|_Ty
+|limits_00640
+|limits_00310
+|_Ty
+|_Ty
+|limits_00720
+|_Num_base
+|_Ty
+|limits_00410
+|.ti14numeric_limits.K4bool.
+|limits_00490
+|numeric_limits
+|_Ty
+|limits_00660
+|limits_00290
+|limits_00650
+|.ti14numeric_limits.f.
+|_Ty
+|_Num_float_base
+|limits_00040
+|_Num_int_base
+|limits_00530
+|_Ty
+|limits_00300
+|.ti14numeric_limits.Sc.
+|limits_00170
+|limits_00850
+|limits_00430
+|limits_00920
+|limits_00090
+|limits_00060
+|limits_00830
+|limits_00440
+|limits_00880
+|.ti14numeric_limits.l.
+|limits_00150
+|limits_00580
+|limits_00260
+|.ti14numeric_limits.s.
+|limits_00120
+|.ti14numeric_limits.d.
+|limits_00780
+|.ti14numeric_limits.Ui.
+|limits_00500
+|limits_00230
+|_Ty
+|limits_00010
+|limits_00210
+|limits_00370
+|limits_00630
+|limits_00200
+|limits_00760
+|limits_00350
+|limits_00420
+|limits_00560
+|limits_00390
+|limits_00470
+|_Ty
+|limits_00450
+|limits_00890
+|limits_00320
+|limits_00550
+|.ti14numeric_limits.i.
+|limits_00110
+|_Ty
+|_Ty
+|limits_00770
+|limits_00840
+|limits_00740
+|limits_00330
+|limits_00510
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C85140175"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C85140193"
+		    supplier   	"Component View::STL::xstddef"
+		    quidu      	"370C85110289"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\limits"
+	    language   	"C++")
+	(object module "list" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\list")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"list")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|binder2nd< not_equal_to< _Ty > >
+|iterator
+|not_equal_to< _Ty >
+|const_iterator
+|_Tptr
+|list< _Ty,_A >
+|allocator_type
+|size_type
+|_Acc
+|const_reference
+|_Ctptr
+|greater< _Ty >
+|_Nodepref
+|list
+|reverse_bidirectional_iterator< list::iterator,list::value_type,list::reference,list::_Tptr,list::difference_type >
+|_It
+|reverse_bidirectional_iterator< list::const_iterator,list::value_type,list::const_reference,list::_Ctptr,list::difference_type >
+|reference
+|value_type
+|_Nodeptr
+|_Vref
+|difference_type
+|_Node
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C851402C9"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851402DD"
+		    supplier   	"Component View::STL::functional"
+		    quidu      	"370C85120136"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370C851402DE"
+		    supplier   	"Component View::STL::iterator"
+		    quidu      	"370C85140048"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\list"
+	    language   	"C++")
+	(object module "locale" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\locale")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"locale")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|collate< char >
+|collate< char >
+|messages_base
+|string_type
+|char_type
+|char_type
+|messages_byname
+|collate
+|messages
+|char_type
+|collate_byname
+|basic_string< _E,char_traits< _E >,allocator< _E > >
+|basic_string< _E,char_traits< _E >,allocator< _E > >
+|catalog
+|
+		    )))
+	    quid       	"370C851500CC"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\locale"
+	    language   	"C++")
+	(object module "xstring" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xstring")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xstring")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|value_type
+|const_pointer
+|reverse_iterator< basic_string::const_iterator,basic_string::value_type,basic_string::const_reference,basic_string::const_pointer,basic_string::difference_type >
+|traits_type
+|reference
+|size_type
+|size_type
+|const_iterator
+|const_reference
+|value_type
+|const_reference
+|allocator_type
+|pointer
+|basic_string< char,char_traits< char >,allocator< char > >
+|reverse_iterator< basic_string::iterator,basic_string::value_type,basic_string::reference,basic_string::pointer,basic_string::difference_type >
+|xstring_00010
+|pointer
+|reference
+|basic_string< _E,_Tr,_A >
+|_Mref
+|difference_type
+|_Myt
+|reverse_iterator
+|basic_string< char,char_traits< char >,allocator< char > >
+|traits_type
+|_It
+|_Mref
+|const_pointer
+|pointer
+|const_reverse_iterator
+|pointer
+|const_pointer
+|const_iterator
+|size_type
+|allocator_type
+|iterator
+|pointer
+|_Myt
+|xstring_00010
+|xstring_00010
+|const_reference
+|const_pointer
+|const_iterator
+|value_type
+|reference
+|difference_type
+|allocator< wchar_t >
+|reference
+|basic_string< wchar_t,char_traits< wchar_t >,allocator< wchar_t > >
+|difference_type
+|iterator
+|allocator< char >
+|size_type
+|allocator_type
+|_It
+|difference_type
+|reference
+|const_reference
+|traits_type
+|const_reference
+|value_type
+|_Mref
+|difference_type
+|basic_string< wchar_t,char_traits< wchar_t >,allocator< wchar_t > >
+|_It
+|iterator
+|basic_string
+|reverse_iterator
+|const_pointer
+|const_reverse_iterator
+|size_type
+|value_type
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"AFPSET")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    )))
+	    quid       	"370C8515034C"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851D01DC"
+		    supplier   	"Component View::STL::xmemory"
+		    quidu      	"370C851601B4"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\xstring"
+	    language   	"C++")
+	(object module "map" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\map")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"map")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Kfn
+|value_compare
+|reverse_iterator
+|iterator
+|pair< map::iterator,map::iterator >
+|key_compare
+|pair< multimap::const_iterator,multimap::const_iterator >
+|_Tree< _K,map::value_type,map::_Kfn,_Pr,_A >
+|key_type
+|pair< map::iterator,bool >
+|_Kfn
+|_It
+|pair< multimap::iterator,multimap::iterator >
+|const_reference
+|size_type
+|allocator_type
+|const_iterator
+|const_reverse_iterator
+|_It
+|pair< map::const_iterator,map::const_iterator >
+|difference_type
+|_Tref
+|_Tree< _K,multimap::value_type,multimap::_Kfn,_Pr,_A >
+|size_type
+|allocator_type
+|iterator
+|const_reverse_iterator
+|key_type
+|key_compare
+|map< _K,_Ty,_Pr,_A >
+|multimap< _K,_Ty,_Pr,_A >
+|difference_type
+|map
+|reference
+|pair< const _K,_Ty >
+|value_compare
+|reverse_iterator
+|reference
+|referent_type
+|multimap
+|const_iterator
+|referent_type
+|pair< const _K,_Ty >
+|const_reference
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C8515037F"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C85150393"
+		    supplier   	"Component View::STL::functional"
+		    quidu      	"370C85120136"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370C851503A7"
+		    supplier   	"Component View::STL::xtree"
+		    quidu      	"370C8515039D"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\map"
+	    language   	"C++")
+	(object module "xtree" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xtree")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xtree")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Nodeptr
+|_Rbref
+|const_reference
+|reverse_bidirectional_iterator< _Tree::const_iterator,_Tree::value_type,_Tree::const_reference,_Tree::_Ctptr,_Tree::difference_type >
+|pair< _Tree::const_iterator,_Tree::const_iterator >
+|_Nodepref
+|iterator
+|key_type
+|reverse_bidirectional_iterator< _Tree::iterator,_Tree::value_type,_Tree::reference,_Tree::_Tptr,_Tree::difference_type >
+|size_type
+|value_type
+|const_iterator
+|_Tree
+|_Vref
+|_Node
+|pair< _Tree::iterator,bool >
+|_Redbl
+|reference
+|_Tptr
+|difference_type
+|_Keyref
+|_Ctptr
+|pair< _Tree::iterator,_Tree::iterator >
+|_Tree< _K,_Ty,_Kfn,_Pr,_A >
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C8515039D"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C852D006C"
+		    supplier   	"Component View::STL::iterator"
+		    quidu      	"370C85140048"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\xtree"
+	    language   	"C++")
+	(object module "xmemory" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xmemory")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xmemory")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|const_pointer
+|_Ty
+|value_type
+|size_type
+|const_reference
+|pointer
+|allocator
+|reference
+|difference_type
+|value_type
+|pointer
+|.ti9allocator.v.
+|const_pointer
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851601B4"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\xmemory"
+	    language   	"C++")
+	(object module "new" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\new")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"new")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|bad_alloc
+|new_handler
+|nothrow_t
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851602A4"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851602AE"
+		    supplier   	"Component View::STL::exception"
+		    quidu      	"370C8511027F"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\new"
+	    language   	"C++")
+	(object module "numeric" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\numeric")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"numeric")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C851602E0"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\numeric"
+	    language   	"C++")
+	(object module "queue" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\queue")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"queue")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|priority_queue
+|size_type
+|value_type
+|size_type
+|_It
+|allocator_type
+|queue
+|allocator_type
+|value_type
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    )))
+	    quid       	"370C85170093"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C8517009D"
+		    supplier   	"Component View::STL::deque"
+		    quidu      	"370C851100A8"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370C851700C5"
+		    supplier   	"Component View::STL::vector"
+		    quidu      	"370C851700B1"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370C851700C6"
+		    supplier   	"Component View::STL::functional"
+		    quidu      	"370C85120136"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\queue"
+	    language   	"C++")
+	(object module "vector" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\vector")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"vector")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|pointer
+|const_iterator
+|const_reverse_iterator
+|allocator< _Vbase >
+|reference
+|_Ranit< _Bool,typedef vector< bool, class allocator< unsigned int > >::difference_type >
+|size_type
+|_It
+|_Tptr
+|const_reference
+|value_type
+|_Ctptr
+|_It
+|_Myt
+|difference_type
+|allocator_type
+|reference
+|const_reference
+|size_type
+|const_iterator
+|pointer_type
+|vector
+|reverse_iterator< vector< class bool, class allocator< unsigned int > >::const_iterator,typedef vector< bool, class allocator< unsigned int > >::value_type,typedef vector< bool, class allocator< unsigned int > >::const_reference,typedef vector< bool, class allocator< unsigned int > >::const_reference*,typedef vector< bool, class allocator< unsigned int > >::difference_type >
+|size_type
+|value_type
+|_It
+|_Ty
+|const_iterator
+|reverse_iterator< vector< class bool, class allocator< unsigned int > >::iterator,typedef vector< bool, class allocator< unsigned int > >::value_type,vector< class bool, class allocator< unsigned int > >::reference,vector< class bool, class allocator< unsigned int > >::reference*,typedef vector< bool, class allocator< unsigned int > >::difference_type >
+|allocator_type
+|value_type
+|pointer_type
+|reverse_iterator< vector::const_iterator,vector::value_type,vector::const_reference,vector::_Ctptr,vector::difference_type >
+|const_reference
+|_Myt
+|vector< _Ty,_A >
+|reference
+|_Ctptr
+|_A
+|_Vbase
+|const_reference
+|difference_type
+|reference_type
+|allocator< _Vbase >
+|difference_type
+|reverse_iterator
+|vector< _Vbase,typedef vector< bool, class allocator< unsigned int > >::_A >
+|vector< _Bool,_Bool_allocator >
+|reference
+|reverse_iterator< vector::iterator,vector::value_type,vector::reference,vector::_Tptr,vector::difference_type >
+|_Tptr
+|iter_type
+|.ti6vector.K4boolK17.ti9allocator.Ui..
+|reverse_iterator< vector< class bool, class allocator< unsigned int > >::const_iterator,typedef vector< bool, class allocator< unsigned int > >::value_type,typedef vector< bool, class allocator< unsigned int > >::const_reference,typedef vector< bool, class allocator< unsigned int > >::const_reference*,typedef vector< bool, class allocator< unsigned int > >::difference_type >
+|iterator
+|vector< typedef vector< bool, class allocator< unsigned int > >::_Ty,typedef vector< bool, class allocator< unsigned int > >::_A >
+|allocator_type
+|iter_type
+|reference_type
+|size_type
+|value_type
+|_Myt
+|reverse_iterator< vector< class bool, class allocator< unsigned int > >::iterator,typedef vector< bool, class allocator< unsigned int > >::value_type,vector< class bool, class allocator< unsigned int > >::reference,vector< class bool, class allocator< unsigned int > >::reference*,typedef vector< bool, class allocator< unsigned int > >::difference_type >
+|const_pointer
+|difference_type
+|iterator
+|iterator
+|vector< _Vbase,typedef vector< bool, class allocator< unsigned int > >::_A >
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C851700B1"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\vector"
+	    language   	"C++")
+	(object module "set" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\set")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"set")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|key_type
+|_Kfn
+|const_reverse_iterator
+|pair< set::iterator,set::iterator >
+|iterator
+|const_iterator
+|key_type
+|reverse_iterator
+|value_type
+|_It
+|key_compare
+|pair< multiset::const_iterator,multiset::const_iterator >
+|const_reference
+|value_compare
+|iterator
+|size_type
+|set< _K,_Pr,_A >
+|value_type
+|size_type
+|value_compare
+|_It
+|difference_type
+|_Tree< _K,set::value_type,set::_Kfn,_Pr,_A >
+|reference
+|allocator_type
+|const_iterator
+|reference
+|difference_type
+|const_reference
+|pair< multiset::iterator,multiset::iterator >
+|multiset
+|reverse_iterator
+|const_reverse_iterator
+|_Kfn
+|key_compare
+|pair< set::iterator,bool >
+|_Tree< _K,multiset::value_type,multiset::_Kfn,_Pr,_A >
+|set
+|multiset< _K,_Pr,_A >
+|pair< set::const_iterator,set::const_iterator >
+|allocator_type
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C85170223"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C85170237"
+		    supplier   	"Component View::STL::functional"
+		    quidu      	"370C85120136"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370C85170238"
+		    supplier   	"Component View::STL::xtree"
+		    quidu      	"370C8515039D"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\set"
+	    language   	"C++")
+	(object module "sstream" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\sstream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"sstream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|__Strstate
+|basic_stringstream
+|basic_istringstream
+|basic_stringbuf< _E,_Tr,_A >
+|basic_string< _E,_Tr,_A >
+|_Strstate
+|sstream_00010
+|basic_string< _E,_Tr,_A >
+|basic_stringbuf< _E,_Tr,_A >
+|basic_ostringstream
+|basic_string< _E,_Tr,_A >
+|basic_stringbuf
+|basic_string< _E,_Tr,_A >
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851703E6"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\sstream"
+	    language   	"C++")
+	(object module "stack" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\stack")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"stack")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|value_type
+|allocator_type
+|stack
+|size_type
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    )))
+	    quid       	"370C851801AD"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851801AE"
+		    supplier   	"Component View::STL::deque"
+		    quidu      	"370C851100A8"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\stack"
+	    language   	"C++")
+	(object module "stdexcept" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\stdexcept")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"stdexcept")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|range_error
+|domain_error
+|out_of_range
+|runtime_error
+|underflow_error
+|logic_error
+|length_error
+|invalid_argument
+|overflow_error
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851802B1"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851802BB"
+		    supplier   	"Component View::STL::exception"
+		    quidu      	"370C8511027F"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370C851802BC"
+		    supplier   	"Component View::STL::xstring"
+		    quidu      	"370C8515034C"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\stdexcept"
+	    language   	"C++")
+	(object module "string" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROSECPP_SOURCE\\STL\\string")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"string")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text ""))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C851900CF"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851900D2"
+		    supplier   	"Component View::STL::istream"
+		    quidu      	"370C85110315"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370DFD32020D"
+		    supplier   	"Component View::STL::xstring"
+		    quidu      	"370C8515034C"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\string"
+	    language   	"C++")
+	(object module "strstream" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\strstream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"strstream")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|strstreambuf
+|istrstream
+|strstream
+|_Strstate
+|__Strstate
+|strstream_00010
+|ostrstream
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include <$file>
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"370C851900E6"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\strstream"
+	    language   	"C++")
+	(object module "typeinfo" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\typeinfo")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"typeinfo")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|type_info
+|__non_rtti_object
+|bad_typeid
+|bad_cast
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851902A8"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851902B2"
+		    supplier   	"Component View::STL::xstddef"
+		    quidu      	"370C85110289"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"370C851902B3"
+		    supplier   	"Component View::STL::exception"
+		    quidu      	"370C8511027F"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\typeinfo"
+	    language   	"C++")
+	(object module "valarray" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\valarray")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"valarray")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|valarray
+|value_type
+|mask_array
+|slice_array
+|indirect_array
+|gslice_array
+|value_type
+|value_type
+|valarray< _Bool >
+|valarray< size_t >
+|gslice
+|value_type
+|value_type
+|slice
+|
+		    )))
+	    quid       	"370C851A0029"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\valarray"
+	    language   	"C++")
+	(object module "yvals" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\yvals.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"yvals.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Bool
+|_Lockit
+|
+		    )))
+	    quid       	"370C851A02D2"
+	    stereotype 	"Package Body"
+	    path       	"$MSVC60\\vc98\\include\\yvals.h"
+	    language   	"C++")
+	(object module "verfile" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\verfile")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"verfile")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C851A0322"
+	    stereotype 	"Package Specification"
+	    path       	"$MSVC60\\vc98\\include\\verfile"
+	    language   	"C++")
+	(object module "xlocinfo" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xlocinfo")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xlocinfo")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Ctypevec
+|_Locinfo
+|_Collvec
+|_Cvtvec
+|_Timevec
+|_Timevec
+|
+		    ))
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"CallType"
+		    value      	"__cdecl ")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851B0125"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851B02EB"
+		    supplier   	"Component View::STL::xlocinfo"
+		    quidu      	"370C851B02EA"))
+	    path       	"$MSVC60\\vc98\\include\\xlocinfo"
+	    language   	"C++")
+	(object module "xlocinfo" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xlocinfo.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xlocinfo.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|_Collvec
+|_Cvtvec
+|_Ctypevec
+|
+		    )))
+	    quid       	"370C851B02EA"
+	    stereotype 	"Package Body"
+	    path       	"$MSVC60\\vc98\\include\\xlocinfo.h"
+	    language   	"C++")
+	(object module "xlocmon" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xlocmon")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xlocmon")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|pattern
+|part
+|basic_string< _E,char_traits< _E >,allocator< _E > >
+|moneypunct< _E,false >
+|iter_type
+|moneypunct< _E,true >
+|char_type
+|_Mpunct
+|basic_string< _E,char_traits< _E >,allocator< _E > >
+|char_type
+|_Part
+|moneypunct_byname
+|money_put
+|char_type
+|money_get
+|money_base
+|iter_type
+|moneypunct< _E,false >
+|moneypunct< _E,true >
+|basic_string< _E,char_traits< _E >,allocator< _E > >
+|moneypunct
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851B0392"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851B03B0"
+		    supplier   	"Component View::STL::xiosbase"
+		    quidu      	"370C85130105"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\xlocmon"
+	    language   	"C++")
+	(object module "xlocnum" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xlocnum")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xlocnum")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|numpunct< char >
+|string_type
+|numpunct< char >
+|iter_type
+|numpunct< _E >
+|num_get
+|char_type
+|numpunct< _E >
+|numpunct< wchar_t >
+|char_type
+|basic_string< _E,char_traits< _E >,allocator< _E > >
+|basic_string< _E,char_traits< _E >,allocator< _E > >
+|basic_string< _E,char_traits< _E >,allocator< _E > >
+|numpunct< wchar_t >
+|numpunct
+|char_type
+|iter_type
+|char_type
+|char_type
+|num_put
+|numpunct_byname
+|string_type
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851C017B"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851C018A"
+		    supplier   	"Component View::STL::xiosbase"
+		    quidu      	"370C85130105"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\xlocnum"
+	    language   	"C++")
+	(object module "xloctime" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xloctime")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xloctime")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text 
+|char_type
+|time_put
+|time_base
+|time_get_byname
+|iter_type
+|iter_type
+|char_type
+|time_get
+|dateorder
+|time_put_byname
+|_Dateorder
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"InliningStyle"
+		    value      	("InliningStyleSet" 208)))
+	    quid       	"370C851C03AF"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C851C03B0"
+		    supplier   	"Component View::STL::xiosbase"
+		    quidu      	"370C85130105"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\xloctime"
+	    language   	"C++")
+	(object module "xutility" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"Generate"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$MSVC60\\vc98\\include\\xutility")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	"xutility")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"AllowExtensionlessFileName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"TypesDefined"
+		    value      	(value Text "")))
+	    quid       	"370C852D0207"
+	    stereotype 	"Package Specification"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"370C852D0211"
+		    supplier   	"Component View::STL::utility"
+		    quidu      	"370C8514005C"
+		    supplier_is_spec 	TRUE))
+	    path       	"$MSVC60\\vc98\\include\\xutility"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "Main"
+	    quid       	"370DEC540287"
+	    title      	"Main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::STL::xstring" "PackageType" "Specification" @1
+		    location   	(512, 704)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(450, 508)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"xstring")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8515034C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::STL::string" "PackageType" "Specification" @2
+		    location   	(1392, 704)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1330, 508)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"string")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851900CF"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @3
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370DFD32020D"
+		    client     	@2
+		    supplier   	@1
+		    line_style 	0))))
+    path       	"$MSVC60\\vc98\\include")

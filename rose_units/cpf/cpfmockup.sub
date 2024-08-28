@@ -1,0 +1,572 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object SubSystem "CPF"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	(value Text "")))
+    quid       	"3753DC110029"
+    physical_models 	(list unit_reference_list
+	(object module "fms_cpf_eventsubscription" "PackageType" "Body"
+	    attributes 	(list Attribute_Set)
+	    quid       	"3753DC85031F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3753DD160038"
+		    supplier   	"Component View::CPF::fms_cpf_eventsubscription"
+		    quidu      	"3753DC9B0149"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "fms_fcc_nameprotection" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set)
+	    quid       	"375BBAFA00EB"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"375BBB150202"
+		    supplier   	"Logical View::FMS_CPF::FMS_FCC_NameProtection"
+		    quidu      	"375BB8350308"))
+	    language   	"C++")
+	(object module "fms_fcc_nameprotection" "PackageType" "Body"
+	    attributes 	(list Attribute_Set)
+	    quid       	"375BBAEE01C0"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"375BBB05028B"
+		    supplier   	"Component View::CPF::fms_fcc_nameprotection"
+		    quidu      	"375BBAFA00EB"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "fms_cpf_filenameprotection" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set)
+	    quid       	"375BBA6401F3"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"375BBAC602B3"
+		    supplier   	"Logical View::FMS_CPF::FMS_CPF_FileNameProtection"
+		    quidu      	"375BB6B900BD"))
+	    language   	"C++")
+	(object module "fms_cpf_filenameprotection" "PackageType" "Body"
+	    attributes 	(list Attribute_Set)
+	    quid       	"375BBA620345"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"375BBA8103C2"
+		    supplier   	"Component View::CPF::fms_cpf_filenameprotection"
+		    quidu      	"375BBA6401F3"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "fms_cpf_eventsubscription" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set)
+	    quid       	"3753DC9B0149"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"3753DDAD0053"
+		    supplier   	"Logical View::FMS_CPF::FMS_CPF_EventSubscription"
+		    quidu      	"3753DAF002C2"))
+	    language   	"C++")
+	(object module "FMS_CPF_File" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "FMS_CPF_File.C")))
+	    quid       	"3769029C03D1"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"376902B70037"
+		    supplier   	"Component View::CPF::FMS_CPF_File"
+		    quidu      	"376902A702B5"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "FMS_CPF_File" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "FMS_CPF_File.H")))
+	    quid       	"376902A702B5"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"376902BA038F"
+		    supplier   	"Logical View::FMS_CPF::FMS_CPF_File"
+		    quidu      	"37690278039E"))
+	    language   	"C++")
+	(object module "FMS_CPF_Types" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "FMS_CPF_Types.C")))
+	    quid       	"376906780039"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"37690693020E"
+		    supplier   	"Component View::CPF::FMS_CPF_Types"
+		    quidu      	"3769068601D3"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "FMS_CPF_Types" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "FMS_CPF_Types.H")))
+	    quid       	"3769068601D3"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"376906A3008C"
+		    supplier   	"Logical View::FMS_CPF::FMS_CPF_Types"
+		    quidu      	"37690699034D"))
+	    language   	"C++")
+	(object module "FMS_CPF_Exception" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "FMS_CPF_Exception.C")))
+	    quid       	"37690E68032A"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"37690E8602A1"
+		    supplier   	"Component View::CPF::FMS_CPF_Exception"
+		    quidu      	"37690E7A0380"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "FMS_CPF_Exception" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "FMS_CPF_Exception.H")))
+	    quid       	"37690E7A0380"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"37690EAB036C"
+		    supplier   	"Logical View::FMS_CPF::FMS_CPF_Exception"
+		    quidu      	"37690EA401BD"))
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "Cpf components"
+	    quid       	"3753DC7A02FB"
+	    title      	"Cpf components"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	773
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::CPF::fms_cpf_eventsubscription" "PackageType" "Body" @1
+		    location   	(282, 282)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(220, 86)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"fms_cpf_eventsubscription")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3753DC85031F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::CPF::fms_cpf_eventsubscription" "PackageType" "Specification" @2
+		    location   	(658, 376)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(596, 180)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"fms_cpf_eventsubscription")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3753DC9B0149"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @3
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3753DD160038"
+		    client     	@1
+		    supplier   	@2
+		    line_style 	0)
+		(object InterfaceView "Logical View::FMS_CPF::FMS_CPF_EventSubscription" @4
+		    location   	(987, 376)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(986, 484)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	300
+			justify    	0
+			label      	"FMS_CPF_EventSubscription")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3753DAF002C2"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @5
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3753DDAD0053"
+		    client     	@2
+		    supplier   	@4
+		    line_style 	0)
+		(object ModView "Component View::CPF::fms_cpf_filenameprotection" "PackageType" "Body" @6
+		    location   	(282, 846)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(220, 650)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"fms_cpf_filenameprotection")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"375BBA620345"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::CPF::fms_cpf_filenameprotection" "PackageType" "Specification" @7
+		    location   	(658, 940)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(596, 744)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"fms_cpf_filenameprotection")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"375BBA6401F3"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @8
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"375BBA8103C2"
+		    client     	@6
+		    supplier   	@7
+		    line_style 	0)
+		(object InterfaceView "Logical View::FMS_CPF::FMS_CPF_FileNameProtection" @9
+		    location   	(987, 940)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(986, 1048)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	294
+			justify    	0
+			label      	"FMS_CPF_FileNameProtection")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"375BB6B900BD"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"375BBAC602B3"
+		    client     	@7
+		    supplier   	@9
+		    line_style 	0)
+		(object ModView "Component View::CPF::fms_fcc_nameprotection" "PackageType" "Body" @11
+		    location   	(1363, 282)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1301, 86)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"fms_fcc_nameprotection")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"375BBAEE01C0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::CPF::fms_fcc_nameprotection" "PackageType" "Specification" @12
+		    location   	(1739, 423)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(1677, 227)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"fms_fcc_nameprotection")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"375BBAFA00EB"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"375BBB05028B"
+		    client     	@11
+		    supplier   	@12
+		    line_style 	0)
+		(object InterfaceView "Logical View::FMS_CPF::FMS_FCC_NameProtection" @14
+		    location   	(2068, 423)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(2067, 531)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	268
+			justify    	0
+			label      	"FMS_FCC_NameProtection")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"375BB8350308"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @15
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"375BBB150202"
+		    client     	@12
+		    supplier   	@14
+		    line_style 	0)
+		(object ModView "Component View::CPF::FMS_CPF_File" "PackageType" "Body" @16
+		    location   	(282, 1504)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(220, 1308)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"FMS_CPF_File")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3769029C03D1"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::CPF::FMS_CPF_File" "PackageType" "Specification" @17
+		    location   	(658, 1598)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(596, 1402)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"FMS_CPF_File")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"376902A702B5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"376902B70037"
+		    client     	@16
+		    supplier   	@17
+		    line_style 	0)
+		(object InterfaceView "Logical View::FMS_CPF::FMS_CPF_File" @19
+		    location   	(987, 1598)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(986, 1706)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"FMS_CPF_File")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37690278039E"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"376902BA038F"
+		    client     	@17
+		    supplier   	@19
+		    line_style 	0)
+		(object ModView "Component View::CPF::FMS_CPF_Types" "PackageType" "Body" @21
+		    location   	(1363, 893)
+		    label      	(object ItemLabel
+			Parent_View 	@21
+			location   	(1301, 697)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"FMS_CPF_Types")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"376906780039"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::CPF::FMS_CPF_Types" "PackageType" "Specification" @22
+		    location   	(1739, 1034)
+		    label      	(object ItemLabel
+			Parent_View 	@22
+			location   	(1677, 838)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"FMS_CPF_Types")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3769068601D3"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @23
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"37690693020E"
+		    client     	@21
+		    supplier   	@22
+		    line_style 	0)
+		(object InterfaceView "Logical View::FMS_CPF::FMS_CPF_Types" @24
+		    location   	(2068, 1034)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(2067, 1142)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"FMS_CPF_Types")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37690699034D"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"376906A3008C"
+		    client     	@22
+		    supplier   	@24
+		    line_style 	0)
+		(object ModView "Component View::CPF::FMS_CPF_Exception" "PackageType" "Body" @26
+		    location   	(1363, 1598)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(1301, 1402)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"FMS_CPF_Exception")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37690E68032A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::CPF::FMS_CPF_Exception" "PackageType" "Specification" @27
+		    location   	(1739, 1692)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(1677, 1496)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"FMS_CPF_Exception")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37690E7A0380"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @28
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"37690E8602A1"
+		    client     	@26
+		    supplier   	@27
+		    line_style 	0)
+		(object InterfaceView "Logical View::FMS_CPF::FMS_CPF_Exception" @29
+		    location   	(2068, 1692)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(2067, 1800)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"FMS_CPF_Exception")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37690EA401BD"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @30
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"37690EAB036C"
+		    client     	@27
+		    supplier   	@29
+		    line_style 	0)))))

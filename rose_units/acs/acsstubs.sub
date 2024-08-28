@@ -1,0 +1,1057 @@
+
+(object Petal
+    version    	44
+    _written   	"Rose 7.1.9642.27"
+    charSet    	0)
+
+(object SubSystem "ACS stubs"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"cg_style"
+	    value      	"aes"))
+    quid       	"376639A1007A"
+    physical_models 	(list unit_reference_list
+	(object module "ACS_AEH_EvReport" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "ACS_AEH_EvReport.h"))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"3765188C0360"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"376518AF0107"
+		    supplier   	"Logical View::ACS stubs::ACS_AEH_EvReport"
+		    quidu      	"37651488039E"))
+	    language   	"C++")
+	(object module "ACS_AEH_EvReport" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "ACS_AEH_EvReport.cpp"))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"376518800069"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Module_Visibility_Relationship
+		    quid       	"3765189C0363"
+		    supplier   	"Component View::ACS stubs::ACS_AEH_EvReport"
+		    quidu      	"3765188C0360"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "ACS_PHA_Tables" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "ACS_PHA_Tables.h"))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"3764C08B0099"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"3764C0AC0245"
+		    supplier   	"Logical View::ACS stubs::ACS_PHA_Tables"
+		    quidu      	"3764BF570169"))
+	    language   	"C++")
+	(object module "ACS_PHA_Tables" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"3764C082026D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Module_Visibility_Relationship
+		    quid       	"3764C096035C"
+		    supplier   	"Component View::ACS stubs::ACS_PHA_Tables"
+		    quidu      	"3764C08B0099"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "ACS_PHA_Parameter" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"3764C05500B0"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Module_Visibility_Relationship
+		    quid       	"3764C0950025"
+		    supplier   	"Component View::ACS stubs::ACS_PHA_Parameter"
+		    quidu      	"3764C0520228"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "ACS_PHA_Parameter" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "ACS_PHA_Parameter.h"))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"3764C0520228"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"3764C0A80222"
+		    supplier   	"Logical View::ACS stubs::ACS_PHA_Parameter"
+		    quidu      	"3764BFA90243"))
+	    language   	"C++")
+	(object module "ACS_DSD_DSA" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROSECPP_SOURCE\\ACS_DSD\\ACS_DSD.cpp")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"37157F820189"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Module_Visibility_Relationship
+		    quid       	"37157F880156"
+		    supplier   	"Component View::ACS stubs::ACS_DSD_DSA"
+		    quidu      	"37157F7D03A9"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "ACS_DSD_DSA" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROSECPP_SOURCE\\ACS_DSD\\ACS_DSD_DSA.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"37157F7D03A9"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"3715804A030D"
+		    supplier   	"Logical View::ACS stubs::ACS_DSD_Service"
+		    quidu      	"370DA0F60210"))
+	    language   	"C++")
+	(object module "ACS_JTP" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROSECPP_SOURCE\\ACS_JTP\\ACS_JTP.cpp")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"37157E2A0289"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Module_Visibility_Relationship
+		    quid       	"37157E3003BE"
+		    supplier   	"Component View::ACS stubs::ACS_JTP"
+		    quidu      	"37157E25001F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "ACS_JTP" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROSECPP_SOURCE\\ACS_JTP\\ACS_JTP.h")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"37157E25001F"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"371580570202"
+		    supplier   	"Logical View::ACS stubs::ACS_JTP_Service"
+		    quidu      	"36F8F347021C")
+		(object Realize_Relationship
+		    quid       	"371580590251"
+		    supplier   	"Logical View::ACS stubs::ACS_JTP_Conversation"
+		    quidu      	"36FA2AA602F4"))
+	    language   	"C++")
+	(object module "ACS_TRA_trace" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "ACS_TRA_trace.h"))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"37B7D918017A"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"37B7D96600E5"
+		    supplier   	"Logical View::ACS stubs::ACS_TRA_trace"
+		    quidu      	"37B7D6E6038E"))
+	    language   	"C++")
+	(object module "ACS_TRA_trace" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "ACS_TRA_trace.cpp"))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"37B7D919022F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Module_Visibility_Relationship
+		    quid       	"37B7D9530034"
+		    supplier   	"Component View::ACS stubs::ACS_TRA_trace"
+		    quidu      	"37B7D918017A"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "ACS_PRC_Process" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "acs_prc_process.h"))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"3869C81B039B"
+	    stereotype 	"Package Specification"
+	    realized_interfaces 	(list realize_rel_list
+		(object Realize_Relationship
+		    quid       	"3869C9030218"
+		    supplier   	"Logical View::ACS stubs::ACS_PRC_Process"
+		    quidu      	"3869C7AA0226"))
+	    language   	"C++")
+	(object module "ACS_PRC_Process" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"FileName"
+		    value      	(value Text "acs_prc_process.cpp"))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeFormat"
+		    value      	(value Text 
+|#include "$file"
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"IncludeBySimpleName"
+		    value      	TRUE))
+	    quid       	"3869C8B00254"
+	    stereotype 	"Package Body"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "ACS_AEH"
+	    quid       	"3765186F02A0"
+	    title      	"ACS_AEH"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	559
+	    items      	(list diagram_item_list
+		(object ModView "Component View::ACS stubs::ACS_AEH_EvReport" "PackageType" "Body" @1
+		    location   	(705, 611)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(643, 415)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"ACS_AEH_EvReport")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"376518800069"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::ACS stubs::ACS_AEH_EvReport" "PackageType" "Specification" @2
+		    location   	(713, 1178)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(651, 982)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	562
+			label      	"ACS_AEH_EvReport")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3765188C0360"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @3
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3765189C0363"
+		    client     	@1
+		    supplier   	@2
+		    line_style 	0)
+		(object InterfaceView "Logical View::ACS stubs::ACS_AEH_EvReport" @4
+		    location   	(697, 1700)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(696, 1808)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"ACS_AEH_EvReport")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37651488039E"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @5
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"376518AF0107"
+		    client     	@2
+		    supplier   	@4
+		    line_style 	0)))
+	(object Module_Diagram "ACS_PHA"
+	    quid       	"3764C0410129"
+	    title      	"ACS_PHA"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::ACS stubs::ACS_PHA_Parameter" "PackageType" "Specification" @6
+		    location   	(837, 1054)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(775, 858)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	615
+			label      	"ACS_PHA_Parameter")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3764C0520228"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::ACS stubs::ACS_PHA_Parameter" "PackageType" "Body" @7
+		    location   	(846, 470)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(784, 274)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"ACS_PHA_Parameter")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3764C05500B0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::ACS stubs::ACS_PHA_Tables" "PackageType" "Body" @8
+		    location   	(1598, 470)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1536, 274)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"ACS_PHA_Tables")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3764C082026D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::ACS stubs::ACS_PHA_Tables" "PackageType" "Specification" @9
+		    location   	(1612, 1054)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(1550, 858)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	601
+			label      	"ACS_PHA_Tables")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3764C08B0099"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3764C0950025"
+		    client     	@7
+		    supplier   	@6
+		    line_style 	0)
+		(object ModVisView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3764C096035C"
+		    client     	@8
+		    supplier   	@9
+		    line_style 	0)
+		(object InterfaceView "Logical View::ACS stubs::ACS_PHA_Parameter" @12
+		    location   	(697, 1496)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(696, 1604)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"ACS_PHA_Parameter")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3764BFA90243"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3764C0A80222"
+		    client     	@6
+		    supplier   	@12
+		    line_style 	0)
+		(object InterfaceView "Logical View::ACS stubs::ACS_PHA_Tables" @14
+		    location   	(1496, 1496)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1495, 1604)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"ACS_PHA_Tables")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3764BF570169"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @15
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3764C0AC0245"
+		    client     	@9
+		    supplier   	@14
+		    line_style 	0)))
+	(object Module_Diagram "ACS_DSD"
+	    quid       	"37157F770274"
+	    title      	"ACS_DSD"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::ACS stubs::ACS_DSD_DSA" "PackageType" "Specification" @16
+		    location   	(368, 464)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(306, 268)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	569
+			label      	"ACS_DSD_DSA")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37157F7D03A9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::ACS stubs::ACS_DSD_DSA" "PackageType" "Body" @17
+		    location   	(1088, 464)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(1026, 268)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	547
+			label      	"ACS_DSD_DSA")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37157F820189"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"37157F880156"
+		    client     	@17
+		    supplier   	@16
+		    line_style 	0)
+		(object InterfaceView "Logical View::ACS stubs::ACS_DSD_Service" @19
+		    location   	(391, 952)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(390, 1060)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"ACS_DSD_Service")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370DA0F60210"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3715804A030D"
+		    client     	@16
+		    supplier   	@19
+		    line_style 	0)))
+	(object Module_Diagram "ACS_JTP"
+	    quid       	"37157E1700DD"
+	    title      	"ACS_JTP"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::ACS stubs::ACS_JTP" "PackageType" "Specification" @21
+		    location   	(368, 368)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@21
+			location   	(306, 172)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	612
+			label      	"ACS_JTP")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37157E25001F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::ACS stubs::ACS_JTP" "PackageType" "Body" @22
+		    location   	(1088, 384)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@22
+			location   	(1026, 188)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	547
+			label      	"ACS_JTP")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37157E2A0289"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @23
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"37157E3003BE"
+		    client     	@22
+		    supplier   	@21
+		    line_style 	0)
+		(object InterfaceView "Logical View::ACS stubs::ACS_JTP_Service" @24
+		    location   	(187, 799)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(186, 907)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"ACS_JTP_Service")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"36F8F347021C"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"371580570202"
+		    client     	@21
+		    supplier   	@24
+		    line_style 	0)
+		(object InterfaceView "Logical View::ACS stubs::ACS_JTP_Conversation" @26
+		    location   	(697, 1173)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(696, 1281)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"ACS_JTP_Conversation")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"36FA2AA602F4"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @27
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"371580590251"
+		    client     	@21
+		    supplier   	@26
+		    line_style 	0)))
+	(object Module_Diagram "ACS_TRA"
+	    quid       	"37B7D7190251"
+	    title      	"ACS_TRA"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::ACS stubs::ACS_TRA_trace" "PackageType" "Specification" @28
+		    location   	(624, 720)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@28
+			location   	(562, 524)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	641
+			label      	"ACS_TRA_trace")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37B7D918017A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::ACS stubs::ACS_TRA_trace" "PackageType" "Body" @29
+		    location   	(1312, 704)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(1250, 508)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	547
+			label      	"ACS_TRA_trace")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37B7D919022F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @30
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"37B7D9530034"
+		    client     	@29
+		    supplier   	@28
+		    line_style 	0)
+		(object InterfaceView "Logical View::ACS stubs::ACS_TRA_trace" @31
+		    location   	(612, 1224)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(611, 1332)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	232
+			justify    	0
+			label      	"ACS_TRA_trace")
+		    icon       	"Interface"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37B7D6E6038E"
+		    width      	58
+		    height     	58
+		    autoResize 	TRUE)
+		(object RealizeView "" @32
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"37B7D96600E5"
+		    client     	@28
+		    supplier   	@31
+		    line_style 	0)))))

@@ -1,0 +1,98 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "stdio"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DDC2302D7"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "_iobuf"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	146)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct")
+		(object Attribute
+		    tool       	"analyzer"
+		    name       	"IncompleteType"
+		    value      	TRUE))
+	    quid       	"370C8512008D"
+	    exportControl 	"Implementation"
+	    module     	"Component View::STL::stdio (module body)"
+	    quidu      	"370C85120096"
+	    language   	"C++")
+	(object Class "fpos_t"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	237)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct")
+		(object Attribute
+		    tool       	"analyzer"
+		    name       	"IncompleteType"
+		    value      	TRUE))
+	    quid       	"370C85130169"
+	    exportControl 	"Implementation"
+	    module     	"Component View::STL::stdio (module body)"
+	    quidu      	"370C85120096"
+	    language   	"C++"))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "stdio"
+	    quid       	"370DE8F902AA"
+	    title      	"stdio"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::include::stdio::_iobuf" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(432, 368)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(351, 317)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"_iobuf")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8512008D"
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::include::stdio::fpos_t" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(448, 608)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(367, 557)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"fpos_t")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130169"
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)))))

@@ -1,0 +1,280 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "iomanip"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DD88B0111"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Instantiated_Class "(_Smanip< ios_base::fmtflags >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	55)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85120371"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"370C85120374"
+		supplier   	"Logical View::include::iomanip::_Smanip"
+		quidu      	"370C85120367")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C85120373"
+		    label      	"_Tm"
+		    supplier   	"Logical View::include::xiosbase::ios_base::fmtflags"
+		    quidu      	"370C851102EC"))
+	    module     	"Component View::STL::iomanip (module spec)"
+	    quidu      	"370C8512024D"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "ios_base::fmtflags")))
+	(object Parameterized_Class "_Smanip"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	38)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85120367"
+	    operations 	(list Operations
+		(object Operation "_Smanip"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5FF415DEFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"void (*) (class ios_base&, _Tm)")
+			(object Parameter "_A"
+			    type       	"_Tm"))
+		    result     	"_Smanip"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Pf"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"370C8512036D"
+		    type       	"void (*) (class ios_base&, _Tm)"
+		    exportControl 	"Public"
+		    Containment 	"By Value")
+		(object ClassAttribute "_Manarg"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C8512036E"
+		    type       	"_Tm"
+		    exportControl 	"Public"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::iomanip (module spec)"
+	    quidu      	"370C8512024D"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Tm"
+		    type       	"class")))
+	(object Parameterized_Class "_Fillobj"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	18)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C8512024F"
+	    operations 	(list Operations
+		(object Operation "_Fillobj"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"FFDD6221FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Charg"
+			    type       	"_E"))
+		    result     	"_Fillobj"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ch"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C8512035D"
+		    type       	"_E"
+		    exportControl 	"Public"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::iomanip (module spec)"
+	    quidu      	"370C8512024D"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_E"
+		    type       	"class"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "iomanip"
+	    quid       	"370DE50601F2"
+	    title      	"iomanip"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "InstantiatedClass" "Logical View::include::iomanip::(_Smanip< ios_base\\:\\:fmtflags >)" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(480, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(165, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	630
+			justify    	0
+			label      	"(_Smanip< ios_base::fmtflags >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120371"
+		    width      	648
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::iomanip::_Smanip" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(448, 688)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(92, 608)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	712
+			justify    	0
+			label      	"_Smanip")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120367"
+		    width      	730
+		    height     	260
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InstantiateView "" @3
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85120374"
+		    client     	@1
+		    supplier   	@2
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::iomanip::_Fillobj" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(192, 1088)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(86, 1033)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	212
+			justify    	0
+			label      	"_Fillobj")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8512024F"
+		    width      	230
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)))))

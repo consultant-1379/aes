@@ -1,0 +1,3147 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "valarray"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DD9360121"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Parameterized_Class "indirect_array"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	808)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206)))
+	    quid       	"370C851A012B"
+	    operations 	(list Operations
+		(object Operation "indirect_array"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"FDAFB9E8FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Ia"
+			    type       	"const _Sizarray&")
+			(object Parameter "_Pd"
+			    type       	"_Ty*"))
+		    result     	"indirect_array"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E9E43210FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const valarray&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"FF3485E8FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const _Ty&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Data"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9B8EE6C9FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_I"
+			    type       	"size_t"))
+		    result     	"_Ty&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Totlen"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AED7AD26FEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Indir"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3AEC47C0FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_I"
+			    type       	"size_t"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A012D"
+		    type       	"_Ty*"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::valarray (module spec)"
+	    quidu      	"370C851A0029"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "value_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	810)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_Ty"))
+		    quid       	"370C851A012E"
+		    module     	"Component View::STL::valarray (module spec)"
+		    quidu      	"370C851A0029"
+		    language   	"C++"
+		    nonclassname 	"_Ty")))
+	(object Parameterized_Class "mask_array"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	733)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206)))
+	    quid       	"370C851A0113"
+	    operations 	(list Operations
+		(object Operation "mask_array"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"617CA970FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Ma"
+			    type       	"const _Boolarray&")
+			(object Parameter "_Pd"
+			    type       	"_Ty*"))
+		    result     	"mask_array"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B315CE17FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const valarray&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1A3F7037FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const _Ty&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Data"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7FC28D7AFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_I"
+			    type       	"size_t"))
+		    result     	"_Ty&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Totlen"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"89788B5CFEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Mask"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"39C0FEAEFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_I"
+			    type       	"size_t"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A0119"
+		    type       	"_Ty*"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::valarray (module spec)"
+	    quidu      	"370C851A0029"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "value_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	735)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_Ty"))
+		    quid       	"370C851A011A"
+		    module     	"Component View::STL::valarray (module spec)"
+		    quidu      	"370C851A0029"
+		    language   	"C++"
+		    nonclassname 	"_Ty")))
+	(object Parameterized_Class "gslice_array"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	663)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206)))
+	    quid       	"370C851A0105"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"370C851A0112"
+		    supplier   	"Logical View::include::valarray::gslice"
+		    quidu      	"370C851A00F1"))
+	    operations 	(list Operations
+		(object Operation "gslice_array"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E75FE8C6FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Gs"
+			    type       	"const gslice&")
+			(object Parameter "_Pd"
+			    type       	"_Ty*"))
+		    result     	"gslice_array"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"50E9C18CFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const valarray&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CE4E2F6EFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const _Ty&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Data"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AFA6F614FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_I"
+			    type       	"size_t"))
+		    result     	"_Ty&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A0107"
+		    type       	"_Ty*"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::valarray (module spec)"
+	    quidu      	"370C851A0029"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "value_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	665)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_Ty"))
+		    quid       	"370C851A0108"
+		    module     	"Component View::STL::valarray (module spec)"
+		    quidu      	"370C851A0029"
+		    language   	"C++"
+		    nonclassname 	"_Ty")))
+	(object Class "gslice"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	614)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206)))
+	    quid       	"370C851A00F1"
+	    operations 	(list Operations
+		(object Operation "size"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"257FA715FEED"
+		    result     	"_Sizarray"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "gslice"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"839D026AFEED"
+		    result     	"gslice"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "gslice"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2E1E4ABDFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_S"
+			    type       	"size_t")
+			(object Parameter "_L"
+			    type       	"const _Sizarray&")
+			(object Parameter "_D"
+			    type       	"const _Sizarray&"))
+		    result     	"gslice"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "start"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"11486A2CFEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "stride"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D61FFE43FEED"
+		    result     	"_Sizarray"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Nslice"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"EB855FF7FEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Off"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AD710BBAFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Idx"
+			    type       	"_Sizarray&"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Totlen"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B80850E8FEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Start"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A00FB"
+		    type       	"size_t"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::valarray (module spec)"
+	    quidu      	"370C851A0029"
+	    language   	"C++")
+	(object Class "slice"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	531)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206)))
+	    quid       	"370C851A00D6"
+	    operations 	(list Operations
+		(object Operation "size"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E3524364FEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "slice"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"4D39B675FEED"
+		    result     	"slice"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "slice"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"21188AE4FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_S"
+			    type       	"size_t")
+			(object Parameter "_L"
+			    type       	"size_t")
+			(object Parameter "_D"
+			    type       	"size_t"))
+		    result     	"slice"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "start"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1371B6C1FEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "stride"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9D2BEBC1FEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Len"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A00DD"
+		    type       	"size_t"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "_Start"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A00DE"
+		    type       	"size_t"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "_Stride"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A00DF"
+		    type       	"size_t"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::valarray (module spec)"
+	    quidu      	"370C851A0029"
+	    language   	"C++")
+	(object Parameterized_Class "valarray"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	45)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateSubscriptOperations"
+		    value      	FALSE))
+	    quid       	"370C851A005B"
+	    operations 	(list Operations
+		(object Operation "size"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"EBF2A837FEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Tidy"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CCE4112EFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Constructed"
+			    type       	"bool"
+			    initv      	"0"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "_Grow"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BFFB2735FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_N"
+			    type       	"size_t")
+			(object Parameter "_S"
+			    type       	"const _Ty*"
+			    initv      	"0")
+			(object Parameter "_D"
+			    type       	"size_t"
+			    initv      	"0")
+			(object Parameter "_Trim"
+			    type       	"bool"
+			    initv      	"0"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "valarray"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5255C89DFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_N"
+			    type       	"size_t"
+			    initv      	"0"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "valarray"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"186EF909FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_N"
+			    type       	"size_t"))
+		    result     	"valarray"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "valarray"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A529FA08FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_S"
+			    type       	"const _Ty*")
+			(object Parameter "_N"
+			    type       	"size_t"))
+		    result     	"valarray"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "valarray"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0E013E1CFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const valarray&"))
+		    result     	"valarray"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "valarray"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AE70BB97FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Sl"
+			    type       	"const slice_array&"))
+		    result     	"valarray"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "valarray"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8071F339FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Gs"
+			    type       	"const gslice_array&"))
+		    result     	"valarray"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "valarray"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"64522407FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Ma"
+			    type       	"const mask_array&"))
+		    result     	"valarray"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "valarray"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"628F008AFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Ia"
+			    type       	"const indirect_array&"))
+		    result     	"valarray"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~valarray"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"10CD51BDFEED"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6C7A111EFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const valarray&"))
+		    result     	"valarray&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"FD8959D8FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const _Ty&"))
+		    result     	"valarray&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6A3C8E28FEED"
+		    documentation 	"slice_array TEMPLATE FUNCTIONS"
+		    parameters 	(list Parameters
+			(object Parameter "_Sl"
+			    type       	"const slice_array&"))
+		    result     	"valarray&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5F013ECEFEED"
+		    documentation 	"gslice_array TEMPLATE FUNCTIONS"
+		    parameters 	(list Parameters
+			(object Parameter "_Gs"
+			    type       	"const gslice_array&"))
+		    result     	"valarray&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"38969FB1FEED"
+		    documentation 	"mask_array TEMPLATE FUNCTIONS"
+		    parameters 	(list Parameters
+			(object Parameter "_Ma"
+			    type       	"const mask_array&"))
+		    result     	"valarray&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F0F44796FEED"
+		    documentation 	"indirect_array TEMPLATE FUNCTIONS"
+		    parameters 	(list Parameters
+			(object Parameter "_Ia"
+			    type       	"const indirect_array&"))
+		    result     	"valarray&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "resize"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A9A01AB7FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_N"
+			    type       	"size_t")
+			(object Parameter "_C"
+			    type       	"const _Ty&"
+			    initv      	"_Ty()"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E5986228FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_I"
+			    type       	"size_t"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"860E0AB3FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_I"
+			    type       	"size_t"))
+		    result     	"_Ty&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A6160BC2FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Sl"
+			    type       	"slice"))
+		    result     	"valarray< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"FA2BFA7EFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Sl"
+			    type       	"slice"))
+		    result     	"slice_array< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D9083DE9FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Gs"
+			    type       	"const gslice&"))
+		    result     	"valarray< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F24A4590FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Gs"
+			    type       	"const gslice&"))
+		    result     	"gslice_array< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E8E11EC1FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Ba"
+			    type       	"const _Boolarray&"))
+		    result     	"valarray< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"688FA23DFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Ba"
+			    type       	"const _Boolarray&"))
+		    result     	"mask_array< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BE077DFCFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Ia"
+			    type       	"const _Sizarray&"))
+		    result     	"valarray< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"163E0C19FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Ia"
+			    type       	"const _Sizarray&"))
+		    result     	"indirect_array< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "sum"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0312CA0DFEED"
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "min"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3DBD057DFEED"
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "max"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D53B2317FEED"
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "shift"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E10F78CFFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_N"
+			    type       	"int"))
+		    result     	"valarray< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "cshift"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"DC0E8B63FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_N"
+			    type       	"int"))
+		    result     	"valarray< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "apply"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"20FBF040FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_Ty (class _Ty)"))
+		    result     	"valarray< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "apply"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"00A61521FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_Ty (const class _Ty&)"))
+		    result     	"valarray< _Ty >"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "free"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"38268C4AFEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A0083"
+		    type       	"_Ty*"
+		    Containment 	"By Value")
+		(object ClassAttribute "_Res"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A008D"
+		    type       	"size_t"
+		    Containment 	"By Value")
+		(object ClassAttribute "_Len"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A00B5"
+		    type       	"size_t"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::valarray (module spec)"
+	    quidu      	"370C851A0029"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "value_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	47)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_Ty"))
+		    quid       	"370C851A0084"
+		    module     	"Component View::STL::valarray (module spec)"
+		    quidu      	"370C851A0029"
+		    language   	"C++"
+		    nonclassname 	"_Ty")))
+	(object Parameterized_Class "slice_array"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	557)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206)))
+	    quid       	"370C851A00E2"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"370C851A00EF"
+		    supplier   	"Logical View::include::valarray::slice"
+		    quidu      	"370C851A00D6"))
+	    operations 	(list Operations
+		(object Operation "slice_array"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"606BC64BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Sl"
+			    type       	"const slice&")
+			(object Parameter "_Pd"
+			    type       	"_Ty*"))
+		    result     	"slice_array"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C11B00A4FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const valarray&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"FD0B7F83FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const _Ty&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Data"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3A5E01BAFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_I"
+			    type       	"size_t"))
+		    result     	"_Ty&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851A00E4"
+		    type       	"_Ty*"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::valarray (module spec)"
+	    quidu      	"370C851A0029"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "value_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	559)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_Ty"))
+		    quid       	"370C851A00E5"
+		    module     	"Component View::STL::valarray (module spec)"
+		    quidu      	"370C851A0029"
+		    language   	"C++"
+		    nonclassname 	"_Ty")))
+	(object Instantiated_Class "_Boolarray"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"valarray<_Bool>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	28))
+	    quid       	"370C851A0051"
+	    module     	"Component View::STL::valarray (module spec)"
+	    quidu      	"370C851A0029"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Bool"))
+	    nonclassname 	"valarray<_Bool>")
+	(object Instantiated_Class "_Sizarray"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"valarray<size_t>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	29))
+	    quid       	"370C851A0053"
+	    module     	"Component View::STL::valarray (module spec)"
+	    quidu      	"370C851A0029"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "size_t"))
+	    nonclassname 	"valarray<size_t>"))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "valarray"
+	    quid       	"370DE61B036C"
+	    title      	"valarray"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ParameterizedClass" "Logical View::include::valarray::gslice_array" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(224, 1376)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(93, 1321)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	262
+			justify    	0
+			label      	"gslice_array")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A0105"
+		    width      	280
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::include::valarray::slice" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1584, 224)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1420, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	328
+			justify    	0
+			label      	"slice")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A00D6"
+		    width      	346
+		    height     	286
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::valarray::valarray" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(224, 1808)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(77, 1703)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	294
+			justify    	0
+			label      	"valarray")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A005B"
+		    width      	312
+		    height     	310
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::valarray::slice_array" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1600, 816)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1477, 761)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	246
+			justify    	0
+			label      	"slice_array")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A00E2"
+		    width      	264
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @5
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851A00EF"
+		    client     	@4
+		    supplier   	@2
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::valarray::_Boolarray" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1152, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1041, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	222
+			justify    	0
+			label      	"_Boolarray")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A0051"
+		    width      	240
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::valarray::mask_array" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1152, 816)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1023, 761)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	258
+			justify    	0
+			label      	"mask_array")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A0113"
+		    width      	276
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @8
+		    location   	(1152, 458)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851A0128"
+		    roleview_list 	(list RoleViews
+			(object RoleView "_Marr" @9
+			    Parent_View 	@8
+			    location   	(864, -278)
+			    label      	(object SegLabel @10
+				Parent_View 	@9
+				location   	(1194, 258)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	114
+				justify    	0
+				label      	"-_Marr"
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851A012A"
+			    client     	@8
+			    supplier   	@6
+			    line_style 	0
+			    label      	(object SegLabel @11
+				Parent_View 	@9
+				location   	(1099, 232)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "" @12
+			    Parent_View 	@8
+			    location   	(864, -278)
+			    label      	(object SegLabel @13
+				Parent_View 	@12
+				location   	(1194, 659)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851A0129"
+			    client     	@8
+			    supplier   	@7
+			    line_style 	0
+			    label      	(object SegLabel @14
+				Parent_View 	@12
+				location   	(1099, 685)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::include::valarray::gslice" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(240, 752)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(86, 671)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	308
+			justify    	0
+			label      	"gslice")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A00F1"
+		    width      	326
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851A0112"
+		    client     	@1
+		    supplier   	@15
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::valarray::_Sizarray" @17
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(400, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(298, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	204
+			justify    	0
+			label      	"_Sizarray")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A0053"
+		    width      	222
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @18
+		    location   	(323, 432)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851A00F8"
+		    roleview_list 	(list RoleViews
+			(object RoleView "_Len" @19
+			    Parent_View 	@18
+			    location   	(-909, -992)
+			    label      	(object SegLabel @20
+				Parent_View 	@19
+				location   	(411, 263)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	108
+				justify    	0
+				label      	"-_Len"
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851A00FA"
+			    client     	@18
+			    supplier   	@17
+			    line_style 	0
+			    label      	(object SegLabel @21
+				Parent_View 	@19
+				location   	(325, 216)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "" @22
+			    Parent_View 	@18
+			    location   	(-909, -992)
+			    label      	(object SegLabel @23
+				Parent_View 	@22
+				location   	(316, 623)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851A00F9"
+			    client     	@18
+			    supplier   	@15
+			    line_style 	0
+			    label      	(object SegLabel @24
+				Parent_View 	@22
+				location   	(217, 622)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object AssociationViewNew "" @25
+		    location   	(323, 432)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851A00FC"
+		    roleview_list 	(list RoleViews
+			(object RoleView "_Stride" @26
+			    Parent_View 	@25
+			    location   	(-909, -992)
+			    label      	(object SegLabel @27
+				Parent_View 	@26
+				location   	(411, 263)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	145
+				justify    	0
+				label      	"-_Stride"
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851A00FE"
+			    client     	@25
+			    supplier   	@17
+			    line_style 	0
+			    label      	(object SegLabel @28
+				Parent_View 	@26
+				location   	(325, 216)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "" @29
+			    Parent_View 	@25
+			    location   	(-909, -992)
+			    label      	(object SegLabel @30
+				Parent_View 	@29
+				location   	(316, 623)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851A00FD"
+			    client     	@25
+			    supplier   	@15
+			    line_style 	0
+			    label      	(object SegLabel @31
+				Parent_View 	@29
+				location   	(217, 622)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object ClassView "ParameterizedClass" "Logical View::include::valarray::indirect_array" @32
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(704, 816)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(567, 761)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	274
+			justify    	0
+			label      	"indirect_array")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A012B"
+		    width      	292
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @33
+		    location   	(541, 458)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851A013C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "_Iarr" @34
+			    Parent_View 	@33
+			    location   	(109, -806)
+			    label      	(object SegLabel @35
+				Parent_View 	@34
+				location   	(489, 241)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	90
+				justify    	0
+				label      	"-_Iarr"
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851A013E"
+			    client     	@33
+			    supplier   	@17
+			    line_style 	0
+			    label      	(object SegLabel @36
+				Parent_View 	@34
+				location   	(392, 256)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "" @37
+			    Parent_View 	@33
+			    location   	(109, -806)
+			    label      	(object SegLabel @38
+				Parent_View 	@37
+				location   	(669, 643)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851A013D"
+			    client     	@33
+			    supplier   	@32
+			    line_style 	0
+			    label      	(object SegLabel @39
+				Parent_View 	@37
+				location   	(594, 706)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))))))

@@ -1,0 +1,57 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "yvals"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DDA340072"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "_Bool"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	36)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"bool"))
+	    quid       	"370C851A02CC"
+	    exportControl 	"Implementation"
+	    module     	"Component View::STL::yvals (module body)"
+	    quidu      	"370C851A02D2"
+	    language   	"C++"
+	    nonclassname 	"bool"))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "yvals"
+	    quid       	"370DE682027A"
+	    title      	"yvals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::include::yvals::_Bool" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1232, 1408)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(1151, 1357)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"_Bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851A02CC"
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)))))

@@ -1,0 +1,27 @@
+csm-version: '1.0'
+components:
+- uid: aes.ohi
+  name: aes-ohi
+  description: Install OHI
+  availability-manager: NONE
+  software:
+    sdp: ERIC-AES_OHIBIN-CXC1371446
+  supersedes:
+  - software: ERIC-AES_OHIBIN-CXC1371446
+  constraints:
+    installation:
+      after:
+      - component: acs.lct.lib
+        method: DIFFERENT-STEP
+    upgrade:
+      after:
+      - component: acs.lct.lib
+        method: DIFFERENT-STEP
+  meta-data:
+    component-version: 9.0.0-5
+    deliverable:
+      deployment-package: aes_ohi-9.0.0-5-deployment-CXC1371446.tar.gz
+      runtime-package: aes_ohi-9.0.0-5-runtime-CXC1371446.tar.gz
+    software:
+    - file-name: AES_OHIBIN-CXC1371446_9-R1A05.x86_64.sdp
+      bundle-name: ERIC-AES_OHIBIN-CXC1371446_9-R1A05

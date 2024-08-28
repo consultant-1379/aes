@@ -1,0 +1,277 @@
+DEST_FOLDER=DEST_FOLDER
+VALID_IP=147.44.132.12
+VALID_PORT_NUMBER=22
+***************************************************************************************************************
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST,respondingDestinationSetId=DDESTSET,fileTransferMId=1,dataTransferMId=1"@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST,respondingDestinationSetId=DDESTSET,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d respondingDestinationSetId=DDESTSET,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET1,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST1,respondingDestinationSetId=DDESTSET1,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=temp@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST1,respondingDestinationSetId=DDESTSET1,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d respondingDestinationSetId=DDESTSET1,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET2,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST2,respondingDestinationSetId=DDESTSET2,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST2,respondingDestinationSetId=DDESTSET2,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d respondingDestinationSetId=DDESTSET2,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET3,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST3,respondingDestinationSetId=DDESTSET3,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a nbiFolderPath=temp@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST3,respondingDestinationSetId=DDESTSET3,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d respondingDestinationSetId=DDESTSET3,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET4,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST4,respondingDestinationSetId=DDESTSET4,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -d respondingDestinationSetId=DDESTSET4,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET5,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST5,respondingDestinationSetId=DDESTSET5,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=65536@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST5,respondingDestinationSetId=DDESTSET5,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d respondingDestinationSetId=DDESTSET5,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET7,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST7,respondingDestinationSetId=DDESTSET7,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=hello@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST7,respondingDestinationSetId=DDESTSET7,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d respondingDestinationSetId=DDESTSET7,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET8,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST12345678912345678912345678,respondingDestinationSetId=DDESTSET8,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST8,respondingDestinationSetId=DDESTSET8,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d respondingDestinationSetId=DDESTSET8,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET9,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=1235,respondingDestinationSetId=DDESTSET9,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST9,respondingDestinationSetId=DDESTSET9,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d respondingDestinationSetId=DDESTSET9,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET10,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=1DP2345D,respondingDestinationSetId=DDESTSET10,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST10,respondingDestinationSetId=DDESTSET10,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d respondingDestinationSetId=DDESTSET10,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET11,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST11,respondingDestinationSetId=DDESTSET11,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST11,respondingDestinationSetId=DDESTSET11,fileTransferMId=1,dataTransferMId=1"@fail
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST11,respondingDestinationSetId=DDESTSET11,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST11,respondingDestinationSetId=DDESTSET11,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET11,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET12,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST12,respondingDestinationSetId=DDESTSET12,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST12,respondingDestinationSetId=DDESTSET12,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=temp@fail
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST12,respondingDestinationSetId=DDESTSET12,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST12,respondingDestinationSetId=DDESTSET12,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET12,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET13,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST13,respondingDestinationSetId=DDESTSET13,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST13,respondingDestinationSetId=DDESTSET13,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP@fail
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST13,respondingDestinationSetId=DDESTSET13,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST13,respondingDestinationSetId=DDESTSET13,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET13,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET14,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST14,respondingDestinationSetId=DDESTSET14,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST14,respondingDestinationSetId=DDESTSET14,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST14,respondingDestinationSetId=DDESTSET14,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET14,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET15,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST15,respondingDestinationSetId=DDESTSET15,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST15,respondingDestinationSetId=DDESTSET15,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST15,respondingDestinationSetId=DDESTSET15,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET15,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET16,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST16,respondingDestinationSetId=DDESTSET16,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST16,respondingDestinationSetId=DDESTSET16,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=Temp@fail
+immcfg -d respondingDestinationSetId=DDESTSET16,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET17,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST17,respondingDestinationSetId=DDESTSET17,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST17,respondingDestinationSetId=DDESTSET17,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST17,respondingDestinationSetId=DDESTSET17,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET17,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET18,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST18,respondingDestinationSetId=DDESTSET18,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST18,respondingDestinationSetId=DDESTSET18,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=65536@fail
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST18,respondingDestinationSetId=DDESTSET18,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST18,respondingDestinationSetId=DDESTSET18,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET18,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET19,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST19,respondingDestinationSetId=DDESTSET19,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST19,respondingDestinationSetId=DDESTSET19,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST19,respondingDestinationSetId=DDESTSET19,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET19,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET21,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST21,respondingDestinationSetId=DDESTSET21,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST21,respondingDestinationSetId=DDESTSET21,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=hello@fail
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST21,respondingDestinationSetId=DDESTSET21,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST21,respondingDestinationSetId=DDESTSET21,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET21,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET22,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST22,respondingDestinationSetId=DDESTSET22,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSCDEST12345678912345678912345678,respondingDestinationSetId=DDESTSET22,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@fail
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST22,respondingDestinationSetId=DDESTSET22,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST22,respondingDestinationSetId=DDESTSET22,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET22,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET23,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST23,respondingDestinationSetId=DDESTSET23,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=5321,respondingDestinationSetId=DDESTSET23,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@fail
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST23,respondingDestinationSetId=DDESTSET23,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST23,respondingDestinationSetId=DDESTSET23,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET23,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET24,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST24,respondingDestinationSetId=DDESTSET24,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=5DSC321,respondingDestinationSetId=DDESTSET24,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@fail
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST24,respondingDestinationSetId=DDESTSET24,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST24,respondingDestinationSetId=DDESTSET24,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET24,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET26,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST26,respondingDestinationSetId=DDESTSET26,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST26,respondingDestinationSetId=DDESTSET26,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST26,respondingDestinationSetId=DDESTSET26,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET26,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET27,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DDESTSET27,respondingDestinationSetId=DDESTSET27,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -a fileOverwrite=1 advancedRespParametersId=DDESTSET27,respondingDestinationSetId=DDESTSET27,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST27,respondingDestinationSetId=DDESTSET27,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST27,respondingDestinationSetId=DDESTSET27,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET27,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET28,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST166,respondingDestinationSetId=DDESTSET166,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST28,respondingDestinationSetId=DDESTSET28,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d respondingDestinationSetId=DDESTSET28,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET29,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST29,respondingDestinationSetId=DDESTSET29,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST29,respondingDestinationSetId=DDESTSET29,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d respondingDestinationSetId=DDESTSET29,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET30,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST30,respondingDestinationSetId=DDESTSET345,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST30,respondingDestinationSetId=DDESTSET30,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d respondingDestinationSetId=DDESTSET30,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET31,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDET11,respondingDestinationSetId=DDESTSET11,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@fail
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST31,respondingDestinationSetId=DDESTSET31,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d respondingDestinationSetId=DDESTSET31,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET32,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST32,respondingDestinationSetId=DDESTSET32,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -a nbiFolderName=HELLO primaryRespondingDestinationId=DPRDEST32,respondingDestinationSetId=DDESTSET32,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d respondingDestinationSetId=DDESTSET32,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET34,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST34,respondingDestinationSetId=DDESTSET34,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -a ipNotificationAddress=hello primaryRespondingDestinationId=DPRDEST34,respondingDestinationSetId=DDESTSET34,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d respondingDestinationSetId=DDESTSET34,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET35,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST35,respondingDestinationSetId=DDESTSET35,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -a portNotificationNumber=65530 primaryRespondingDestinationId=DPRDEST35,respondingDestinationSetId=DDESTSET35,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d respondingDestinationSetId=DDESTSET35,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET36,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST36,respondingDestinationSetId=DDESTSET36,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -a portNotificationNumber=655780 primaryRespondingDestinationId=DPRDEST36,respondingDestinationSetId=DDESTSET36,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d respondingDestinationSetId=DDESTSET36,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET37,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST37,respondingDestinationSetId=DDESTSET37,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST37,respondingDestinationSetId=DDESTSET37,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -a nbiFolderName=temp secondaryRespondingDestinationId=DSDEST37,respondingDestinationSetId=DDESTSET37,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d secondaryRespondingDestinationId=DSDEST37,respondingDestinationSetId=DDESTSET37,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET37,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET38,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST38,respondingDestinationSetId=DDESTSET38,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST38,respondingDestinationSetId=DDESTSET38,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -a nbiFolderPath=temp secondaryRespondingDestinationId=DSDEST38,respondingDestinationSetId=DDESTSET38,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d secondaryRespondingDestinationId=DSDEST38,respondingDestinationSetId=DDESTSET38,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET38,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET39,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST39,respondingDestinationSetId=DDESTSET39,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST39,respondingDestinationSetId=DDESTSET39,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -a ipNotificationAddress=1.1.1.1 secondaryRespondingDestinationId=DSDEST39,respondingDestinationSetId=DDESTSET39,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST39,respondingDestinationSetId=DDESTSET39,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET39,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET40,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST40,respondingDestinationSetId=DDESTSET40,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST40,respondingDestinationSetId=DDESTSET40,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -a ipNotificationAddress=addr2 secondaryRespondingDestinationId=DSDEST40,respondingDestinationSetId=DDESTSET40,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d secondaryRespondingDestinationId=DSDEST40,respondingDestinationSetId=DDESTSET40,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET40,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET41,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST41,respondingDestinationSetId=DDESTSET41,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST41,respondingDestinationSetId=DDESTSET41,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -a portNotificationNumber=655VALID_PORT_NUMBER secondaryRespondingDestinationId=DSDEST41,respondingDestinationSetId=DDESTSET41,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST41,respondingDestinationSetId=DDESTSET41,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET41,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET42,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST42,respondingDestinationSetId=DDESTSET42,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST42,respondingDestinationSetId=DDESTSET42,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -a portNotificationNumber=655345 secondaryRespondingDestinationId=DSDEST42,respondingDestinationSetId=DDESTSET42,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d secondaryRespondingDestinationId=DSDEST42,respondingDestinationSetId=DDESTSET42,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET42,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET43,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST43,respondingDestinationSetId=DDESTSET43,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=0@pass
+immcfg -a ipNotificationAddress=172.16.51.132 primaryRespondingDestinationId=DPRDEST43,respondingDestinationSetId=DDESTSET43,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET43,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET44,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST44,respondingDestinationSetId=DDESTSET44,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d primaryRespondingDestinationId=DPRDEST44,respondingDestinationSetId=DDESTSET44,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d respondingDestinationSetId=DDESTSET44,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET45,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST45,respondingDestinationSetId=DDESTSET45,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST45,respondingDestinationSetId=DDESTSET45,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST45,respondingDestinationSetId=DDESTSET45,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST45,respondingDestinationSetId=DDESTSET45,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST45,respondingDestinationSetId=DDESTSET45,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET45,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET46,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST46,respondingDestinationSetId=DDESTSET46,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST46,respondingDestinationSetId=DDESTSET46,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST46,respondingDestinationSetId=DDESTSET46,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET46,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET47,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST47,respondingDestinationSetId=DDESTSET47,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -a ipNotificationAddress="" primaryRespondingDestinationId=DPRDEST47,respondingDestinationSetId=DDESTSET47,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET47,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET48,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST48,respondingDestinationSetId=DDESTSET48,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST48,respondingDestinationSetId=DDESTSET48,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -a ipNotificationAddress="" secondaryRespondingDestinationId=DSDEST48,respondingDestinationSetId=DDESTSET48,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST48,respondingDestinationSetId=DDESTSET48,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET48,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET49,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST49,respondingDestinationSetId=DDESTSET49,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -a fileKeepTime=10 advancedRespParametersId=DDESTSET49,respondingDestinationSetId=DDESTSET49,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET49,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET50,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST50,respondingDestinationSetId=DDESTSET50,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -a fileOverwrite=0 advancedRespParametersId=DDESTSET50,respondingDestinationSetId=DDESTSET50,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET50,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET51,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST51,respondingDestinationSetId=DDESTSET51,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -a inhibitTransferQueueNamePrefx=1 advancedRespParametersId=DDESTSET51,respondingDestinationSetId=DDESTSET51,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET51,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET52,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST52,respondingDestinationSetId=DDESTSET52,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -a notificationResponseTimer=11 advancedRespParametersId=DDESTSET52,respondingDestinationSetId=DDESTSET52,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET52,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET53,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST53,respondingDestinationSetId=DDESTSET53,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -a notificationResponseTimer=11 advancedRespParametersId=DDESTSET53,respondingDestinationSetId=DDESTSET53,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET53,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET54,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST54,respondingDestinationSetId=DDESTSET54,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -a resendNotificationTimer=1 advancedRespParametersId=DDESTSET54,respondingDestinationSetId=DDESTSET54,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET54,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET55,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST55,respondingDestinationSetId=DDESTSET55,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -a suppressSubFolderCreation=1 advancedRespParametersId=DDESTSET55,respondingDestinationSetId=DDESTSET55,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET55,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET56,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST56,respondingDestinationSetId=DDESTSET56,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d advancedRespParametersId=DDESTSET56,respondingDestinationSetId=DDESTSET56,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d respondingDestinationSetId=DDESTSET56,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET57,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST57,respondingDestinationSetId=DDESTSET57,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -d respondingDestinationSetId=DDESTSET57,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET58,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST58,respondingDestinationSetId=DDESTSET58,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST58,respondingDestinationSetId=DDESTSET58,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST58,respondingDestinationSetId=DDESTSET58,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET58,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET59,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST59,respondingDestinationSetId=DDESTSET59,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST59,respondingDestinationSetId=DDESTSET59,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST111,respondingDestinationSetId=DDESTSET59,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER@fail
+immcfg -d secondaryRespondingDestinationId=DSDEST59,respondingDestinationSetId=DDESTSET59,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET59,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=DDESTSET60,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=DPRDEST60,respondingDestinationSetId=DDESTSET60,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -c SecondaryRespondingDestination "secondaryRespondingDestinationId=DSDEST60,respondingDestinationSetId=DDESTSET60,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=DEST_FOLDER -a ipNotificationAddress=VALID_IP -a portNotificationNumber=VALID_PORT_NUMBER@pass
+immcfg -a ipNotificationAddress=172.16.51.132 secondaryRespondingDestinationId=DSDEST60,respondingDestinationSetId=DDESTSET60,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d secondaryRespondingDestinationId=DSDEST60,respondingDestinationSetId=DDESTSET60,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=DDESTSET60,fileTransferMId=1,dataTransferMId=1@pass
+

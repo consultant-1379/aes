@@ -1,0 +1,149 @@
+
+(object Petal
+    version    	44
+    _written   	"Rose 7.1.9642.27"
+    charSet    	0)
+
+(object SubSystem "OSF"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"Traversal"
+	    name       	"CodeFile"
+	    value      	"d:\\osf")
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	(value Text "$OSF\\osf")))
+    quid       	"3822E555033F"
+    documentation 	"d:\\osf"
+    physical_models 	(list unit_reference_list
+	(object SubSystem "osf_caa"
+	    is_unit    	TRUE
+	    is_loaded  	FALSE
+	    file_name  	"$AES\\rose_units\\osf\\osf_caa.sub"
+	    quid       	"3829877E0071")
+	(object SubSystem "osf_cxa"
+	    quid       	"38298A220041"
+	    physical_models 	(list unit_reference_list)
+	    physical_presentations 	(list unit_reference_list))
+	(object SubSystem "osf_cxc"
+	    quid       	"38298ABD00F8"
+	    physical_models 	(list unit_reference_list)
+	    physical_presentations 	(list unit_reference_list))
+	(object SubSystem "osf_cxc_4"
+	    quid       	"38298AC602C7"
+	    physical_models 	(list unit_reference_list)
+	    physical_presentations 	(list unit_reference_list)))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "osfdiagram"
+	    quid       	"3822E55403E6"
+	    title      	"osfdiagram"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object SubSysView "Component View::OSF::osf_caa" @1
+		    location   	(493, 901)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(349, 832)
+			fill_color 	13041663
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"osf_caa")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3829877E0071"
+		    width      	300
+		    height     	150)
+		(object SubSysView "Component View::OSF::osf_cxa" @2
+		    location   	(901, 901)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(757, 832)
+			fill_color 	13041663
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"osf_cxa")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"38298A220041"
+		    width      	300
+		    height     	150)
+		(object SubSysView "Component View::OSF::osf_cxc" @3
+		    location   	(1258, 901)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1114, 832)
+			fill_color 	13041663
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"osf_cxc")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"38298ABD00F8"
+		    width      	300
+		    height     	150)
+		(object SubSysView "Component View::OSF::osf_cxc_4" @4
+		    location   	(1615, 901)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1471, 832)
+			fill_color 	13041663
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"osf_cxc_4")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"38298AC602C7"
+		    width      	300
+		    height     	150))))
+    path       	"d:\\osf")

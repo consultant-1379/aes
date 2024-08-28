@@ -1,0 +1,98 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "iostream"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DD66B0209"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "_Winit"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	21)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"370C8513026D"
+	    operations 	(list Operations
+		(object Operation "_Winit"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"CDD3D3F5FEED"
+		    result     	"_Winit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~_Winit"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"50839073FEED"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::iostream (module spec)"
+	    quidu      	"370C8513026C"
+	    language   	"C++"))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "iostream"
+	    quid       	"370DE1E102DA"
+	    title      	"iostream"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::iostream::_Winit" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(256, 288)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(175, 237)
+			fill_color 	16766894
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"_Winit")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	16766894
+		    quidu      	"370C8513026D"
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)))))

@@ -1,0 +1,49 @@
+001>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=respInit1,dataTransferMId=1@pass
+002>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=respInit2,dataTransferMId=1@pass
+003>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=respInit3,dataTransferMId=1@pass
+004>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=initResp1,dataTransferMId=1@pass
+005>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=initResp2,dataTransferMId=1@pass
+006>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=initResp3,dataTransferMId=1@pass
+007>immcfg -c LocalDestination localDestinationId=localdest1,dataTransferMId=1  -a transferType=0 -a virtualFolderName=/tmp@pass
+008>immcfg -c LocalDestination localDestinationId=localdest2,dataTransferMId=1  -a transferType=0 -a virtualFolderName=/tmp@pass
+009>immcfg -c LocalDestination localDestinationId=localdest3,dataTransferMId=1  -a transferType=0 -a virtualFolderName="/tmp"@pass
+010>immcfg -c LocalDestination localDestinationId=localdest4,dataTransferMId=1  -a transferType=0 -a virtualFolderName="/tmp"@pass
+011>immcfg -c FileRemoteDestination fileRemoteDestinationId=fileRemoteDest1,dataTransferMId=1 -a destinationAddress=10.11.12.13 -a transferType=FTPV2@pass
+012>immcfg -c FileRemoteDestination fileRemoteDestinationId=fileRemoteDest2,dataTransferMId=1 -a destinationAddress=10.11.12.13 -a transferType=FTPV2@pass
+013>immcfg -c FileRemoteDestination fileRemoteDestinationId=fileRemoteDest3,dataTransferMId=1 -a destinationAddress=10.11.12.13 -a transferType=FTPV2@pass
+014>immcfg -c FileRemoteDestination fileRemoteDestinationId=fileRemoteDest4,dataTransferMId=1 -a destinationAddress=10.11.12.13 -a transferType=FTPV2@pass
+015>immcfg -c RespInitCategory respInitCategoryId=respInit1,fileDestinationGroupCategoryId=respInit1,dataTransferMId=1  -a primaryDestination=localDestinationId=localdest1,dataTransferMId=1@pass
+016>immcfg -c RespInitCategory respInitCategoryId=respInit2,fileDestinationGroupCategoryId=respInit2,dataTransferMId=1  -a primaryDestination=localDestinationId=localdest2,dataTransferMId=1 -a secondaryDestination=fileRemoteDestinationId=fileRemoteDest1,dataTransferMId=1@pass
+016>immcfg -c RespInitCategory respInitCategoryId=respInit3,fileDestinationGroupCategoryId=respInit3,dataTransferMId=1  -a primaryDestination=localDestinationId=localdest1,dataTransferMId=1@fail
+017>immcfg -c RespInitCategory respInitCategoryId=respInit3,fileDestinationGroupCategoryId=respInit3,dataTransferMId=1  -a primaryDestination=localDestinationId=localdest,dataTransferMId=1@fail
+020>immcfg -c RespInitCategory respInitCategoryId=$ajnd^,fileDestinationGroupCategoryId=respInit3,dataTransferMId=1  -a primaryDestination="localDestinationId=localdest3,dataTransferMId=1@fail
+021>immcfg -c RespInitCategory respInitCategoryId=23DestTest,fileDestinationGroupCategoryId=respInit3,dataTransferMId=1  -a primaryDestination=localDestinationId=localdest3,dataTransferMId=1@fail
+022>immcfg -c RespInitCategory respInitCategoryId=DestTest2222222222222222222222222222222222222,fileDestinationGroupCategoryId=respInit3,dataTransferMId=1  -a primaryDestination=localDestinationId=localdest3,dataTransferMId=1@fail
+023>immcfg -c InitRespCategory initRespCategoryId=initResp1,fileDestinationGroupCategoryId=initResp1,dataTransferMId=1  -a primaryDestination=fileRemoteDestinationId=fileRemoteDest2,dataTransferMId=1@pass
+024>immcfg -c InitRespCategory initRespCategoryId=initResp2,fileDestinationGroupCategoryId=initResp2,dataTransferMId=1  -a primaryDestination=fileRemoteDestinationId=fileRemoteDest3,dataTransferMId=1 -a secondaryDestination=localdest3,dataTransferMId=1@pass
+025>immcfg -c InitRespCategory initRespCategoryId=initResp3,fileDestinationGroupCategoryId=initResp3,dataTransferMId=1  -a primaryDestination=fileRemoteDestinationId=fileRemoteDest3,dataTransferMId=1@fail
+026>immcfg -c InitRespCategory initRespCategoryId=initResp3,fileDestinationGroupCategoryId=initResp3,dataTransferMId=1  -a primaryDestination=fileRemoteDestinationId=fileRemoteDest10,dataTransferMId=1@fail
+029>immcfg -c InitRespCategory initRespCategoryId=$ajnd^,fileDestinationGroupCategoryId=initResp3,dataTransferMId=1  -a primaryDestination=fileRemoteDestinationId=fileRemoteDest4,dataTransferMId=1@fail
+030>immcfg -c InitRespCategory initRespCategoryId=23DestTest,fileDestinationGroupCategoryId=initResp3,dataTransferMId=1  -a primaryDestination=localDestinationId=fileRemoteDestinationId=fileRemoteDest4,dataTransferMId=1@fail
+031>immcfg -c InitRespCategory initRespCategoryId=DestTest2222222222222222222222222222222222222,fileDestinationGroupCategoryId=initResp3,dataTransferMId=1  -a primaryDestination=fileRemoteDestinationId=fileRemoteDest4,dataTransferMId=1@fail
+032>immcfg -d respInitCategoryId=respInit1,fileDestinationGroupCategoryId=respInit1,dataTransferMId=1@pass
+033>immcfg -d fileDestinationGroupCategoryId=respInit2,dataTransferMId=1@pass
+034>immcfg -d initRespCategoryId=initResp1,fileDestinationGroupCategoryId=initResp1,dataTransferMId=1@pass
+035>immcfg -d fileDestinationGroupCategoryId=initResp2,dataTransferMId=1@pass
+036>immcfg -d fileDestinationGroupCategoryId=respInit1,dataTransferMId=1@pass
+037>immcfg -d fileDestinationGroupCategoryId=initResp1,dataTransferMId=1@pass
+038>immcfg -d fileDestinationGroupCategoryId=initResp3,dataTransferMId=1@pass
+040>immcfg -d localDestinationId=localdest1,dataTransferMId=1@pass
+041>immcfg -d localDestinationId=localdest2,dataTransferMId=1@pass
+042>immcfg -d localDestinationId=localdest3,dataTransferMId=1@pass
+044>immcfg -d fileRemoteDestinationId=fileRemoteDest1,dataTransferMId=1@pass
+045>immcfg -d fileRemoteDestinationId=fileRemoteDest2,dataTransferMId=1@pass
+046>immcfg -d fileRemoteDestinationId=fileRemoteDest3,dataTransferMId=1@pass
+048>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=dest$^1,dataTransferMId=1@fail
+049>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=22dest1,dataTransferMId=1@fail
+050>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=DestGrpTest2222222222222222222222222222222222222,dataTransferMId=1@fail
+001>immcfg -c FileDestinationGroupCategory fileDestinationGroupCategoryId=destGrp1,dataTransferMId=1@pass
+051>immcfg -c RespInitCategory respInitCategoryId=respInit3,fileDestinationGroupCategoryId=destGrp1,dataTransferMId=1  -a primaryDestination=localDestinationId=localdest4,dataTransferMId=1@fail
+052>immcfg -c InitRespCategory initRespCategoryId=initResp3,fileDestinationGroupCategoryId=destGrp1,dataTransferMId=1  -a primaryDestination=fileRemoteDestinationId=fileRemoteDest2,dataTransferMId=1@fail
+053>immcfg -d localDestinationId=localdest4,dataTransferMId=1@pass
+047>immcfg -d fileRemoteDestinationId=fileRemoteDest4,dataTransferMId=1@pass

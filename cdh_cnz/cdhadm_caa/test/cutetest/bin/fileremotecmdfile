@@ -1,0 +1,1006 @@
+VALID_USERNAME =root
+INVALID_USERNAME =root1
+VALID_PASS =root
+INVALID_PASS =root1
+VALID_PORTNUMBER =4422
+TRANSFERPROTOCOL_SFTP=0
+TRANSFERPROTOCOL_FTP=1
+*****************************************************************************************************************
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest1,initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest1,initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest2,initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1 -a ipAddress="1.1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest2,initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest3,initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest3,initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=1 -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset4,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest4,initiatingDestinationSetId=initdestset4,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset4,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest5,initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="ipaddress"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest5,initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=1 -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest6,initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest6,initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest7,initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="256.256.256.256"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest7,initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest8,initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest8,initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset9,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest9,initiatingDestinationSetId=initdestset9,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a username="user" -a password="password"@pass
+immcfg -d "initiatingDestinationSetId=initdestset9,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest10,initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=-1@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest10,initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest11,initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65536@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest11,initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset12,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest12,initiatingDestinationSetId=initdestset12,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=0@pass
+immcfg -d "initiatingDestinationSetId=initdestset12,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset13,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest13,initiatingDestinationSetId=initdestset13,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset13,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest14,initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="abc"@pass
+immcfg -d "initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest15,initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="C:\temp"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest15,initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=1 -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset16,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest16,initiatingDestinationSetId=initdestset16,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="temp//"@pass
+immcfg -d "initiatingDestinationSetId=initdestset16,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest17,initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username=""@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest17,initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest18,initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username="0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest18,initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset19,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest19,initiatingDestinationSetId=initdestset19,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a username="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567"@pass
+immcfg -d "initiatingDestinationSetId=initdestset19,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=testingtestingtestingtestingtesti,initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest20,initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=123456,initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest21,initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest22,initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest22,initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1 @fail
+immcfg -d "initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest23,initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest23,initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1 -a ipAddress="1.1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest24,initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest24,initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=0@fail
+immcfg -d "initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest25,initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest25,initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest26,initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest26,initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="ipaddress"@fail
+immcfg -d "initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest27,initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest27,initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest28,initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest28,initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="256.256.256.256"@fail
+immcfg -d "initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest29,initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest29,initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest30,initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest30,initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a username="user" -a password="password"@pass
+immcfg -d "initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest31,initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest31,initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=-1@fail
+immcfg -d "initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest32,initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest32,initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65536@fail
+immcfg -d "initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest33,initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest33,initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=0@pass
+immcfg -d "initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest34,initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest34,initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest35,initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest35,initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="abc"@pass
+immcfg -d "initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest36,initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest36,initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="C:\temp"@fail
+immcfg -d "initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest37,initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest37,initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=1 -a ipAddress="1.1.1.1" -a remoteFolderPath="temp//"@pass
+immcfg -d "initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest38,initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest38,initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username=""@fail
+immcfg -d "initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest39,initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest39,initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username="0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"@fail
+immcfg -d "initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest40,initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest40,initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a username="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567"@pass
+immcfg -d "initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest41,initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=testingtestingtestingtestingtesti,initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest42,initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=123456,initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @fail
+immcfg -d "initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest43,initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset43,initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1 -a fileOverwrite=1@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest43,initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest44,initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset44,initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1 -a retryDelay=15@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest44,initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest45,initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset45,initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1 -a sendRetry=15@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest45,initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest46,initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset46,initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1 -a suppressSubFolderCreation=1@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest46,initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest47,initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest47,initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=0@fail
+immcfg -d "initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest48,initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest48,initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="256.256.256.256"@fail
+immcfg -d "initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest49,initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest49,initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest50,initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest50,initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest51,initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest51,initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1 -a  password="hello"@pass
+immcfg -d "initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest52,initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest52,initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1 -a  portNumber=65536@fail
+immcfg -d "initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest53,initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest53,initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1 -a  portNumber=23@pass
+immcfg -d "initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest54,initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest54,initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1 -a  remoteFolderPath="abc/"@pass
+immcfg -d "initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest55,initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest55,initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1 -a  username="user"@pass
+immcfg -d "initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest56,initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest56,initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=1 -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest56,initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=0@fail
+immcfg -d "initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest57,initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest57,initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m secondaryInitiatingDestinationId=secdest57,initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="256.256.256.256"@fail
+immcfg -d "initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest58,initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest58,initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest58,initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest59,initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest59,initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest59,initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest60,initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest60,initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest60,initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1 -a  password="hello"@pass
+immcfg -d "initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest61,initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest61,initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest61,initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1 -a  portNumber=65536@fail
+immcfg -d "initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest62,initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest62,initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest62,initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1 -a  portNumber=23@pass
+immcfg -d "initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest63,initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest63,initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest63,initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1 -a  remoteFolderPath="abc/"@pass
+immcfg -d "initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest64,initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest64,initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest64,initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1 -a  username="user"@pass
+immcfg -d "initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest65,initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset65,initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1 -a retryDelay=70@fail
+immcfg -d "initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest66,initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset66,initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1 -a retryDelay=15@pass
+immcfg -d "initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest67,initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset67,initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1 -a sendRetry=150@fail
+immcfg -d "initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest68,initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset68,initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1 -a sendRetry=75@pass
+immcfg -d "initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest69,initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset69,initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1 -a fileOverwrite=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest70,initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset70,initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1 -a suppressSubFolderCreation=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest71,initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d primaryInitiatingDestinationId=primdest71,initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest72,initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a password="hello"@pass
+immcfg -d primaryInitiatingDestinationId=primdest72,initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest73,initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination secondaryInitiatingDestinationId=secdest73,initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1 -a transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d secondaryInitiatingDestinationId=secdest73,initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest74,initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination secondaryInitiatingDestinationId=secdest74,initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1 -a transferProtocol=0 -a ipAddress="1.1.1.1" -a password="hello"@pass
+immcfg -d secondaryInitiatingDestinationId=secdest74,initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest75,initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a password="hello"@pass
+immcfg -d advancedInitDestParametersId=initdestset75,initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest76,initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest76,initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest77,initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="10.246.15.3" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest77,initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest78,initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=422@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest78,initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest79,initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="INVALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest79,initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest80,initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="INVALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest80,initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset81,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest81,initiatingDestinationSetId=initdestset81,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest81,initiatingDestinationSetId=initdestset81,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset81,fileTransferMId=1,dataTransferMId=1"@pass
+
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest1,initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest1,initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest2,initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1 -a ipAddress="1.1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest2,initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest3,initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest3,initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset4,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest4,initiatingDestinationSetId=initdestset4,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset4,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest5,initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="ipaddress"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest5,initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest6,initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest6,initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest7,initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="256.256.256.256"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest7,initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest8,initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest8,initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset9,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest9,initiatingDestinationSetId=initdestset9,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a username="user" -a password="password"@pass
+immcfg -d "initiatingDestinationSetId=initdestset9,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest10,initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=-1@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest10,initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest11,initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65536@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest11,initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset12,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest12,initiatingDestinationSetId=initdestset12,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=0@pass
+immcfg -d "initiatingDestinationSetId=initdestset12,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset13,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest13,initiatingDestinationSetId=initdestset13,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset13,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest14,initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="abc"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest14,initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest15,initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="C:\temp"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest15,initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset16,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest16,initiatingDestinationSetId=initdestset16,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="temp//"@pass
+immcfg -d "initiatingDestinationSetId=initdestset16,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest17,initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username=""@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest17,initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest18,initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username="0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest18,initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset19,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest19,initiatingDestinationSetId=initdestset19,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a username="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567"@pass
+immcfg -d "initiatingDestinationSetId=initdestset19,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=testingtestingtestingtestingtesti,initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest20,initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=123456,initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest21,initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest22,initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest22,initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1 @fail
+immcfg -d "initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest23,initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest23,initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1 -a ipAddress="1.1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest24,initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest24,initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP@fail
+immcfg -d "initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest25,initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest25,initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest26,initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest26,initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="ipaddress"@fail
+immcfg -d "initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest27,initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest27,initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest28,initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest28,initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="256.256.256.256"@fail
+immcfg -d "initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest29,initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest29,initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest30,initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest30,initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a username="user" -a password="password"@pass
+immcfg -d "initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest31,initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest31,initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=-1@fail
+immcfg -d "initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest32,initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest32,initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65536@fail
+immcfg -d "initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest33,initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest33,initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=0@pass
+immcfg -d "initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest34,initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest34,initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest35,initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest35,initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="abc"@fail
+immcfg -d "initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest36,initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest36,initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="C:\temp"@fail
+immcfg -d "initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest37,initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest37,initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="temp//"@pass
+immcfg -d "initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest38,initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest38,initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username=""@fail
+immcfg -d "initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest39,initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest39,initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username="0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"@fail
+immcfg -d "initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest40,initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest40,initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a username="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567"@pass
+immcfg -d "initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest41,initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=testingtestingtestingtestingtesti,initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest42,initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=123456,initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @fail
+immcfg -d "initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest43,initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset43,initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1 -a fileOverwrite=1@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest43,initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest44,initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset44,initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1 -a retryDelay=15@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest44,initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest45,initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset45,initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1 -a sendRetry=15@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest45,initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest46,initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset46,initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1 -a suppressSubFolderCreation=1@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest46,initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest47,initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest47,initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=0@fail
+immcfg -d "initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest48,initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest48,initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="256.256.256.256"@fail
+immcfg -d "initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest49,initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest49,initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest50,initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest50,initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest51,initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest51,initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1 -a  password="hello"@pass
+immcfg -d "initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest52,initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest52,initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1 -a  portNumber=65536@fail
+immcfg -d "initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest53,initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest53,initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1 -a  portNumber=23@pass
+immcfg -d "initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest54,initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest54,initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1 -a  remoteFolderPath="abc/"@pass
+immcfg -d "initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest55,initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest55,initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1 -a  username="user"@pass
+immcfg -d "initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest56,initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest56,initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest56,initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=0@fail
+immcfg -d "initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest57,initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest57,initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m secondaryInitiatingDestinationId=secdest57,initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="256.256.256.256"@fail
+immcfg -d "initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest58,initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest58,initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest58,initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest59,initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest59,initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest59,initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest60,initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest60,initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest60,initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1 -a  password="hello"@pass
+immcfg -d "initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest61,initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest61,initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=1 -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest61,initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1 -a  portNumber=65536@fail
+immcfg -d "initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest62,initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest62,initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest62,initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1 -a  portNumber=23@pass
+immcfg -d "initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest63,initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest63,initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest63,initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1 -a  remoteFolderPath="abc/"@pass
+immcfg -d "initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest64,initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest64,initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest64,initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1 -a  username="user"@pass
+immcfg -d "initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest65,initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset65,initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1 -a retryDelay=70@fail
+immcfg -d "initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest66,initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset66,initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1 -a retryDelay=15@pass
+immcfg -d "initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest67,initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset67,initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1 -a sendRetry=150@fail
+immcfg -d "initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest68,initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset68,initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1 -a sendRetry=75@pass
+immcfg -d "initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest69,initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset69,initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1 -a fileOverwrite=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest70,initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset70,initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1 -a suppressSubFolderCreation=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest71,initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d primaryInitiatingDestinationId=primdest71,initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest72,initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a password="hello"@pass
+immcfg -d primaryInitiatingDestinationId=primdest72,initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest73,initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination secondaryInitiatingDestinationId=secdest73,initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1 -a transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d secondaryInitiatingDestinationId=secdest73,initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest74,initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination secondaryInitiatingDestinationId=secdest74,initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1 -a transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a password="hello"@pass
+immcfg -d secondaryInitiatingDestinationId=secdest74,initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest75,initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a password="hello"@pass
+immcfg -d advancedInitDestParametersId=initdestset75,initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest76,initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest76,initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest77,initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="10.246.15.3" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest77,initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest78,initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=422@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest78,initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest79,initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="INVALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest79,initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest80,initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="INVALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest80,initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset81,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest81,initiatingDestinationSetId=initdestset81,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest81,initiatingDestinationSetId=initdestset81,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset81,fileTransferMId=1,dataTransferMId=1"@pass
+
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest1,initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest1,initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass	
+immcfg -d initiatingDestinationSetId=initdestset1,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest2,initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1 -a ipAddress="1.1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest2,initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset2,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest3,initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest3,initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset3,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset4,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest4,initiatingDestinationSetId=initdestset4,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset4,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest5,initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="ipaddress"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest5,initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset5,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest6,initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest6,initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset6,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest7,initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="256.256.256.256"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest7,initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset7,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest8,initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest8,initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset8,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset9,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest9,initiatingDestinationSetId=initdestset9,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a username="user" -a password="password"@pass
+immcfg -d "initiatingDestinationSetId=initdestset9,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest10,initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=-1@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest10,initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset10,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest11,initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65536@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest11,initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset11,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset12,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest12,initiatingDestinationSetId=initdestset12,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=0@pass
+immcfg -d "initiatingDestinationSetId=initdestset12,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset13,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest13,initiatingDestinationSetId=initdestset13,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset13,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest14,initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="abc"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest14,initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset14,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest15,initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="C:\temp"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest15,initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset15,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset16,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest16,initiatingDestinationSetId=initdestset16,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="temp//"@pass
+immcfg -d "initiatingDestinationSetId=initdestset16,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest17,initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=1 -a ipAddress="1.1.1.1" -a password="password" -a username=""@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest17,initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset17,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest18,initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username="0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest18,initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset18,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset19,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest19,initiatingDestinationSetId=initdestset19,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a username="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567"@pass
+immcfg -d "initiatingDestinationSetId=initdestset19,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=testingtestingtestingtestingtesti,initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=TRANSFERPROTOCOL_FTP -a  transferProtocol=1 -a ipAddress="1.1.1.1"@fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest20,initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset20,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=123456,initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @fail
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest21,initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset21,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest22,initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest22,initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1 @fail
+immcfg -d "initiatingDestinationSetId=initdestset22,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest23,initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest23,initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1 -a ipAddress="1.1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset23,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest24,initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest24,initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP@fail
+immcfg -d "initiatingDestinationSetId=initdestset24,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest25,initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest25,initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset25,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest26,initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest26,initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="ipaddress"@fail
+immcfg -d "initiatingDestinationSetId=initdestset26,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest27,initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest27,initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset27,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest28,initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest28,initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="256.256.256.256"@fail
+immcfg -d "initiatingDestinationSetId=initdestset28,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest29,initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest29,initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset29,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest30,initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest30,initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a username="user" -a password="password"@pass
+immcfg -d "initiatingDestinationSetId=initdestset30,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest31,initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest31,initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=-1@fail
+immcfg -d "initiatingDestinationSetId=initdestset31,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest32,initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest32,initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65536@fail
+immcfg -d "initiatingDestinationSetId=initdestset32,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest33,initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest33,initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=0@pass
+immcfg -d "initiatingDestinationSetId=initdestset33,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest34,initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest34,initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a portNumber=65535@pass
+immcfg -d "initiatingDestinationSetId=initdestset34,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest35,initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest35,initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="abc"@fail
+immcfg -d "initiatingDestinationSetId=initdestset35,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest36,initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest36,initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="C:\temp"@fail
+immcfg -d "initiatingDestinationSetId=initdestset36,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest37,initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest37,initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a remoteFolderPath="temp//"@pass
+immcfg -d "initiatingDestinationSetId=initdestset37,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest38,initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest38,initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username=""@fail
+immcfg -d "initiatingDestinationSetId=initdestset38,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest39,initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest39,initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a password="password" -a username="0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"@fail
+immcfg -d "initiatingDestinationSetId=initdestset39,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest40,initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest40,initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" -a username="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567"@pass
+immcfg -d "initiatingDestinationSetId=initdestset40,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest41,initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=testingtestingtestingtestingtesti,initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset41,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primdest42,initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=123456,initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @fail
+immcfg -d "initiatingDestinationSetId=initdestset42,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest43,initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset43,initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1 -a fileOverwrite=1@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest43,initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset43,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest44,initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset44,initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1 -a retryDelay=15@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest44,initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset44,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest45,initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset45,initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1 -a sendRetry=15@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest45,initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset45,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest46,initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m advancedInitDestParametersId=initdestset46,initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1 -a suppressSubFolderCreation=1@pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest46,initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset46,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest47,initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest47,initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=0@fail
+immcfg -d "initiatingDestinationSetId=initdestset47,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest48,initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest48,initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="256.256.256.256"@fail
+immcfg -d "initiatingDestinationSetId=initdestset48,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest49,initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest49,initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset49,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest50,initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest50,initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset50,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest51,initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest51,initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1 -a  password="hello"@pass
+immcfg -d "initiatingDestinationSetId=initdestset51,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest52,initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest52,initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1 -a  portNumber=65536@fail
+immcfg -d "initiatingDestinationSetId=initdestset52,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest53,initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest53,initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1 -a  portNumber=23@pass
+immcfg -d "initiatingDestinationSetId=initdestset53,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest54,initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest54,initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1 -a  remoteFolderPath="abc/"@pass
+immcfg -d "initiatingDestinationSetId=initdestset54,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest55,initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m primaryInitiatingDestinationId=primdest55,initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1 -a  username="user"@pass
+immcfg -d "initiatingDestinationSetId=initdestset55,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest56,initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest56,initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=1 -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest56,initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=0@fail
+immcfg -d "initiatingDestinationSetId=initdestset56,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest57,initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest57,initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m secondaryInitiatingDestinationId=secdest57,initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="256.256.256.256"@fail
+immcfg -d "initiatingDestinationSetId=initdestset57,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest58,initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest58,initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest58,initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1"@fail
+immcfg -d "initiatingDestinationSetId=initdestset58,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest59,initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest59,initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest59,initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1 -a  ipAddress="1.1.1.1"@pass
+immcfg -d "initiatingDestinationSetId=initdestset59,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest60,initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest60,initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest60,initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1 -a  password="hello"@pass
+immcfg -d "initiatingDestinationSetId=initdestset60,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest61,initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest61,initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest61,initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1 -a  portNumber=65536@fail
+immcfg -d "initiatingDestinationSetId=initdestset61,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest62,initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest62,initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest62,initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1 -a  portNumber=23@pass
+immcfg -d "initiatingDestinationSetId=initdestset62,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest63,initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest63,initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest63,initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1 -a  remoteFolderPath="abc/"@pass
+immcfg -d "initiatingDestinationSetId=initdestset63,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest64,initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -c SecondaryInitiatingDestination  secondaryInitiatingDestinationId=secdest64,initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1" @pass
+immcfg -m secondaryInitiatingDestinationId=secdest64,initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1 -a  username="user"@pass
+immcfg -d "initiatingDestinationSetId=initdestset64,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest65,initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset65,initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1 -a retryDelay=70@fail
+immcfg -d "initiatingDestinationSetId=initdestset65,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest66,initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset66,initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1 -a retryDelay=15@pass
+immcfg -d "initiatingDestinationSetId=initdestset66,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest67,initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset67,initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1 -a sendRetry=150@fail
+immcfg -d "initiatingDestinationSetId=initdestset67,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest68,initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset68,initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1 -a sendRetry=75@pass
+immcfg -d "initiatingDestinationSetId=initdestset68,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest69,initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset69,initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1 -a fileOverwrite=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset69,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest70,initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -m advancedInitDestParametersId=initdestset70,initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1 -a suppressSubFolderCreation=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset70,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest71,initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d primaryInitiatingDestinationId=primdest71,initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset71,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest72,initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a password="hello"@pass
+immcfg -d primaryInitiatingDestinationId=primdest72,initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset72,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest73,initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination secondaryInitiatingDestinationId=secdest73,initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1 -a transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -d secondaryInitiatingDestinationId=secdest73,initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset73,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest74,initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress="1.1.1.1"@pass
+immcfg -c SecondaryInitiatingDestination secondaryInitiatingDestinationId=secdest74,initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1 -a transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a password="hello"@pass
+immcfg -d secondaryInitiatingDestinationId=secdest74,initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset74,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest75,initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="1.1.1.1" -a password="hello"@pass
+immcfg -d advancedInitDestParametersId=initdestset75,initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset75,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest76,initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest76,initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=initdestset76,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest77,initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="10.246.15.3" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest77,initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset77,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest78,initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="VALID_USERNAME" -a portNumber=422@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest78,initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset78,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest79,initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="VALID_PASS" -a username="INVALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest79,initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset79,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination  primaryInitiatingDestinationId=primdest80,initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_SFTP -a ipAddress="172.16.45.32" -a password="INVALID_PASS" -a username="VALID_USERNAME" -a portNumber=VALID_PORTNUMBER@pass
+immadm -o 5  primaryInitiatingDestinationId=primdest80,initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -d "initiatingDestinationSetId=initdestset80,fileTransferMId=1,dataTransferMId=1"@pass
+
+

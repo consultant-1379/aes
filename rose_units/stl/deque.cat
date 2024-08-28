@@ -1,0 +1,3201 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "deque"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DDBB80066"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Parameterized_Class "deque"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	22)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateSubscriptOperations"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206)))
+	    quid       	"370C851100BC"
+	    operations 	(list Operations
+		(object Operation "deque"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"24C6C0DBFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Al"
+			    type       	"const _A&"
+			    initv      	"_A()"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "deque"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6A4D06A7FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_N"
+			    type       	"deque::size_type")
+			(object Parameter "_V"
+			    type       	"const _Ty&"
+			    initv      	"_Ty()")
+			(object Parameter "_Al"
+			    type       	"const _A&"
+			    initv      	"_A()"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "deque"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CDC22F11FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const deque::_Myt&"))
+		    result     	"deque"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "deque"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8B291D9AFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"deque::_It")
+			(object Parameter "_L"
+			    type       	"deque::_It")
+			(object Parameter "_Al"
+			    type       	"const _A&"
+			    initv      	"_A()"))
+		    result     	"deque"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A05983B5FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"deque::size_type"))
+		    result     	"deque::const_reference"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator []"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3C41207AFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"deque::size_type"))
+		    result     	"deque::reference"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "insert"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"ADC77401FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"deque::iterator")
+			(object Parameter "_X"
+			    type       	"const _Ty&"
+			    initv      	"_Ty()"))
+		    result     	"deque::iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "insert"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D5FAAC2FFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"deque::iterator")
+			(object Parameter "_M"
+			    type       	"deque::size_type")
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "insert"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0F873D5AFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"deque::iterator")
+			(object Parameter "_F"
+			    type       	"deque::_It")
+			(object Parameter "_L"
+			    type       	"deque::_It"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "begin"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C5832F7EFEED"
+		    result     	"deque::iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "begin"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"02E7A9FFFEED"
+		    result     	"deque::const_iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "end"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C500DEC3FEED"
+		    result     	"deque::iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "end"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"01D23970FEED"
+		    result     	"deque::const_iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "empty"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E77A8B30FEED"
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~deque"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BC9E7E5CFEED"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "pop_front"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CF9423C9FEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"653C1A63FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const deque::_Myt&"))
+		    result     	"deque::_Myt&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "size"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B5BA584CFEED"
+		    result     	"deque::size_type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "erase"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B63331EFFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"deque::iterator"))
+		    result     	"deque::iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "erase"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"84254BC4FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"deque::iterator")
+			(object Parameter "_L"
+			    type       	"deque::iterator"))
+		    result     	"deque::iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "rbegin"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CD3522A8FEED"
+		    result     	"deque::reverse_iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "rbegin"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1470116AFEED"
+		    result     	"deque::const_reverse_iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "rend"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D7A7C09DFEED"
+		    result     	"deque::reverse_iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "rend"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6CB6FBBAFEED"
+		    result     	"deque::const_reverse_iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "resize"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CF135022FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_N"
+			    type       	"deque::size_type")
+			(object Parameter "_X"
+			    type       	"_Ty"
+			    initv      	"_Ty()"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "max_size"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2DF82FA3FEED"
+		    result     	"deque::size_type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_allocator"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2AD5705DFEED"
+		    result     	"_A"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "at"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"235B3079FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"deque::size_type"))
+		    result     	"deque::const_reference"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "at"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"54FC42D8FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"deque::size_type"))
+		    result     	"deque::reference"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Xran"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D8BA7FAFFEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "front"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"291358ECFEED"
+		    result     	"deque::reference"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "front"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"06AA315CFEED"
+		    result     	"deque::const_reference"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "back"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CEFC5299FEED"
+		    result     	"deque::reference"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "back"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A2FFB9AAFEED"
+		    result     	"deque::const_reference"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "push_front"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1169C7B7FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Buyfront"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"336A52ADFEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "_Freefront"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A5D08F95FEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "push_back"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"21CFC454FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Buyback"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"4093E4F6FEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "pop_back"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9AC7E62FFEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Freeback"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E2D72F04FEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "assign"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"ACEEF9A7FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"deque::_It")
+			(object Parameter "_L"
+			    type       	"deque::_It"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "assign"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8B503E75FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_N"
+			    type       	"deque::size_type")
+			(object Parameter "_X"
+			    type       	"const _Ty&"
+			    initv      	"_Ty()"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "clear"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"FE829840FEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "swap"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"223B76FEFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"deque::_Myt&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Getmap"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5B5603F1FEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "_Setptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"70B27031FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_M"
+			    type       	"deque::_Mapptr")
+			(object Parameter "_P"
+			    type       	"deque::_Tptr"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "_Growmap"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"02AAF026FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Newsize"
+			    type       	"deque::size_type"))
+		    result     	"deque::_Mapptr"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "_Freeptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D49ECB45FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_M"
+			    type       	"deque::_Mapptr"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "_Freemap"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1AA744A2FEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "allocator"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C8511017A"
+		    type       	"_A"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::deque (module spec)"
+	    quidu      	"370C851100A8"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")
+		(object Parameter "_A"
+		    type       	"class"
+		    initv      	"allocator<_Ty> "))
+	    nestedClasses 	(list nestedClasses
+		(object Instantiated_Class "_Myt"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"deque<_Ty,_A>")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	24))
+		    quid       	"370C85110184"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    parameters 	(list Parameters
+			(object Parameter "_Ty")
+			(object Parameter "_A"))
+		    nonclassname 	"deque<_Ty,_A>")
+		(object Class "allocator_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	25)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A"))
+		    quid       	"370C85110187"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"_A")
+		(object Class "size_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	26)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A::size_type"))
+		    quid       	"370C85110189"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"_A::size_type")
+		(object Class "difference_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	27)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A::difference_type"))
+		    quid       	"370C8511018F"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"_A::difference_type")
+		(object Class "_Tptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	28)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A::pointer"))
+		    quid       	"370C85110191"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"_A::pointer")
+		(object Class "_Ctptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	29)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A::const_pointer"))
+		    quid       	"370C85110193"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"_A::const_pointer")
+		(object Class "_Mapptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"typedef deque::_Tptr*")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	30))
+		    quid       	"370C85110194"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"typedef deque::_Tptr*")
+		(object Class "reference"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	31)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A::reference"))
+		    quid       	"370C85110199"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"_A::reference")
+		(object Class "const_reference"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	32)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A::const_reference"))
+		    quid       	"370C8511019B"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"_A::const_reference")
+		(object Class "value_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	33)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A::value_type"))
+		    quid       	"370C8511019D"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"_A::value_type")
+		(object Class "iterator"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	120)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateDefaultConstructor"
+			    value      	("GenerateSet" 206))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateDereferenceOperations"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateIndirectionOperations"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSubscriptOperations"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateEqualityOperations"
+			    value      	("GenerateSet" 206))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateRelationalOperations"
+			    value      	FALSE))
+		    quid       	"370C851101A3"
+		    superclasses 	(list inheritance_relationship_list
+			(object Inheritance_Relationship
+			    quid       	"370C85110275"
+			    supplier   	"Logical View::include::deque::deque::const_iterator"
+			    quidu      	"370C851101DE"))
+		    operations 	(list Operations
+			(object Operation "iterator"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"A2BF38A1FEED"
+			    result     	"deque::iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "iterator"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"CE7A6B73FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_P"
+				    type       	"deque::_Tptr")
+				(object Parameter "_M"
+				    type       	"deque::_Mapptr"))
+			    result     	"deque::iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator *"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"AB025268FEED"
+			    result     	"deque::reference"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator ->"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"7E89B1E6FEED"
+			    result     	"deque::_Tptr"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator ++"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"A945922BFEED"
+			    result     	"deque::iterator&"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator ++"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"36738FBBFEED"
+			    parameters 	(list Parameters
+				(object Parameter ""
+				    type       	"int"))
+			    result     	"deque::iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator --"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"3D46F757FEED"
+			    result     	"deque::iterator&"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator --"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"D2A7C853FEED"
+			    parameters 	(list Parameters
+				(object Parameter ""
+				    type       	"int"))
+			    result     	"deque::iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator +="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"3569B324FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::iterator&"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator -="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"E60A29F6FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::iterator&"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator +"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"D307DFBCFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator -"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"DB567A75FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator -"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"32CD771BFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::iterator&"))
+			    result     	"deque::difference_type"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator []"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"B6E996BFFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::reference"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator =="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"0BF8C383FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator !="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"7C4F1C64FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator <"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"16842E04FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator <="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"803E032BFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator >"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"F328D656FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator >="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"A40A84E8FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0))
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++")
+		(object Instantiated_Class "reverse_iterator"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"reverse_iterator<deque::iterator,deque::value_type,deque::reference,deque::_Tptr,deque::difference_type>")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	187))
+		    quid       	"370C851101BD"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    parameters 	(list Parameters
+			(object Parameter "deque::iterator")
+			(object Parameter "deque::value_type")
+			(object Parameter "deque::reference")
+			(object Parameter "deque::_Tptr")
+			(object Parameter "deque::difference_type"))
+		    nonclassname 	"reverse_iterator<deque::iterator,deque::value_type,deque::reference,deque::_Tptr,deque::difference_type>")
+		(object Instantiated_Class "const_reverse_iterator"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"reverse_iterator<deque::const_iterator,deque::value_type,deque::const_reference,deque::_Ctptr,deque::difference_type>")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	184))
+		    quid       	"370C851101C3"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    parameters 	(list Parameters
+			(object Parameter "deque::const_iterator")
+			(object Parameter "deque::value_type")
+			(object Parameter "deque::const_reference")
+			(object Parameter "deque::_Ctptr")
+			(object Parameter "deque::difference_type"))
+		    nonclassname 	"reverse_iterator<deque::const_iterator,deque::value_type,deque::const_reference,deque::_Ctptr,deque::difference_type>")
+		(object Class "const_iterator"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	36)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateDefaultConstructor"
+			    value      	("GenerateSet" 206))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateDereferenceOperations"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateIndirectionOperations"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSubscriptOperations"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateEqualityOperations"
+			    value      	("GenerateSet" 206))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateRelationalOperations"
+			    value      	FALSE))
+		    quid       	"370C851101DE"
+		    superclasses 	(list inheritance_relationship_list
+			(object Inheritance_Relationship
+			    quid       	"370C85110250"
+			    supplier   	"Logical View::<unspecified>::(_Ranit< _Ty, deque\\:\\:difference_type >)"
+			    quidu      	"370C8511024C"))
+		    operations 	(list Operations
+			(object Operation "const_iterator"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"FF355B3EFEED"
+			    result     	"deque::const_iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "const_iterator"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"4F6F5A52FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_P"
+				    type       	"deque::_Tptr")
+				(object Parameter "_M"
+				    type       	"deque::_Mapptr"))
+			    result     	"deque::const_iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "const_iterator"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"FE97A2CFFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::iterator&"))
+			    result     	"deque::const_iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator *"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"0BBD45BEFEED"
+			    result     	"deque::const_reference"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator ->"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"A0ABE7DDFEED"
+			    result     	"deque::_Ctptr"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator ++"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"D4ABB96EFEED"
+			    result     	"deque::const_iterator&"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator ++"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"293B21A5FEED"
+			    parameters 	(list Parameters
+				(object Parameter ""
+				    type       	"int"))
+			    result     	"deque::const_iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator --"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"CA9A185FFEED"
+			    result     	"deque::const_iterator&"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator --"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"4974BCCEFEED"
+			    parameters 	(list Parameters
+				(object Parameter ""
+				    type       	"int"))
+			    result     	"deque::const_iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "_Add"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"3511B18BFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"void"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Protected"
+			    uid        	0)
+			(object Operation "operator +="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"D9278BEFFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::const_iterator&"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator -="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	FALSE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"EC76F3BAFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::const_iterator&"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator +"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"8A24A732FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::const_iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator -"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"FAFD0B9FFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::const_iterator"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator -"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"CFEB6878FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::const_iterator&"))
+			    result     	"deque::difference_type"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator []"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"9FBB8311FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_N"
+				    type       	"deque::difference_type"))
+			    result     	"deque::const_reference"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator =="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"496EEC53FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::const_iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator !="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"A2638553FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::const_iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator <"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"B0482C8CFEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::const_iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator <="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"557DA4C6FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::const_iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator >"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"190FC310FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::const_iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0)
+			(object Operation "operator >="
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationIsConst"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"OperationKind"
+				    value      	("OperationKindSet" 200))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"Inline"
+				    value      	TRUE)
+				(object Attribute
+				    tool       	"cg"
+				    name       	"EntryCode"
+				    value      	(value Text ""))
+				(object Attribute
+				    tool       	"cg"
+				    name       	"ExitCode"
+				    value      	(value Text "")))
+			    quid       	"10D63226FEED"
+			    parameters 	(list Parameters
+				(object Parameter "_X"
+				    type       	"const deque::const_iterator&"))
+			    result     	"bool"
+			    protocol   	"C++"
+			    concurrency 	"Sequential"
+			    const      	TRUE
+			    opExportControl 	"Public"
+			    uid        	0))
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++")
+		(object Class "_It"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	201)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"deque::const_iterator"))
+		    quid       	"370C851101DF"
+		    module     	"Component View::STL::deque (module spec)"
+		    quidu      	"370C851100A8"
+		    language   	"C++"
+		    nonclassname 	"deque::const_iterator"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "deque"
+	    quid       	"370DE886029A"
+	    title      	"deque"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ParameterizedClass" "Logical View::include::deque::deque" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(224, 224)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(77, 169)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	294
+			justify    	0
+			label      	"deque")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851100BC"
+		    width      	312
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)))))

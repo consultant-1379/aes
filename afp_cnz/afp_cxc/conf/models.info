@@ -1,0 +1,179 @@
+##
+# ------------------------------------------------------------------------
+#     Copyright (C) 2014 Ericsson AB. All rights reserved.
+# ------------------------------------------------------------------------
+##
+# models.info
+##
+# Description:
+#       Configuration file used to perform IMM model changes during software upgrade for AFPBIN.
+##
+##
+# Changelog:
+#       First version
+##
+# log($message) ===> Use it to append a notice to the system log
+# log_error($message) ===> Use it to append an error message to the system log
+##
+##
+#-----------------------------------------------------------------------
+#       CHANGE-LOG
+#----------------------------------------------------------------------
+#APG43L-4.2 LSV05
+VERSION: CXC1371518_9-R1L
+#APG43L-4.1.1
+VERSION: CXC1371518_9-R1K
+
+#APG43L-4.1 LSV04
+VERSION: CXC1371518_9-R1J
+# APG43L-4.0 LSV07
+VERSION: CXC1371518_9-R1H
+
+# APG43L-4.0 LSV07
+VERSION: CXC1371518_9-R1G
+
+# APG43L-4.0 LSV05
+VERSION: CXC1371518_9-R1F
+
+# APG43L-3.8.1
+VERSION: CXC1371518_9-R1E
+
+# APG43L-3.8.0-LSV02
+VERSION: CXC1371518_9-R1D
+
+# APG43L-3_7_0 -REBASE of 3.6.2
+VERSION: CXC1371518_9-R1C
+
+# APG43L-3.6.2
+VERSION: CXC1371518_9-R1B
+# Adaptations to SwM2.0
+VERSION: CXC1371518_9-R1A05
+VERSION: CXC1371518_9-R1A04
+VERSION: CXC1371518_9-R1A03
+VERSION: CXC1371518_9-R1A02
+VERSION: CXC1371518_9-R1A01
+
+# APG43L-3.5.3
+VERSION: CXC1371518_5-R1G
+log " No model changes introduced in version CXC1371518_5-R1G"
+
+VERSION: CXC1371518_5-R1F
+log " No model changes introduced in version CXC1371518_5-R1F"
+
+VERSION: CXC1371518_5-R1E
+log " No model changes introduced in version CXC1371518_5-R1E"
+
+VERSION: CXC1371518_5-R1D
+log " No model changes introduced in version CXC1371518_5-R1D"
+
+VERSION: CXC1371518_5-R1C
+log " No model changes introduced in version CXC1371518_5-R1C"
+
+
+VERSION: CXC1371518_5-R1B
+log " No model changes introduced in version CXC1371518_5-R1B"
+
+VERSION: CXC1371518_5-R1A03
+log " No model changes introduced in version CXC1371518_5-R1A03"
+
+VERSION: CXC1371518_5-R1A02
+log " No model changes introduced in version CXC1371518_5-R1A02"
+
+VERSION: CXC1371518_5-R1A01
+log " No model changes introduced in version CXC1371518_5-R1A01"
+
+VERSION: CXC1371518-R1D
+log " No model changes introduced in version CXC1371518-R1D"
+
+VERSION: CXC1371518-R1C
+log " No model changes introduced in version CXC1371518-R1C"
+
+VERSION: CXC1371518-R1B
+log " No model changes introduced in version CXC1371518-R1B"
+
+VERSION: CXC1371518-R1A25
+log " No model changes introduced in version CXC1371518-R1A25"
+
+VERSION: CXC1371518-R1A24
+log " No model changes introduced in version CXC1371518-R1A24"
+
+VERSION: CXC1371518-R1A23
+log " No model changes introduced in version CXC1371518-R1A23"
+
+VERSION: CXC1371518-R1A22
+log " No model changes introduced in version CXC1371518-R1A22"
+
+VERSION: CXC1371518-R1A21
+log " No model changes introduced in version CXC1371518-R1A21"
+
+VERSION: CXC1371518-R1A20
+log " No model changes introduced in version CXC1371518-R1A20"
+
+VERSION: CXC1371518-R1A19
+log " No model changes introduced in version CXC1371518-R1A19"
+
+VERSION: CXC1371518-R1A18
+log " No model changes introduced in version CXC1371518-R1A18"
+
+VERSION: CXC1371518-R1A17
+log " No model changes introduced in version CXC1371518-R1A17"
+
+VERSION: CXC1371518-R1A16
+log " No model changes introduced in version CXC1371518-R1A16"
+
+VERSION: CXC1371518-R1A15
+log " No model changes introduced in version CXC1371518-R1A15"
+
+VERSION: CXC1371518-R1A14
+log " No model changes introduced in version CXC1371518-R1A14"
+
+VERSION: CXC1371518-R1A13
+log " No model changes introduced in version CXC1371518-R1A13"
+
+VERSION: CXC1371518-R1A12
+log " No model changes introduced in version CXC1371518-R1A12"
+
+VERSION: CXC1371518-R1A11
+log " No model changes introduced in version CXC1371518-R1A11"
+
+VERSION: CXC1371518-R1A10
+log " No model changes introduced in version CXC1371518-R1A10"
+
+VERSION: CXC1371518-R1A09
+log " No model changes introduced in version CXC1371518-R1A09"
+
+VERSION: CXC1371518-R1A08
+log " No model changes introduced in version CXC1371518-R1A08"
+
+VERSION: CXC1371518-R1A07
+log " No model changes introduced in version CXC1371518-R1A07"
+
+VERSION: CXC1371518-R1A06
+log " No model changes introduced in version CXC1371518-R1A06"
+
+VERSION: CXC1371518-R1A05
+log " No model changes introduced in version CXC1371518-R1A05"
+
+VERSION: CXC1371518-R1A04
+log " No model changes introduced in version CXC1371518-R1A04"
+
+VERSION: CXC1371518-R1A03
+log " No model changes introduced in version CXC1371518-R1A03"
+
+VERSION: CXC1371518-R1A02
+log " No model changes introduced in version CXC1371518-R1A02"
+
+VERSION: CXC1371518-R1A01
+log " No model changes introduced in version CXC1371518-R1A01"
+
+VERSION: CXC1371449-R2A
+log " No model changes introduced in version CXC1371449-R2A"
+
+VERSION: CXC1371449-R1G
+log " No model changes introduced in version CXC1371449-R1G"
+
+VERSION: CXC1371449-R1F
+log " No model changes introduced in version CXC1371449-R1F"
+
+VERSION: CXC1371449-R1E
+log " No model changes introduced in version CXC1371449-R1E"

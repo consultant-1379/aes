@@ -1,0 +1,2545 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "iosfwd"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DB0590133"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Instantiated_Class "wios"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ios<wchar_t,char_traits<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	272))
+	    quid       	"370C8513023F"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>"))
+	    nonclassname 	"basic_ios<wchar_t,char_traits<wchar_t>>")
+	(object Instantiated_Class "streambuf"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_streambuf<char,char_traits<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	255))
+	    quid       	"370C85130217"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>"))
+	    nonclassname 	"basic_streambuf<char,char_traits<char>>")
+	(object Parameterized_Class "(char_traits< wchar_t >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	137)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct")
+		(object Attribute
+		    tool       	"analyzer"
+		    name       	"IncompleteType"
+		    value      	TRUE))
+	    quid       	"370C8514002F"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")))
+	(object Instantiated_Class "filebuf"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_filebuf<char,char_traits<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	267))
+	    quid       	"370C85130233"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>"))
+	    nonclassname 	"basic_filebuf<char,char_traits<char>>")
+	(object Instantiated_Class "wistringstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_istringstream<wchar_t,char_traits<wchar_t>,allocator<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	281))
+	    quid       	"370C85130252"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>")
+		(object Parameter "allocator<wchar_t>"))
+	    nonclassname 	"basic_istringstream<wchar_t,char_traits<wchar_t>,allocator<wchar_t>>")
+	(object Instantiated_Class "istream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_istream<char,char_traits<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	256))
+	    quid       	"370C8513021A"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"370C8514002D"
+		supplier   	"Logical View::include::istream::basic_istream"
+		quidu      	"370C851200DF")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C8514002B"
+		    label      	"_E"
+		    supplier   	"Logical View::<unspecified>::char"
+		    quidu      	"370C8514002A")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C8514002C"
+		    label      	"_Tr"
+		    supplier   	"Logical View::include::iosfwd::(char_traits >)"
+		    quidu      	"370C85130212"))
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits< char >"))
+	    nonclassname 	"basic_istream<char,char_traits<char>>")
+	(object Instantiated_Class "ostringstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ostringstream<char,char_traits<char>,allocator<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	264))
+	    quid       	"370C8513022B"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>")
+		(object Parameter "allocator<char>"))
+	    nonclassname 	"basic_ostringstream<char,char_traits<char>,allocator<char>>")
+	(object Instantiated_Class "stringstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_stringstream<char,char_traits<char>,allocator<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	266))
+	    quid       	"370C8513022F"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>")
+		(object Parameter "allocator<char>"))
+	    nonclassname 	"basic_stringstream<char,char_traits<char>,allocator<char>>")
+	(object Instantiated_Class "stringbuf"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_stringbuf<char,char_traits<char>,allocator<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	260))
+	    quid       	"370C85130223"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>")
+		(object Parameter "allocator<char>"))
+	    nonclassname 	"basic_stringbuf<char,char_traits<char>,allocator<char>>")
+	(object Instantiated_Class "ostream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ostream<char,char_traits<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	257))
+	    quid       	"370C8513021D"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"370C85170077"
+		supplier   	"Logical View::include::ostream::basic_ostream"
+		quidu      	"370C851200FD")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C85170075"
+		    label      	"_E"
+		    supplier   	"Logical View::<unspecified>::char"
+		    quidu      	"370C8514002A")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C85170076"
+		    label      	"_Tr"
+		    supplier   	"Logical View::include::iosfwd::(char_traits >)"
+		    quidu      	"370C85130212"))
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits< char >"))
+	    nonclassname 	"basic_ostream<char,char_traits<char>>")
+	(object Instantiated_Class "istringstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_istringstream<char,char_traits<char>,allocator<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	262))
+	    quid       	"370C85130227"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>")
+		(object Parameter "allocator<char>"))
+	    nonclassname 	"basic_istringstream<char,char_traits<char>,allocator<char>>")
+	(object Instantiated_Class "ofstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ofstream<char,char_traits<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	269))
+	    quid       	"370C85130239"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>"))
+	    nonclassname 	"basic_ofstream<char,char_traits<char>>")
+	(object Instantiated_Class "ifstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ifstream<char,char_traits<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	268))
+	    quid       	"370C85130236"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>"))
+	    nonclassname 	"basic_ifstream<char,char_traits<char>>")
+	(object Instantiated_Class "wstreambuf"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_streambuf<wchar_t,char_traits<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	274))
+	    quid       	"370C85130242"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>"))
+	    nonclassname 	"basic_streambuf<wchar_t,char_traits<wchar_t>>")
+	(object Instantiated_Class "wostream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ostream<wchar_t,char_traits<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	276))
+	    quid       	"370C85130248"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"370C85170081"
+		supplier   	"Logical View::include::ostream::basic_ostream"
+		quidu      	"370C851200FD")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C8517007F"
+		    label      	"_E"
+		    supplier   	"Logical View::<unspecified>::wchar_t"
+		    quidu      	"370C8514002E")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C85170080"
+		    label      	"_Tr"
+		    supplier   	"Logical View::include::iosfwd::(char_traits< wchar_t >)"
+		    quidu      	"370C8514002F"))
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits< wchar_t >"))
+	    nonclassname 	"basic_ostream<wchar_t,char_traits<wchar_t>>")
+	(object Instantiated_Class "wstringbuf"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_stringbuf<wchar_t,char_traits<wchar_t>,allocator<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	279))
+	    quid       	"370C8513024E"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>")
+		(object Parameter "allocator<wchar_t>"))
+	    nonclassname 	"basic_stringbuf<wchar_t,char_traits<wchar_t>,allocator<wchar_t>>")
+	(object Instantiated_Class "wiostream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_iostream<wchar_t,char_traits<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	277))
+	    quid       	"370C8513024B"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>"))
+	    nonclassname 	"basic_iostream<wchar_t,char_traits<wchar_t>>")
+	(object Instantiated_Class "wstringstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_stringstream<wchar_t,char_traits<wchar_t>,allocator<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	285))
+	    quid       	"370C8513025A"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>")
+		(object Parameter "allocator<wchar_t>"))
+	    nonclassname 	"basic_stringstream<wchar_t,char_traits<wchar_t>,allocator<wchar_t>>")
+	(object Instantiated_Class "wistream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_istream<wchar_t,char_traits<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	275))
+	    quid       	"370C85130245"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"370C85140034"
+		supplier   	"Logical View::include::istream::basic_istream"
+		quidu      	"370C851200DF")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C85140031"
+		    label      	"_E"
+		    supplier   	"Logical View::<unspecified>::wchar_t"
+		    quidu      	"370C8514002E")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C85140032"
+		    label      	"_Tr"
+		    supplier   	"Logical View::include::iosfwd::(char_traits< wchar_t >)"
+		    quidu      	"370C8514002F"))
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits< wchar_t >"))
+	    nonclassname 	"basic_istream<wchar_t,char_traits<wchar_t>>")
+	(object Instantiated_Class "wostringstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ostringstream<wchar_t,char_traits<wchar_t>,allocator<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	283))
+	    quid       	"370C85130256"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>")
+		(object Parameter "allocator<wchar_t>"))
+	    nonclassname 	"basic_ostringstream<wchar_t,char_traits<wchar_t>,allocator<wchar_t>>")
+	(object Instantiated_Class "wfilebuf"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_filebuf<wchar_t,char_traits<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	286))
+	    quid       	"370C8513025E"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>"))
+	    nonclassname 	"basic_filebuf<wchar_t,char_traits<wchar_t>>")
+	(object Instantiated_Class "wifstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ifstream<wchar_t,char_traits<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	287))
+	    quid       	"370C85130261"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>"))
+	    nonclassname 	"basic_ifstream<wchar_t,char_traits<wchar_t>>")
+	(object Instantiated_Class "iostream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_iostream<char,char_traits<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	258))
+	    quid       	"370C85130220"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>"))
+	    nonclassname 	"basic_iostream<char,char_traits<char>>")
+	(object Instantiated_Class "fstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_fstream<char,char_traits<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	270))
+	    quid       	"370C8513023C"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>"))
+	    nonclassname 	"basic_fstream<char,char_traits<char>>")
+	(object Instantiated_Class "wfstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_fstream<wchar_t,char_traits<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	289))
+	    quid       	"370C85130267"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>"))
+	    nonclassname 	"basic_fstream<wchar_t,char_traits<wchar_t>>")
+	(object Instantiated_Class "ios"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ios<char,char_traits<char>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	254))
+	    quid       	"370C85130214"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "char")
+		(object Parameter "char_traits<char>"))
+	    nonclassname 	"basic_ios<char,char_traits<char>>")
+	(object Instantiated_Class "(char_traits >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	137)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85130212"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++")
+	(object Instantiated_Class "(char_traits >)#0"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	176)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85130213"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++")
+	(object Instantiated_Class "wofstream"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"basic_ofstream<wchar_t,char_traits<wchar_t>>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	288))
+	    quid       	"370C85130264"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "wchar_t")
+		(object Parameter "char_traits<wchar_t>"))
+	    nonclassname 	"basic_ofstream<wchar_t,char_traits<wchar_t>>")
+	(object Class "streamoff"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"long")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	19))
+	    quid       	"370C85130155"
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    nonclassname 	"long")
+	(object Instantiated_Class "streampos"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"fpos<mbstate_t>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	73))
+	    quid       	"370C851301CF"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"370C8513026B"
+		supplier   	"Logical View::include::iosfwd::fpos"
+		quidu      	"370C85130156")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C8513026A"
+		    label      	"_St"
+		    supplier   	"Logical View::include::xiosbase::ios_base::fmtflags"
+		    quidu      	"370C851102EC"))
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "mbstate_t"))
+	    nonclassname 	"fpos<mbstate_t>")
+	(object Parameterized_Class "fpos"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	25)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateEqualityOperations"
+		    value      	("GenerateSet" 206)))
+	    quid       	"370C85130156"
+	    operations 	(list Operations
+		(object Operation "fpos"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2FD1B5F2FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_O"
+			    type       	"streamoff"
+			    initv      	"0"))
+		    result     	"fpos"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "fpos"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"46E56131FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_S"
+			    type       	"_St")
+			(object Parameter "_F"
+			    type       	"fpos_t"))
+		    result     	"fpos"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "state"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0C233740FEED"
+		    result     	"_St"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "state"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C1633D08FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_S"
+			    type       	"_St"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_fpos_t"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0827A409FEED"
+		    result     	"fpos_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator streamoff"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3E0E928FFEED"
+		    result     	"streamoff"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator -"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3A0D369FFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const fpos::_Myt&"))
+		    result     	"streamoff"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator -"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7D3822C0FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_O"
+			    type       	"streamoff"))
+		    result     	"fpos::_Myt"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator +="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0B3400B4FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_O"
+			    type       	"streamoff"))
+		    result     	"fpos::_Myt&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator -="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C2EDBF25FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_O"
+			    type       	"streamoff"))
+		    result     	"fpos::_Myt&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator +"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C1C72A43FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_O"
+			    type       	"streamoff"))
+		    result     	"fpos::_Myt"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator =="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"13E41033FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const fpos::_Myt&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator !="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"50406256FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const fpos::_Myt&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_State"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851301AF"
+		    type       	"_St"
+		    Containment 	"By Value")
+		(object ClassAttribute "_Stz"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851301B0"
+		    type       	"_St"
+		    Containment 	"By Value"
+		    static     	TRUE))
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_St"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Instantiated_Class "_Myt"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"fpos<_St>")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	26))
+		    quid       	"370C8513015F"
+		    module     	"Component View::STL::iosfwd (module spec)"
+		    quidu      	"370C85130123"
+		    language   	"C++"
+		    parameters 	(list Parameters
+			(object Parameter "_St"))
+		    nonclassname 	"fpos<_St>")))
+	(object Parameterized_Class "char_traits"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	77)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851301D1"
+	    operations 	(list Operations
+		(object Operation "assign"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl __cdecl "))
+		    quid       	"7FBEA967FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_E&")
+			(object Parameter "_Y"
+			    type       	"const _E&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "assign"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl __cdecl "))
+		    quid       	"89D4EF8FFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_U"
+			    type       	"_E*")
+			(object Parameter "_N"
+			    type       	"size_t")
+			(object Parameter "_C"
+			    type       	"const _E&"))
+		    result     	"_E*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "eq"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"E01B6E24FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _E&")
+			(object Parameter "_Y"
+			    type       	"const _E&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "lt"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"8471DC7AFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _E&")
+			(object Parameter "_Y"
+			    type       	"const _E&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "compare"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"ABF56371FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_U"
+			    type       	"const _E*")
+			(object Parameter "_V"
+			    type       	"const _E*")
+			(object Parameter "_N"
+			    type       	"size_t"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "length"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"EF819428FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_U"
+			    type       	"const _E*"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "copy"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"451761A0FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_U"
+			    type       	"_E*")
+			(object Parameter "_V"
+			    type       	"const _E*")
+			(object Parameter "_N"
+			    type       	"size_t"))
+		    result     	"_E*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "find"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"3FD1423EFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_U"
+			    type       	"const _E*")
+			(object Parameter "_N"
+			    type       	"size_t")
+			(object Parameter "_C"
+			    type       	"const _E&"))
+		    result     	"const _E*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "move"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"9B6A19CBFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_U"
+			    type       	"_E*")
+			(object Parameter "_V"
+			    type       	"const _E*")
+			(object Parameter "_N"
+			    type       	"size_t"))
+		    result     	"_E*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "to_char_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"F6BC285AFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_C"
+			    type       	"const char_traits::int_type&"))
+		    result     	"_E"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "to_int_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"AEED33BDFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_C"
+			    type       	"const _E&"))
+		    result     	"char_traits::int_type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "eq_int_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"90B1A28BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const char_traits::int_type&")
+			(object Parameter "_Y"
+			    type       	"const char_traits::int_type&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "eof"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"93F478C4FEED"
+		    result     	"char_traits::int_type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "not_eof"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"040CB436FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_C"
+			    type       	"const char_traits::int_type&"))
+		    result     	"char_traits::int_type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::iosfwd (module spec)"
+	    quidu      	"370C85130123"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_E"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "char_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	78)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_E"))
+		    quid       	"370C851301D3"
+		    module     	"Component View::STL::iosfwd (module spec)"
+		    quidu      	"370C85130123"
+		    language   	"C++"
+		    nonclassname 	"_E")
+		(object Class "int_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	79)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_E"))
+		    quid       	"370C851301D4"
+		    module     	"Component View::STL::iosfwd (module spec)"
+		    quidu      	"370C85130123"
+		    language   	"C++"
+		    nonclassname 	"_E"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "iosfwd"
+	    quid       	"370DDF3E02D0"
+	    title      	"iosfwd"
+	    zoom       	75
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wios" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(160, 992)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(79, 941)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"wios")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513023F"
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::streambuf" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(528, 992)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(421, 941)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	214
+			justify    	0
+			label      	"streambuf")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130217"
+		    width      	232
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::iosfwd::(char_traits< wchar_t >)" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1776, 624)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1542, 594)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	468
+			justify    	0
+			label      	"(char_traits< wchar_t >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8514002F"
+		    width      	486
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::filebuf" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(880, 992)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(799, 941)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"filebuf")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130233"
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wistringstream" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1280, 992)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1132, 941)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	296
+			justify    	0
+			label      	"wistringstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130252"
+		    width      	314
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::istream" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(176, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(89, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	174
+			justify    	0
+			label      	"istream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513021A"
+		    width      	192
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::ostringstream" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1728, 992)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1587, 941)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	282
+			justify    	0
+			label      	"ostringstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513022B"
+		    width      	300
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::stringstream" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2176, 992)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(2041, 941)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	270
+			justify    	0
+			label      	"stringstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513022F"
+		    width      	288
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::stringbuf" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2576, 992)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(2481, 941)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	190
+			justify    	0
+			label      	"stringbuf")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130223"
+		    width      	208
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::ostream" @10
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(512, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(420, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	184
+			justify    	0
+			label      	"ostream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513021D"
+		    width      	202
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::istringstream" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(224, 1248)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(87, 1197)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	274
+			justify    	0
+			label      	"istringstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130227"
+		    width      	292
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::ofstream" @12
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(624, 1248)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(530, 1197)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	188
+			justify    	0
+			label      	"ofstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130239"
+		    width      	206
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::ifstream" @13
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(976, 1248)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(887, 1197)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	178
+			justify    	0
+			label      	"ifstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130236"
+		    width      	196
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wstreambuf" @14
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1360, 1248)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1236, 1197)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	248
+			justify    	0
+			label      	"wstreambuf")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130242"
+		    width      	266
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wostream" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1984, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1881, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	206
+			justify    	0
+			label      	"wostream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130248"
+		    width      	224
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "_Tr" @16
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(1883, 375)
+			anchor_loc 	1
+			nlines     	1
+			max_width  	60
+			justify    	0
+			label      	"_Tr")
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85170080"
+		    client     	@15
+		    supplier   	@3
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wstringbuf" @17
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1744, 1248)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(1638, 1197)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	212
+			justify    	0
+			label      	"wstringbuf")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513024E"
+		    width      	230
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wiostream" @18
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2144, 1248)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(2027, 1197)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	234
+			justify    	0
+			label      	"wiostream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513024B"
+		    width      	252
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wstringstream" @19
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2576, 1248)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(2434, 1197)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	284
+			justify    	0
+			label      	"wstringstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513025A"
+		    width      	302
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wistream" @20
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1616, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@20
+			location   	(1521, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	190
+			justify    	0
+			label      	"wistream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130245"
+		    width      	208
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "_Tr" @21
+		    label      	(object ItemLabel
+			Parent_View 	@21
+			location   	(1693, 375)
+			anchor_loc 	1
+			nlines     	1
+			max_width  	60
+			justify    	0
+			label      	"_Tr")
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85140032"
+		    client     	@20
+		    supplier   	@3
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wostringstream" @22
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(240, 1488)
+		    label      	(object ItemLabel
+			Parent_View 	@22
+			location   	(86, 1437)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	308
+			justify    	0
+			label      	"wostringstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130256"
+		    width      	326
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wfilebuf" @23
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(640, 1488)
+		    label      	(object ItemLabel
+			Parent_View 	@23
+			location   	(556, 1437)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	168
+			justify    	0
+			label      	"wfilebuf")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513025E"
+		    width      	186
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wifstream" @24
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(992, 1488)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(889, 1437)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	206
+			justify    	0
+			label      	"wifstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130261"
+		    width      	224
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::iostream" @25
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1360, 1488)
+		    label      	(object ItemLabel
+			Parent_View 	@25
+			location   	(1266, 1437)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	188
+			justify    	0
+			label      	"iostream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130220"
+		    width      	206
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::fstream" @26
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1712, 1488)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(1625, 1437)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	174
+			justify    	0
+			label      	"fstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8513023C"
+		    width      	192
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wfstream" @27
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2064, 1488)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(1969, 1437)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	190
+			justify    	0
+			label      	"wfstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130267"
+		    width      	208
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::ios" @28
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2400, 1488)
+		    label      	(object ItemLabel
+			Parent_View 	@28
+			location   	(2319, 1437)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"ios")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130214"
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::(char_traits >)" @29
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(352, 560)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(208, 509)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	288
+			justify    	0
+			label      	"(char_traits >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130212"
+		    width      	306
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "_Tr" @30
+		    label      	(object ItemLabel
+			Parent_View 	@30
+			location   	(263, 352)
+			anchor_loc 	1
+			nlines     	1
+			max_width  	60
+			justify    	0
+			label      	"_Tr")
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C8514002C"
+		    client     	@6
+		    supplier   	@29
+		    line_style 	0)
+		(object UsesView "_Tr" @31
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(431, 352)
+			anchor_loc 	1
+			nlines     	1
+			max_width  	60
+			justify    	0
+			label      	"_Tr")
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85170076"
+		    client     	@10
+		    supplier   	@29
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::(char_traits >)\\#0" @32
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(256, 1728)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(90, 1677)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	332
+			justify    	0
+			label      	"(char_traits >)#0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130213"
+		    width      	350
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::wofstream" @33
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(704, 1728)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(587, 1677)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	234
+			justify    	0
+			label      	"wofstream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130264"
+		    width      	252
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::iosfwd::streampos" @34
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1248, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@34
+			location   	(1139, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	218
+			justify    	0
+			label      	"streampos")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851301CF"
+		    width      	236
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::include::iosfwd::streamoff" @35
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(880, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(783, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	194
+			justify    	0
+			label      	"streamoff")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130155"
+		    width      	212
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::iosfwd::fpos" @36
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1056, 688)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(920, 608)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	272
+			justify    	0
+			label      	"fpos")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85130156"
+		    width      	290
+		    height     	260
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @37
+		    location   	(956, 382)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85130161"
+		    roleview_list 	(list RoleViews
+			(object RoleView "_Off" @38
+			    Parent_View 	@37
+			    location   	(492, -1314)
+			    label      	(object SegLabel @39
+				Parent_View 	@38
+				location   	(872, 255)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	112
+				justify    	0
+				label      	"-_Off"
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C85130163"
+			    client     	@37
+			    supplier   	@35
+			    line_style 	0
+			    label      	(object SegLabel @40
+				Parent_View 	@38
+				location   	(956, 209)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "" @41
+			    Parent_View 	@37
+			    location   	(492, -1314)
+			    label      	(object SegLabel @42
+				Parent_View 	@41
+				location   	(962, 535)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C85130162"
+			    client     	@37
+			    supplier   	@36
+			    line_style 	0
+			    label      	(object SegLabel @43
+				Parent_View 	@41
+				location   	(1058, 525)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object InstantiateView "" @44
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C8513026B"
+		    client     	@34
+		    supplier   	@36
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::iosfwd::char_traits" @45
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1104, 1792)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(988, 1762)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	232
+			justify    	0
+			label      	"char_traits")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851301D1"
+		    width      	250
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)))))

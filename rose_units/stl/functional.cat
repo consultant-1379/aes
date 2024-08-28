@@ -1,0 +1,2842 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "functional"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DD6170050"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Parameterized_Class "greater_equal"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	90)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201C5"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,bool >"))
+		    quid       	"370C851201CA"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D662DBB6FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "less_equal"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	96)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201CB"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,bool >"))
+		    quid       	"370C851201D0"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C8953DCEFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "logical_and"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	102)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201D1"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,bool >"))
+		    quid       	"370C851201D6"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"493AA32FFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "logical_or"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	108)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201D7"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,bool >"))
+		    quid       	"370C851201DC"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D880E689FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "logical_not"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	114)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201DD"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,bool >"))
+		    quid       	"370C851201E1"
+		    supplier   	"Logical View::include::functional::unary_function"
+		    quidu      	"370C85120140"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5A3C3846FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "unary_negate"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	120))
+	    quid       	"370C851201E2"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ufn::argument_type,bool >"))
+		    quid       	"370C851201E9"
+		    supplier   	"Logical View::include::functional::unary_function"
+		    quidu      	"370C85120140"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"4E34A082FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ufn::argument_type&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "unary_negate"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8DB4BC4DFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ufn&"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Fn"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851201E6"
+		    type       	"_Ufn"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ufn"
+		    type       	"class")))
+	(object Parameterized_Class "binary_negate"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	136))
+	    quid       	"370C851201EA"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Bfn::first_argument_type,_Bfn::second_argument_type,bool >"))
+		    quid       	"370C851201F2"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"80900052FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Bfn::first_argument_type&")
+			(object Parameter "_Y"
+			    type       	"const _Bfn::second_argument_type&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "binary_negate"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"84861674FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Bfn&"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Fn"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851201EF"
+		    type       	"_Bfn"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Bfn"
+		    type       	"class")))
+	(object Parameterized_Class "binder1st"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	154))
+	    quid       	"370C851201F3"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Bfn::second_argument_type,_Bfn::result_type >"))
+		    quid       	"370C851201FF"
+		    supplier   	"Logical View::include::functional::unary_function"
+		    quidu      	"370C85120140"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"4FF11932FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const unary_function::argument_type&"))
+		    result     	"unary_function::result_type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "binder1st"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9AD03F69FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Bfn&")
+			(object Parameter "_Y"
+			    type       	"const _Bfn::first_argument_type&"))
+		    result     	"binder1st"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "op"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851201FA"
+		    type       	"_Bfn"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Bfn"
+		    type       	"class")))
+	(object Parameterized_Class "binder2nd"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	174))
+	    quid       	"370C85120200"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Bfn::first_argument_type,_Bfn::result_type >"))
+		    quid       	"370C8512020C"
+		    supplier   	"Logical View::include::functional::unary_function"
+		    quidu      	"370C85120140"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CE645888FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const unary_function::argument_type&"))
+		    result     	"unary_function::result_type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "binder2nd"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D3B07071FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Bfn&")
+			(object Parameter "_Y"
+			    type       	"const _Bfn::second_argument_type&"))
+		    result     	"binder2nd"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "op"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C85120207"
+		    type       	"_Bfn"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Bfn"
+		    type       	"class")))
+	(object Parameterized_Class "pointer_to_unary_function"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	194))
+	    quid       	"370C8512020D"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _A,_R >"))
+		    quid       	"370C85120216"
+		    supplier   	"Logical View::include::functional::unary_function"
+		    quidu      	"370C85120140"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"30F56BD0FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_A"))
+		    result     	"_R"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "pointer_to_unary_function"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AC827164FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_R (*) (class _A)"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Fn"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"370C85120213"
+		    type       	"_R (*) (class _A)"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_A"
+		    type       	"class")
+		(object Parameter "_R"
+		    type       	"class")))
+	(object Parameterized_Class "pointer_to_binary_function"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	206))
+	    quid       	"370C85120217"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _A1,_A2,_R >"))
+		    quid       	"370C85120222"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C3ACFFDFFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_A1")
+			(object Parameter "_Y"
+			    type       	"_A2"))
+		    result     	"_R"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "pointer_to_binary_function"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"105A2A88FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_R (*) (class _A1, class _A2)"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Fn"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"370C8512021F"
+		    type       	"_R (*) (class _A1, class _A2)"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_A1"
+		    type       	"class")
+		(object Parameter "_A2"
+		    type       	"class")
+		(object Parameter "_R"
+		    type       	"class")))
+	(object Parameterized_Class "mem_fun_t"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	228))
+	    quid       	"370C85120223"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty*,_R >"))
+		    quid       	"370C8512022C"
+		    supplier   	"Logical View::include::functional::unary_function"
+		    quidu      	"370C85120140"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"423554B5FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"_Ty*"))
+		    result     	"_R"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "mem_fun_t"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B02DA856FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Pm"
+			    type       	"_R (_Ty::*) (void)"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C8512022B"
+		    type       	"_R (_Ty::*) (void)"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_R"
+		    type       	"class")
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "mem_fun1_t"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	243))
+	    quid       	"370C8512022D"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty*,_A,_R >"))
+		    quid       	"370C85120238"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E59D4734FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"_Ty*")
+			(object Parameter "_Arg"
+			    type       	"_A"))
+		    result     	"_R"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "mem_fun1_t"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1C64278BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Pm"
+			    type       	"_R (_Ty::*) (class _A)"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C85120237"
+		    type       	"_R (_Ty::*) (class _A)"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_R"
+		    type       	"class")
+		(object Parameter "_Ty"
+		    type       	"class")
+		(object Parameter "_A"
+		    type       	"class")))
+	(object Parameterized_Class "mem_fun_ref_t"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	258))
+	    quid       	"370C85120239"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_R >"))
+		    quid       	"370C85120241"
+		    supplier   	"Logical View::include::functional::unary_function"
+		    quidu      	"370C85120140"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B8909E23FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty&"))
+		    result     	"_R"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "mem_fun_ref_t"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2E44D694FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Pm"
+			    type       	"_R (_Ty::*) (void)"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C85120240"
+		    type       	"_R (_Ty::*) (void)"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_R"
+		    type       	"class")
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "mem_fun1_ref_t"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	273))
+	    quid       	"370C85120242"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty*,_A,_R >"))
+		    quid       	"370C8512024C"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"975E7D7BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty&")
+			(object Parameter "_Arg"
+			    type       	"_A"))
+		    result     	"_R"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "mem_fun1_ref_t"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E0FA8E83FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Pm"
+			    type       	"_R (_Ty::*) (class _A)"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C8512024B"
+		    type       	"_R (_Ty::*) (class _A)"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_R"
+		    type       	"class")
+		(object Parameter "_Ty"
+		    type       	"class")
+		(object Parameter "_A"
+		    type       	"class")))
+	(object Parameterized_Class "unary_function"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	17)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85120140"
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_A"
+		    type       	"class")
+		(object Parameter "_R"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "argument_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	18)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A"))
+		    quid       	"370C85120172"
+		    module     	"Component View::STL::functional (module spec)"
+		    quidu      	"370C85120136"
+		    language   	"C++"
+		    nonclassname 	"_A")
+		(object Class "result_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	19)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_R"))
+		    quid       	"370C8512017C"
+		    module     	"Component View::STL::functional (module spec)"
+		    quidu      	"370C85120136"
+		    language   	"C++"
+		    nonclassname 	"_R")))
+	(object Parameterized_Class "not_equal_to"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	72)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201B3"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,bool >"))
+		    quid       	"370C851201B8"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AF9BCBA0FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "multiplies"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	42)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85120196"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,_Ty >"))
+		    quid       	"370C8512019B"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E3B62BB5FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "binary_function"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	23)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C8512017D"
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_A1"
+		    type       	"class")
+		(object Parameter "_A2"
+		    type       	"class")
+		(object Parameter "_R"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "result_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	26)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_R"))
+		    quid       	"370C85120181"
+		    module     	"Component View::STL::functional (module spec)"
+		    quidu      	"370C85120136"
+		    language   	"C++"
+		    nonclassname 	"_R")
+		(object Class "first_argument_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	24)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A1"))
+		    quid       	"370C85120186"
+		    module     	"Component View::STL::functional (module spec)"
+		    quidu      	"370C85120136"
+		    language   	"C++"
+		    nonclassname 	"_A1")
+		(object Class "second_argument_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	25)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_A2"))
+		    quid       	"370C85120187"
+		    module     	"Component View::STL::functional (module spec)"
+		    quidu      	"370C85120136"
+		    language   	"C++"
+		    nonclassname 	"_A2")))
+	(object Parameterized_Class "minus"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	36)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85120190"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,_Ty >"))
+		    quid       	"370C85120195"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"41C86CFAFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "plus"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	30)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C85120188"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,_Ty >"))
+		    quid       	"370C8512018D"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2701943BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "divides"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	48)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C8512019C"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,_Ty >"))
+		    quid       	"370C851201A1"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C22F814FFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "modulus"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	54)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201A2"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,_Ty >"))
+		    quid       	"370C851201A7"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5EBFEA08FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "negate"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	60)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201A8"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty >"))
+		    quid       	"370C851201AC"
+		    supplier   	"Logical View::include::functional::unary_function"
+		    quidu      	"370C85120140"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7B043286FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "greater"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	78)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201B9"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,bool >"))
+		    quid       	"370C851201BE"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"43641616FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "less"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	84)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201BF"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,bool >"))
+		    quid       	"370C851201C4"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A2419291FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "equal_to"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	66)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851201AD"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty,_Ty,bool >"))
+		    quid       	"370C851201B2"
+		    supplier   	"Logical View::include::functional::binary_function"
+		    quidu      	"370C8512017D"))
+	    operations 	(list Operations
+		(object Operation "operator ()"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7253B45DFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&")
+			(object Parameter "_Y"
+			    type       	"const _Ty&"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::functional (module spec)"
+	    quidu      	"370C85120136"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "functional"
+	    quid       	"370DE0E9012F"
+	    title      	"functional"
+	    zoom       	65
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	2704
+	    items      	(list diagram_item_list
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::greater_equal" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(192, 1200)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(50, 1168)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	284
+			justify    	0
+			label      	"greater_equal")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201C5"
+		    width      	302
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::less_equal" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(800, 304)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(685, 272)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	230
+			justify    	0
+			label      	"less_equal")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201CB"
+		    width      	248
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::logical_and" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1376, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1252, 112)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	248
+			justify    	0
+			label      	"logical_and")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201D1"
+		    width      	266
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::logical_or" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1856, 176)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1755, 144)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	202
+			justify    	0
+			label      	"logical_or")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201D7"
+		    width      	220
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::logical_not" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(608, 4160)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(492, 4128)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	232
+			justify    	0
+			label      	"logical_not")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201DD"
+		    width      	250
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::unary_negate" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2528, 3536)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(2391, 3479)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	274
+			justify    	0
+			label      	"unary_negate")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201E2"
+		    width      	292
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::binary_negate" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1872, 2800)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1729, 2743)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	286
+			justify    	0
+			label      	"binary_negate")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201EA"
+		    width      	304
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::binder1st" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(448, 3488)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(341, 3431)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	214
+			justify    	0
+			label      	"binder1st")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201F3"
+		    width      	232
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::pointer_to_unary_function" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2592, 3888)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(2345, 3831)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	494
+			justify    	0
+			label      	"pointer_to_unary_function")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8512020D"
+		    width      	512
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::pointer_to_binary_function" @10
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2560, 2768)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(2217, 2711)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	686
+			justify    	0
+			label      	"pointer_to_binary_function")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120217"
+		    width      	704
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::mem_fun_t" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1984, 4320)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1752, 4263)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	464
+			justify    	0
+			label      	"mem_fun_t")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120223"
+		    width      	482
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::mem_fun1_t" @12
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(3184, 352)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(2906, 295)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	556
+			justify    	0
+			label      	"mem_fun1_t")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8512022D"
+		    width      	574
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::mem_fun_ref_t" @13
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1248, 4288)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1016, 4231)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	464
+			justify    	0
+			label      	"mem_fun_ref_t")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120239"
+		    width      	482
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::mem_fun1_ref_t" @14
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2496, 160)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(2218, 103)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	556
+			justify    	0
+			label      	"mem_fun1_ref_t")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120242"
+		    width      	574
+		    height     	210
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::unary_function" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1664, 3536)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1518, 3504)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	292
+			justify    	0
+			label      	"unary_function")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120140"
+		    width      	310
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201E1"
+		    client     	@5
+		    supplier   	@15
+		    line_style 	0)
+		(object InheritView "" @17
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201E9"
+		    client     	@6
+		    supplier   	@15
+		    line_style 	0)
+		(object InheritView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201FF"
+		    client     	@8
+		    supplier   	@15
+		    line_style 	0)
+		(object InheritView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85120216"
+		    client     	@9
+		    supplier   	@15
+		    line_style 	0)
+		(object InheritView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C8512022C"
+		    client     	@11
+		    supplier   	@15
+		    line_style 	0)
+		(object InheritView "" @21
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85120241"
+		    client     	@13
+		    supplier   	@15
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::not_equal_to" @22
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(3712, 1984)
+		    label      	(object ItemLabel
+			Parent_View 	@22
+			location   	(3577, 1952)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	270
+			justify    	0
+			label      	"not_equal_to")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201B3"
+		    width      	288
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::multiplies" @23
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(3792, 1424)
+		    label      	(object ItemLabel
+			Parent_View 	@23
+			location   	(3683, 1392)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	218
+			justify    	0
+			label      	"multiplies")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120196"
+		    width      	236
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::binary_function" @24
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2064, 1488)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(1914, 1456)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	300
+			justify    	0
+			label      	"binary_function")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8512017D"
+		    width      	318
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201CA"
+		    client     	@1
+		    supplier   	@24
+		    line_style 	0)
+		(object InheritView "" @26
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201D0"
+		    client     	@2
+		    supplier   	@24
+		    line_style 	0)
+		(object InheritView "" @27
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201D6"
+		    client     	@3
+		    supplier   	@24
+		    line_style 	0)
+		(object InheritView "" @28
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201DC"
+		    client     	@4
+		    supplier   	@24
+		    line_style 	0)
+		(object InheritView "" @29
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201F2"
+		    client     	@7
+		    supplier   	@24
+		    line_style 	0)
+		(object InheritView "" @30
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85120222"
+		    client     	@10
+		    supplier   	@24
+		    line_style 	0)
+		(object InheritView "" @31
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85120238"
+		    client     	@12
+		    supplier   	@24
+		    line_style 	0)
+		(object InheritView "" @32
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C8512024C"
+		    client     	@14
+		    supplier   	@24
+		    line_style 	0)
+		(object InheritView "" @33
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201B8"
+		    client     	@22
+		    supplier   	@24
+		    line_style 	0)
+		(object InheritView "" @34
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C8512019B"
+		    client     	@23
+		    supplier   	@24
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::minus" @35
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(3584, 624)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(3503, 592)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"minus")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120190"
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @36
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85120195"
+		    client     	@35
+		    supplier   	@24
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::plus" @37
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(3264, 2592)
+		    label      	(object ItemLabel
+			Parent_View 	@37
+			location   	(3183, 2560)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"plus")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85120188"
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @38
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C8512018D"
+		    client     	@37
+		    supplier   	@24
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::divides" @39
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(880, 2672)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(797, 2640)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	166
+			justify    	0
+			label      	"divides")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8512019C"
+		    width      	184
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201A1"
+		    client     	@39
+		    supplier   	@24
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::modulus" @41
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(3728, 992)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(3637, 960)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	182
+			justify    	0
+			label      	"modulus")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201A2"
+		    width      	200
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @42
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201A7"
+		    client     	@41
+		    supplier   	@24
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::negate" @43
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2640, 4224)
+		    label      	(object ItemLabel
+			Parent_View 	@43
+			location   	(2559, 4192)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"negate")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201A8"
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @44
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201AC"
+		    client     	@43
+		    supplier   	@15
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::greater" @45
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1360, 2720)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(1279, 2688)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"greater")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201B9"
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201BE"
+		    client     	@45
+		    supplier   	@24
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::less" @47
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(336, 672)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(255, 640)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"less")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201BF"
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @48
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201C4"
+		    client     	@47
+		    supplier   	@24
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::functional::equal_to" @49
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(368, 2128)
+		    label      	(object ItemLabel
+			Parent_View 	@49
+			location   	(275, 2096)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	186
+			justify    	0
+			label      	"equal_to")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851201AD"
+		    width      	204
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @50
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851201B2"
+		    client     	@49
+		    supplier   	@24
+		    line_style 	0)))))

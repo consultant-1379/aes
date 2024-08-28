@@ -1,0 +1,467 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "exception"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DDABD00BF"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "__exString"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"const char*")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	47))
+	    quid       	"370C851102A7"
+	    module     	"Component View::STL::exception (module spec)"
+	    quidu      	"370C8511027F"
+	    language   	"C++"
+	    nonclassname 	"const char*")
+	(object Class "exception"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	49)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"370C851102A8"
+	    operations 	(list Operations
+		(object Operation "exception"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"5AB55CCEFEED"
+		    result     	"exception"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "exception"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"2F280B96FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    type       	"const __exString&"))
+		    result     	"exception"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "exception"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"ED01A0EBFEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    type       	"const exception&"))
+		    result     	"exception"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"4CA66CC5FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    type       	"const exception&"))
+		    result     	"exception&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "what"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"C874242AFEED"
+		    result     	"__exString"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~exception"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"F6DD5831FEED"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_m_doFree"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C851102ED"
+		    type       	"int"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::exception (module spec)"
+	    quidu      	"370C8511027F"
+	    language   	"C++")
+	(object Class "bad_exception"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	66)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"370C851102EE"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"370C851102F3"
+		    supplier   	"Logical View::include::exception::exception"
+		    quidu      	"370C851102A8"))
+	    operations 	(list Operations
+		(object Operation "bad_exception"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AEF2C4DAFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_S"
+			    type       	"const char*"
+			    initv      	
+|"bad exception"
+			    ))
+		    result     	"bad_exception"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~bad_exception"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"122614D4FEED"
+		    exceptions 	"()"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Doraise"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E6A2830EFEED"
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0))
+	    module     	"Component View::STL::exception (module spec)"
+	    quidu      	"370C8511027F"
+	    language   	"C++"))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "exception"
+	    quid       	"370DE696002A"
+	    title      	"exception"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::include::exception::__exString" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(272, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(161, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	222
+			justify    	0
+			label      	"__exString")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851102A7"
+		    width      	240
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::include::exception::exception" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(288, 592)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(120, 511)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	336
+			justify    	0
+			label      	"exception")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851102A8"
+		    width      	354
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @3
+		    location   	(279, 352)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851102E9"
+		    roleview_list 	(list RoleViews
+			(object RoleView "_m_what" @4
+			    Parent_View 	@3
+			    location   	(-425, -672)
+			    label      	(object SegLabel @5
+				Parent_View 	@4
+				location   	(316, 235)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	182
+				justify    	0
+				label      	"-_m_what"
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851102EB"
+			    client     	@3
+			    supplier   	@1
+			    line_style 	0
+			    label      	(object SegLabel @6
+				Parent_View 	@4
+				location   	(221, 224)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "" @7
+			    Parent_View 	@3
+			    location   	(-425, -672)
+			    label      	(object SegLabel @8
+				Parent_View 	@7
+				location   	(324, 468)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"370C851102EA"
+			    client     	@3
+			    supplier   	@2
+			    line_style 	0
+			    label      	(object SegLabel @9
+				Parent_View 	@7
+				location   	(230, 483)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::include::exception::bad_exception" @10
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(224, 1056)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(78, 1005)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	292
+			justify    	0
+			label      	"bad_exception")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851102EE"
+		    width      	310
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851102F3"
+		    client     	@10
+		    supplier   	@2
+		    line_style 	0)))))

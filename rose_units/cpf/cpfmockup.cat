@@ -1,0 +1,552 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "FMS_CPF"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set)
+    quid       	"375BBFF70047"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "FMS_CPF_EventSubscription"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"fmsset"))
+	    quid       	"3753DAF002C2"
+	    stereotype 	"Interface"
+	    operations 	(list Operations
+		(object Operation "FMS_CPF_EventSubscription"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"3753DF85034B"
+		    parameters 	(list Parameters
+			(object Parameter "cpfilename"
+			    type       	"const char *"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "SetFileName"
+		    quid       	"3753DFB801C8"
+		    parameters 	(list Parameters
+			(object Parameter "cpfilename"
+			    type       	"const char *"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetFileName"
+		    quid       	"3753DFE40171"
+		    result     	"const char *"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "OpenConnection"
+		    quid       	"3753DFFC002B"
+		    parameters 	(list Parameters
+			(object Parameter "realqueSize"
+			    type       	"int &")
+			(object Parameter "queSize"
+			    type       	"int"
+			    initv      	"0"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "CloseConnection"
+		    quid       	"3753E00B03BC"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Handle_Open"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"3753E0120037"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Handle_Close"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201)))
+		    quid       	"3753E01D01EB"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Handle_CloseConnection"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET")
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201)))
+		    quid       	"375BB3080032"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Handle_SubfileOpen"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201)))
+		    quid       	"3753E02500C0"
+		    parameters 	(list Parameters
+			(object Parameter "subfilename"
+			    type       	"const char *"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Handle_SubfileClose"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201)))
+		    quid       	"3753E03200FB"
+		    parameters 	(list Parameters
+			(object Parameter "subfilename"
+			    type       	"const char *"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Handle_SubfileSwitch"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201)))
+		    quid       	"3753E04102BF"
+		    parameters 	(list Parameters
+			(object Parameter "fromsubfile"
+			    type       	"const char *")
+			(object Parameter "tosubfile"
+			    type       	"const char *"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Handle_Write"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201)))
+		    quid       	"3753E05102FE"
+		    parameters 	(list Parameters
+			(object Parameter "recno"
+			    type       	"unsigned int"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Handle_Failed"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201)))
+		    quid       	"3753E05F0114"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "SubscribeFile"
+		    quid       	"3753E06D0146"
+		    parameters 	(list Parameters
+			(object Parameter "subflags"
+			    type       	"unsigned int"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "UnSubscribeFile"
+		    quid       	"3753E080014D"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "SubscribeData"
+		    quid       	"3753E08C005A"
+		    parameters 	(list Parameters
+			(object Parameter "streamHandle"
+			    type       	"FMS_CPF_Stream &")
+			(object Parameter "subflags"
+			    type       	"unsigned int"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "UnSubscribeData"
+		    quid       	"3753E09602A3"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "TestCallBack"
+		    quid       	"3753E0BE0156"
+		    parameters 	(list Parameters
+			(object Parameter "subflags"
+			    type       	"unsigned int"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::FMS_CPF::fms_cpf_eventsubscription (module spec)"
+	    quidu      	"3753DC9B0149"
+	    language   	"C++")
+	(object Class "FMS_FCC_NameProtection"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	(value Text 
+|enum Handler {INSERT, REMOVE, LIST};
+|enum {FREE, OCCUPIED};
+|
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"fmsset"))
+	    quid       	"375BB8350308"
+	    stereotype 	"Interface"
+	    operations 	(list Operations
+		(object Operation "FMS_FCC_NameProtection"
+		    quid       	"375BB9500156"
+		    parameters 	(list Parameters
+			(object Parameter "Type"
+			    type       	"char *"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "FMS_FCC_NameProtection"
+		    quid       	"375BB980017D"
+		    parameters 	(list Parameters
+			(object Parameter "User"
+			    type       	"char *")
+			(object Parameter "Type"
+			    type       	"char *")
+			(object Parameter "APRPersistent"
+			    type       	"bool"
+			    initv      	"true"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Protect"
+		    quid       	"375BB9B8032C"
+		    parameters 	(list Parameters
+			(object Parameter "Name"
+			    type       	"char *")
+			(object Parameter "Protection"
+			    type       	"int"
+			    initv      	"0"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Unprotect"
+		    quid       	"375BB9D3006E"
+		    parameters 	(list Parameters
+			(object Parameter "Name"
+			    type       	"char *")
+			(object Parameter "Protection"
+			    type       	"int"
+			    initv      	"0"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "isProtected"
+		    quid       	"375BB9FE025B"
+		    parameters 	(list Parameters
+			(object Parameter "Name"
+			    type       	"const char *"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "List"
+		    quid       	"375BBA1C0380"
+		    parameters 	(list Parameters
+			(object Parameter "name"
+			    type       	"char *"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::FMS_CPF::fms_cpf_nameprotection (module spec)"
+	    quidu      	"375BBAFA00EB"
+	    language   	"C++")
+	(object Class "FMS_CPF_FileNameProtection"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"fmsset"))
+	    quid       	"375BB6B900BD"
+	    stereotype 	"Interface"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"375BB84B033C"
+		    supplier   	"Logical View::FMS_CPF::FMS_FCC_NameProtection"
+		    quidu      	"375BB8350308"))
+	    operations 	(list Operations
+		(object Operation "FMS_CPF_FileNameProtection"
+		    quid       	"375BB6D700AC"
+		    parameters 	(list Parameters
+			(object Parameter "user"
+			    type       	"char *"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ProtectFile"
+		    quid       	"375BB6ED02DE"
+		    parameters 	(list Parameters
+			(object Parameter "Name"
+			    type       	"char *")
+			(object Parameter "Protection"
+			    type       	"int"
+			    initv      	"0"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "UnprotectFile"
+		    quid       	"375BB7BB00DC"
+		    parameters 	(list Parameters
+			(object Parameter "Name"
+			    type       	"char *"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "FileNameIsProtected"
+		    quid       	"375BB7D20002"
+		    parameters 	(list Parameters
+			(object Parameter "Name"
+			    type       	"char *"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "FileNameIsProtected"
+		    quid       	"375BB7FE01FA"
+		    parameters 	(list Parameters
+			(object Parameter "Name"
+			    type       	"char *")
+			(object Parameter "Protection"
+			    type       	"int &"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::FMS_CPF::fms_cpf_filenameprotection (module spec)"
+	    quidu      	"375BBA6401F3"
+	    language   	"C++")
+	(object Class "FMS_CPF_File"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"fmsset"))
+	    quid       	"37690278039E"
+	    stereotype 	"Interface"
+	    operations 	(list Operations
+		(object Operation "FMS_CPF_File"
+		    quid       	"3769031A002F"
+		    parameters 	(list Parameters
+			(object Parameter "filename"
+			    type       	"const char *"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "FMS_CPF_File"
+		    quid       	"376903DF0281"
+		    parameters 	(list Parameters
+			(object Parameter "file"
+			    type       	"FMS_CPF_File &"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator="
+		    quid       	"376904080230"
+		    parameters 	(list Parameters
+			(object Parameter "file"
+			    type       	"FMS_CPF_File &"))
+		    result     	"FMS_CPF_File &"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator=="
+		    attributes 	(list Attribute_Set)
+		    quid       	"3769043701B6"
+		    parameters 	(list Parameters
+			(object Parameter "file"
+			    type       	"FMS_CPF_File &"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "reserve"
+		    quid       	"376904AC01D2"
+		    parameters 	(list Parameters
+			(object Parameter "access"
+			    type       	"FMS_CPF_Types::accessType"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "unreserve"
+		    quid       	"376904F1034E"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "reserve"
+		    quid       	"3769053E0023"
+		    parameters 	(list Parameters
+			(object Parameter "access"
+			    type       	"FMS_CPF_Types::accessType"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "unreserve"
+		    quid       	"376905620242"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "remove"
+		    quid       	"3769057400E9"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "deleteFile"
+		    quid       	"37690580019B"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "isReserved"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE))
+		    quid       	"37690591005F"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "exists"
+		    quid       	"376905BE0104"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "getCPFname"
+		    quid       	"376905C802FD"
+		    result     	"const char *"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "getAttributes"
+		    quid       	"376905F003CC"
+		    result     	"FMS_CPF_Types::fileAttributes"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "getPhysicalPath"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE))
+		    quid       	"376906220157"
+		    result     	"const char *"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "opname"
+		    quid       	"3769099703A9"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::FMS_CPF::FMS_CPF_File (module spec)"
+	    quidu      	"376902A702B5"
+	    language   	"C++")
+	(object Class "FMS_CPF_Types"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"fmsset"))
+	    quid       	"37690699034D"
+	    stereotype 	"Interface"
+	    operations 	(list Operations
+		(object Operation "accessType"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"CodeName"
+			    value      	(value Text "enum")))
+		    quid       	"376907530016"
+		    result     	"enum"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "infiniteType"
+		    quid       	"37690774006D"
+		    result     	"struct"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "fileAttributes"
+		    quid       	"3769078F0166"
+		    result     	"struct"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::FMS_CPF::FMS_CPF_Types (module spec)"
+	    quidu      	"3769068601D3"
+	    language   	"C++")
+	(object Class "FMS_CPF_Exception"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"fmsset"))
+	    quid       	"37690EA401BD"
+	    stereotype 	"Interface"
+	    module     	"Component View::FMS_CPF::FMS_CPF_Exception (module spec)"
+	    quidu      	"37690E7A0380"
+	    language   	"C++"))
+    logical_presentations 	(list unit_reference_list))

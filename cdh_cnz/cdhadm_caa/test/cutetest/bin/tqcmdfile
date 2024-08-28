@@ -1,0 +1,170 @@
+NBIFOLDERNAME1=temp
+NBIFOLDERNAME2=localDest
+TRANSFERPROTOCOL_SFTP=0
+TRANSFERPROTOCOL_FTP=1
+IPADDRESS=141.137.47.53
+*****************************************************************************************************************
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=RespDestSet1,fileTransferMId=1,dataTransferMId=1" @pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=PrimRespDest1,respondingDestinationSetId=RespDestSet1,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME1@pass
+immcfg -c FileTransferQueue fileTransferQueueId=TQ1,fileTransferMId=1,dataTransferMId=1 -a respondingDestinationSet=RespDestSet1@pass
+immcfg -d fileTransferQueueId=TQ1,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=RespDestSet1,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c FileTransferQueue fileTransferQueueId=TQ1,fileTransferMId=1,dataTransferMId=1 -a respondingDestinationSet=RespDestSet2@fail
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=InitDestSet3,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=PrimInitDest3,initiatingDestinationSetId=InitDestSet3,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+immcfg -c FileTransferQueue fileTransferQueueId=TQ3,fileTransferMId=1,dataTransferMId=1 -a initiatingDestinationSet=InitDestSet3@pass
+immcfg -d fileTransferQueueId=TQ3,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=InitDestSet3,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c FileTransferQueue fileTransferQueueId=TQ4,fileTransferMId=1,dataTransferMId=1 -a initiatingDestinationSet=initdestset@fail
+immcfg -c FileTransferQueue fileTransferQueueId=TQ6,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=RespDestSet7,fileTransferMId=1,dataTransferMId=1" @pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=PrimRespDest7,respondingDestinationSetId=RespDestSet7,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=InitDestSet7,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=PrimInitDest7,initiatingDestinationSetId=InitDestSet7,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+immcfg -c FileTransferQueue fileTransferQueueId=TQ7,fileTransferMId=1,dataTransferMId=1 -a initiatingDestinationSet=InitDestSet7 -a respondingDestinationSet=RespDestSet7@fail
+immcfg -d respondingDestinationSetId=RespDestSet7,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d "initiatingDestinationSetId=InitDestSet7,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c FileTransferQueue fileTransferQueueId=TQ8234567890123456789012345678901,fileTransferMId=1,dataTransferMId=1 @fail
+immcfg -c FileTransferQueue fileTransferQueueId=TQ9004%,fileTransferMId=1,dataTransferMId=1@fail
+immcfg -c FileTransferQueue fileTransferQueueId=TQ10,fileTransferMId=1,dataTransferMId=1 -a intiatingDestinationSet=initDestSet1234567890123456789012@fail
+immcfg -c FileTransferQueue fileTransferQueueId=TQ11,fileTransferMId=1,dataTransferMId=1 -a initiatingDestinationSet="init^hgs*"@fail
+immcfg -c FileTransferQueue fileTransferQueueId=TQ12,fileTransferMId=1,dataTransferMId=1 -a respondingDestinationSet=respdestset1234567890123456789012@fail
+immcfg -c FileTransferQueue fileTransferQueueId=TQ13,fileTransferMId=1,dataTransferMId=1 -a respondingDestinationSet="respdest%6&" @fail
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=RespDestSet14,fileTransferMId=1,dataTransferMId=1" @pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=PrimRespDest14,respondingDestinationSetId=RespDestSet14,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME1@pass
+afpdef TQ14 RespDestSet14@pass
+immcfg -d fileTransferQueueId=TQ14,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=RespDestSet14,fileTransferMId=1,dataTransferMId=1@pass
+afpdef TQ15 norespdest@fail
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=InitDestSet16,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=PrimInitDest16,initiatingDestinationSetId=InitDestSet16,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+afpdef TQ16 InitDestSet16@pass
+immcfg -d fileTransferQueueId=TQ16,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=InitDestSet16,fileTransferMId=1,dataTransferMId=1@pass
+afpdef  TQ18- @fail
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=InitDestSet19,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=PrimIniDest19,initiatingDestinationSetId=InitDestSet19,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+afpdef TQ1934567890123456789012345678901 InitDestSet19@fail
+immcfg -d "initiatingDestinationSetId=InitDestSet19,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=InitDestSet20,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=PrimInitDest20,initiatingDestinationSetId=InitDestSet20,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+afpdef "TQ%&^*"  InitDestSet20@fail
+immcfg -d initiatingDestinationSetId=InitDestSet20,fileTransferMId=1,dataTransferMId=1@pass
+afpdef TQ21 respdestset1234567890123456789012@fail
+afpdef TQ22 "respdest5$$^"@fail
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest32,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primInit32,initiatingDestinationSetId=initdest32,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=respdest32,fileTransferMId=1,dataTransferMId=1" @pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=respInitF32,respondingDestinationSetId=respdest32,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME2@pass
+afpdef TQ32 initdest32@pass
+afpdef TQ32 respdest32@pass
+immcfg -d fileTransferQueueId=TQ32,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest32,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=respdest32,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest33,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primInit33,initiatingDestinationSetId=initdest33,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=respdest33,fileTransferMId=1,dataTransferMId=1" @pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=primRes33,respondingDestinationSetId=respdest33,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME2@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=respdest33a,fileTransferMId=1,dataTransferMId=1" @pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=primRest33a,respondingDestinationSetId=respdest33a,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME2@pass
+afpdef TQ33 initdest33@pass
+afpdef TQ33 respdest33@pass
+afpdef TQ33 respdest33a@pass
+immcfg -d fileTransferQueueId=TQ33,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest33,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=respdest33,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=respdest33a,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest34,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primInit34,initiatingDestinationSetId=initdest34,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest34a,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primInit34a,initiatingDestinationSetId=initdest34a,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=respdest34,fileTransferMId=1,dataTransferMId=1" @pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=primResp34,respondingDestinationSetId=respdest34,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME2@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=respdest34a,fileTransferMId=1,dataTransferMId=1" @pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=primResp34a,respondingDestinationSetId=respdest34a,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME2@pass
+afpdef TQ34 initdest34@pass
+afpdef TQ34 respdest34@pass
+afpdef TQ34 respdest34a@pass
+afpdef TQ34 initdest34a@fail
+immcfg -d fileTransferQueueId=TQ34,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest34,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=respdest34,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest34a,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=respdest34a,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest40,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primi40,initiatingDestinationSetId=initdest40,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=respdest40,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=respinitdest40,respondingDestinationSetId=respdest40,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME2@pass
+afpdef TQ40 initdest40@pass
+afpdef TQ40 respdest40@pass
+immcfg -d fileTransferQueueId=TQ40,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest40,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=respdest40,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest41,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primi41,initiatingDestinationSetId=initdest41,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=respdest41,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=respinitdest41,respondingDestinationSetId=respdest41,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME2@pass
+afpdef TQ41 initdest41@pass
+afpdef TQ41 respdest41@pass
+immcfg -d fileTransferQueueId=TQ41,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest41,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=respdest41,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest42,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primin42,initiatingDestinationSetId=initdest42,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+immcfg -c RespondingDestinationSet "respondingDestinationSetId=respdest42,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryRespondingDestination "primaryRespondingDestinationId=respinitdest42,respondingDestinationSetId=respdest42,fileTransferMId=1,dataTransferMId=1" -a nbiFolderName=NBIFOLDERNAME2@pass
+afpdef TQ42 initdest42@pass
+afpdef TQ42 respdest42@pass
+immcfg -d fileTransferQueueId=TQ42,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest42,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d respondingDestinationSetId=respdest42,fileTransferMId=1,dataTransferMId=1@pass
+afprm TQ43@fail
+afprm TQ44 initdest44@fail
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest45,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primin45,initiatingDestinationSetId=initdest45,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+ afpdef TQ45 initdest45@pass
+immcfg -m advancedFileTransferQueueParamId=TQ45,fileTransferQueueId=TQ45,fileTransferMId=1,dataTransferMId=1 -a template=yyyy@pass
+immcfg -d fileTransferQueueId=TQ45,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest45,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest46,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primin46,initiatingDestinationSetId=initdest46,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS @pass
+afpdef TQ46 initdest46@pass
+immcfg -m advancedFileTransferQueueParamId=TQ46,fileTransferQueueId=TQ46,fileTransferMId=1,dataTransferMId=1 -a template=YYYY@fail
+immcfg -d fileTransferQueueId=TQ46,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest46,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest53,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primin53,initiatingDestinationSetId=initdest53,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+afpdef TQ53 initdest53@pass
+immcfg -m advancedFileTransferQueueParamId=TQ53,fileTransferQueueId=TQ53,fileTransferMId=1,dataTransferMId=1 -a removeDelay=30@pass
+immcfg -d fileTransferQueueId=TQ53,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest53,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest54,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primin54,initiatingDestinationSetId=initdest54,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+afpdef TQ54 initdest54@pass
+immcfg -m advancedFileTransferQueueParamId=TQ54,fileTransferQueueId=TQ54,fileTransferMId=1,dataTransferMId=1 -a removeDelay=-1@pass
+immcfg -d fileTransferQueueId=TQ54,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest54,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest55,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primin55,initiatingDestinationSetId=initdest55,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+ afpdef TQ55 initdest55@pass
+immcfg -m advancedFileTransferQueueParamId=TQ55,fileTransferQueueId=TQ55,fileTransferMId=1,dataTransferMId=1 -a removeDelay=5999@pass
+immcfg -d fileTransferQueueId=TQ55,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest55,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest56,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primin56,initiatingDestinationSetId=initdest56,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+ afpdef TQ56 initdest56@pass
+immcfg -m advancedFileTransferQueueParamId=TQ56,fileTransferQueueId=TQ56,fileTransferMId=1,dataTransferMId=1 -a removeDelay=6000@pass
+immcfg -d fileTransferQueueId=TQ56,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest56,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest57,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primin57,initiatingDestinationSetId=initdest57,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+ afpdef TQ57 initdest57@pass
+immcfg -m advancedFileTransferQueueParamId=TQ57,fileTransferQueueId=TQ57,fileTransferMId=1,dataTransferMId=1 -a deleteCountDown=true@pass
+immcfg -d fileTransferQueueId=TQ57,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest57,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -c InitiatingDestinationSet  "initiatingDestinationSetId=initdest58,fileTransferMId=1,dataTransferMId=1"@pass
+immcfg -c PrimaryInitiatingDestination primaryInitiatingDestinationId=primin58,initiatingDestinationSetId=initdest58,fileTransferMId=1,dataTransferMId=1 -a  transferProtocol=TRANSFERPROTOCOL_FTP -a ipAddress=IPADDRESS@pass
+ afpdef TQ58 initdest58@pass
+immcfg -m advancedFileTransferQueueParamId=TQ58,fileTransferQueueId=TQ58,fileTransferMId=1,dataTransferMId=1 -a deleteCountDown=false@pass
+immcfg -d fileTransferQueueId=TQ58,fileTransferMId=1,dataTransferMId=1@pass
+immcfg -d initiatingDestinationSetId=initdest58,fileTransferMId=1,dataTransferMId=1@pass

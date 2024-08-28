@@ -1,0 +1,27 @@
+csm-version: '1.0'
+components:
+- uid: aes.gcc
+  name: aes-gcc
+  description: Install GCC
+  availability-manager: NONE
+  software:
+    sdp: ERIC-AES_GCCBIN-CXC1371448
+  supersedes:
+  - software: ERIC-AES_GCCBIN-CXC1371448
+  constraints:
+    installation:
+      after:
+      - component: acs.lct.lib
+        method: DIFFERENT-STEP
+    upgrade:
+      after:
+      - component: acs.lct.lib
+        method: DIFFERENT-STEP
+  meta-data:
+    component-version: 9.0.0-4
+    deliverable:
+      deployment-package: aes_gcc-9.0.0-4-deployment-CXC1371448.tar.gz
+      runtime-package: aes_gcc-9.0.0-4-runtime-CXC1371448.tar.gz
+    software:
+    - file-name: AES_GCCBIN-CXC1371448_9-R1A04.x86_64.sdp
+      bundle-name: ERIC-AES_GCCBIN-CXC1371448_9-R1A04

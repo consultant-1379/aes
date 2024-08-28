@@ -1,0 +1,130 @@
+##
+# ------------------------------------------------------------------------
+#     Copyright (C) 2015 Ericsson AB. All rights reserved.
+# ------------------------------------------------------------------------
+##
+# models.info
+##
+# Description:
+#       Configuration file used to perform IMM model changes during software upgrade for DDT block.
+##
+##
+# Changelog:
+# - 2015-03-27 - Paolo Elefante (QPAOELE) 
+#       First version
+##
+
+#APG43L 5.3
+VERSION: CXC1371515_18-R1B
+log "No model changes in DDTBIN CXC1371515_18-R1B"
+
+#APG43L 5.2
+VERSION: CXC1371515_18-R1A01
+log "No model changes in DDTBIN CXC1371515_18-R1A01"
+
+#APG43L 5.1.1
+VERSION: CXC1371515_12-R1E
+log "No model changes in DDTBIN CXC1371515_12-R1E"
+
+#APG43L 5.1
+VERSION: CXC1371515_12-R1D
+log "No model changes in DDTBIN CXC1371515_12-R1D"
+
+#APG43L 4.3 
+VERSION: CXC1371515_12-R1C
+log "No model changes in DDTBIN CXC1371515_12-R1C"
+
+#APG43L 4.1 - LSV03
+VERSION: CXC1371515_12-R1B
+log "Regeneration Due to DXtoolbox and ECIM Uplift"
+
+#APG43L 4.0 - LSV08 - Fix for TR HY53346
+VERSION: CXC1371515_12-R1A06
+log "No model changes in DDTBIN CXC1371515_12-R1A06"
+
+#APG43L 4.0 - LSV07 - Reverted Upgrade Failure Impacts
+VERSION: CXC1371515_12-R1A05
+log "No model changes in DDTBIN CXC1371515_12-R1A05"
+
+#APG43L 4.0 - LSV07 - Upgrade Failure Impacts
+VERSION: CXC1371515_12-R1A04
+log "No model changes in DDTBIN CXC1371515_12-R1A04"
+
+#APG43L 4.0 - LSV04 - Fix for TR HY37414
+VERSION: CXC1371515_12-R1A03
+log "No model changes in DDTBIN CXC1371515_12-R1A03"
+
+#APG43L 4.0 - LSV03
+VERSION: CXC1371515_12-R1A02
+log "Updated AxeDirectDataTransfer_mp.xml for IPv6 feature in DDTBIN CXC1371515_12-R1A02"
+
+#APG43L 4.0 - LSV01
+VERSION: CXC1371515_12-R1A01
+log "No model changes in DDTBIN CXC1371515_12-R1A01"
+
+#APG43L 3.8
+VERSION: CXC1371515_9-R1D
+log "Model files updated by generating with new version of modelling tool"
+
+# APG43l-3.7.0-rebase of 3.6.2
+VERSION: CXC1371515_9-R1C
+
+# APG43l-3.6.2
+VERSION: CXC1371515_9-R1B
+
+VERSION: CXC1371515_9-R1A06
+# GEP7 impacts
+VERSION: CXC1371515_9-R1A05
+VERSION: CXC1371515_9-R1A04
+log "No model changes in DDTBIN CXC1371515_9-R1A04"
+
+# Adaptations to SwM2.0
+VERSION: CXC1371515_9-R1A04
+VERSION: CXC1371515_9-R1A03
+VERSION: CXC1371515_9-R1A02
+VERSION: CXC1371515_9-R1A01
+
+VERSION: CXC1371515_5-R1A10
+log "No model changes in DDTBIN CXC1371515_5-R1A10"
+
+VERSION: CXC1371515_5-R1A09
+log "No model changes in DDTBIN CXC1371515_5-R1A09"
+
+VERSION: CXC1371515_5-R1A08
+log "No model changes in DDTBIN CXC1371515_5-R1A08"
+
+VERSION: CXC1371515_5-R1A07
+log "No model changes in DDTBIN CXC1371515_5-R1A07"
+
+VERSION: CXC1371515_5-R1A06
+log "Introducing NBC changes in DirectDataTransferM. DDTBIN CXC1371515_5-R1A06"
+cmw-immclass-delete AxeDirectDataTransferDataSource
+cmw-immclass-add $BUNDLE_NAME AxeDirectDataTransferDataSource
+cmw-immclass-modify $BUNDLE_NAME AxeDirectDataTransferFileFormat
+
+VERSION: CXC1371515_5-R1A05
+log "Adding model changes DDTBIN CXC1371515_5-R1A05"
+log "No model changes in DDTBIN CXC1371515_5-R1A05"
+
+VERSION: CXC1371515_5-R1A04
+log "Adding model changes DDTBIN CXC1371515_5-R1A04"
+log "No model changes in DDTBIN CXC1371515_5-R1A04"
+
+VERSION: CXC1371515_5-R1A03
+log "Adding model changes DDTBIN CXC1371515_5-R1A03"
+log "No model changes in DDTBIN CXC1371515_5-R1A03"
+
+VERSION: CXC1371515_5-R1A02
+log "No model changes in DDTBIN CXC1371515_5-R1A02"
+
+VERSION: CXC1371515_5-R1A01
+log "No model changes in DDTBIN CXC1371515-R1A01"
+
+VERSION: CXC1371515-R1A25
+log "No model changes in DDTBIN CXC1371515-R1A25"
+
+VERSION: CXC1371515-R1A24A
+log "No model changes in DDTBIN CXC1371515-R1A24A"
+
+VERSION: CXC1371515-R1A24
+log "No model changes in DDTBIN CXC1371515-R1A24"

@@ -1,0 +1,911 @@
+
+(object Petal
+    version    	44
+    _written   	"Rose 7.1.9642.27"
+    charSet    	0)
+
+(object Class_Category "ACS stubs"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"cg_style"
+	    value      	"fmsset"))
+    quid       	"37663A1A0381"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "ACS_JTP_Service"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"36F8F347021C"
+	    documentation 	"service object"
+	    stereotype 	"Interface"
+	    operations 	(list Operations
+		(object Operation "ACS_JTP_Service"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"3715C2FC032D"
+		    parameters 	(list Parameters
+			(object Parameter "Service"
+			    quid       	"3B372F6003CC"
+			    type       	"char*"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924157053)
+		(object Operation "jidrepreq"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA28F60285"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094319)
+		(object Operation "accept"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA29CC02DD"
+		    parameters 	(list Parameters
+			(object Parameter "Job"
+			    quid       	"3B372F6003CF"
+			    type       	"ACS_JTP_Job*")
+			(object Parameter "Conversation"
+			    quid       	"3B372F6003D0"
+			    type       	"ACS_JTP_Conversation*"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094320)
+		(object Operation "getHandles"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA29DA0369"
+		    parameters 	(list Parameters
+			(object Parameter "noOfHandles"
+			    quid       	"3B372F6003D2"
+			    type       	"int&")
+			(object Parameter "hand"
+			    quid       	"3B372F6003D3"
+			    type       	"JTP_HANDLE*&"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094321))
+	    module     	"Component View::ACS stubs::ACS_JTP (module spec)"
+	    quidu      	"37157E25001F"
+	    language   	"C++")
+	(object Class "ACS_DSD_Service"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"370DA0F60210"
+	    stereotype 	"Interface"
+	    operations 	(list Operations
+		(object Operation "getAPNodeIdentity"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"370DA11300D2"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094342)
+		(object Operation "getAPNodeName"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"370DA12E0301"
+		    result     	"char*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094343)
+		(object Operation "getAPIdentity"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"37147CCF017C"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094344)
+		(object Operation "getAPName"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"37147CE101F0"
+		    result     	"char*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094345)
+		(object Operation "publish"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"37147CF201B9"
+		    parameters 	(list Parameters
+			(object Parameter "Name"
+			    quid       	"3B372F6003DF"
+			    type       	"const char*")
+			(object Parameter "Domain"
+			    quid       	"3B372F6003E0"
+			    type       	"const char*"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094346)
+		(object Operation "accept"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"37147D620250"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094347)
+		(object Operation "unregister"
+		    quid       	"37147D7100D5"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094348)
+		(object Operation "getHandles"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"37147D8C0047"
+		    parameters 	(list Parameters
+			(object Parameter "noOfHandles"
+			    quid       	"3B372F6003E4"
+			    type       	"int&")
+			(object Parameter "handles"
+			    quid       	"3B372F6003E5"
+			    type       	"DSD_HANDLE*&"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094349)
+		(object Operation "connect"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"37147DAA018B"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	924094350))
+	    module     	"Component View::ACS stubs::ACS_DSD_DSA (module spec)"
+	    quidu      	"37157F7D03A9"
+	    language   	"C++")
+	(object Class "ACS_AEH_EvReport"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"37651488039E"
+	    stereotype 	"Interface"
+	    module     	"Component View::ACS stubs::ACS_AEH_EvReport (module spec)"
+	    quidu      	"3765188C0360"
+	    language   	"C++")
+	(object Class "ACS_PHA_Tables"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"3764BF570169"
+	    stereotype 	"Interface"
+	    module     	"Component View::ACS stubs::ACS_PHA_Tables (module spec)"
+	    quidu      	"3764C08B0099"
+	    language   	"C++")
+	(object Class "ACS_PHA_Parameter"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"3764BFA90243"
+	    stereotype 	"Interface"
+	    module     	"Component View::ACS stubs::ACS_PHA_Parameter (module spec)"
+	    quidu      	"3764C0520228"
+	    language   	"C++")
+	(object Class "ACS_JTP_Conversation"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	(value Text "enum {JTPClient=1, JTPServer=2, StateCreated=0, StateConnected=1, StateAccepted=2, StateJobRunning=3, StateWateForData=4}"))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"36FA2AA602F4"
+	    documentation 	"Conversation object"
+	    stereotype 	"Interface"
+	    operations 	(list Operations
+		(object Operation "ACS_JTP_Conversation"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA352001EC"
+		    parameters 	(list Parameters
+			(object Parameter "Service"
+			    quid       	"3B372F61000D"
+			    type       	"char*")
+			(object Parameter "MaxBufLen"
+			    quid       	"3B372F61000E"
+			    type       	"ushort"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ACS_JTP_Conversation"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA354D03BE"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "jexinitreq"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2AFB029C"
+		    parameters 	(list Parameters
+			(object Parameter "U1"
+			    quid       	"3B372F610011"
+			    type       	"ushort")
+			(object Parameter "U2"
+			    quid       	"3B372F610012"
+			    type       	"ushort"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "jexinitind"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B0F009C"
+		    parameters 	(list Parameters
+			(object Parameter "U1"
+			    quid       	"3B372F610014"
+			    type       	"ushort&")
+			(object Parameter "U2"
+			    quid       	"3B372F610015"
+			    type       	"ushort&"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "jexinitrsp"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B1900B5"
+		    parameters 	(list Parameters
+			(object Parameter "U1"
+			    quid       	"3B372F610017"
+			    type       	"ushort")
+			(object Parameter "U2"
+			    quid       	"3B372F610018"
+			    type       	"ushort")
+			(object Parameter "R"
+			    quid       	"3B372F610019"
+			    type       	"ushort"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "jexinitconf"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B2500DA"
+		    parameters 	(list Parameters
+			(object Parameter "U1"
+			    quid       	"3B372F61001B"
+			    type       	"ushort&")
+			(object Parameter "U2"
+			    quid       	"3B372F61001C"
+			    type       	"ushort&")
+			(object Parameter "R"
+			    quid       	"3B372F61001D"
+			    type       	"ushort&"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "jexdatareq"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B30022A"
+		    parameters 	(list Parameters
+			(object Parameter "U1"
+			    quid       	"3B372F61001F"
+			    type       	"ushort")
+			(object Parameter "U2"
+			    quid       	"3B372F610020"
+			    type       	"ushort")
+			(object Parameter "BufLen"
+			    quid       	"3B372F610021"
+			    type       	"ushort")
+			(object Parameter "Buf"
+			    quid       	"3B372F610022"
+			    type       	"char*"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "jexdataind"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B470300"
+		    parameters 	(list Parameters
+			(object Parameter "U1"
+			    quid       	"3B372F610024"
+			    type       	"ushort&")
+			(object Parameter "U2"
+			    quid       	"3B372F610025"
+			    type       	"ushort&")
+			(object Parameter "BufLen"
+			    quid       	"3B372F610026"
+			    type       	"ushort&")
+			(object Parameter "Buf"
+			    quid       	"3B372F610027"
+			    type       	"char*&"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "jexdiscreq"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B51003D"
+		    parameters 	(list Parameters
+			(object Parameter "U1"
+			    quid       	"3B372F610029"
+			    type       	"ushort")
+			(object Parameter "U2"
+			    quid       	"3B372F61002A"
+			    type       	"ushort")
+			(object Parameter "Reason"
+			    quid       	"3B372F61002B"
+			    type       	"ushort"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "jexdiscind"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B5B015A"
+		    parameters 	(list Parameters
+			(object Parameter "U1"
+			    quid       	"3B372F61002D"
+			    type       	"ushort&")
+			(object Parameter "U2"
+			    quid       	"3B372F61002E"
+			    type       	"ushort&")
+			(object Parameter "Reason"
+			    quid       	"3B372F61002F"
+			    type       	"ushort&"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Side"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B6F020D"
+		    result     	"JTP_Side"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "State"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B75027A"
+		    result     	"JTP_State"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "getHandle"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B7C03A6"
+		    result     	"JTP_HANDLE"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "setTimeOut"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B8700DB"
+		    parameters 	(list Parameters
+			(object Parameter "Sec"
+			    quid       	"3B372F610034"
+			    type       	"int"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "setNoOfTries"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA2B8E0031"
+		    parameters 	(list Parameters
+			(object Parameter "Times"
+			    quid       	"3B372F610036"
+			    type       	"int"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "setDelayTime"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"AFPSET"))
+		    quid       	"36FA31AC015F"
+		    parameters 	(list Parameters
+			(object Parameter "Sec"
+			    quid       	"3B372F610038"
+			    type       	"int"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::ACS stubs::ACS_JTP (module spec)"
+	    quidu      	"37157E25001F"
+	    language   	"C++")
+	(object Class "ACS_TRA_trace"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"37B7D6E6038E"
+	    stereotype 	"Interface"
+	    module     	"Component View::ACS stubs::ACS_TRA_trace (module spec)"
+	    quidu      	"37B7D918017A"
+	    language   	"C++")
+	(object Class "ACS_DSD_Session"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"375E0EF202C8"
+	    stereotype 	"Interface"
+	    module     	"Component View::ACS::ACS_DSD_DSA (module spec)"
+	    quidu      	"375E4F130351"
+	    module     	"Component View::ACS stubs::ACS_DSD_DSA (module spec)"
+	    quidu      	"37157F7D03A9"
+	    language   	"C++")
+	(object Class "ACS_PRC_Process"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"3869C7AA0226"
+	    stereotype 	"Interface"
+	    module     	"Component View::ACS stubs::ACS_PRC_Process (module spec)"
+	    quidu      	"3869C81B039B"
+	    language   	"C++"))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "ACS Stubs"
+	    quid       	"37663A3700BC"
+	    title      	"ACS Stubs"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::ACS stubs::ACS_JTP_Service" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(464, 288)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(321, 271)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	286
+			justify    	0
+			label      	"ACS_JTP_Service")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@1
+			location   	(321, 233)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	286
+			justify    	0
+			label      	"<<Interface>>")
+		    icon       	"Interface"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"36F8F347021C"
+		    width      	304
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::ACS stubs::ACS_DSD_Service" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(464, 896)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(318, 879)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	292
+			justify    	0
+			label      	"ACS_DSD_Service")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@2
+			location   	(318, 841)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	292
+			justify    	0
+			label      	"<<Interface>>")
+		    icon       	"Interface"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370DA0F60210"
+		    width      	310
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::ACS stubs::ACS_AEH_EvReport" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1271, 899)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1067, 868)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	408
+			justify    	0
+			label      	"ACS_AEH_EvReport")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@3
+			location   	(1067, 830)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	408
+			justify    	0
+			label      	"<<Interface>>")
+		    icon       	"Interface"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37651488039E"
+		    width      	426
+		    height     	156
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::ACS stubs::ACS_PHA_Tables" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1269, 282)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1080, 251)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	378
+			justify    	0
+			label      	"ACS_PHA_Tables")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@4
+			location   	(1080, 213)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	378
+			justify    	0
+			label      	"<<Interface>>")
+		    icon       	"Interface"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3764BF570169"
+		    width      	396
+		    height     	156
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::ACS stubs::ACS_PHA_Parameter" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1269, 517)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1051, 486)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	436
+			justify    	0
+			label      	"ACS_PHA_Parameter")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@5
+			location   	(1051, 448)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	436
+			justify    	0
+			label      	"<<Interface>>")
+		    icon       	"Interface"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3764BFA90243"
+		    width      	454
+		    height     	156
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::ACS stubs::ACS_JTP_Conversation" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(464, 512)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(290, 495)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	348
+			justify    	0
+			label      	"ACS_JTP_Conversation")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@6
+			location   	(290, 457)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	348
+			justify    	0
+			label      	"<<Interface>>")
+		    icon       	"Interface"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"36FA2AA602F4"
+		    width      	366
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::ACS stubs::ACS_TRA_trace" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(470, 1175)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(301, 1144)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	338
+			justify    	0
+			label      	"ACS_TRA_trace")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@7
+			location   	(301, 1106)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	338
+			justify    	0
+			label      	"<<Interface>>")
+		    icon       	"Interface"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"37B7D6E6038E"
+		    width      	356
+		    height     	156
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::ACS stubs::ACS_PRC_Process" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1209, 1178)
+		    font       	(object Font
+			size       	7
+			face       	"Andale Mono"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1014, 1143)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	390
+			justify    	0
+			label      	"ACS_PRC_Process")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@8
+			location   	(1014, 1105)
+			fill_color 	13041663
+			anchor     	10
+			nlines     	1
+			max_width  	390
+			justify    	0
+			label      	"<<Interface>>")
+		    icon       	"Interface"
+		    icon_style 	"Label"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3869C7AA0226"
+		    width      	408
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)))))

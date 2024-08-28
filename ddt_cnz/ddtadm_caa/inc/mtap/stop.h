@@ -1,0 +1,58 @@
+//	********************************************************
+//
+//	 COPYRIGHT Ericsson 2015
+//	All rights reserved.
+//
+//	The Copyright to the computer program(s) herein
+//	is the property of Ericsson 2015.
+//	The program(s) may be used and/or copied only with
+//	the written permission from Ericsson 2015 or in
+//	accordance with the terms and conditions stipulated in
+//	the agreement/contract under which the program(s) have
+//	been supplied.
+//
+//	********************************************************
+#ifndef DDTADM_CAA_INC_AES_DDT_MTAP_STOP_H_
+#define DDTADM_CAA_INC_AES_DDT_MTAP_STOP_H_
+
+#include "pdu.h"
+
+namespace mtap
+{
+
+	class Stop : public PDU
+	{
+ 	public:
+
+		//Constructor
+		Stop();
+
+		//Destructor
+		virtual ~Stop();
+
+		/**
+		 * @brief
+		 * This method is called to parse the mtap buffer received.
+		 *
+		 * @return NONE
+		 *
+		 */
+		inline void deserialize() {};
+
+		/**
+		 * @brief
+		 * This method is called to create the response for the STOP PDU parsed.
+		 *
+		 * @param char: The output buffer to sent as response.
+		 *
+		 * @param ssize_t : The size of the output buffer to be sent as response.
+		 *
+		 * @return 0 on success otherwise appropriate error code.
+		 *
+		 */
+		virtual int createResponse(unsigned char*& outBuffer, ssize_t& outBufferSize);
+	};
+
+} /* namespace mtap */
+
+#endif /* DDTADM_CAA_INC_AES_DDT_MTAP_STOP_H_ */

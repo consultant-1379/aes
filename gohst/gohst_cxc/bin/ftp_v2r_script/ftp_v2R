@@ -1,0 +1,656 @@
+#! /bin/ksh
+
+###############################################################################
+#                                                                             #
+# Name:        ftp_v2R                                                        #
+#                                                                             #
+# Type:        ksh script                                                     #
+#                                                                             #
+# Date:        2001-08-30                                                     #
+#                                                                             #
+# Description: FTP_v2R (responder) is a Korn shell script used to automatize  #
+#              tasks previously performed manually. The script checks if      #
+#              there are any files in the remote (specified by user)          #
+#              directory ready. If this is the case file/s are renamed to     #
+#              <file.tmp> in the send directory at the remote host. After     #
+#              this the files are retrieved from the remote host to the local #
+#              machine from where the script is executed. The files are       #
+#              stored in a directory downloads (default, changeable) and the  #
+#              extension .tmp is changed to the file's original extension.    #
+#              After each retrieved file, the file once more is renamed to    #
+#              <file.xxx> (where xxx is original extension) in the delete     #
+#              directory at the remote host.                                  #
+#                                                                             #
+#              At start up of the script the user has to enter some configure #
+#              data (setup phase). For example:                               #
+#          	   IP number to remote host, user, pwd and more.              #
+#                                                                             #
+#              Then after this setup phase a menu is presented to the user.   #
+#              Two alternative modes are available:                           #
+#                                                                             #
+#	        Get all files:	Script checks for new files at the remote     #
+#                               host. If there are they are retrieved. When   #
+#                               done the menu is presented again.             #
+#                                                                             #
+#              Check for files: Second mode checks for files in a specified   #
+#              interval given by the user. Else it performs the same tasks.   #
+#                                                                             #
+# Versions:    PA1  2001-07-XX  First version                                 # 
+#              PA2  2001-07-25  Corrections                                   #
+#              PA3  2001-08-30  Updates and corrections                       #
+#                                                                             # 
+# Author:      UAB/S/AU QABMSOL,                                              #
+#              UAB/S/AU QABTHMA                                               #
+#                                                                             #
+###############################################################################
+
+
+
+#####     *   *   ***   ****   *    ***   ****   *     ******   ***       #####
+#####     *   *  *   *  *   *  *   *   *  *   *  *     *       *          #####
+#####     *   *  *****  ****   *   *****  ****   *     ***      ***       #####
+#####      * *   *   *  *   *  *   *   *  *   *  *     *           *      #####
+#####       *    *   *  *   *  *   *   *  ****   ***** *****    ***       #####
+
+productNumber='CAL 109 02'        # Product number
+ftp_v2R_version='PA3'             # Version number of ftp_v2R
+defaultDestPath='ftp/cdh/dest1'   # Default destination on remote host 
+defaultDownloadPath='downloads'   # Default download path
+options=no                        # If setup info. given by user is correct
+fileLog=files.log                 # Contains filename of file containing remote's new files
+dirLog=directories.log            # Contains filename of file containing remote's new directories
+stop=0                            # Used to control while loop with time interval
+defaultTransferMode=bin           # Default transfer mode that will be used (binary)
+fileNr=1                          # Starting file in get()
+netRcFile=~/.netrc                #
+#defaultBellMode=off              # off
+#$DEBUG=-d
+
+
+
+
+#####     *****  *   *  *   *   ***  *****  *   ***   *   *   ***         #####
+#####     *      *   *  **  *  *       *    *  *   *  **  *  *            #####
+#####     ***    *   *  * * *  *       *    *  *   *  * * *   ***         #####
+#####     *      *   *  *  **  *       *    *  *   *  *  **      *        #####
+#####     *      *****  *   *   ***    *    *   ***   *   *   ***         #####
+
+
+
+################################################################################
+# CREATE_NETRC - Create a .netrc file under ~/                                 #
+################################################################################           
+CREATE_NETRC_FILE()
+{
+	# Make a backup of old netrc file if it exists
+	if test -f $netRcFile
+		then
+			mv $netRcFile $netRcFile'.org'
+			echo 'INFO: Storing already existing' $netRcFile 'as' $netRcFile'.org'
+	fi
+		
+	echo 'INFO: Creating' $netRcFile 'file according to following pattern:'
+	echo '      machine <IP Number>'
+	echo '      login <User>'
+	echo '      password <Password>'
+	echo
+	printf 'Enter IP number to remote machine: '
+	read ip 
+	[ -z "$ip" ] && ip="NOT_SPECIFIED"
+
+	printf 'Enter user: ' 
+	read user 
+	[ -z "$user" ] && user="NOT_SPECIFIED"
+
+	printf 'Enter password: ' 
+	stty -echo
+	read pwd 
+	stty echo
+	[ -z "$pwd" ] && pwd='""'
+
+	cat > $netRcFile <<EOF
+machine $ip
+login $user
+password $pwd
+EOF
+
+#	more $netRcFile
+
+	echo
+	echo 'INFO: Changing protection on' $netRcFile '(go-rwx)'
+	chmod go-rwx $netRcFile
+
+	echo 'INFO:' $netRcFile 'updated.'
+
+	echo
+
+}
+
+
+################################################################################
+# SETUP_PHASE - Prompt user for values needed to perform correctly towards the #
+#               remote host. To use default values (showed as <default value>  #
+#               just press ENTER and to next question. User will at the end be #
+#               asked if his/her choices are correctly answered. Verifying     #
+#               with (yes/no).                                                 # 
+################################################################################           
+SETUP_PHASE()
+{
+
+while test $options != "yes"
+do
+	clear
+	echo '----- Setup phase ----------------------------------'
+
+	CREATE_NETRC_FILE
+
+	printf 'Enter host <'$ip'>: '
+	read host #read host
+	[ -z "$host" ] && host=$ip   # If no IP is submitted, use default
+
+	printf 'Enter path (ftpRoot/.../ready) <ftp/cdh/dest1>: '
+	read path
+	[ -z "$path" ] && path=$defaultDestPath   # If no destination is submitted, use default
+
+	# Set paths to directories under a destination
+	readyPath=$path'/ready'      # Path to ready directory on remote host 
+	sendPath=$path'/send'        # Path to send directory on remote host 
+	deletePath=$path'/delete'    # Path to delete directory on remote host 
+	archivePath=$path'/archive'  # Path to archive directory on remote host 
+
+	printf 'Enter download path </downloads>: '
+	read downloadPath
+	[ -z "$downloadPath" ] && downloadPath=$defaultDownloadPath   # If no path is submitted, use default
+
+	printf 'Enter transfer mode (ascii/bin) <bin>: '
+	read transferMode
+	[ -z "$transferMode" ] && transferMode=$defaultTransferMode   # If no mode is submitted, use default
+	if test $transferMode = ascii
+		then
+			transferMode=ascii
+		else
+			transferMode=$defaultTransferMode
+	fi
+
+#	printf 'Bell mode (on/off) <off>: '
+#	read bellMode
+#	[ -z "$bellMode" ] && bellMode=$defaultBellMode   # If no mode is submitted, use default
+#	if test $bellMode = on
+#		then
+#			bellMode=bell
+#		else
+#			bellMode=ls #""
+#	fi
+	echo '----- END Setup phase ------------------------------'
+	echo
+	echo
+	echo
+	echo 'Specified options:'
+	echo '==================' 
+	echo
+	echo 'Remote host:' $host   
+	echo 'Paths: <FTPROOT>/'$readyPath
+	echo '       <FTPROOT>/'$sendPath
+	echo '       <FTPROOT>/'$deletePath
+	echo '       <FTPROOT>/'$archivePath
+	echo 'Download path:' $downloadPath
+	echo 'Transfer mode:' $transferMode
+#	if test $bellMode = bell
+#		then
+#			echo 'Bell mode:' on
+#		else
+#			echo 'Bell mode:' off
+#	fi
+	echo
+	printf 'Are the options specified correct (yes/no)? '
+	read options
+	[ -z "$options" ] && options=no
+done
+
+
+}
+
+
+################################################################################
+# HEAD - DISPLAY HEADER USED IN FTP_V2R.                                       #
+################################################################################           
+HEAD()
+{
+	echo '--------------------------------------------------'
+	echo 'FTP v2R (Responder)'
+    echo 'Product number: '$productNumber ' Version: '$ftp_v2R_version
+	echo
+	echo $(/usr/ucb/whoami) logged in $(/usr/bin/date)
+	echo '--------------------------------------------------'
+}
+
+
+
+
+################################################################################
+# FTP_GET_LIST_OF_FILES - This function gets a list containing the files that  #
+#                         are ready to be sent. The file "files.log" are place #
+#                         in the directory where the script is executed.       #
+#                         NOTE: Do not remove this file manually !             # 
+################################################################################           
+FTP_GET_LIST_OF_FILES()
+{
+	echo 'INFO: Retrieving list of new files at' $host $readyPath
+	ftp -i <<EOF
+			open $host		
+			$transferMode
+			cd $readyPath
+			dir * files.tmp
+			bye
+EOF
+
+#	echo "Status= " $?
+
+#	$(grep -v "<DIR>" files.tmp.log | awk '{ print $NF }' > files.log) # ONLY files in this file
+#	let nrOfFiles="$(wc -l < $fileLog)"   # Count number of files in files.log
+#	echo 'INFO: Directory Ready contained' $nrOfFiles 'new files.'
+
+	if test -f "files.tmp"
+		then
+		
+			echo 'INFO: Checking for new files...'
+			$(grep -v "<DIR>" files.tmp | awk '{ print $4,$5,$6,$7,$8 }' > files.log) # ONLY files in this file ($NF)
+			let nrOfFiles="$(wc -l < files.log)"   # Count number of files in files.log
+			echo 'INFO: Directory Ready contained' $nrOfFiles 'new files.'
+
+
+#			echo 'INFO: Checking for new directories...'
+#			$(grep "<DIR>" files.tmp | awk '{ print $4,$5,$6,$7,$8 }' > directories.log) # ONLY directories in this file
+#			let nrOfDirs="$(wc -l < directories.log)"   # Count number of files in files.log
+#			echo 'INFO: Directory Ready contained' $nrOfDirs 'new directories.'
+	
+			rm files.tmp
+		
+		else
+			echo "INFO: Login failed. Terminating script..."
+			CLEANUP
+			exit
+	fi
+
+	
+	echo Done
+}
+
+
+################################################################################
+# FTP_RENAME_TO_SEND - This function renames files listed in files.log which   #
+#                      where retrieved by FTP_GET_LIST_OF_FILES(). The files   #
+#                      files are (in ready directory) are renamed to           #
+#                      ../send/<filename>.tmp                                  # 
+################################################################################           
+FTP_RENAME_TO_SEND()
+{
+	echo 'INFO: Renaming files'
+	while read FILENAME; do
+		newName=${FILENAME%.*}.tmp
+		tmpPath='../send/'$newName
+		ftp -i <<EOF2
+		open $host
+		$transferMode
+		cd $readyPath
+		rename $FILENAME $tmpPath
+		bye
+EOF2
+		done < ./$fileLog
+	echo Done
+}
+
+
+
+################################################################################
+# FTP_GET_ALL_FILES_FROM_SEND - This function get all files in the directory   #
+#                               send on the remote host. Files are retrived    #
+#                               with the ftp command mget *. The files are     #
+#                               downloaded to the host where the ftp_v2R       # 
+#                               script is executed. After succesful download   #
+#                               the files are moved into diretory specified by #
+#                               the user at setup phase (default: downloads).  #
+#                               After retrieving a file the file is "renamed"  #
+#                               into the delete directory for current          #
+#                               destination.                                   #
+################################################################################           
+FTP_GET_ALL_FILES_FROM_SEND()
+{
+	echo 'INFO: Retrieving' $nrOfFiles 'file(s) from' $host $sendPath
+	echo 'INFO: Using transfer mode' $transferMode
+	
+	
+	while read FILENAME; do
+		newName=${FILENAME%.*}.tmp
+		orgName=$FILENAME
+		tmpPath='../delete/'$orgName  ##tmpName
+
+
+	ftp -i <<EOF3
+
+		open $host
+		$transferMode
+		cd $sendPath
+		get $newName
+		rename $newName $tmpPath
+		bye
+
+
+EOF3
+
+		#$bellMode
+
+#		if test -b $FILENAME
+#			then
+#				echo 'INFO:' $FILENAME 'is a block special file.'
+#		elif test -c $FILENAME
+#			then
+#				echo 'INFO:' $FILENAME 'is a character special file.'
+#		elif test -d $FILENAME
+#			then
+#				echo 'INFO:' $FILENAME 'is a directory.'
+#		else
+#			echo 'INFO:' $FILENAME 'is a regular file.'
+#		fi
+
+
+		echo 'File' $fileNr'/'$nrOfFiles 'is received.'
+		let fileNr=$fileNr+1
+		done <./$fileLog
+		fileNr=1
+
+		echo 'INFO:' $nrOfFiles 'file(s) received from' $host $sendPath
+		echo Done
+		echo
+
+
+	if test -d $downloadPath
+		then
+			echo INFO: Moving downloaded files to $downloadPath
+			mv *.tmp $downloadPath
+			echo Done
+			echo
+		else
+			echo WARNING: Directory $downloadPath does not exist.
+			echo INFO: Creating directory $downloadPath
+			mkdir $downloadPath
+			echo Done
+			echo 'INFO: Changing access rights (777) on '$downloadPath
+			chmod 777 $downloadPath
+			echo Done
+			echo INFO: Moving downloaded files to $downloadPath
+			mv *.tmp $downloadPath
+			echo Done
+			echo
+	fi
+	
+
+	while read FILENAME; do
+		newName=${FILENAME%.*}.tmp
+		orgName=$FILENAME
+		mv $downloadPath'/'$newName $downloadPath'/'$orgName
+		echo 'INFO: Renaming file' $newName 'to' $orgName
+		echo Done
+		done <./$fileLog
+
+
+
+
+}
+
+################################################################################
+# CLEANUP -  Checks for created files and removes these. Restoring changed     #
+#            ~/.netrc file. Terminates script.                                 #
+################################################################################           
+CLEANUP()
+{
+	if test -f $fileLog
+		then
+			echo INFO: Removing $fileLog
+			rm $fileLog
+			echo Done
+	fi
+
+	if test -f $dirLog
+		then
+			echo INFO: Removing $dirLog
+			rm $dirLog
+			echo Done
+	fi
+
+	if test -f $netRcFile'.org'
+		then
+			echo 'INFO: Restoring original .netrc file'
+			mv $netRcFile'.org' $netRcFile
+			chmod go-rwx $netRcFile
+			echo Done
+	fi
+			
+	echo INFO: Script terminated...
+	echo Done
+	echo
+}
+
+
+
+################################################################################
+# SLEEP -  Wait for a defined time interval. Displays an ugly progress bar.    #
+################################################################################           
+SLEEP()
+{
+	let interval="$time_sec/10"
+	let interval="$interval/2"
+	let halfTime="$time_sec/2"
+#	echo 'time_min: ' $time_min
+#	echo 'time_sec: ' $time_sec
+#	echo 'interval: ' $interval
+#	echo 'halfTime: ' $halfTime
+	echo
+	echo 'INFO: Checking for new files in' $time_min 'minutes...'
+	echo 
+
+	if test time_sec -lt 100
+
+		then
+			echo $time_sec'                 '$halfTime'                 0 sec'
+		else
+			if test time_sec -lt 199
+				then
+					echo $time_sec'               '$halfTime'                  0 sec'
+				else
+					echo $time_sec'              '$halfTime'                  0 sec'
+			fi
+	fi
+
+	counter=1
+	while test counter -le 20
+	do
+		sleep $interval
+		printf '=='
+		let counter="$counter+1"
+	done
+	echo
+echo
+}
+
+
+
+
+# NOT IMPLEMENTED YET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# SENDING DIRECTORIES - MAKE SOME RECURSIVE FUNCTION 
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+################################################################################
+# FTP_GET_ALL_DIRS_FROM_SEND -  This function get all directories in the       #
+#                               directory send on the remote host.             #
+################################################################################           
+#FTP_GET_ALL_DIRS_FROM_SEND()
+#{
+#	echo 'INFO: Retrieving' $nrOfDirs 'directory(ies) from' $host $path
+#	echo 'INFO: Using transfer mode' $transferMode
+#	
+#	
+#	while read DIRNAME; do
+#		newName=${DIRNAME%.*}.tmp
+#		tmpPath='../delete/'$newName
+#
+#	ftp -i $DEBUG<<EOF4
+#
+#		open $host
+#		$transferMode
+#		$bellMode
+#		cd $sendPath
+#		get $newName
+#		rename $newName $tmpPath
+#		bye
+#
+#
+#EOF4
+#
+#		echo 'Directory' $dirNr'/'$nrOfDirs 'is received.'
+#		let dirNr=$dirNr+1
+#		done <./$dirLog
+#		dirNr=1
+#
+#		echo 'INFO:' $nrOfDirs 'directory(ies) received from' $host $path
+#		echo Done
+#		done
+#
+#
+#	if test -d $downloadPath
+#		then
+#			echo INFO: Moving downloaded directory(ies) to $downloadPath
+#			mv *.tmp $downloadPath
+#			echo Done
+#			echo
+#		else
+#			echo WARNING: Directory $downloadPath does not exist.
+#			echo INFO: Creating directory $downloadPath
+#			mkdir $downloadPath
+#			echo Done
+#			echo INFO: Moving downloaded directory(ies) to $downloadPath
+#			mv *.tmp $downloadPath
+#			echo Done
+#			echo
+#	fi
+#	
+#}
+
+
+
+
+
+
+
+
+#####     *   *   ***   *  *   *   ***** ***** ****    *   *  ***  ****    #####
+#####     ** **  *   *  *  **  *   *       *   *   *   *   * *   * *   *   #####
+#####     * * *  *****  *  * * *   ***     *   ****    *   *    *  ****    #####
+#####     *   *  *   *  *  *  **   *       *   *        * *   **   *   *   #####
+#####     *   *  *   *  *  *   *   *       *   *    ***  *   ***** *   *   #####
+
+
+SETUP_PHASE   # Calling setup phase function
+
+
+################################################################################
+# ----- M E N U -----                                                          #
+# This part presents a menu for the user and it is from this menu everything   #
+# performed using functions defined above or directly in the specific case.    #
+################################################################################           
+clear
+	HEAD   # Display header
+	echo
+
+select reply in  "Get all files" "Check for new files (interval)" "Quit"
+do
+	clear
+	HEAD   # Display header
+	echo 'Press <ENTER> to get menu options'
+	echo '--------------------------------------------------'
+	echo
+
+	
+	case $reply in
+
+		##### Get all files #####
+
+		"Get all files")
+			
+			# Function calls
+			FTP_GET_LIST_OF_FILES
+
+			if test $nrOfFiles -gt 0
+				then
+					FTP_RENAME_TO_SEND
+					FTP_GET_ALL_FILES_FROM_SEND
+				else
+					echo INFO: No new files available.
+			fi
+		;;
+
+
+
+		##### Check for new files (interval) #####
+
+		"Check for new files (interval)")
+
+			printf 'Enter time interval to check for new files <1 min>: '
+			read time_min   # read time interval
+			[ -z "$time_min" ] && time_min=1   # If no time interval is submitted, use default
+			if test $time_min -eq 0
+				then
+					time_min=1
+			fi
+			let time_sec=$time_min*60   # Multiply to get time in sec
+
+			echo
+			echo 'INFO: Checking for new files every' $time_min 'minute/s (End with <CTRL-C>)'
+			echo
+			trap stop=1 INT
+			while test $stop != 1
+				do
+					echo 'INFO: Checking for new files...'
+
+					FTP_GET_LIST_OF_FILES
+					
+					if test $nrOfFiles -gt 0
+						then
+							echo 'INFO:' $nrOfFiles 'file(s) available on' $host $path
+							FTP_RENAME_TO_SEND
+							FTP_GET_ALL_FILES_FROM_SEND
+						else
+							echo INFO: No new files available.
+					fi
+									
+					echo 
+					echo Done
+					echo
+					SLEEP
+				done
+				trap - INT
+				
+				stop=0  ## Clear ctrl-c catch signalflag
+		;;
+
+
+
+		#### QUIT #####
+
+		"Quit")
+
+			CLEANUP
+
+			break;
+		;;
+
+
+
+		##### Default #####
+
+		*)
+			echo ERROR: Illegal choice!
+		;;
+
+	esac
+done

@@ -1,0 +1,2 @@
+T:\ntaes\ohi_cnz\ohi_cxc\bin\libaes_ohi.so.1.0.0
+T:\ntaes\ohi_cnz\ohi_cxc\packages\rpm\AES_OHI-CXC1371324-R1A08.x86_64.rpm

@@ -1,0 +1,6022 @@
+
+(object Petal
+    version    	44
+    _written   	"Rose 7.1.9642.27"
+    charSet    	0)
+
+(object Class_Category "Messages"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3822EBD3033F"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "OSF_Message_Block"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	26)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206)))
+	    quid       	"3822E55702C0"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E55800CD"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E55800D8"
+		    supplier   	"Logical View::os::OSF_DL_TYPE"
+		    quidu      	"3822E55800D7")
+		(object Uses_Relationship
+		    quid       	"3822E55800DA"
+		    supplier   	"Logical View::Messages::OSF_Message_Block::Message_Flags"
+		    quidu      	"3822E55702B0")
+		(object Uses_Relationship
+		    quid       	"3822E55800DF"
+		    supplier   	"Logical View::<unspecified>::OSF_thread_t"
+		    quidu      	"3822E5560016")
+		(object Uses_Relationship
+		    quid       	"3822E55800E3"
+		    supplier   	"Logical View::MemoryManagement::OSF_Allocator"
+		    quidu      	"3822E55800E1")
+		(object Uses_Relationship
+		    quid       	"3822E55800E4"
+		    supplier   	"Logical View::Synch::OSF_Lock"
+		    quidu      	"3822E5560354")
+		(object Uses_Relationship
+		    quid       	"3822E558014A"
+		    supplier   	"Logical View::<unspecified>::caddr_t"
+		    quidu      	"3822E5580149")
+		(object Uses_Relationship
+		    quid       	"3822E55803A4"
+		    supplier   	"Logical View::Messages::OSF_Data_Block"
+		    quidu      	"3822E55800D0"
+		    friend     	TRUE))
+	    operations 	(list Operations
+		(object Operation "OSF_Message_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B0F63F1EFEED"
+		    documentation 	"= Initialization and termination."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0152"
+			    type       	"void"))
+		    result     	"OSF_Message_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E55702C0")
+		(object Operation "OSF_Message_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6E52452EFEED"
+		    documentation 	"Create an empty message."
+		    parameters 	(list Parameters
+			(object Parameter "data_block"
+			    quid       	"3CA99C2A0154"
+			    type       	"OSF_Data_Block*"))
+		    result     	"OSF_Message_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E55702C0")
+		(object Operation "OSF_Message_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"3C564A88FEED"
+		    documentation 	"Create an <OSF_Message_Block> that owns the <OSF_Data_Block> *."
+		    parameters 	(list Parameters
+			(object Parameter "data"
+			    quid       	"3CA99C2A0156"
+			    type       	"const char*")
+			(object Parameter "size"
+			    quid       	"3CA99C2A0157"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"
+			    initv      	"0")
+			(object Parameter "priority"
+			    quid       	"3CA99C2A0158"
+			    type       	"unsigned long"
+			    initv      	"0"))
+		    result     	"OSF_Message_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E55702C0")
+		(object Operation "OSF_Message_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B06F4459FEED"
+		    documentation 	
+|Create a Message Block that assumes ownership of <data> without
+|copying it (i.e., we don't delete it since we don't malloc it!).
+|Note that the <size> of the <Message_Block> will be <size>, but
+|the <length> will be 0 until <wr_ptr> is set.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "size"
+			    quid       	"3CA99C2A015A"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "msg_type"
+			    quid       	"3CA99C2A015B"
+			    type       	"OSF_Message_Block::OSF_Message_Type"
+			    initv      	"MB_DATA")
+			(object Parameter "msg_cont"
+			    quid       	"3CA99C2A015C"
+			    type       	"OSF_Message_Block*"
+			    initv      	"0")
+			(object Parameter "msg_data"
+			    quid       	"3CA99C2A015D"
+			    type       	"const char*"
+			    initv      	"0")
+			(object Parameter "allocator_strategy"
+			    quid       	"3CA99C2A015E"
+			    type       	"OSF_Allocator*"
+			    initv      	"0")
+			(object Parameter "locking_strategy"
+			    quid       	"3CA99C2A015F"
+			    type       	"OSF_Lock*"
+			    initv      	"0")
+			(object Parameter "priority"
+			    quid       	"3CA99C2A0160"
+			    type       	"u_long"
+			    initv      	"0")
+			(object Parameter "execution_time"
+			    quid       	"3CA99C2A0161"
+			    type       	"const OSF_Time_Value&"
+			    initv      	"OSF_Time_Value::zero")
+			(object Parameter "deadline_time"
+			    quid       	"3CA99C2A0162"
+			    type       	"const OSF_Time_Value&"
+			    initv      	"OSF_Time_Value::max_time")
+			(object Parameter "data_block_allocator"
+			    quid       	"3CA99C2A0163"
+			    type       	"OSF_Allocator*"
+			    initv      	"0"))
+		    result     	"OSF_Message_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E55702C0")
+		(object Operation "OSF_Message_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D907F5B9FEED"
+		    documentation 	"= Internal initialization methods."
+		    parameters 	(list Parameters
+			(object Parameter "size"
+			    quid       	"3CA99C2A0165"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "msg_type"
+			    quid       	"3CA99C2A0166"
+			    type       	"OSF_Message_Block::OSF_Message_Type")
+			(object Parameter "msg_cont"
+			    quid       	"3CA99C2A0167"
+			    type       	"OSF_Message_Block*")
+			(object Parameter "msg_data"
+			    quid       	"3CA99C2A0168"
+			    type       	"const char*")
+			(object Parameter "allocator_strategy"
+			    quid       	"3CA99C2A0169"
+			    type       	"OSF_Allocator*")
+			(object Parameter "locking_strategy"
+			    quid       	"3CA99C2A016A"
+			    type       	"OSF_Lock*")
+			(object Parameter "flags"
+			    quid       	"3CA99C2A016B"
+			    type       	"OSF_Message_Block::Message_Flags")
+			(object Parameter "priority"
+			    quid       	"3CA99C2A016C"
+			    type       	"u_long")
+			(object Parameter "execution_time"
+			    quid       	"3CA99C2A016D"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "deadline_time"
+			    quid       	"3CA99C2A016E"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "db"
+			    quid       	"3CA99C2A016F"
+			    type       	"OSF_Data_Block*")
+			(object Parameter "data_block_allocator"
+			    quid       	"3CA99C2A0170"
+			    type       	"OSF_Allocator*"))
+		    result     	"OSF_Message_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0
+		    quidu      	"3822E55702C0")
+		(object Operation "OSF_Message_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"6645C848FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0172"
+			    type       	"const OSF_Message_Block&"))
+		    result     	"OSF_Message_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0
+		    quidu      	"3822E55702C0")
+		(object Operation "size"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BF17451CFEED"
+		    documentation 	
+|Set the length of the message
+|= Message size is the total amount of sposf alloted.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0174"
+			    type       	"void"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"370C8510004E")
+		(object Operation "size"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"70D30BC0FEED"
+		    documentation 	"Get the total amount of sposf in the message."
+		    parameters 	(list Parameters
+			(object Parameter "length"
+			    quid       	"3CA99C2A0176"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "cont"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5AD46088FEED"
+		    documentation 	
+|Set the data block (releasing the original one).
+|= The continuation field chains together composite messages.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0178"
+			    type       	"void"))
+		    result     	"OSF_Message_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "cont"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A5FDF631FEED"
+		    documentation 	"Get the continuation field."
+		    parameters 	(list Parameters
+			(object Parameter "cont_msg"
+			    quid       	"3CA99C2A017A"
+			    type       	"OSF_Message_Block*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "init"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"ABCA3977FEED"
+		    documentation 	
+|Create an initialized message of type <type> containing <size>
+|bytes.  The <cont> argument initializes the continuation field in
+|the <Message_Block>.  If <data> == 0 then we create and own the
+|<data>, using <allocator> to get the data if it's non-0.  If
+|<data> != 0 we assume ownership of the <data> (and don't delete
+|it).  If <locking_strategy> is non-0 then this is used to protect
+|regions of code that access shared state (e.g., reference
+|counting) from rosf conditions.  Note that the <size> of the
+|<Message_Block> will be <size>, but the <length> will be 0 until
+|<wr_ptr> is set.
+|The <data_block_allocator> is use to allocate the data blocks
+|while the <allocator_strategy> is used to allocate the buffers
+|contained by those.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "data"
+			    quid       	"3CA99C2A017C"
+			    type       	"const char*")
+			(object Parameter "size"
+			    quid       	"3CA99C2A017D"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"
+			    initv      	"0"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "init"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3138A14FFEED"
+		    documentation 	
+|Create a Message Block that assumes ownership of <data> (i.e.,
+|doesn't delete it since it didn't malloc it!).  Note that the
+|<size> of the <Message_Block> will be <size>, but the <length>
+|will be 0 until <wr_ptr> is set.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "size"
+			    quid       	"3CA99C2A017F"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "msg_type"
+			    quid       	"3CA99C2A0180"
+			    type       	"OSF_Message_Block::OSF_Message_Type"
+			    initv      	"MB_DATA")
+			(object Parameter "msg_cont"
+			    quid       	"3CA99C2A0181"
+			    type       	"OSF_Message_Block*"
+			    initv      	"0")
+			(object Parameter "msg_data"
+			    quid       	"3CA99C2A0182"
+			    type       	"const char*"
+			    initv      	"0")
+			(object Parameter "allocator_strategy"
+			    quid       	"3CA99C2A0183"
+			    type       	"OSF_Allocator*"
+			    initv      	"0")
+			(object Parameter "locking_strategy"
+			    quid       	"3CA99C2A0184"
+			    type       	"OSF_Lock*"
+			    initv      	"0")
+			(object Parameter "priority"
+			    quid       	"3CA99C2A0185"
+			    type       	"u_long"
+			    initv      	"0")
+			(object Parameter "execution_time"
+			    quid       	"3CA99C2A0186"
+			    type       	"const OSF_Time_Value&"
+			    initv      	"OSF_Time_Value::zero")
+			(object Parameter "deadline_time"
+			    quid       	"3CA99C2A0187"
+			    type       	"const OSF_Time_Value&"
+			    initv      	"OSF_Time_Value::max_time")
+			(object Parameter "data_block_allocator"
+			    quid       	"3CA99C2A0188"
+			    type       	"OSF_Allocator*"
+			    initv      	"0"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "init"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"9381E513FEED"
+		    parameters 	(list Parameters
+			(object Parameter "size"
+			    quid       	"3CA99C2A018A"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "type"
+			    quid       	"3CA99C2A018B"
+			    type       	"OSF_Message_Block::OSF_Message_Type"
+			    initv      	"MB_DATA")
+			(object Parameter "cont"
+			    quid       	"3CA99C2A018C"
+			    type       	"OSF_Message_Block*"
+			    initv      	"0")
+			(object Parameter "data"
+			    quid       	"3CA99C2A018D"
+			    type       	"const char*"
+			    initv      	"0"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msg_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"410C89B8FEED"
+		    documentation 	
+|Delete all the resources held in the message.
+|= Message Type accessors and mutators.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A018F"
+			    type       	"void"))
+		    result     	"OSF_Message_Block::OSF_Message_Type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msg_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D4F19875FEED"
+		    documentation 	"Get type of the message."
+		    parameters 	(list Parameters
+			(object Parameter "t"
+			    quid       	"3CA99C2A0191"
+			    type       	"OSF_Message_Block::OSF_Message_Type"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~OSF_Message_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"06450DE3FEED"
+		    documentation 	
+|Create an initialized message of type <type> containing <size>
+|bytes.  The <cont> argument initializes the continuation field in
+|the <Message_Block>.  If <data> == 0 then we create and own the
+|<data>, using <allocator> to get the data if it's non-0.  If
+|<data> != 0 we assume ownership of the <data> (and don't delete
+|it).  If <locking_strategy> is non-0 then this is used to protect
+|regions of code that access shared state (e.g., reference
+|counting) from rosf conditions.  Note that the <size> of the
+|<Message_Block> will be <size>, but the <length> will be 0 until
+|<wr_ptr> is set.
+|The <data_block_allocator> is use to allocate the data blocks
+|while the <allocator_strategy> is used to allocate the buffers
+|contained by those.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0193"
+			    type       	"void"))
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "is_data_msg"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"80FD2A51FEED"
+		    documentation 	"Set type of the message."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0195"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msg_class"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"07185DFCFEED"
+		    documentation 	"Find out what type of message this is."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0197"
+			    type       	"void"))
+		    result     	"OSF_Message_Block::OSF_Message_Type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set_flags"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2C426753FEED"
+		    documentation 	
+|Find out what class of message this is (there are two classes,
+|<normal> messages and <high-priority> messages).
+|= Message flag accessors and mutators.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "more_flags"
+			    quid       	"3CA99C2A026C"
+			    type       	"OSF_Message_Block::Message_Flags"))
+		    result     	"OSF_Message_Block::Message_Flags"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "clr_flags"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6322C3FDFEED"
+		    documentation 	
+|Bitwise-or the <more_flags> into the existing message flags and
+|return the new value.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "less_flags"
+			    quid       	"3CA99C2A0276"
+			    type       	"OSF_Message_Block::Message_Flags"))
+		    result     	"OSF_Message_Block::Message_Flags"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "flags"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"DD6A9B4FFEED"
+		    documentation 	
+|Clear the message flag bits specified in <less_flags> and return
+|the new value.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0278"
+			    type       	"void"))
+		    result     	"OSF_Message_Block::Message_Flags"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msg_priority"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"E7397076FEED"
+		    documentation 	"Get the current message flags."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A027A"
+			    type       	"void"))
+		    result     	"unsigned long"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msg_priority"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"B0F19813FEED"
+		    documentation 	"Get priority of the message."
+		    parameters 	(list Parameters
+			(object Parameter "priority"
+			    quid       	"3CA99C2A027C"
+			    type       	"unsigned long"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msg_deadline_time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F566FA4BFEED"
+		    documentation 	"Set priority of the message."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0281"
+			    type       	"void"))
+		    result     	"const OSF_Time_Value&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msg_deadline_time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5E797463FEED"
+		    documentation 	"Get absolute time of deadline associated with the message."
+		    parameters 	(list Parameters
+			(object Parameter "dt"
+			    quid       	"3CA99C2A0283"
+			    type       	"const OSF_Time_Value&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "clone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"01A7C9FEFEED"
+		    documentation 	
+|Set absolute time of deadline associated with the message.
+|= Deep copy and shallow copy methods.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "mask"
+			    quid       	"3CA99C2A0285"
+			    type       	"OSF_Message_Block::Message_Flags"
+			    initv      	"0"))
+		    result     	"OSF_Message_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "duplicate"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C94F24D6FEED"
+		    documentation 	
+|Return an exact "deep copy" of the message, i.e., create fresh
+|new copies of all the Data_Blocks and continuations.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A028A"
+			    type       	"void"))
+		    result     	"OSF_Message_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "duplicate"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"81F6AD2CFEED"
+		    documentation 	
+|Return a "shallow" copy that increments our reference count by 1.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "mb"
+			    quid       	"3CA99C2A028C"
+			    type       	"const OSF_Message_Block*"))
+		    result     	"OSF_Message_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "release"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"377738DDFEED"
+		    documentation 	
+|Return a "shallow" copy that increments our reference count by 1.
+|This is similar to CORBA's <_duplicate> method, which is useful
+|if you want to eliminate lots of checks for NULL <mb> pointers
+|before calling <_duplicate> on them.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A028E"
+			    type       	"void"))
+		    result     	"OSF_Message_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "release"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6C6F334EFEED"
+		    documentation 	
+|Decrease the shared OSF_Data_Block's reference count by 1.  If the
+|OSF_Data_Block's reference count goes to 0, it is deleted.
+|In all cases, this OSF_Message_Block is deleted - it must have come
+|from the heap, or there will be trouble.
+|static
+		    
+		    parameters 	(list Parameters
+			(object Parameter "mb"
+			    quid       	"3CA99C2A0290"
+			    type       	"OSF_Message_Block*"))
+		    result     	"OSF_Message_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "copy"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"24305546FEED"
+		    documentation 	
+|This behaves like the non-static method <release>, except that it
+|checks if <mb> is 0.  This is similar to <CORBA::release>, which
+|is useful if you want to eliminate lots of checks for NULL
+|pointers before calling <release> on them.  Returns <mb>.
+|= Operations on Message data
+		    
+		    parameters 	(list Parameters
+			(object Parameter "buf"
+			    quid       	"3CA99C2A0294"
+			    type       	"const char*")
+			(object Parameter "n"
+			    quid       	"3CA99C2A0295"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "copy"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0A15FFF2FEED"
+		    documentation 	
+|Copies <n> bytes from <buf> into the Message_Block starting at
+|the <wr_ptr> offset.  Return 0 and increment <wr_ptr> by <n> if
+|the method succeeds.  Returns -1 if the size of the message is
+|too small, i.e., for this to work correct, <end> must be >=
+|<wr_ptr>.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "buf"
+			    quid       	"3CA99C2A0297"
+			    type       	"const char*"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "base"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E65A3400FEED"
+		    documentation 	
+|Copies <buf> into the Message_Block starting at the wr_ptr()
+|offset.  This call assumees that <buf> is NUL-terminated.  Return
+|0 and increment <wr_ptr> by <OSF_OS::strlen (buf) + 1> if the
+|method succeeds.  Returns -1 if the size of the message is too
+|small, i.e., for this to work correct, <end> must be >= <wr_ptr>.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0299"
+			    type       	"void"))
+		    result     	"char*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "base"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"19BDDC92FEED"
+		    documentation 	"Get message data."
+		    parameters 	(list Parameters
+			(object Parameter "msg_data"
+			    quid       	"3CA99C2A029B"
+			    type       	"char*")
+			(object Parameter "msg_length"
+			    quid       	"3CA99C2A029C"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "msg_flags"
+			    quid       	"3CA99C2A029D"
+			    type       	"OSF_Message_Block::Message_Flags"
+			    initv      	"DONT_DELETE"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "end"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6AD33872FEED"
+		    documentation 	"Set message data (doesn't reallocate)."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A029F"
+			    type       	"void"))
+		    result     	"char*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "rd_ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"4E8E8F11FEED"
+		    documentation 	"Return a pointer to 1 past the end of the data in a message."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02A1"
+			    type       	"void"))
+		    result     	"char*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "rd_ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C3A5AAA1FEED"
+		    documentation 	"Get the read pointer."
+		    parameters 	(list Parameters
+			(object Parameter "new_ptr"
+			    quid       	"3CA99C2A02A3"
+			    type       	"char*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "rd_ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"764A02AAFEED"
+		    documentation 	"Set the read pointer to <ptr>."
+		    parameters 	(list Parameters
+			(object Parameter "n"
+			    quid       	"3CA99C2A02A5"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "wr_ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B1322FAAFEED"
+		    documentation 	"Set the read pointer ahead <n> bytes."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02A7"
+			    type       	"void"))
+		    result     	"char*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "wr_ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"878A1919FEED"
+		    documentation 	"Get the write pointer."
+		    parameters 	(list Parameters
+			(object Parameter "new_ptr"
+			    quid       	"3CA99C2A02A9"
+			    type       	"char*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "wr_ptr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"19AD48E8FEED"
+		    documentation 	"Set the write pointer to <ptr>."
+		    parameters 	(list Parameters
+			(object Parameter "n"
+			    quid       	"3CA99C2A02AB"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "length"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F7C68351FEED"
+		    documentation 	
+|Set the write pointer ahead <n> bytes.  This is used to compute
+|the <length> of a message.
+|= Message length is wr_ptr() - rd_ptr ().
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02AD"
+			    type       	"void"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"370C8510004E")
+		(object Operation "length"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"629CF6B7FEED"
+		    documentation 	"Get the length of the message"
+		    parameters 	(list Parameters
+			(object Parameter "len"
+			    quid       	"3CA99C2A02AF"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "data_block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"014F3A5EFEED"
+		    documentation 	
+|Set the total amount of sposf in the message, reallocating sposf
+|if necessary.  However, the <rd_ptr_> and <wr_ptr_> remain at the
+|original offsets into the buffer, even if it is reallocated.
+|Returns 0 if successful, else -1.
+|= <OSF_Data_Block> methods.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02B1"
+			    type       	"void"))
+		    result     	"OSF_Data_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "data_block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9680F624FEED"
+		    documentation 	"Get the data block."
+		    parameters 	(list Parameters
+			(object Parameter "db"
+			    quid       	"3CA99C2A02B3"
+			    type       	"OSF_Data_Block*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "next"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2F7A3209FEED"
+		    documentation 	
+|Set the continuation field.
+|= Pointer to the <Message_Block> directly ahead in the <OSF_Message_Queue>.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02B5"
+			    type       	"void"))
+		    result     	"OSF_Message_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "next"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8B191CECFEED"
+		    documentation 	"Get link to next message."
+		    parameters 	(list Parameters
+			(object Parameter "next_msg"
+			    quid       	"3CA99C2A02B7"
+			    type       	"OSF_Message_Block*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "prev"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9227A913FEED"
+		    documentation 	
+|Set link to next message.
+|= Pointer to the <Message_Block> directly behind in the <OSF_Message_Queue>.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02B9"
+			    type       	"void"))
+		    result     	"OSF_Message_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "prev"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5AE06CCEFEED"
+		    documentation 	"Get link to prev message."
+		    parameters 	(list Parameters
+			(object Parameter "next_msg"
+			    quid       	"3CA99C2A02BB"
+			    type       	"OSF_Message_Block*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "reference_count"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"495420D7FEED"
+		    documentation 	"Set link to prev message."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02BD"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "release_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B2AD9C88FEED"
+		    documentation 	"Perform the actual initialization."
+		    parameters 	(list Parameters
+			(object Parameter "lock"
+			    quid       	"3CA99C2A02BF"
+			    type       	"OSF_Lock*"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "init_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B1D9C6B6FEED"
+		    documentation 	
+|Internal release implementation
+|Returns 1 if the data block has to be destroyed.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "size"
+			    quid       	"3CA99C2A02C1"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "msg_type"
+			    quid       	"3CA99C2A02C2"
+			    type       	"OSF_Message_Block::OSF_Message_Type")
+			(object Parameter "msg_cont"
+			    quid       	"3CA99C2A02C3"
+			    type       	"OSF_Message_Block*")
+			(object Parameter "msg_data"
+			    quid       	"3CA99C2A02C4"
+			    type       	"const char*")
+			(object Parameter "allocator_strategy"
+			    quid       	"3CA99C2A02C5"
+			    type       	"OSF_Allocator*")
+			(object Parameter "locking_strategy"
+			    quid       	"3CA99C2A02C6"
+			    type       	"OSF_Lock*")
+			(object Parameter "flags"
+			    quid       	"3CA99C2A02C7"
+			    type       	"OSF_Message_Block::Message_Flags")
+			(object Parameter "priority"
+			    quid       	"3CA99C2A02C8"
+			    type       	"u_long")
+			(object Parameter "execution_time"
+			    quid       	"3CA99C2A02C9"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "deadline_time"
+			    quid       	"3CA99C2A02CA"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "db"
+			    quid       	"3CA99C2A02CB"
+			    type       	"OSF_Data_Block*")
+			(object Parameter "data_block_allocator"
+			    quid       	"3CA99C2A02CC"
+			    type       	"OSF_Allocator*"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"58D75639FEED"
+		    documentation 	
+|Pointer to the reference counted data structure that contains the
+|actual memory buffer.
+|= Disallow these operations for now (use <clone> instead).
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02CE"
+			    type       	"const OSF_Message_Block&"))
+		    result     	"OSF_Message_Block&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "rd_ptr_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580180"
+		    documentation 	"Perform the actual initialization."
+		    type       	"size_t"
+		    quidu      	"370C8510004E"
+		    Containment 	"By Value")
+		(object ClassAttribute "wr_ptr_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580184"
+		    documentation 	"Pointer to beginning of next read."
+		    type       	"size_t"
+		    quidu      	"370C8510004E"
+		    Containment 	"By Value")
+		(object ClassAttribute "priority_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580188"
+		    documentation 	"Pointer to beginning of next write."
+		    type       	"u_long"
+		    Containment 	"By Value")
+		(object ClassAttribute "execution_time_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E558018C"
+		    documentation 	"Priority of message."
+		    type       	"OSF_Time_Value"
+		    Containment 	"By Value")
+		(object ClassAttribute "deadline_time_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580190"
+		    documentation 	"execution time associated with the message"
+		    type       	"OSF_Time_Value"
+		    Containment 	"By Value")
+		(object ClassAttribute "cont_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580194"
+		    documentation 	
+|absolute deadline time for message
+|= Links to other OSF_Message_Block *s.
+		    
+		    type       	"OSF_Message_Block*"
+		    Containment 	"By Value")
+		(object ClassAttribute "next_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580198"
+		    documentation 	"Pointer to next message block in the chain."
+		    type       	"OSF_Message_Block*"
+		    Containment 	"By Value")
+		(object ClassAttribute "prev_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E558019C"
+		    documentation 	"Pointer to next message in the list."
+		    type       	"OSF_Message_Block*"
+		    Containment 	"By Value")
+		(object ClassAttribute "data_block_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E55801A0"
+		    documentation 	"Pointer to previous message in the list."
+		    type       	"OSF_Data_Block*"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::message_block (module spec)"
+	    quidu      	"3822E55702C1"
+	    module     	"Component View::OSF::osf_caa::src::message_block (module body)"
+	    quidu      	"3822E5610007"
+	    module     	"Component View::OSF::osf_caa::src::message_block0 (module body)"
+	    quidu      	"3822E580005C"
+	    language   	"C++"
+	    nestedClasses 	(list nestedClasses
+		(object Class "$UNNAMED$0"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	53)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {MB_DATA=, MB_PROTO=, MB_BREAK=, MB_PASSFP=, MB_EVENT=, MB_SIG=, MB_IOCTL=, MB_SETOPTS=, MB_IOCACK=, MB_IOCNAK=, MB_PCPROTO=, MB_PCSIG=, MB_READ=, MB_FLUSH=, MB_STOP=, MB_START=, MB_HANGUP=, MB_ERROR=, MB_PCEVENT=, MB_NORMAL=, MB_PRIORITY=, MB_USER=}"))
+		    quid       	"3822E5580091"
+		    module     	"Component View::OSF::osf_caa::osf::message_block (module spec)"
+		    quidu      	"3822E55702C1"
+		    module     	"Component View::OSF::osf_caa::src::message_block (module body)"
+		    quidu      	"3822E5610007"
+		    module     	"Component View::OSF::osf_caa::src::message_block0 (module body)"
+		    quidu      	"3822E580005C"
+		    nonclassname 	"enum {MB_DATA=, MB_PROTO=, MB_BREAK=, MB_PASSFP=, MB_EVENT=, MB_SIG=, MB_IOCTL=, MB_SETOPTS=, MB_IOCACK=, MB_IOCNAK=, MB_PCPROTO=, MB_PCSIG=, MB_READ=, MB_FLUSH=, MB_STOP=, MB_START=, MB_HANGUP=, MB_ERROR=, MB_PCEVENT=, MB_NORMAL=, MB_PRIORITY=, MB_USER=}")
+		(object Class "Message_Flags"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"unsigned long")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	87))
+		    quid       	"3822E55702B0"
+		    module     	"Component View::OSF::osf_caa::osf::message_block (module spec)"
+		    quidu      	"3822E55702C1"
+		    module     	"Component View::OSF::osf_caa::src::message_block (module body)"
+		    quidu      	"3822E5610007"
+		    module     	"Component View::OSF::osf_caa::src::message_block0 (module body)"
+		    quidu      	"3822E580005C"
+		    nonclassname 	"unsigned long")
+		(object Class "$UNNAMED$1"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	89)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {DONT_DELETE=, USER_FLAGS=}"))
+		    quid       	"3822E55800C3"
+		    module     	"Component View::OSF::osf_caa::osf::message_block (module spec)"
+		    quidu      	"3822E55702C1"
+		    module     	"Component View::OSF::osf_caa::src::message_block (module body)"
+		    quidu      	"3822E5610007"
+		    module     	"Component View::OSF::osf_caa::src::message_block0 (module body)"
+		    quidu      	"3822E580005C"
+		    nonclassname 	"enum {DONT_DELETE=, USER_FLAGS=}")
+		(object Class "__Ace"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	326)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ClassKey"
+			    value      	"struct"))
+		    quid       	"3822E55801A7"
+		    documentation 	"Get the current reference count."
+		    module     	"Component View::OSF::osf_caa::osf::message_block (module spec)"
+		    quidu      	"3822E55702C1"
+		    module     	"Component View::OSF::osf_caa::src::message_block (module body)"
+		    quidu      	"3822E5610007"
+		    module     	"Component View::OSF::osf_caa::src::message_block0 (module body)"
+		    quidu      	"3822E580005C")))
+	(object Parameterized_Class "OSF_Message_Queue"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	33)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3822E57602DA"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E577003C"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E5770052"
+		    supplier   	"Logical View::UnAssigned::(OSF_Message_Queue< _OSF_SYNCH_MUTEX_T, _OSF_SYNCH_CONDITION_T >)"
+		    quidu      	"3822E577004F"
+		    exportControl 	"Private")
+		(object Uses_Relationship
+		    quid       	"3822E577005A"
+		    supplier   	"Logical View::Timing::OSF_Time_Value"
+		    quidu      	"3822E5560048")
+		(object Uses_Relationship
+		    quid       	"3822E577008C"
+		    supplier   	"Logical View::Synch::(OSF_Guard< _OSF_SYNCH_MUTEX_T >)"
+		    quidu      	"3822E577008A"
+		    exportControl 	"Protected"))
+	    operations 	(list Operations
+		(object Operation "high_water_mark"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BF8E1E26FEED"
+		    documentation 	
+|Close down the message queue and release all resources.
+|= Flow control methods.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02F5"
+			    type       	"void"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"370C8510004E")
+		(object Operation "high_water_mark"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0F967D6DFEED"
+		    documentation 	"Get high watermark."
+		    parameters 	(list Parameters
+			(object Parameter "hwm"
+			    quid       	"3CA99C2A02F7"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "low_water_mark"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E139BD1DFEED"
+		    documentation 	
+|Set the high watermark, which determines how many bytes can be
+|stored in a queue before it's considered "full."
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A02F9"
+			    type       	"void"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"370C8510004E")
+		(object Operation "low_water_mark"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CD0859B7FEED"
+		    documentation 	"Get low watermark."
+		    parameters 	(list Parameters
+			(object Parameter "lwm"
+			    quid       	"3CA99C2A02FB"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "open"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F6F7C97BFEED"
+		    documentation 	
+|Don't bother locking since if someone calls this function more than
+|once for the same queue, we're in bigger trouble than just
+|concurrency control!
+		    
+		    parameters 	(list Parameters
+			(object Parameter "hwm"
+			    quid       	"3CA99C2A02FD"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"
+			    initv      	"DEFAULT_HWM")
+			(object Parameter "lwm"
+			    quid       	"3CA99C2A02FE"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"
+			    initv      	"DEFAULT_LWM")
+			(object Parameter "ns"
+			    quid       	"3CA99C2A02FF"
+			    type       	"OSF_Notification_Strategy*"
+			    initv      	"0"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "OSF_Message_Queue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E037A858FEED"
+		    documentation 	
+|= Initialization and termination methods.
+|=
+|= class OSF_Message_Queue
+|=
+		    
+		    parameters 	(list Parameters
+			(object Parameter "hwm"
+			    quid       	"3CA99C2A0301"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"
+			    initv      	"DEFAULT_HWM")
+			(object Parameter "lwm"
+			    quid       	"3CA99C2A0302"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"
+			    initv      	"DEFAULT_LWM")
+			(object Parameter "ns"
+			    quid       	"3CA99C2A0303"
+			    type       	"OSF_Notification_Strategy*"
+			    initv      	"0"))
+		    result     	"OSF_Message_Queue"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E57602DA")
+		(object Operation "OSF_Message_Queue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"1BFD96C6FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0305"
+			    type       	"const OSF_Message_Queue&"))
+		    result     	"OSF_Message_Queue"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0
+		    quidu      	"3822E57602DA")
+		(object Operation "close"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CFB32B88FEED"
+		    documentation 	
+|Initialize an <OSF_Message_Queue>.
+|Clean up the queue if we have not already done so!
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0307"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~OSF_Message_Queue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"03128B3DFEED"
+		    documentation 	
+|Close down the message queue and release all resources.
+|You need to re-open the MQ after this function is executed.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0309"
+			    type       	"void"))
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "enqueue_prio"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"20EDE933FEED"
+		    documentation 	
+|Set the low watermark, which determines how many bytes must be in
+|the queue before supplier threads are allowed to enqueue
+|additional <OSF_Message_Block>s.
+|= Enqueue and dequeue methods.
+|Block indefinitely waiting for an item to arrive, does not ignore
+|alerts (e.g., signals).
+|Enqueue an <OSF_Message_Block *> into the <Message_Queue> in
+|accordance with its <msg_priority> (0 is lowest priority).  Returns
+|-1 on failure, else the number of items still on the queue.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "new_item"
+			    quid       	"3CA99C2A030B"
+			    type       	"OSF_Message_Block*")
+			(object Parameter "timeout"
+			    quid       	"3CA99C2A030C"
+			    type       	"OSF_Time_Value*"
+			    initv      	"0"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "enqueue_head"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0717510EFEED"
+		    documentation 	
+|Enqueue an <OSF_Message_Block *> into the <Message_Queue> in
+|accordance with its <msg_priority> (0 is lowest priority).  FIFO
+|order is maintained when messages of the same priority are
+|inserted consecutively.  Returns -1 on failure, else the number
+|of items still on the queue.
+|Block indefinitely waiting for an item to arrive, does not ignore
+|alerts (e.g., signals).
+		    
+		    parameters 	(list Parameters
+			(object Parameter "new_item"
+			    quid       	"3CA99C2A030E"
+			    type       	"OSF_Message_Block*")
+			(object Parameter "timeout"
+			    quid       	"3CA99C2A030F"
+			    type       	"OSF_Time_Value*"
+			    initv      	"0"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "enqueue_tail"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1A1975F8FEED"
+		    documentation 	
+|Enqueue an <OSF_Message_Block *> at the head of the queue.
+|Returns -1 on failure, else the number of items still on the
+|queue.
+|Block indefinitely waiting for an item to arrive,
+|does not ignore alerts (e.g., signals).
+		    
+		    parameters 	(list Parameters
+			(object Parameter "new_item"
+			    quid       	"3CA99C2A0311"
+			    type       	"OSF_Message_Block*")
+			(object Parameter "timeout"
+			    quid       	"3CA99C2A0312"
+			    type       	"OSF_Time_Value*"
+			    initv      	"0"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "dequeue_head"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"11A543FDFEED"
+		    documentation 	
+|Enqueue an <OSF_Message_Block *> at the end of the queue.
+|Returns -1 on failure, else the number of items still on the
+|queue.
+|Remove an item from the front of the queue.  If timeout == 0 block
+|indefinitely (or until an alert occurs).  Otherwise, block for upto
+|the amount of time specified by timeout.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "first_item"
+			    quid       	"3CA99C2A0314"
+			    type       	"OSF_Message_Block*&")
+			(object Parameter "timeout"
+			    quid       	"3CA99C2A0315"
+			    type       	"OSF_Time_Value*"
+			    initv      	"0"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "peek_dequeue_head"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"49126893FEED"
+		    documentation 	
+|Dequeue and return the <OSF_Message_Block *> at the head of the
+|queue.  Returns -1 on failure, else the number of items still on
+|the queue.
+|Take a look at the first item without removing it.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "first_item"
+			    quid       	"3CA99C2A0317"
+			    type       	"OSF_Message_Block*&")
+			(object Parameter "timeout"
+			    quid       	"3CA99C2A0318"
+			    type       	"OSF_Time_Value*"
+			    initv      	"0"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "is_full"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"46BABA5AFEED"
+		    documentation 	
+|Retrieve the first <OSF_Message_Block> without removing it.
+|Returns -1 on failure, else the number of items still on the
+|queue.
+|= Check if queue is full/empty.
+|Check if queue is full (holds locks).
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A031A"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "is_empty"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"FB9C7D98FEED"
+		    documentation 	
+|Always return false.
+|Check if queue is empty (holds locks).
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A031C"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "message_bytes"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"421A8363FEED"
+		    documentation 	
+|True if queue is empty, else false.  Notice the return value is
+|only transient.
+|= Queue statistic methods (transient.)
+|Return the current number of bytes in the queue.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A031E"
+			    type       	"void"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"370C8510004E")
+		(object Operation "message_count"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D177B7F8FEED"
+		    documentation 	
+|Number of total bytes on the queue.
+|Return the current number of messages in the queue.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0320"
+			    type       	"void"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"370C8510004E")
+		(object Operation "deactivate"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"4704CBF4FEED"
+		    documentation 	
+|Number of total messages on the queue.
+|= Activation control methods.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0322"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "activate"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2CCE7BE8FEED"
+		    documentation 	
+|Deactivate the queue and wakeup all threads waiting on the queue
+|so they can continue.  Messages already in the queue get removed.
+|If there are more messages in the queue than there are threads
+|waiting on the queue, the left over messages will not be removed.
+|Any other enqueue/dequeue operations called until the queue is
+|activated again will immediately return -1 with <errno> ==
+|ESHUTDOWN.  Returns WAS_INACTIVE if queue was inactive before the
+|call and WAS_ACTIVE if queue was active before the call.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0324"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "deactivated"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3E969273FEED"
+		    documentation 	
+|Reactivate the queue so that threads can enqueue and dequeue
+|messages again.  Returns WAS_INACTIVE if queue was inactive
+|before the call and WAS_ACTIVE if queue was active before the
+|call.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0326"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "notify"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D87F4A95FEED"
+		    documentation 	"Returns true if <deactivated_> is enabled."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0328"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "enqueue_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"118959FEFEED"
+		    documentation 	
+|= Routines that actually do the enqueueing and dequeueing.
+|These routines assume that locks are held by the corresponding
+|public methods.  Since they are virtual, you can change the
+|queueing mechanism by subclassing from <OSF_Message_Queue>.
+|Actually put the node at its proper position relative to its
+|priority.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "new_item"
+			    quid       	"3CA99C2A032A"
+			    type       	"OSF_Message_Block*"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "enqueue_tail_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"14A25DE0FEED"
+		    documentation 	
+|Enqueue an <OSF_Message_Block *> in accordance with its priority.
+|Actually put the node at the end (no locking so must be called with
+|locks held).
+		    
+		    parameters 	(list Parameters
+			(object Parameter "new_item"
+			    quid       	"3CA99C2A032C"
+			    type       	"OSF_Message_Block*"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "enqueue_head_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"91B04129FEED"
+		    documentation 	
+|Enqueue an <OSF_Message_Block *> at the end of the queue.
+|Actually put the node at the head (no locking)
+		    
+		    parameters 	(list Parameters
+			(object Parameter "new_item"
+			    quid       	"3CA99C2A032E"
+			    type       	"OSF_Message_Block*"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "dequeue_head_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2726BD87FEED"
+		    documentation 	
+|Enqueue an <OSF_Message_Block *> at the head of the queue.
+|Actually get the first OSF_Message_Block (no locking, so must be
+|called with locks held).  This method assumes that the queue has at
+|least one item in it when it is called.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "first_item"
+			    quid       	"3CA99C2A0330"
+			    type       	"OSF_Message_Block*&"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "is_full_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B91DFC2BFEED"
+		    documentation 	
+|Dequeue and return the <OSF_Message_Block *> at the head of the
+|queue.
+|= Check the boundary conditions (assumes locks are held).
+|Check if queue is full (does not hold locks).
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0332"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "is_empty_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AA096C8DFEED"
+		    documentation 	
+|True if queue is full, else false.
+|Keeps track of how far we've advanced...
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0334"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "deactivate_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"336F4257FEED"
+		    documentation 	
+|True if queue is empty, else false.
+|= Implementation of the public activate() and deactivate() methods above (assumes locks are held).
+|Implementation of the public deactivate() method
+|(assumes locks are held).
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0336"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "activate_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"68594672FEED"
+		    documentation 	"Deactivate the queue."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0338"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "wait_not_full_cond"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0D8F92F4FEED"
+		    documentation 	
+|Activate the queue.
+|= Helper methods to factor out common #ifdef code.
+|Take a look at the first item without removing it.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "mon"
+			    quid       	"3CA99C2A033A"
+			    type       	"OSF_Guard&")
+			(object Parameter "timeout"
+			    quid       	"3CA99C2A033B"
+			    type       	"OSF_Time_Value*"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "wait_not_empty_cond"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5782E44BFEED"
+		    documentation 	"Wait for the queue to become non-full."
+		    parameters 	(list Parameters
+			(object Parameter "mon"
+			    quid       	"3CA99C2A033D"
+			    type       	"OSF_Guard&")
+			(object Parameter "timeout"
+			    quid       	"3CA99C2A033E"
+			    type       	"OSF_Time_Value*"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "signal_enqueue_waiters"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B32A576CFEED"
+		    documentation 	"Wait for the queue to become non-empty."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0340"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "signal_dequeue_waiters"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CF32B9F3FEED"
+		    documentation 	"Inform any threads waiting to enqueue that they can procede."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0342"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"286D5869FEED"
+		    documentation 	"= Disallow these operations."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0344"
+			    type       	"const OSF_Message_Queue&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "head_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5770097"
+		    documentation 	"Inform any threads waiting to dequeue that they can procede."
+		    type       	"OSF_Message_Block*"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "tail_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E577009B"
+		    documentation 	"Pointer to head of OSF_Message_Block list."
+		    type       	"OSF_Message_Block*"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "low_water_mark_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E577009F"
+		    documentation 	"Pointer to tail of OSF_Message_Block list."
+		    type       	"size_t"
+		    quidu      	"370C8510004E"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "high_water_mark_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57700A3"
+		    documentation 	"Lowest number before unblocking occurs."
+		    type       	"size_t"
+		    quidu      	"370C8510004E"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "cur_bytes_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57700B3"
+		    documentation 	"Greatest number of bytes before blocking."
+		    type       	"size_t"
+		    quidu      	"370C8510004E"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "cur_count_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57700BD"
+		    documentation 	"Current number of bytes in the queue."
+		    type       	"size_t"
+		    quidu      	"370C8510004E"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "deactivated_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57700D1"
+		    documentation 	"Current number of messages in the queue."
+		    type       	"int"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "notification_strategy_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57700E5"
+		    documentation 	"Indicates that the queue is inactive."
+		    type       	"OSF_Notification_Strategy*"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "lock_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57700EF"
+		    documentation 	
+|The notification strategy used when a new message is enqueued.
+|= Synchronization primitives for controlling concurrent access.
+		    
+		    type       	"_OSF_SYNCH_MUTEX_T"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "not_empty_cond_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57700F0"
+		    documentation 	"Protect queue from concurrent access."
+		    type       	"_OSF_SYNCH_CONDITION_T"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "not_full_cond_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57700F9"
+		    documentation 	"Used to make threads sleep until the queue is no longer empty."
+		    type       	"_OSF_SYNCH_CONDITION_T"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::message_queue (module spec)"
+	    quidu      	"3822E57602C5"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_OSF_SYNCH_MUTEX_T"
+		    quid       	"3CA99C2A0351"
+		    type       	"class")
+		(object Parameter "_OSF_SYNCH_CONDITION_T"
+		    quid       	"3CA99C2A0352"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "$UNNAMED$2"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	48)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum {DEFAULT_HWM=16 * 1024, DEFAULT_LWM=16 * 1024, WAS_ACTIVE=, WAS_INACTIVE=}"))
+		    quid       	"3822E57602ED"
+		    module     	"Component View::OSF::osf_caa::osf::message_queue (module spec)"
+		    quidu      	"3822E57602C5"
+		    nonclassname 	"enum {DEFAULT_HWM=16 * 1024, DEFAULT_LWM=16 * 1024, WAS_ACTIVE=, WAS_INACTIVE=}")))
+	(object Parameterized_Class "OSF_Message_Queue_Iterator"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	264)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3822E5770103"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E5770104"
+		    supplier   	"Logical View::Messages::OSF_Message_Queue"
+		    quidu      	"3822E57602DA"
+		    friend     	TRUE)
+		(object Uses_Relationship
+		    quid       	"3822E5770112"
+		    supplier   	"Logical View::<unspecified>::OSF_thread_t"
+		    quidu      	"3822E5560016")
+		(object Uses_Relationship
+		    quid       	"3822E5770119"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E"))
+	    operations 	(list Operations
+		(object Operation "OSF_Message_Queue_Iterator"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"89770B13FEED"
+		    documentation 	
+|= Initialization method.
+|$$$
+|=
+|= class OSF_Message_Queue_Iterator
+|=
+		    
+		    parameters 	(list Parameters
+			(object Parameter "q"
+			    quid       	"3CA99C2A035D"
+			    type       	"OSF_Message_Queue&"))
+		    result     	"OSF_Message_Queue_Iterator"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5770103")
+		(object Operation "next"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6ED915EEFEED"
+		    documentation 	"= Iteration methods."
+		    parameters 	(list Parameters
+			(object Parameter "entry"
+			    quid       	"3CA99C2A035F"
+			    type       	"OSF_Message_Block*&"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "done"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D522EDF6FEED"
+		    documentation 	
+|Pass back the <entry> that hasn't been seen in the queue.
+|Returns 0 when all items have been seen, else 1.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0361"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "advance"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"31C56147FEED"
+		    documentation 	"Returns 1 when all items have been seen, else 0."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0363"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "dump"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"72135800FEED"
+		    documentation 	
+|Move forward by one element in the queue.  Returns 0 when all the
+|items in the set have been seen, else 1.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0365"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "queue_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5770120"
+		    type       	"OSF_Message_Queue&"
+		    Containment 	"By Value")
+		(object ClassAttribute "curr_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5770124"
+		    documentation 	"Message_Queue we are iterating over."
+		    type       	"OSF_Message_Block*"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::message_queue (module spec)"
+	    quidu      	"3822E57602C5"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_OSF_SYNCH_MUTEX_T"
+		    quid       	"3CA99C2A0369"
+		    type       	"class")
+		(object Parameter "_OSF_SYNCH_CONDITION_T"
+		    quid       	"3CA99C2A036A"
+		    type       	"class")))
+	(object Class "OSF_Data_Block"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	399)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206)))
+	    quid       	"3822E55800D0"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E55801A6"
+		    supplier   	"Logical View::Messages::OSF_Message_Block"
+		    quidu      	"3822E55702C0"
+		    friend     	TRUE)
+		(object Uses_Relationship
+		    quid       	"3822E558033A"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E558033F"
+		    supplier   	"Logical View::os::OSF_DL_TYPE"
+		    quidu      	"3822E55800D7")
+		(object Uses_Relationship
+		    quid       	"3822E558036F"
+		    supplier   	"Logical View::<unspecified>::caddr_t"
+		    quidu      	"3822E5580149"))
+	    operations 	(list Operations
+		(object Operation "OSF_Data_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5E5ECB95FEED"
+		    documentation 	"= Initialization and termination methods."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0375"
+			    type       	"void"))
+		    result     	"OSF_Data_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E55800D0")
+		(object Operation "OSF_Data_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D5C9D101FEED"
+		    documentation 	
+|Default "do-nothing" constructor.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "size"
+			    quid       	"3CA99C2A0377"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "msg_type"
+			    quid       	"3CA99C2A0378"
+			    type       	"OSF_Message_Block::OSF_Message_Type")
+			(object Parameter "msg_data"
+			    quid       	"3CA99C2A0379"
+			    type       	"const char*")
+			(object Parameter "allocator_strategy"
+			    quid       	"3CA99C2A037A"
+			    type       	"OSF_Allocator*")
+			(object Parameter "locking_strategy"
+			    quid       	"3CA99C2A037B"
+			    type       	"OSF_Lock*")
+			(object Parameter "flags"
+			    quid       	"3CA99C2A037C"
+			    type       	"OSF_Message_Block::Message_Flags")
+			(object Parameter "data_block_allocator"
+			    quid       	"3CA99C2A037D"
+			    type       	"OSF_Allocator*"))
+		    result     	"OSF_Data_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E55800D0")
+		(object Operation "OSF_Data_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"6FCFBFC5FEED"
+		    documentation 	"Initialize."
+		    parameters 	(list Parameters
+			(object Parameter "size"
+			    quid       	"3CA99C2A037F"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "msg_type"
+			    quid       	"3CA99C2A0380"
+			    type       	"OSF_Message_Block::OSF_Message_Type")
+			(object Parameter "msg_data"
+			    quid       	"3CA99C2A0381"
+			    type       	"const char*"))
+		    result     	"OSF_Data_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E55800D0")
+		(object Operation "OSF_Data_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"EE01D0AAFEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0383"
+			    type       	"const OSF_Data_Block&"))
+		    result     	"OSF_Data_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0
+		    quidu      	"3822E55800D0")
+		(object Operation "size"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CDA21BE1FEED"
+		    documentation 	
+|Return a pointer to 1 past the end of the data in a message.
+|= Message size is the total amount of sposf alloted.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0385"
+			    type       	"void"))
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"370C8510004E")
+		(object Operation "size"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"010EB9E8FEED"
+		    documentation 	"Get the total amount of sposf in the message."
+		    parameters 	(list Parameters
+			(object Parameter "length"
+			    quid       	"3CA99C2A0387"
+			    type       	"size_t"
+			    quidu      	"370C8510004E"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "locking_strategy"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B53993A7FEED"
+		    documentation 	
+|Get the current reference count.
+|= The locking strategy prevents race conditions.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0389"
+			    type       	"void"))
+		    result     	"OSF_Lock*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "locking_strategy"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8415F4D5FEED"
+		    documentation 	"Get the locking strategy."
+		    parameters 	(list Parameters
+			(object Parameter "nls"
+			    quid       	"3CA99C2A038B"
+			    type       	"OSF_Lock*"))
+		    result     	"OSF_Lock*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "data_block_allocator"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F13FE6DFFEED"
+		    documentation 	"Internal release implementation"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A038D"
+			    type       	"void"))
+		    result     	"OSF_Allocator*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "msg_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0FA7BE87FEED"
+		    documentation 	"Delete all the resources held in the message."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A038F"
+			    type       	"void"))
+		    result     	"OSF_Message_Block::OSF_Message_Type"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msg_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"EE5C6D46FEED"
+		    documentation 	"Get type of the message."
+		    parameters 	(list Parameters
+			(object Parameter "t"
+			    quid       	"3CA99C2A0391"
+			    type       	"OSF_Message_Block::OSF_Message_Type"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~OSF_Data_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"84CD6CF8FEED"
+		    documentation 	"Initialize."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0393"
+			    type       	"void"))
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set_flags"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0EA2D8BBFEED"
+		    documentation 	
+|Decrease the shared reference count by 1.  If the reference count
+|is > 0 then return this; else if reference count == 0 then delete
+|<this> and <mb> and return 0.  Behavior is undefined if reference
+|count < 0.
+|= Message flag accessors and mutators.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "more_flags"
+			    quid       	"3CA99C2A0395"
+			    type       	"OSF_Message_Block::Message_Flags"))
+		    result     	"OSF_Message_Block::Message_Flags"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "clr_flags"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0134A232FEED"
+		    documentation 	
+|Bitwise-or the <more_flags> into the existing message flags and
+|return the new value.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "less_flags"
+			    quid       	"3CA99C2A0397"
+			    type       	"OSF_Message_Block::Message_Flags"))
+		    result     	"OSF_Message_Block::Message_Flags"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "flags"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D8A5BFE2FEED"
+		    documentation 	
+|Clear the message flag bits specified in <less_flags> and return
+|the new value.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A0399"
+			    type       	"void"))
+		    result     	"OSF_Message_Block::Message_Flags"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "clone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F0E7FB30FEED"
+		    documentation 	
+|Set the total amount of sposf in the message.  Returns 0 if
+|successful, else -1.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "mask"
+			    quid       	"3CA99C2A039B"
+			    type       	"OSF_Message_Block::Message_Flags"
+			    initv      	"0"))
+		    result     	"OSF_Data_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "duplicate"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6E27860DFEED"
+		    documentation 	
+|Return an exact "deep copy" of the message, i.e., create fresh
+|new copies of all the Data_Blocks and continuations.
+|Notice that Data_Blocks can act as "Prototypes", i.e. derived
+|classes can override this method and create instances of
+|themselves.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A039D"
+			    type       	"void"))
+		    result     	"OSF_Data_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "release"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"359545C5FEED"
+		    documentation 	
+|Return a "shallow" copy that increments our reference count by 1.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "lock"
+			    quid       	"3CA99C2A039F"
+			    type       	"OSF_Lock*"
+			    initv      	"0"))
+		    result     	"OSF_Data_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "base"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"784D2E30FEED"
+		    documentation 	"Set type of the message."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A03A1"
+			    type       	"void"))
+		    result     	"char*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "base"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"506DFBE9FEED"
+		    documentation 	"Get message data pointer"
+		    parameters 	(list Parameters
+			(object Parameter "msg_data"
+			    quid       	"3CA99C2A03A3"
+			    type       	"char*")
+			(object Parameter "msg_length"
+			    quid       	"3CA99C2A03A4"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "msg_flags"
+			    quid       	"3CA99C2A03A5"
+			    type       	"OSF_Message_Block::Message_Flags"
+			    initv      	"OSF_Message_Block::DONT_DELETE"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "end"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"35E08B9BFEED"
+		    documentation 	"Set message data pointer (doesn't reallocate)."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A03A7"
+			    type       	"void"))
+		    result     	"char*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "reference_count"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"31886A2AFEED"
+		    documentation 	"Get the current message flags."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A03A9"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "release_i"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B7E301B5FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A03AB"
+			    type       	"void"))
+		    result     	"OSF_Data_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"6045CCC8FEED"
+		    documentation 	
+|The allocator use to destroy ourselves.
+|= Disallow these operations.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A03AD"
+			    type       	"const OSF_Data_Block&"))
+		    result     	"OSF_Data_Block&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "release_no_delete"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D9B5BE99FEED"
+		    parameters 	(list Parameters
+			(object Parameter "lock"
+			    quid       	"3CA99C2A03AF"
+			    type       	"OSF_Lock*"))
+		    result     	"OSF_Data_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "type_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580380"
+		    documentation 	
+|Decrease the reference count, but don't delete the object.
+|Returns 0 if the object should be removed.
+|If <lock> is equal to the locking strategy then we assume that
+|the lock is beign held by the current thread; this is used to
+|release all the data blocks in a chain while holding a single
+|lock.
+		    
+		    type       	"OSF_Message_Block::OSF_Message_Type"
+		    Containment 	"By Value")
+		(object ClassAttribute "cur_size_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580384"
+		    documentation 	"Type of message."
+		    type       	"size_t"
+		    quidu      	"370C8510004E"
+		    Containment 	"By Value")
+		(object ClassAttribute "max_size_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580388"
+		    documentation 	"Current size of message block."
+		    type       	"size_t"
+		    quidu      	"370C8510004E"
+		    Containment 	"By Value")
+		(object ClassAttribute "flags_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E558038C"
+		    documentation 	"Total size of buffer."
+		    type       	"OSF_Message_Block::Message_Flags"
+		    Containment 	"By Value")
+		(object ClassAttribute "base_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580390"
+		    documentation 	"Misc flags (e.g., DONT_DELETE and USER_FLAGS)."
+		    type       	"char*"
+		    Containment 	"By Value")
+		(object ClassAttribute "allocator_strategy_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580394"
+		    documentation 	
+|Pointer to beginning of message payload.
+|= Strategies.
+		    
+		    type       	"OSF_Allocator*"
+		    Containment 	"By Value")
+		(object ClassAttribute "locking_strategy_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5580398"
+		    documentation 	
+|Pointer to the allocator defined for this <OSF_Data_Block>.  Note
+|that this pointer is shared by all owners of this
+|<OSF_Data_Block>.
+		    
+		    type       	"OSF_Lock*"
+		    Containment 	"By Value")
+		(object ClassAttribute "reference_count_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E558039C"
+		    documentation 	
+|Pointer to the locking strategy defined for this
+|<OSF_Data_Block>.  This is used to protect regions of code that
+|access shared <OSF_Data_Block> state.  Note that this lock is
+|shared by all owners of the <OSF_Data_Block>'s data.
+		    
+		    type       	"int"
+		    Containment 	"By Value")
+		(object ClassAttribute "data_block_allocator_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E55803A0"
+		    documentation 	
+|Reference count for this <OSF_Data_Block>, which is used to avoid
+|deep copies (i.e., <clone>).  Note that this pointer value is
+|shared by all owners of the <Data_Block>'s data, i.e., all the
+|<OSF_Message_Block>s.
+		    
+		    type       	"OSF_Allocator*"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::message_block (module spec)"
+	    quidu      	"3822E55702C1"
+	    module     	"Component View::OSF::osf_caa::src::message_block (module body)"
+	    quidu      	"3822E5610007"
+	    module     	"Component View::OSF::osf_caa::src::message_block0 (module body)"
+	    quidu      	"3822E580005C"
+	    language   	"C++")
+	(object Parameterized_Class "(OSF_Locked_Data_Block< OSF_LOCK >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	19)
+		(object Attribute
+		    tool       	"analyzer"
+		    name       	"IncompleteType"
+		    value      	TRUE))
+	    quid       	"3822E57A03E3"
+	    module     	"Component View::OSF::osf_caa::osf::message_block_t (module spec)"
+	    quidu      	"3822E57A0310"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "OSF_LOCK"
+		    quid       	"3CA99C2A03BE")))
+	(object Instantiated_Class "(OSF_Message_Queue< <exp>, <exp> >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	462))
+	    quid       	"3822E57D0120"
+	    documentation 	
+|An auto event is used so that we can <signal> it to wakeup one
+|thread up (e.g., when the <notify> method is called).
+|because Sun C++ 4.1 can't cope with this declaration:
+	    
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"3822E57E0027"
+		supplier   	"Logical View::Messages::OSF_Message_Queue"
+		quidu      	"3822E57602DA")
+	    module     	"Component View::OSF::osf_caa::osf::wfmo_reactor (module spec)"
+	    quidu      	"3822E57C00D9"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "<exp>"
+		    quid       	"3CA99C2A03C3")
+		(object Parameter "<exp>"
+		    quid       	"3CA99C2A03C4")))
+	(object Instantiated_Class "(OSF_Message_Queue< <exp>, OSF_Null_Condition >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	43))
+	    quid       	"3822E57701B8"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"3822E5770302"
+		supplier   	"Logical View::Messages::OSF_Message_Queue"
+		quidu      	"3822E57602DA")
+	    module     	"Component View::OSF::osf_caa::osf::activation_queue (module spec)"
+	    quidu      	"3822E5770186"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "<exp>"
+		    quid       	"3CA99C2A03C9")
+		(object Parameter "OSF_Null_Condition"
+		    quid       	"3CA99C2A03CA")))
+	(object Parameterized_Class "OSF_Locked_Data_Block"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	19)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3822E57A031A"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3822E57A03F0"
+		    supplier   	"Logical View::Messages::OSF_Data_Block"
+		    quidu      	"3822E55800D0"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E57A032F"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E57A0332"
+		    supplier   	"Logical View::<unspecified>::size_t"
+		    quidu      	"3822E5560278")
+		(object Uses_Relationship
+		    quid       	"3822E57A03CF"
+		    supplier   	"Logical View::<unspecified>::OSF_thread_t"
+		    quidu      	"3822E5560016")
+		(object Uses_Relationship
+		    quid       	"3822E57A03D9"
+		    supplier   	"Logical View::os::OSF_DL_TYPE"
+		    quidu      	"3822E55800D7")
+		(object Uses_Relationship
+		    quid       	"3822E57A03DA"
+		    supplier   	"Logical View::MemoryManagement::OSF_Allocator"
+		    quidu      	"3822E55800E1")
+		(object Uses_Relationship
+		    quid       	"3822E57A03DB"
+		    supplier   	"Logical View::Messages::OSF_Message_Block::Message_Flags"
+		    quidu      	"3822E55702B0")
+		(object Uses_Relationship
+		    quid       	"3822E57A03E5"
+		    supplier   	"Logical View::Messages::(OSF_Locked_Data_Block< OSF_LOCK >)"
+		    quidu      	"3822E57A03E3"
+		    exportControl 	"Private")
+		(object Uses_Relationship
+		    quid       	"3822E57A03E8"
+		    supplier   	"Logical View::Messages::OSF_Data_Block"
+		    quidu      	"3822E55800D0"))
+	    operations 	(list Operations
+		(object Operation "OSF_Locked_Data_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BAC0D632FEED"
+		    documentation 	"= Initialization and termination methods."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A03DF"
+			    type       	"void"))
+		    result     	"OSF_Locked_Data_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E57A031A")
+		(object Operation "OSF_Locked_Data_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"48CDE736FEED"
+		    documentation 	
+|Default "do-nothing" constructor.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "size"
+			    quid       	"3CA99C2A03E1"
+			    type       	"size_t"
+			    quidu      	"370C8510004E")
+			(object Parameter "msg_type"
+			    quid       	"3CA99C2A03E2"
+			    type       	"OSF_Message_Block::OSF_Message_Type")
+			(object Parameter "msg_data"
+			    quid       	"3CA99C2A03E3"
+			    type       	"const char*")
+			(object Parameter "allocator_strategy"
+			    quid       	"3CA99C2A03E4"
+			    type       	"OSF_Allocator*")
+			(object Parameter "flags"
+			    quid       	"3CA99C2A03E5"
+			    type       	"OSF_Message_Block::Message_Flags")
+			(object Parameter "data_block_allocator"
+			    quid       	"3CA99C2A03E6"
+			    type       	"OSF_Allocator*"))
+		    result     	"OSF_Locked_Data_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E57A031A")
+		(object Operation "OSF_Locked_Data_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"5B31AE8CFEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A03E8"
+			    type       	"const OSF_Locked_Data_Block&"))
+		    result     	"OSF_Locked_Data_Block"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0
+		    quidu      	"3822E57A031A")
+		(object Operation "clone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"17C3052FFEED"
+		    documentation 	"Delete all the resources held in the message."
+		    parameters 	(list Parameters
+			(object Parameter "mask"
+			    quid       	"3CA99C2A03EA"
+			    type       	"OSF_Message_Block::Message_Flags"
+			    initv      	"0"))
+		    result     	"OSF_Data_Block*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~OSF_Locked_Data_Block"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"193553AFFEED"
+		    documentation 	"Initialize."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A03EC"
+			    type       	"void"))
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"F54C8733FEED"
+		    documentation 	
+|The lock
+|= Disallow these operations.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C2A03EE"
+			    type       	"const OSF_Locked_Data_Block&"))
+		    result     	"OSF_Locked_Data_Block&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "lock_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57A03ED"
+		    type       	"OSF_LOCK"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::message_block_t (module spec)"
+	    quidu      	"3822E57A0310"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "OSF_LOCK"
+		    quid       	"3CA99C2A03F1"
+		    type       	"class"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "Messages"
+	    quid       	"3826E5AF013B"
+	    title      	"Messages"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::Messages::OSF_Data_Block" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1536, 672)
+		    font       	(object Font
+			size       	10
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(1357, 631)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	358
+			justify    	0
+			label      	"OSF_Data_Block")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3822E55800D0"
+		    width      	376
+		    height     	107
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::Messages::OSF_Locked_Data_Block" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(736, 1152)
+		    font       	(object Font
+			size       	10
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(481, 1130)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	510
+			justify    	0
+			label      	"OSF_Locked_Data_Block")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3822E57A031A"
+		    width      	528
+		    height     	145
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @3
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3822E57A03F0"
+		    client     	@2
+		    supplier   	@1
+		    line_style 	0)
+		(object UsesView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3822E57A03E8"
+		    client     	@2
+		    supplier   	@1
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::Messages::OSF_Message_Block" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2064, 1280)
+		    font       	(object Font
+			size       	10
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1849, 1239)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	430
+			justify    	0
+			label      	"OSF_Message_Block")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3822E55702C0"
+		    width      	448
+		    height     	107
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3822E55801A6"
+		    client     	@1
+		    supplier   	@5
+		    line_style 	0)
+		(object UsesView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3822E55803A4"
+		    client     	@5
+		    supplier   	@1
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::Messages::OSF_Message_Queue" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1952, 2016)
+		    font       	(object Font
+			size       	10
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1730, 1994)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	444
+			justify    	0
+			label      	"OSF_Message_Queue")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3822E57602DA"
+		    width      	462
+		    height     	145
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::Messages::OSF_Message_Queue_Iterator" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(512, 1904)
+		    font       	(object Font
+			size       	10
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(214, 1882)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	596
+			justify    	0
+			label      	"OSF_Message_Queue_Iterator")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3822E5770103"
+		    width      	614
+		    height     	145
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3822E5770104"
+		    client     	@9
+		    supplier   	@8
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::Messages::(OSF_Locked_Data_Block< OSF_LOCK >)" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(640, 496)
+		    font       	(object Font
+			size       	10
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(221, 474)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	838
+			justify    	0
+			label      	"(OSF_Locked_Data_Block< OSF_LOCK >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3822E57A03E3"
+		    width      	856
+		    height     	145
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @12
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3822E57A03E5"
+		    client     	@2
+		    supplier   	@11
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::Messages::(OSF_Message_Queue< <exp>, <exp> >)" @13
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2000, 2560)
+		    font       	(object Font
+			size       	10
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1598, 2519)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	804
+			justify    	0
+			label      	"(OSF_Message_Queue< <exp>, <exp> >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3822E57D0120"
+		    width      	822
+		    height     	107
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InstantiateView "" @14
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3822E57E0027"
+		    client     	@13
+		    supplier   	@8
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::Messages::(OSF_Message_Queue< <exp>, OSF_Null_Condition >)" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressAttribute 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(880, 2448)
+		    font       	(object Font
+			size       	10
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(349, 2407)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	1062
+			justify    	0
+			label      	"(OSF_Message_Queue< <exp>, OSF_Null_Condition >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3822E57701B8"
+		    width      	1080
+		    height     	107
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InstantiateView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3822E5770302"
+		    client     	@15
+		    supplier   	@8
+		    line_style 	0)))))

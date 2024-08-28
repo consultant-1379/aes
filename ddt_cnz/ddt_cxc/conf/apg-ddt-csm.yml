@@ -1,0 +1,45 @@
+csm-version: '1.0'
+components:
+- uid: aes.ddt
+  name: aes-ddt
+  description: AES DDT component
+  availability-manager: AMF
+  software:
+    sdp: ERIC-AES_DDTBIN-CXC1371515
+  supersedes:
+  - base-component: ERIC-APG_DDT
+  availability-properties:
+    control-policy:
+      type: ADVANCED
+    multiplicity-policy:
+      node-active: ONE
+      node-standby: ONE
+      node-active-standby: 'NO'
+      cluster-active: ONE
+      cluster-standby: ONE
+    lifecycle-control:
+      prefix: /opt/ap/aes/bin
+      start: aes_ddt_2N_clc instantiate
+      stop: aes_ddt_2N_clc cleanup
+      monitor-keys:
+      - key: aes_ddtd_hck
+        period: 240s
+        timeout: 180s
+      promote-demote-timeout: 200s
+      migrate-timeout: 60s
+      recovery-policy: COMPONENT_RESTART
+      start-stop-timeout: 100s
+  constraints:
+    plugin: plugin/aes.ddt
+    installation:
+      after:
+      - component: acs.lct.lib
+        method: DIFFERENT-STEP
+  meta-data:
+    component-version: 18.0.1-0
+    deliverable:
+      deployment-package: aes_ddt-18.0.1-0-deployment-CXC1371515.tar.gz
+      runtime-package: aes_ddt-18.0.1-0-runtime-CXC1371515.tar.gz
+    software:
+    - file-name: AES_DDTBIN-CXC1371515_18-R1B.x86_64.sdp
+      bundle-name: ERIC-AES_DDTBIN-CXC1371515_18-R1B

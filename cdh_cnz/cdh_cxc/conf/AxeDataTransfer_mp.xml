@@ -1,0 +1,2206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+	Copyright (c) 2020 Ericsson AB.
+	All rights reserved
+
+	DX ECIM Tool-chain generated this file on Dec 9, 2020 1:08:34 PM using:
+	* com.ericsson.ecim.m2m 3.13.0.202006261811
+	* com.ericsson.ecim.dsl 3.13.0.202006261811
+	* com.ericsson.ecim.edm 3.13.0.202006261811
+--><!DOCTYPE models SYSTEM "mp.dtd">
+<models>
+    <dtdVersion>K</dtdVersion>
+    <momMetaData>
+        <momTitle>Managed Object Model for Data Transfer Management Function</momTitle>
+        <momSubTitle/>
+        <momIdentity>
+            <docNum>19089-CXA 117 0052/12</docNum>
+            <docLang>Uen</docLang>
+            <docRev>B</docRev>
+            <docDate>2020-12-08</docDate>
+        </momIdentity>
+        <createdBy>
+            <signature>XHARBAV</signature>
+        </createdBy>
+    </momMetaData>
+    <mim author="Harika Bavana" contact="XHARBAV" correction="0" date="2020-12-09" docNo="19089-CXA 117 0024/9" name="AxeDataTransfer" namespace="urn:com:ericsson:ecim:AxeDataTransfer" namespacePrefix="axedatatransfer" organization="" release="5" revision="E" version="3">
+        <description>Data Transfer Management function MOM.</description>
+        <domainExtension domain="ECIM">
+            <extension name="immNamespace" value="MOM_NAME"/>
+        </domainExtension>
+        <modelFeatures modelType="Template">
+            <modelFeature featureType="basic" name="CPI_HIDDEN"/>
+        </modelFeatures>
+        <struct name="EcimPassword">
+            <description>Stores the password.</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <structMember name="cleartext">
+                <description>Indicates whether or not the password is entered in cleartext.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <derivedDataTypeRef name="EcimEmpty">
+                    <mimName>AxeDataTransfer</mimName>
+                </derivedDataTypeRef>
+            </structMember>
+            <structMember name="password">
+                <description>Holds the password or passphrase text.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isKey" value="true"/>
+                </domainExtension>
+                <string/>
+            </structMember>
+        </struct>
+        <enum name="TransferQueueStatus">
+            <description>Specifies the status for the TQ.</description>
+            <enumMember name="READY">
+                <description>Ready for transfer status. 
+The file or directory is transferred to the defined destination set. &#13;
+</description>
+                <value>0</value>
+            </enumMember>
+            <enumMember name="PENDING">
+                <description>Pending status. 
+No processing occurs until the status is set to another value on the file or directory.&#13;
+</description>
+                <value>8</value>
+            </enumMember>
+            <enumMember name="DELETE">
+                <description>Delete status. 
+The file or directory is deleted in APG file system when the remove delay time has reached value zero.</description>
+                <value>3</value>
+            </enumMember>
+            <enumMember name="NONE">
+                <description>No status. 
+No processing occurs until the status is set to another value on the file or directory.&#13;
+</description>
+                <value>255</value>
+            </enumMember>
+        </enum>
+        <enum name="FileTransferProtocol">
+            <description>Specifies the different file transfer protocol types.</description>
+            <enumMember name="SFTPV2">
+                <value>0</value>
+            </enumMember>
+            <enumMember name="FTPV2">
+                <value>1</value>
+            </enumMember>
+        </enum>
+        <derivedDataType name="RetryNumber">
+            <description>Specifies the retry time internal.</description>
+            <baseType>
+                <int32>
+                    <range>
+                        <min>-1</min>
+                        <max>100</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>-1</min>
+                            <max>100</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="DestinationName">
+            <description>Specifies the type for a destination name.</description>
+            <baseType>
+                <string>
+                    <lengthRange>
+                        <min>1</min>
+                        <max>30</max>
+                    </lengthRange>
+                    <stringLength>
+                        <subrange>
+                            <min>1</min>
+                            <max>30</max>
+                        </subrange>
+                    </stringLength>
+                    <validValues>[A-Za-z0-9]*</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="" format="posix_ere" name="Pattern Constraint"><![CDATA[[A-Za-z0-9]*]]></rule>
+            </validationRules>
+        </derivedDataType>
+        <derivedDataType name="BlockRetryTime">
+            <description>Specifies the block retry time in milliseconds.</description>
+            <baseType>
+                <int32>
+                    <range>
+                        <min>200</min>
+                        <max>10000</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>200</min>
+                            <max>10000</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        
+        <derivedDataType name="RemoveDelay">
+            <description>Specifies the delay in minutes for deletion of file or directory.</description>
+            <baseType>
+                <int32>
+                    <range>
+                        <min>-1</min>
+                        <max>20160</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>-1</min>
+                            <max>20160</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="TransferQueueName">
+            <description>Specifies the TQ name pattern.</description>
+            <baseType>
+                <string>
+                    <lengthRange>
+                        <min>1</min>
+                        <max>32</max>
+                    </lengthRange>
+                    <stringLength>
+                        <subrange>
+                            <min>1</min>
+                            <max>32</max>
+                        </subrange>
+                    </stringLength>
+                    <validValues>[A-Za-z0-9]*</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="" format="posix_ere" name="Pattern Constraint"><![CDATA[[A-Za-z0-9]*]]></rule>
+            </validationRules>
+        </derivedDataType>
+        <derivedDataType name="RetryInterval">
+            <description>Specifies the retry interval.</description>
+            <baseType>
+                <int32>
+                    <range>
+                        <min>10</min>
+                        <max>59999</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>10</min>
+                            <max>59999</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="StartupSequenceNumber">
+            <description>Specifies the range for start and rollover values used to idenitfy files or directories.</description>
+            <baseType>
+                <uint32>
+                    <range>
+                        <min>0</min>
+                        <max>99999999</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>0</min>
+                            <max>99999999</max>
+                        </subrange>
+                    </ranges>
+                </uint32>
+            </baseType>
+        </derivedDataType>
+        
+        <derivedDataType name="RemoveDelayMirrored">
+            <description>Specifies the time for removing mirrored data.</description>
+            <baseType>
+                <int32>
+                    <range>
+                        <min>1</min>
+                        <max>10080</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>1</min>
+                            <max>10080</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="RemoteFolderPath">
+            <description>Specifies the remote folder path pattern.</description>
+            <baseType>
+                <string>
+                    <lengthRange>
+                        <min>1</min>
+                        <max>255</max>
+                    </lengthRange>
+                    <stringLength>
+                        <subrange>
+                            <min>1</min>
+                            <max>255</max>
+                        </subrange>
+                    </stringLength>
+                    <validValues>^[^ ^:*?"&lt;&gt;;|][^:*?"&lt;&gt;;|]*$</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="" format="posix_ere" name="Pattern Constraint"><![CDATA[^[^ ^:*?"<>;|][^:*?"<>;|]*$]]></rule>
+            </validationRules>
+        </derivedDataType>
+        <derivedDataType name="SendRetry">
+            <description>Specifies the retry time for sending data.</description>
+            <baseType>
+                <int32>
+                    <range>
+                        <min>0</min>
+                        <max>100</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>0</min>
+                            <max>100</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="DestinationSetName">
+            <description>Specifies the type for a destination set name.</description>
+            <baseType>
+                <string>
+                    <lengthRange>
+                        <min>1</min>
+                        <max>32</max>
+                    </lengthRange>
+                    <stringLength>
+                        <subrange>
+                            <min>1</min>
+                            <max>32</max>
+                        </subrange>
+                    </stringLength>
+                    <validValues>[A-Za-z0-9]*</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="" format="posix_ere" name="Pattern Constraint"><![CDATA[[A-Za-z0-9]*]]></rule>
+            </validationRules>
+        </derivedDataType>
+        
+        <derivedDataType name="EcimEmpty">
+            <description>Represents a leaf that has no value, it conveys information by its presence or absence.</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <baseType>
+                <boolean/>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="PortRange">
+            <description>Specifies the port number range.</description>
+            <baseType>
+                <int32>
+                    <range>
+                        <min>1</min>
+                        <max>65535</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>1</min>
+                            <max>65535</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="IpAddressType">
+            <description>Specifies the range for an IP address.</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="3"/>
+                <extension name="originatingMimName" value="AxeCommonLibrary"/>
+            </domainExtension>
+            <baseType>
+                <string>
+                    <lengthRange>
+                        <min>1</min>
+                        <max>253</max>
+                    </lengthRange>
+                    <stringLength>
+                        <subrange>
+                            <min>1</min>
+                            <max>253</max>
+                        </subrange>
+                    </stringLength>
+                    <validValues>(^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|(^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:)))(%.+)?\s*$)|(^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$)</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="" format="posix_ere" name="Pattern Constraint"><![CDATA[(^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|(^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]]]><![CDATA[|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:)))(%.+)?\s*$)|(^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$)]]></rule>
+            </validationRules>
+        </derivedDataType>
+        <derivedDataType name="RetryDelay">
+            <description>Sepcifies the time of retries.</description>
+            <baseType>
+                <int32>
+                    <range>
+                        <min>1</min>
+                        <max>60</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>1</min>
+                            <max>60</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        
+        <derivedDataType name="AxeDataTransfer_PrimaryRespondingDestination_portNotificationNumber">
+            <baseType>
+                <int32>
+                    <range>
+                        <min>1025</min>
+                        <max>65535</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>1025</min>
+                            <max>65535</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="AxeDataTransfer_SecondaryRespondingDestination_portNotificationNumber">
+            <baseType>
+                <int32>
+                    <range>
+                        <min>1025</min>
+                        <max>65535</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>1025</min>
+                            <max>65535</max>
+                        </subrange>
+                    </ranges>
+                </int32>
+            </baseType>
+        </derivedDataType>
+        <class name="PrimaryInitiatingDestination">
+            <description>Represents the primary remote server used for initiating traffic.
+
+One or more attributes setting can fail due to one of the following reasons: 
+	-Unreasonable value: This message appears when Destination name is invalid (or) Port No is out of Range (or) Transfer Type is invalid (or) Destination IP address is invalid
+        -Internal program error: This message appears when advance parameters creation fails (or) Error occured while modifying destination
+	-Incorrect usage: This message appears when remote username and remote password are not given for Initiating Type of destination 
+                                 (or) remoteUserName is mandatory when remotePassword is present (or) Password is empty (or) User name is empty (or) 
+        -Modification of Transfer Type is not allowed : Modificaction of transer protocol for a destination is not possible.
+	-The destination is not defined with file notification: Destination not defined with file notification
+	-Destination is already used in a destination set: If primary destination is already used in a different destination set
+	-Destination does not exist:Error code at the time of deleting a non existing destination.
+	-Destination is protected:Deleting the primary dest, with out deleting destset.
+	-Primary Destination does not exist:Error code if primary dest is not created.&#13;
+</description>
+            <action name="connectionVerify">
+                <description>Verifies the connection to the remote server.
+
+The action can fail due to one of the following reasons: 
+	- Error connecting to remote system: When the connection with remote destination with the given values fails.
+	- logon failure on remote system: When the login to remote system fails.
+	- Internal Program Error: When service encounters internal fault like inter service communication failure.
+</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="5"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+            </action>
+            <attribute name="primaryInitiatingDestinationId">
+                <description>Holds the name used when identifying the MO.
+It is the name of a primary destination for initiating traffic.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="ipAddress">
+                <description>Specifies the address of the remote system for the data to be sent to. The argument can be either an Internet Protocol Version 4 (IPv4) address or an Internet Protocol Version 6 (IPv6) address.&#13;
+&#13;
+An IPv4 address is a 32-bit address written in dot-decimal notation expressed as a.b.c.d&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d fields is a decimal value representing 8-bit part of the address. "a" is the most significant field. &#13;
+&#13;
+	The allowed decimal range for each field is 0-255.&#13;
+&#13;
+An IPv6 address is a 128-bit address written in colon-hexadecimal notation expressed as as a:b:c:d:e:f:g:h&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d, e, f, g, h fields is one to four hexadecimal digits representing 16-bit part of the 128-bit address. "a" is the most significant field.&#13;
+&#13;
+	The allowed hexadecimal digits are 0-9, a-f, A-F.&#13;
+&#13;
+	One or more consecutive 16-bit fields of zeros can be replaced by "::". The "::" can only appear once in an address.&#13;
+&#13;
+	Leading zeroes in a field are optional, but there must be at least one numeral in every field (except in fields for which "::" notation is used).</description>
+                <mandatory/>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="IpAddressType">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="portNumber">
+                <description>Specifies the TCP/IP port number on the remote system to connect to.
+&#13;
+The default value is 22 for SFTPV2.
+
+The default value is 21 for FTPV2.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="PortRange">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="transferProtocol">
+                <description>Specifies the transfer type to be used for block or file transfer. </description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <dataType>
+                    <enumRef name="FileTransferProtocol">
+                        <mimName>AxeDataTransfer</mimName>
+                    </enumRef>
+                </dataType>
+            </attribute>
+            <attribute name="username">
+                <description>Specifies the user name for authenticating on the remote system. 
+It is mandatory in case the transfer protocol is SFTPV2, or FTPV2 with a specified remote password.</description>
+                <noNotification/>
+                <dataType>
+                    <string>
+                        <defaultValue>anonymous</defaultValue>
+                    </string>
+                </dataType>
+            </attribute>
+            <attribute name="password">
+                <description>Specifies the password for authenticating on the remote system. 
+It is mandatory if the transfer protocol is SFTPV2.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <structRef name="EcimPassword">
+                        <mimName>AxeDataTransfer</mimName>
+                    </structRef>
+                </dataType>
+            </attribute>
+            <attribute name="remoteFolderPath">
+                <description>Specifies the absolute path on remote destination. 
+It includes a folder separator at the end, to the folder at the remote system where the sent data is to be placed. The folder must exist when the transfer starts.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="RemoteFolderPath">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="DataTransferM">
+            <description>Represents the root MOC for Data Transfer Management function MOM.&#13;
+The main concepts of Data Transfer Management function are:
+
+1. (Primary/Secondary)InitiatingDestination for File and Block - it represents the remote server where data is to be sent. It contains information about remote destination such as IP address; protocol for data transfer, etc. 
+
+2. (Primary/Secondary)RespondingDestination - it represents the local destination within AP where data is to be stored for responding traffic. It contains information about local destination such as the virtual folder name; file notification address, etc. 
+
+3. BlockDestinationSet - it represents a grouping of BlockDestinations objects together. It can contain a maximum of 2 objects (primary and secondary) grouped together. 
+
+4. InitiatingDestinationSet - it represents a grouping of (Primary/Secondary)InitiatingDestinations objects together. It can contain a maximum of 2 objects (Primary and Secondary) grouped together. 
+
+5. RespondingDestinationSet - it represents a grouping of (Primary/Secondary) Responding Destinations objects together. It can conatin a maximum of 2 objects (Primary and Secondary) grouped together. 
+
+6. (File/Block)TransferQueue - it represents the transfer queue defined for file or block based transfer. It contains information about the transfer queue such as file renaming template and associated destination set etc.</description>
+            <root/>
+            <attribute name="dataTransferMId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="FileTransferManager">
+            <description>Represents the file based transmission manager.</description>
+            <action name="deleteFileTQAndSourceFiles">
+                <description>Deletes all files or directories associated to TQ.
+
+The action can fail due to one of the following reasons:
+- Command not executed, AP backup in progress: When backup or restore operation is going on.
+- Transfer in progress: When traffic is flowing to the remote destination.
+- Transfer queue not defined: When non existing TQ name is specified by user.
+- Invalid transfer queue name: When invalid TQ name is specified by user.  
+- FileTransferQueue is used by CP-file, it cannot be deleted: When trying to delete a TQ which is associatd to a CP file.
+- FileTransferQueue is used by Measurement program, it cannot be deleted: When trying to delete a TQ which is associated to Measurement program. 
+- FileTransferQueue is used by ALOG-file, it cannot be deleted: When trying to delete a TQ which is associated to ALOG. 
+- FileTransferQueue is used by PDS-file, it cannot be deleted: When trying to delete a TQ which is associated to PDS.
+- Internal Program Error: When service encounters internal fault like inter service communication failure.
+</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="1"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+                <parameter name="fileTransferQueueName">
+                    <description>Specifies the TQ name.</description>
+                    <in/>
+                    <dataType>
+                        <string/>
+                    </dataType>
+                </parameter>
+            </action>
+            <action name="manualTransferOfEntity">
+                <description>Manually transfer a file or a directory to an already defined destination set for a TQ.
+
+The action can fail due to one of the following reasons. 
+- Different directories for the same transfer queue name : The source directory path mentioned with the action is not same as the source directory path defined with the transfer queue. 
+- File or directory already reported : File or directory already reported to the transfer queue. 
+- File or directory not found : The file or directory not found at the mentioned source path. 
+- The combination transfer queue and destination set does not exist </description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="2"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+                <parameter name="filePath">
+                    <description>Path of the file which is to be manually transfered.</description>
+                    <in/>
+                    <dataType>
+                        <string/>
+                    </dataType>
+                </parameter>
+                <parameter name="fileTransferQueueName">
+                    <description>File based transfer queue name through which the file has to be manually transferred.</description>
+                    <in/>
+                    <dataType>
+                        <string/>
+                    </dataType>
+                </parameter>
+                <parameter name="fileDestinationSet">
+                    <description>File based destination set name.
+It is associated with the TQ through which the file has to be manually transferred.</description>
+                    <in/>
+                    <dataType>
+                        <string/>
+                    </dataType>
+                </parameter>
+            </action>
+            <attribute name="fileTransferManagerId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            
+            
+            
+        </class>
+        <class name="FileTransferQueue">
+            <description>Represents a TQ for file based transfer, initiating or responding mode.
+A TQ can be associated with a maximum of 3 destination sets, in initiating or responding mode.
+If more than one destination set needs to be associated to a specific TQ then the attribute initiatingDestinationSet needs to be valued separately for each destination.
+A destination set can be linked to a maximum of 32 different transfer queues. 
+
+One or more attributes setting can fail due to one of the following reasons: 
+       - Creation or Modification of multiple Transfer queues is not allowed in a single transaction commit : Creation or modification of only one TQ is allowed in a transaction commit. 
+	- Different startup sequence number for the same transfer queue name: Check that startup sequence number is the same
+	- Transfer queue is configured for auto deletion, destination set cannot be added to it : Cannot attach or dettach destination set to a TQ with empty destination set.
+	- Internal program error: This message appears when TQ could not be created
+	- Multiple destination sets cannot be attached or detached : Cannot attach or detach more than one destination set to a TQ.
+	- Removal of association between Transfer queue and last destination set is denied : Cannot detach last destination set from a TQ.
+	- The transfer queue name is invalid: This message appears when Invalid transfer queue name is entered (or) When TQ name exceeds limit .
+	- Too many transfer queues defined for data transfer: Number of TQs defined for data transfer reached the maximum limit.
+	- Too many transfer queues defined to the same destination set name: Maximum number of TQs defined to same destination set is already reached.
+	- Transfer queue already defined: This message appears when TQ is already defined.
+	- Transfer queue not defined: This message appears when an attempt is made to modify the TQ.
+	- The combination transfer queue and destination set does not exist:The combination of TQ and destination set does not exist.
+</description>
+            <action name="manualTransferOfFailedEntities">
+                <description>Manually transfer files or directories with FAILED status.
+They are sent to all destination sets associated to the TQ.
+
+The action can fail due to one of the following reasons: 
+- Internal Program Error: When service encounters internal fault like inter-service communication failure.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="2"/>
+                </domainExtension>
+                <returnType>
+                    <void/>
+                </returnType>
+            </action>
+            <attribute name="fileTransferQueueId">
+                <description>Holds the name used when identifying the MO.
+It is the name of a TQ for file based transfer. </description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="TransferQueueName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="initDestinationSetDn">
+                <description>Specifies a list of DNs corresponding to each MO InitiatingDestinationSet associated to this MO.
+&#13;
+</description>
+                <noNotification/>
+                <readOnly/>
+                <dataType>
+                    <sequence>
+                        <moRef name="InitiatingDestinationSet">
+                            <mimName>AxeDataTransfer</mimName>
+                        </moRef>
+                        <minLength>0</minLength>
+                        <maxLength>3</maxLength>
+                        <nonUnique/>
+                    </sequence>
+                </dataType>
+            </attribute>
+            <attribute name="respDestinationSetDn">
+                <description>Specifies a list of DNs corresponding to each MO RespondingDestinationSet associated to this MO.</description>
+                <noNotification/>
+                <readOnly/>
+                <dataType>
+                    <sequence>
+                        <moRef name="RespondingDestinationSet">
+                            <mimName>AxeDataTransfer</mimName>
+                        </moRef>
+                        <minLength>0</minLength>
+                        <maxLength>3</maxLength>
+                        <nonUnique/>
+                    </sequence>
+                </dataType>
+            </attribute>
+            <attribute name="initiatingDestinationSet">
+                <description>Specifies the initiating destination set associated to the TQ.
+It is a multivalue attributes with following size [0..3].</description>
+                <noNotification/>
+                <dataType>
+                    <sequence>
+                        <derivedDataTypeRef name="DestinationSetName">
+                            <mimName>AxeDataTransfer</mimName>
+                        </derivedDataTypeRef>
+                        <minLength>0</minLength>
+                        <maxLength>3</maxLength>
+                        <nonUnique/>
+                    </sequence>
+                </dataType>
+            </attribute>
+            <attribute name="respondingDestinationSet">
+                <description>Specifies the responding destination set associated to the TQ.
+It is a multivalue attributes with following size [0..3].
+</description>
+                <noNotification/>
+                <dataType>
+                    <sequence>
+                        <derivedDataTypeRef name="DestinationSetName">
+                            <mimName>AxeDataTransfer</mimName>
+                        </derivedDataTypeRef>
+                        <minLength>0</minLength>
+                        <maxLength>3</maxLength>
+                        <nonUnique/>
+                    </sequence>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="AdvancedFileTransferQueueInfo">
+            <description>Represents the advanced settings for a transfer queue.
+It has to be created whenever a new MO FileTransferQueue is created; default values are applied and they can be modified if needed.
+
+One or more attributes setting can fail due to one of the following reasons: 
+- Invalid rename tag: This message appears when incorrect rename type is provided
+- Template is invalid: This message appears when invalid template is provided.
+- Illegal rename identifier: This message appears when invalid rename tag provided.
+- Illegal combination of attributes: This message appears when the startup sequence number is not aligned with respect to  transient or persistent sequence number specified in the template.
+- Transfer in progress: This message appears when any of the file renaming attributes (nameTag1,nameTag2, template and startupSequenceNumber) are modified while the TQ is in use.
+&#13;
+&#13;
+</description>
+            <attribute name="advancedFileTransferQueueInfoId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="removeDelay">
+                <description>Specifies the delay in minutes for deletion of the file or directory. 
+When the remove delay expires, the file or directory is deleted from the APG. Deletion of files or directories is also dependent on the status of the file or directory. If minus one (-1) is specified, no remove delay is defined for the file or directory. Consequently, minus one (-1) is not regarded as an actual remove delay value. It is instead used to disable the automatic deletion of the file or directory. 
+
+NOTE: If the throughput of files is expected to be high, then the value of the removeDelay attribute should be small. Otherwise the number of files on the disks will become huge and the file processing very slow. </description>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="RemoveDelay">
+                        <defaultValue>10</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+                <sideEffects>For disk sizes lower than 600GB value of this attribute may fill up data_transfer quota completely. Refer to User Guide Data Transfer Management for more information.</sideEffects>
+            </attribute>
+            
+            <attribute name="template">
+                <description>Specifies the template used to generate the new file or directory name. &#13;
+&#13;
+The file template can contain one or more of the following elements in any sequence:&#13;
+&#13;
+Each element may only be used once, except F which may be used twice. Only one of yyyy and yy can be used. Only one of nnnnnnnn, nnnnnn, nnnn, n, pppppppp, pppppp, pppp and p can be used. Here n refers to transient sequence number, which gets reset whenever the node is rebooted; and p refers to persistent sequence number, which does not get reset whenever the node is rebooted. The range of the transient or persistent sequence number should be aligned with the startup sequence number. The template is case sensitive.&#13;
+&#13;
+yyyy&#13;
+This element gives year in four digits&#13;
+&#13;
+yy&#13;
+This element gives year in two digits&#13;
+&#13;
+mm&#13;
+This element gives month&#13;
+&#13;
+dd&#13;
+This element gives day&#13;
+&#13;
+HH&#13;
+This element gives hour&#13;
+&#13;
+MM &#13;
+This element gives minute&#13;
+&#13;
+SS &#13;
+This element gives second&#13;
+&#13;
+nnnnnnnn&#13;
+This element gives transient sequence number with fixed length (range 00000000 - 99999999)&#13;
+&#13;
+nnnnnn&#13;
+This element gives transient sequence number with fixed length (range 000000 - 999999)&#13;
+&#13;
+nnnn&#13;
+This element gives transient sequence number with fixed length (range 0000 - 9999)&#13;
+&#13;
+n&#13;
+This element gives transient sequence number with flexible length (range 0 - 9999)&#13;
+&#13;
+pppppppp&#13;
+This element gives persistent sequence number with fixed length (range 00000000 - 99999999)&#13;
+&#13;
+pppppp&#13;
+This element gives persistent sequence number with fixed length (range 000000 - 999999)&#13;
+&#13;
+pppp&#13;
+This element gives persistent sequence number with fixed length (range 0000 - 9999)&#13;
+&#13;
+p&#13;
+This element gives persistent sequence number with flexible length (range 0 - 9999)&#13;
+&#13;
+z&#13;
+This element gives the logical file size in integer (kB)&#13;
+&#13;
+f&#13;
+This element gives the original file or directory name received from data source&#13;
+&#13;
+F&#13;
+This element gives a single name tag. One or two single name tags can be specified in the nametags attribute. If one single name tag is specified in nametag1 attribute, one F element gives that single name tag. If two single name tags are specified with nameTag1 and nameTag2 attributes , the first occurring F element gives the name tag specified by nameTag1 and the second occurring F element gives the name tag specified by nameTag2. &#13;
+
+b
+This element gives blade id with fixed length of two. This blade id is considered based on the file coming from either which blade or SPX. 
+If the file is coming from single digit blade (&lt;BC10 ) then it picks up the last digit of the blade and appends '0' prior to it (example: For BC2 it is'02').
+If the file is coming from two digit blade (&gt;=BC10) then it picks up the last two digits of the blade (example: for BC15 it is '15').
+If the file is coming from a Dual-Sided CP then it picks up the last digit of it and it appends '9' prior to it (example: for CP1 it is '91')
+NOTE : This element usage is applicable to only a Multi-CP System.
+&#13;
+Following is an example of the usage of renameTemplate attribute:
+&#13;
+Input:&#13;
+&#13;
+renameTemplate: FyymmddHHMMzfF&#13;
+nameTag1: STSFILE&#13;
+nameTag2: xyz&#13;
+&#13;
+Output:&#13;
+&#13;
+When the date is 051215, the time is 0945, the input file size is 144 kB and the original filename is BT, the resulting file name is: STSFILE.0512150945144BT.xyz &#13;
+&#13;
+Default value is empty: no template defined.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="nameTag1">
+                <description>Specifies the tag name for files or directories.
+It is considered only if template attribute is specified.&#13;
+If this option is omitted, no name tag is set on the files or directories. &#13;
+&#13;
+Default value is empty (no nameTag1 defined).</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="numberOfRetryOnFailure">
+                <description>Specifies number of retries after a failed transfer. 
+If sending of the file or directory to the destination set fails, then retries are attempted as specified by this attribute.&#13;
+If it is omitted, or if zero (0) is specified, APG only tries to send the file or directory once with no retries. &#13;
+If minus one (-1) is specified, APG tries to send the file or directory infinitely. &#13;
+&#13;
+The default value is 0.</description>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="RetryNumber">
+                        <defaultValue>0</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="retryInterval">
+                <description>Specifies the retry delay in seconds. 
+The delay is between each retry to send the file or directory in case of failure.&#13;
+</description>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="RetryInterval">
+                        <defaultValue>10</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="status">
+                <description>Specifies the status of the TQ. 
+This status is inherited by the files or directories associated to the TQ.
+&#13;
+The default value is READY.&#13;
+&#13;
+</description>
+                <noNotification/>
+                <dataType>
+                    <enumRef name="TransferQueueStatus">
+                        <defaultValue>READY</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </enumRef>
+                </dataType>
+            </attribute>
+            <attribute name="nameTag2">
+                <description>Specifies the tag name for files or directories. 
+It is considered only if template attribute is specified.&#13;
+If this option is omitted, no name tag is set on the files or directories. &#13;
+&#13;
+Default value is empty (no nameTag2 defined).&#13;
+</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="startupSequenceNumber">
+                <description>Specifies the start value and rollover value. 
+Start value and rollover value are specified for the transient or persistent sequence number used for identifying files or directories. When the sequence number reaches its maximum value it starts again from a rollover value as specified in the startup sequence number attribute. The transient or persistent sequence number format should be specified in the template attribute. For template format having n,nnnn,p or pppp maximum value is 9999, for nnnnnn or pppppp maximum value is 999999, for nnnnnnnn or pppppppp maximum value is 99999999. 
+
+This attribute is considered only if template attribute is specified. If this option is omitted, startup sequence number is set to 0.</description>
+                <dataType>
+                    <derivedDataTypeRef name="StartupSequenceNumber">
+                        <defaultValue>0</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="AdvancedInitiatingParameters">
+            <description>Represents the advanced settings for a initiating destination set.
+It has to be created whenever a new MO InitiatingDestinationSet is created; default values are applied and they can be modified if needed.
+
+One or more attributes setting can fail due to one of the following reasons: 
+-Unreasonable value: This message appears when file retry delay is out of range (or) Retry count is out of range (or) Suppress sub folder creation value is invalid.
+</description>
+            <attribute name="sendRetry">
+                <description>Specifies number of re-transmission retries in case of failure.
+The default value is 0.
+</description>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="SendRetry">
+                        <defaultValue>0</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="retryDelay">
+                <description>Specifies the delay in seconds between each sending of a file or directory in case of failure.</description>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="RetryDelay">
+                        <defaultValue>10</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="suppressSubFolderCreation">
+                <description>Specifies if creation of a subdirectory on remote system is to be suppressed. 
+User data files are moved to this subdirectory in remote system after a successful transfer. 
+If not suppressed the subdirectory with TQ name is added to the remote path.</description>
+                <noNotification/>
+                <restricted/>
+                <dataType>
+                    <boolean>
+                        <defaultValue>false</defaultValue>
+                    </boolean>
+                </dataType>
+            </attribute>
+            <attribute name="fileOverwrite">
+                <description>Specifies if an existing file at the destination is to be overwritten.
+This option is only valid when sending single files with transfer types FTPV2 and SFTPV2. This option has no effect when sending directories.</description>
+                <noNotification/>
+                <dataType>
+                    <boolean>
+                        <defaultValue>false</defaultValue>
+                    </boolean>
+                </dataType>
+            </attribute>
+            <attribute name="advancedInitiatingParametersId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="SecondaryInitiatingDestination">
+            <description>Represents the secondary remote server used for initiating traffic.
+
+One or more attributes setting can fail due to one of the following reasons: 
+-Unreasonable value: This message appears when Destination name is invalid (or) Port No is out of Range (or) Transfer Type is invalid (or) Destination IP address is invalid
+-Internal program error: This message appears when advance parameters creation fails (or) Error occured while modifying destination
+-Incorrect usage: This message appears when remote username and remote password are not given for Initiating Type of destination (or) remoteUserName is mandatory when remotePassword is present (or) Password is empty (or) User name is empty (or) Modification of Transfer Type is not allowed
+-The destination is not defined with file notification: Destination not defined with file notification
+-Destination does not exist: Error code at the time of deleting a destination. Destination does not exist.
+-Secondary Destination already exists: If Secondary Destination already exists for this destination set.</description>
+            <action name="connectionVerify">
+                <description>Verifies the connection to the remote server.
+
+The action can fail due to one of the following reasons: 
+	- Error connecting to remote system: When the connection with remote destination with the given values fails.
+	- logon failure on remote system: When the login to remote system fails.
+	- Internal Program Error: When service encounters internal fault like inter service communication failure.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="5"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+            </action>
+            <attribute name="secondaryInitiatingDestinationId">
+                <description>Holds the name used when identifying the MO.
+It is the name of a secondary destination for initiating traffic.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="ipAddress">
+                <description>Specifies the address of the remote system for the data to be sent to. The argument can be either an Internet Protocol Version 4 (IPv4) address or an Internet Protocol Version 6 (IPv6) address.&#13;
+&#13;
+An IPv4 address is a 32-bit address written in dot-decimal notation expressed as a.b.c.d&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d fields is a decimal value representing 8-bit part of the address. "a" is the most significant field. &#13;
+&#13;
+	The allowed decimal range for each field is 0-255.&#13;
+&#13;
+An IPv6 address is a 128-bit address written in colon-hexadecimal notation expressed as as a:b:c:d:e:f:g:h&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d, e, f, g, h fields is one to four hexadecimal digits representing 16-bit part of the 128-bit address. "a" is the most significant field.&#13;
+&#13;
+	The allowed hexadecimal digits are 0-9, a-f, A-F.&#13;
+&#13;
+	One or more consecutive 16-bit fields of zeros can be replaced by "::". The "::" can only appear once in an address.&#13;
+&#13;
+	Leading zeroes in a field are optional, but there must be at least one numeral in every field (except in fields for which "::" notation is used).</description>
+                <mandatory/>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="IpAddressType">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="portNumber">
+                <description>Specifies the TCP/IP port number on the remote system to connect to.&#13;
+&#13;
+The default value is 21 for FTPV2.&#13;
+&#13;
+The default value is 22 for SFTPV2.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="PortRange">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="transferProtocol">
+                <description>Specifies the transfer type to be used for block or file transfer. </description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <dataType>
+                    <enumRef name="FileTransferProtocol">
+                        <mimName>AxeDataTransfer</mimName>
+                    </enumRef>
+                </dataType>
+            </attribute>
+            <attribute name="username">
+                <description>Specifies the user name for autheticating on the remote system. 
+It is mandatory in case the transfer protocol is SFTPV2, or FTPV2 with a specified remote password.</description>
+                <noNotification/>
+                <dataType>
+                    <string>
+                        <defaultValue>anonymous</defaultValue>
+                    </string>
+                </dataType>
+            </attribute>
+            <attribute name="password">
+                <description>Specifies the password for authenticating on the remote system. 
+It is mandatory if the transfer protocol is SFTPV2.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <structRef name="EcimPassword">
+                        <mimName>AxeDataTransfer</mimName>
+                    </structRef>
+                </dataType>
+            </attribute>
+            <attribute name="remoteFolderPath">
+                <description>Specifies the remote absolute path. 
+It includes a folder separator at the end, to the folder at the remote system where the sent data is to be placed. The folder must exist when the transfer starts.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="RemoteFolderPath">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="InitiatingDestinationSet">
+            <description>Represents initiating file based destination set with primary and secondary destinations.
+
+Note: the remote server should be configured to support the automatic password authentication based interaction to make initiating traffic working. 
+Such authentication type lets APG connecting automatically to the remote destination for transferring data over a period of time, using the provided credentials." 
+
+One or more attributes setting can fail due to one of the following reasons: 
+       -Creation of multiple DestinationSet is not allowed in a single transaction: This message appears when an attempt is made to create multiple initiating destination sets in a single transaction. 
+	-Destination set already defined: This message appears when an attempt is made to create a destination set which is already defined
+	-Destination set does not exist: Destination set not found.
+	-Destination is not in destination set: No destination is defined in this destination set.
+	-Destination set does not exist: Error code at the time of deleting a destination set. Destination set does not exist.
+	-Destination set is protected by a transfer queue: Deleting the destination set when it is attached with a TQ.
+	-Illegal combinations of transfer types in a destination set: Indicates the illegal combination.
+	-Maximum Destinations Sets should not be more than 70: Number of destination sets defined for data transfer crossed the maximum limit
+
+&#13;
+</description>
+            <action name="routeTraffic">
+                <description>Routes file transfer from current active destination to other destination in the destination set.
+The route takes effect after the ongoing transaction when files or directories are transferred.
+In case of transfer failure, the route takes effect when all (if any) retries have been done. 
+If there is no transfer in progress, the route will take effect immediately. 
+After the route has taken effect, the new destination is stated as the active destination. 
+
+The action can fail due to one of the following reasons: 
+	- No Secondary destination is defined in this destination set: There is no secondary destination is defined in this destination set.
+	- Internal Program Error: When service encounters internal fault like inter service communication failure.
+</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="8"/>
+                </domainExtension>
+                <returnType>
+                    <void/>
+                </returnType>
+            </action>
+            <attribute name="initiatingDestinationSetId">
+                <description>Holds the name used when identifying the MO. 
+It is the name of a destination set for initiating traffic.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationSetName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="initActiveDestination">
+                <description>This attribute holds the name of active destination of an InitiatingDestinationSet.</description>
+                <noNotification/>
+                <readOnly/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="RespondingDestinationSet">
+            <description>Represents responding file based destination set with the primary and secondary destinations.
+
+One or more attributes setting can fail due to one of the following reasons: 
+       -Creation of multiple DestinationSet is not allowed in a single transaction: This message appears when an attempt is made to create multiple responding destination sets in a single transaction. 
+-Destination set already defined: This message appears when an attempt is made to create a destination set which is already defined
+-Destination set does not exist: Destination set not found
+-Destination is not in destination set: No destination is defined in this destination set
+-Destination set does not exist: Error code at the time of deleting a destination set. Destination set does not exist 
+-Destination set is protected by a transfer queue: Deleting the destination set when it is attached with a TQ.
+-Illegal combinations of transfer types in a destination set:Indicates the illegal combination 
+-Maximum Destinations Sets should not be more than 70: Number of destination sets defined for data transfer crossed the maximum limit</description>
+            <action name="routeTraffic">
+                <description>Routes file transfer from current active destination to other destination in the destination set.&#13;
+The route takes effect after the ongoing transaction when files or directories are transferred.&#13;
+In case of transfer failure, the route takes effect when all (if any) retries have been done. &#13;
+If there is no transfer in progress, the route will take effect immediately. &#13;
+After the route has taken effect, the new destination is stated as the active destination. 
+
+The action can fail due to one of the following reasons: 
+- No Secondary destination is defined in this destination set: There is no secondary destination is defined in this destination set.
+- Internal Program Error: When service encounters internal fault like inter service communication failure.
+</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="8"/>
+                </domainExtension>
+                <returnType>
+                    <void/>
+                </returnType>
+            </action>
+            <attribute name="respondingDestinationSetId">
+                <description>Holds the name used when identifying the MO.
+It is the name of a destination set for responding traffic.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationSetName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="respActiveDestination">
+                <description>This attribute holds the name of active destination of an Responding destination set.</description>
+                <noNotification/>
+                <readOnly/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="AdvancedRespondingParameters">
+            <description>Represents the advanced settings for a responding destination set.
+It has to be created whenever a new MO RespondingDestinationSet is created; default values are applied and they can be modified if needed.&#13;
+</description>
+            
+            <attribute name="fileOverwrite">
+                <description>Specifies if an existing file at the destination is to be overwritten. &#13;
+This option has no effect when sending directories.</description>
+                <noNotification/>
+                <dataType>
+                    <boolean>
+                        <defaultValue>false</defaultValue>
+                    </boolean>
+                </dataType>
+            </attribute>
+            <attribute name="inhibitTransferQueueNamePrefx">
+                <description>Specifies if TQ name is to be removed from files/directories name.&#13;
+&#13;
+If the attribute is true then the file prefix is removed from the file and directory names.&#13;
+</description>
+                <noNotification/>
+                <restricted/>
+                <dataType>
+                    <boolean>
+                        <defaultValue>false</defaultValue>
+                    </boolean>
+                </dataType>
+            </attribute>
+            
+            
+            
+            <attribute name="advancedRespondingParametersId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="PrimaryRespondingDestination">
+            <description>Represents the primary local server used for responding traffic.
+One or more attributes setting can fail due to one of the following reasons: 
+-Unreasonable value: This message appears when Destination name is invalid (or) Port No is out of Range (or) Destination IP address is invalid.
+-Internal program error: This message appears when advance parameters creation fails (or) Error occured while modifying destination.
+-Incorrect usage: This message appears when remote username and remote password are not given for Initiating Type of destination (or) remoteUserName is mandatory when remotePassword is present (or) Password is empty (or) User name is empty.
+-The destination is not defined with file notification: Destination not defined with file notification.
+-Destination is already used in a destination set: If primary destination is already used in a different destination set.
+-Destination does not exist: Error code at the time of deleting a destination. Destination does not exist.
+-Destination is protected: Deleting the primary dest, with out deleting destset.
+-Primary Destination does not exist: Error code if primary destination is not created.
+-Data area error: A destination directory in the APG File System, eg Ready, on the FTP area is not empty or another application is accessing the directory. </description>
+            <action name="connectionVerify">
+                <description>Verifies the connection establishment to an IP address.
+The connetion is verified with the IP address specified in the ipnotificationAddress attribute.
+
+The action can fail due to one of the following reasons: 
+- Error connecting to remote system: When the connection with remote destination with the given values fails.
+- logon failure on remote system: When the login to remote system fails.
+- Internal Program Error: When service encounters internal fault like inter service communication failure.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="6"/>
+                </domainExtension>
+                <returnType>
+                    <sequence>
+                        <boolean/>
+                        <minLength>2</minLength>
+                        <maxLength>2</maxLength>
+                    </sequence>
+                </returnType>
+            </action>
+            <action name="manualNotification">
+                <description>Manually send a file notification to the remote IP address as per ipNotificationAddress attribute.&#13;
+The notification is sent for the last not acknowledged file notification.
+
+The action can fail due to one of the following reasons: 
+- Error connecting to remote system: When the connection with remote destination with the given values fails.
+- The destination is not defined with file notification: When this action is performed on a responding primary destination not defined for notification.
+- Internal Program Error: When service encounters internal fault like inter service communication failure.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="7"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+            </action>
+            <attribute name="primaryRespondingDestinationId">
+                <description>Holds the name used when identifying the MO.
+It is the name of a primary destination for responding traffic.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="ipNotificationAddress">
+                <description>Specifies the address of the remote system for the data to be sent to. The argument can be either an Internet Protocol Version 4 (IPv4) address or an Internet Protocol Version 6 (IPv6) address.&#13;
+&#13;
+An IPv4 address is a 32-bit address written in dot-decimal notation expressed as a.b.c.d&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d fields is a decimal value representing 8-bit part of the address. "a" is the most significant field. &#13;
+&#13;
+	The allowed decimal range for each field is 0-255.&#13;
+&#13;
+An IPv6 address is a 128-bit address written in colon-hexadecimal notation expressed as as a:b:c:d:e:f:g:h&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d, e, f, g, h fields is one to four hexadecimal digits representing 16-bit part of the 128-bit address. "a" is the most significant field.&#13;
+&#13;
+	The allowed hexadecimal digits are 0-9, a-f, A-F.&#13;
+&#13;
+	One or more consecutive 16-bit fields of zeros can be replaced by "::". The "::" can only appear once in an address.&#13;
+&#13;
+	Leading zeroes in a field are optional, but there must be at least one numeral in every field (except in fields for which "::" notation is used).</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="IpAddressType">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="portNotificationNumber">
+                <description>Specifies the TCP/IP port number on the remote system to connect to. 
+It is valid only when ipNotificationAddress is defined.&#13;
+</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="AxeDataTransfer_PrimaryRespondingDestination_portNotificationNumber">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="BlockTransferManager">
+            <description>Represents the block based transmission manager.</description>
+            <attribute name="blockTransferManagerId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            
+            
+            
+        </class>
+        <class name="BlockTransferQueue">
+            <description>Represents a TQ for the block based transfer.</description>
+            <attribute name="blockTransferQueueId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="TransferQueueName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="mirrored">
+                <description>This attribute is used to specify if the mirroring function is to be used or not.&#13;
+&#13;
+If the attribute is specified&#13;
+&#13;
+true&#13;
+Block mirroring is used&#13;
+Data is stored on disk.&#13;
+&#13;
+false&#13;
+Block mirroring is not used&#13;
+Data is not stored on disk. </description>
+                <noNotification/>
+                <dataType>
+                    <boolean>
+                        <defaultValue>false</defaultValue>
+                    </boolean>
+                </dataType>
+            </attribute>
+            <attribute name="removeDelay">
+                <description>Specifies the delay in minutes for deletion of the files where the mirrored blocks are stored.
+This attribute is valid only when blockMirroring attribute is true.&#13;
+</description>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="RemoveDelayMirrored">
+                        <defaultValue>1440</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="blockDestinationSetDn">
+                <description>Specifies the DN for the MO BlockDestinationSet associated to this MO.</description>
+                <noNotification/>
+                <readOnly/>
+                <dataType>
+                    <moRef name="BlockDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </moRef>
+                </dataType>
+            </attribute>
+            <attribute name="blockDestinationSet">
+                <description>Specifies the key attribute's value of an existing BlockDestinationSet instance.&#13;
+It is used to define the block destination set associated to the transfer queue.&#13;
+</description>
+                <mandatory/>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationSetName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="BlockDestinationSet">
+            <description>Represents a block based destination set with the primary and secondary destinations.
+
+One or more attributes setting can fail due to one of the following reasons: 
+- Creation of multiple DestinationSet is not allowed in a single transaction: This message appears when an attempt is made to create multiple block destination sets in a single transaction. </description>
+            <action name="routeTraffic">
+                <description>Routes block transfer from current active destination to other destination in the destination set. &#13;
+The route takes effect after the ongoing transaction when blocks are transferred.&#13;
+In case of transfer failure, the route takes effect when all (if any) retries have been done. &#13;
+If there is no transfer in progress, the route takes effect immediately. &#13;
+After the route has taken effect, the new destination is stated as the active destination. </description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="8"/>
+                </domainExtension>
+                <returnType>
+                    <void/>
+                </returnType>
+            </action>
+            <attribute name="blockDestinationSetId">
+                <description>Holds the name used when identifying the MO.
+It is the name of the destination used to transfer block based data.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationSetName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="blockActiveDestination">
+                <description>This attribute holds the name of active destination of a BlockDestinationSet.</description>
+                <noNotification/>
+                <readOnly/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="PrimaryBlockDestination">
+            <description>Represent the primary remote server used for data block traffic.</description>
+            <action name="connectionVerify">
+                <description>connectionVerify is used to verify the connection to the remote server.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="5"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+            </action>
+            <attribute name="primaryBlockDestinationId">
+                <description>Holds the name used when identifying the MO.
+It is the name of a primary destination for block transfer.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="ipAddress">
+                <description>Specifies the address of the remote system for the data to be sent to. The argument can be either an Internet Protocol Version 4 (IPv4) address or an Internet Protocol Version 6 (IPv6) address.&#13;
+&#13;
+An IPv4 address is a 32-bit address written in dot-decimal notation expressed as a.b.c.d&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d fields is a decimal value representing 8-bit part of the address. "a" is the most significant field. &#13;
+&#13;
+	The allowed decimal range for each field is 0-255.&#13;
+&#13;
+An IPv6 address is a 128-bit address written in colon-hexadecimal notation expressed as as a:b:c:d:e:f:g:h&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d, e, f, g, h fields is one to four hexadecimal digits representing 16-bit part of the 128-bit address. "a" is the most significant field.&#13;
+&#13;
+	The allowed hexadecimal digits are 0-9, a-f, A-F.&#13;
+&#13;
+	One or more consecutive 16-bit fields of zeros can be replaced by "::". The "::" can only appear once in an address.&#13;
+&#13;
+	Leading zeroes in a field are optional, but there must be at least one numeral in every field (except in fields for which "::" notation is used).</description>
+                <mandatory/>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="IpAddressType">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="AdvancedBlockDestSetInfo">
+            <description>Represents the advanced settings for a block destination set.&#13;
+It has to be created whenever a new MO BlockDestinationSet is created; default values are applied and they can be modified if needed.</description>
+            <attribute name="retryDelay">
+                <description>Specifies the retry delay in seconds. 
+The delay is between each retry to send the block data in case of failure.&#13;
+</description>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="BlockRetryTime">
+                        <defaultValue>1000</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="sendRetry">
+                <description>Specifies number of retries after a failure transfer. 
+APG retries to send the block data to the destination for number of times specified in this attribute.</description>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="SendRetry">
+                        <defaultValue>0</defaultValue>
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="advancedBlockDestSetInfoId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="SecondaryRespondingDestination">
+            <description>Represents the secondary local server used for responding traffic.
+
+One or more attributes setting can fail due to one of the following reasons: 
+	-Unreasonable value:This message appears when Destination name is invalid (or) Port No is out of Range (or) Transfer Type is invalid (or) Destination IP address is invalid
+	-Internal program error:This message appears when advance parameters creation fails (or) Error occured while modifying destination
+	-Incorrect usage:This message appears when remote username and remote password are not given for Initiating Type of destination (or) remoteUserName is mandatory when remotePassword is present (or) Password is empty (or) User name is 		 empty
+	-The destination is not defined with file notification:Destination not defined with file notification
+	-Destination does not exist:Error code at the time of deleting a destination . Destination  does not exist 
+	-Secondary Destination already exists:If Secondary Destionation already exists for this destination set.
+        -Data area error: A destination directory in the APG File System, eg Ready, on the FTP area is not empty or another application is accessing the directory.
+
+</description>
+            <action name="connectionVerify">
+                <description>Verifies the connection establishment to a remote destination.
+The connection is verified with the IP address specified in the ipNotificationAddress attribute.
+
+The action can fail due to one of the following reasons: 
+- Error connecting to remote system: When the connection with remote destination with the given values fails.
+- logon failure on remote system: When the login to remote system fails.
+- Internal Program Error: When service encounters internal fault like inter service communication failure.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="6"/>
+                </domainExtension>
+                <returnType>
+                    <sequence>
+                        <boolean/>
+                        <minLength>2</minLength>
+                        <maxLength>2</maxLength>
+                    </sequence>
+                </returnType>
+            </action>
+            <action name="manualNotification">
+                <description>Manually sends a file notification to the IP address specified in the notificationAddress attribute. &#13;
+The notification is sent for the last not acknowledged file notification.
+
+The action can fail due to one of the following reasons: 
+	- Error connecting to remote system: When the connection with remote destination with the given values fails.
+	- The destination is not defined with file notification: When this action is performed on a responding secondary destination not defined for notification.
+	- Internal Program Error: When service encounters internal fault like inter service communication failure.
+</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="7"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+            </action>
+            <attribute name="secondaryRespondingDestinationId">
+                <description>Holds the name used when identifying the MO.
+It is the name of a secondary destination for responding traffic.
+</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="ipNotificationAddress">
+                <description>Specifies the address of the remote system for the data to be sent to. The argument can be either an Internet Protocol Version 4 (IPv4) address or an Internet Protocol Version 6 (IPv6) address.&#13;
+&#13;
+An IPv4 address is a 32-bit address written in dot-decimal notation expressed as a.b.c.d&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d fields is a decimal value representing 8-bit part of the address. "a" is the most significant field. &#13;
+&#13;
+	The allowed decimal range for each field is 0-255.&#13;
+&#13;
+An IPv6 address is a 128-bit address written in colon-hexadecimal notation expressed as as a:b:c:d:e:f:g:h&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d, e, f, g, h fields is one to four hexadecimal digits representing 16-bit part of the 128-bit address. "a" is the most significant field.&#13;
+&#13;
+	The allowed hexadecimal digits are 0-9, a-f, A-F.&#13;
+&#13;
+	One or more consecutive 16-bit fields of zeros can be replaced by "::". The "::" can only appear once in an address.&#13;
+&#13;
+	Leading zeroes in a field are optional, but there must be at least one numeral in every field (except in fields for which "::" notation is used).</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="IpAddressType">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="portNotificationNumber">
+                <description>Specifies the TCP/IP port number on the remote system to connect to.
+This attribute is valid only when the ipNotificationAddress is defined.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="AxeDataTransfer_SecondaryRespondingDestination_portNotificationNumber">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="SecondaryBlockDestination">
+            <description>Represents the secondary remote server used for block based transfer.</description>
+            <action name="connectionVerify">
+                <description>Verifies the connection to the remote server.
+
+The action can fail due to one of the following reasons: 
+	- Error connecting to remote system: When the connection with remote destination with the given values fails.
+        - logon failure on remote system: When the login to remote system fails.
+	- Internal Program Error: When service encounters internal fault like inter service communication failure.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="5"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+            </action>
+            <attribute name="secondaryBlockDestinationId">
+                <description>Holds the name used when identifying the MO.
+It is the name of a secondary destination for block based transfer.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DestinationName">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="ipAddress">
+                <description>Specifies the address of the remote system for the data to be sent to. The argument can be either an Internet Protocol Version 4 (IPv4) address or an Internet Protocol Version 6 (IPv6) address.&#13;
+&#13;
+An IPv4 address is a 32-bit address written in dot-decimal notation expressed as a.b.c.d&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d fields is a decimal value representing 8-bit part of the address. "a" is the most significant field. &#13;
+&#13;
+	The allowed decimal range for each field is 0-255.&#13;
+&#13;
+An IPv6 address is a 128-bit address written in colon-hexadecimal notation expressed as as a:b:c:d:e:f:g:h&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d, e, f, g, h fields is one to four hexadecimal digits representing 16-bit part of the 128-bit address. "a" is the most significant field.&#13;
+&#13;
+	The allowed hexadecimal digits are 0-9, a-f, A-F.&#13;
+&#13;
+	One or more consecutive 16-bit fields of zeros can be replaced by "::". The "::" can only appear once in an address.&#13;
+&#13;
+	Leading zeroes in a field are optional, but there must be at least one numeral in every field (except in fields for which "::" notation is used).</description>
+                <mandatory/>
+                <noNotification/>
+                <dataType>
+                    <derivedDataTypeRef name="IpAddressType">
+                        <mimName>AxeDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <relationship name="InitiatingDestSet_to_SecondaryInitiatingDest">
+            <containment>
+                <parent>
+                    <hasClass name="InitiatingDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="SecondaryInitiatingDestination">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="FileTransferM_to_FileTransferQueue">
+            <containment>
+                <parent>
+                    <hasClass name="FileTransferManager">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="FileTransferQueue">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>70</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="FileTransferM_to_DestinationSet">
+            <containment>
+                <parent>
+                    <hasClass name="FileTransferManager">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="InitiatingDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>70</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="FileTransferQueue_to_AdvancedParam">
+            <containment>
+                <parent>
+                    <hasClass name="FileTransferQueue">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="AdvancedFileTransferQueueInfo">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="FileTransferM_to_RespondingDestSet">
+            <containment>
+                <parent>
+                    <hasClass name="FileTransferManager">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="RespondingDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>70</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="RespondingDestSet_to_PrimaryRespondingDest">
+            <containment>
+                <parent>
+                    <hasClass name="RespondingDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="PrimaryRespondingDestination">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="DataTransferM_to_BlockTransferM">
+            <containment>
+                <parent>
+                    <hasClass name="DataTransferM">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="BlockTransferManager">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="DataTransferM_to_FileTransferM">
+            <containment>
+                <parent>
+                    <hasClass name="DataTransferM">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="FileTransferManager">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="BlockTransferM_to_BlockTransferQueue">
+            <containment>
+                <parent>
+                    <hasClass name="BlockTransferManager">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="BlockTransferQueue">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>30</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="BlockTransferM_to_BlockDestSet">
+            <containment>
+                <parent>
+                    <hasClass name="BlockTransferManager">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="BlockDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>30</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="BlockDestSet_to_PrimaryBlockDestination">
+            <containment>
+                <parent>
+                    <hasClass name="BlockDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="PrimaryBlockDestination">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="InitiatingDestSet_to_AdvancedInitiatingParameters">
+            <containment>
+                <parent>
+                    <hasClass name="InitiatingDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="AdvancedInitiatingParameters">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="RespondingDestSet_to_AdvancedRespParameters">
+            <containment>
+                <parent>
+                    <hasClass name="RespondingDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="AdvancedRespondingParameters">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="BlockDestSet_to_AdvancedBlockDestSetParamters">
+            <containment>
+                <parent>
+                    <hasClass name="BlockDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="AdvancedBlockDestSetInfo">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="InitiatingDestSet_to_PrimaryInitiatingDest">
+            <containment>
+                <parent>
+                    <hasClass name="InitiatingDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="PrimaryInitiatingDestination">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="RespondingDestSet_to_SecondaryRespDest">
+            <containment>
+                <parent>
+                    <hasClass name="RespondingDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="SecondaryRespondingDestination">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+        <relationship name="BlockDestinationSet_to_SecondaryBlockDestination">
+            <containment>
+                <parent>
+                    <hasClass name="BlockDestinationSet">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="SecondaryBlockDestination">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+    </mim>
+    <interMim>
+        <relationship name="DataOutputHandling_to_DataTransferM">
+            <domainExtension domain="CoreMW">
+                <extension name="splitImmDn" value="true"/>
+            </domainExtension>
+            <containment>
+                <parent>
+                    <hasClass name="DataOutputHandling">
+                        <mimName>AxeFunctions</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="DataTransferM">
+                        <mimName>AxeDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+            </containment>
+        </relationship>
+    </interMim>
+</models>

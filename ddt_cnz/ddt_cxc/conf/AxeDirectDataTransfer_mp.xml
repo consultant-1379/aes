@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+	Copyright (c) 2020 Ericsson AB.
+	All rights reserved
+
+	DX ECIM Tool-chain generated this file on Dec 9, 2020 2:13:41 PM using:
+	* com.ericsson.ecim.m2m 3.13.0.202006261811
+	* com.ericsson.ecim.dsl 3.13.0.202006261811
+	* com.ericsson.ecim.edm 3.13.0.202006261811
+--><!DOCTYPE models SYSTEM "mp.dtd">
+<models>
+    <dtdVersion>K</dtdVersion>
+    <momMetaData>
+        <momTitle>Managed Object Model for Direct Data Transfer Management Function</momTitle>
+        <momSubTitle/>
+        <momIdentity>
+            <docNum>19089-CXA 117 0053/12</docNum>
+            <docLang>Uen</docLang>
+            <docRev>B</docRev>
+            <docDate>2020-12-09</docDate>
+        </momIdentity>
+        <createdBy>
+            <signature>XHARBAV</signature>
+        </createdBy>
+    </momMetaData>
+    <mim author="Harika Bavana" contact="XHARBAV" correction="0" date="2020-12-09" docNo="19089-CXA 117 0053" name="AxeDirectDataTransfer" namespace="urn:com:ericsson:ecim:AxeDirectDataTransfer" namespacePrefix="axedirectdatatransfer" organization="" release="1" revision="C" version="1">
+        <description>Direct Data Transfer Management function MOM.
+</description>
+        <domainExtension domain="ECIM">
+            <extension name="immNamespace" value="MOM_NAME"/>
+        </domainExtension>
+        <modelFeatures modelType="Template">
+            <modelFeature featureType="basic" name="CPI_HIDDEN"/>
+        </modelFeatures>
+        <struct name="EcimPassword">
+            <description>Stores the password.</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <structMember name="cleartext">
+                <description>Indicates whether or not the password is entered in cleartext.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <derivedDataTypeRef name="EcimEmpty">
+                    <mimName>AxeDirectDataTransfer</mimName>
+                </derivedDataTypeRef>
+            </structMember>
+            <structMember name="password">
+                <description>Holds the password or passphrase text.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isKey" value="true"/>
+                </domainExtension>
+                <string/>
+            </structMember>
+        </struct>
+        <struct name="AsyncActionProgress">
+            <description>Records the progress of an asynchronous action.</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <structMember name="actionName">
+                <description>Name of the invoked asynchronous action.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <string/>
+            </structMember>
+            <structMember name="additionalInfo">
+                <description>Used for logging significant messages during execution of an action.</description>
+                <sequence>
+                    <string/>
+                    <minLength>0</minLength>
+                </sequence>
+            </structMember>
+            <structMember name="progressInfo">
+                <description>Textual information that describes the actual state of the action execution.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <string/>
+            </structMember>
+            <structMember name="progressPercentage">
+                <description>Progress of the action.
+The range is between 0 and 100.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <uint8/>
+            </structMember>
+            <structMember name="result">
+                <description>Result state of a completed action.
+This field has value NOT_AVAILABLE if the action is not finished.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <enumRef name="ActionResultType">
+                    <mimName>AxeDirectDataTransfer</mimName>
+                </enumRef>
+            </structMember>
+            <structMember name="resultInfo">
+                <description>Textual description of the outcome/result of the action containing useful information for the NMS.
+If the action failed, it can contain an error message.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <string/>
+            </structMember>
+            <structMember name="state">
+                <description>Current state of the action.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <enumRef name="ActionStateType">
+                    <mimName>AxeDirectDataTransfer</mimName>
+                </enumRef>
+            </structMember>
+            <structMember name="actionId">
+                <description>Uniquely identifies the invocation of an action.
+Identifies the invocation of an action when the managed object allows invocation of more than one action at a time.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isKey" value="true"/>
+                </domainExtension>
+                <derivedDataTypeRef name="ActionInvocationResult">
+                    <mimName>AxeDirectDataTransfer</mimName>
+                </derivedDataTypeRef>
+            </structMember>
+            <structMember name="timeActionStarted">
+                <description>Date and time when the current action was started.</description>
+                <derivedDataTypeRef name="DateTime">
+                    <mimName>AxeDirectDataTransfer</mimName>
+                </derivedDataTypeRef>
+            </structMember>
+            <structMember name="timeActionCompleted">
+                <description>Date and time when the action was completed (successfully or unsuccessfully).</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <derivedDataTypeRef name="DateTime">
+                    <mimName>AxeDirectDataTransfer</mimName>
+                </derivedDataTypeRef>
+            </structMember>
+            <structMember name="timeOfLastStatusUpdate">
+                <description>Date and time when the struct member state was last updated.</description>
+                <derivedDataTypeRef name="DateTime">
+                    <mimName>AxeDirectDataTransfer</mimName>
+                </derivedDataTypeRef>
+            </structMember>
+        </struct>
+        <enum name="LenghtType">
+            <description>Represents the length type of the output data buffer.
+There are three types of buffer datatypes: variable, fixed and even.</description>
+            <enumMember name="FIXED">
+                <description>This enumeration value represents the fixed length data type.
+Fixed means that data length is arbitrarily fixed to a maximum value:output data is formatted using the same amount of memory whether this maximum is reached or not.
+If needed padding characters are added to match the fixed length.</description>
+                <value>0</value>
+            </enumMember>
+            <enumMember name="VARIABLE">
+                <description>This enumeration value represents the variable length data type.
+Variable means that data length is not arbitrarily fixed: output data is formatted using varying amounts of memory depending on the actual size.
+No padding characters are added to the output data.</description>
+                <value>1</value>
+            </enumMember>
+            <enumMember name="EVEN">
+                <description>This enumeration value represents the even length data type.
+Even means that data length is not arbitrarily fixed, but it is always even. 
+If needed a padding character is added to match the even length.</description>
+                <value>2</value>
+            </enumMember>
+        </enum>
+        <enum name="ActionResultType">
+            <description>Lists the different results of an action.</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <enumMember name="SUCCESS">
+                <description>The asynchronous action ended with success.</description>
+                <value>1</value>
+            </enumMember>
+            <enumMember name="FAILURE">
+                <description>The asynchronous action ended with failure.</description>
+                <value>2</value>
+            </enumMember>
+            <enumMember name="NOT_AVAILABLE">
+                <description>No result is available yet.</description>
+                <value>3</value>
+            </enumMember>
+        </enum>
+        <enum name="ActionStateType">
+            <description>Lists the action states.</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <enumMember name="CANCELLING">
+                <description>Cancellation is in progress.</description>
+                <value>1</value>
+            </enumMember>
+            <enumMember name="RUNNING">
+                <description>The execution of the action is currently in progress.</description>
+                <value>2</value>
+            </enumMember>
+            <enumMember name="FINISHED">
+                <description>The action is finished.</description>
+                <value>3</value>
+            </enumMember>
+            <enumMember name="CANCELLED">
+                <description>The action has been cancelled and cancellation has been done.</description>
+                <value>4</value>
+            </enumMember>
+        </enum>
+        <enum name="FileTransferProtocol">
+            <description>Defines all protocols allowed for the File Transfer.</description>
+            <enumMember name="SFTP">
+                <value>0</value>
+            </enumMember>
+            <enumMember name="FTP">
+                <value>1</value>
+            </enumMember>
+        </enum>
+        <enum name="PeerStatus">
+            <description>Defines all possible states of a File or Block Peer.</description>
+            <enumMember name="PASSIVE">
+                <description>Peer is not currently involved in the transfer.</description>
+                <value>0</value>
+            </enumMember>
+            <enumMember name="ACTIVE">
+                <description>Peer is currently used for the data transfer.</description>
+                <value>1</value>
+            </enumMember>
+            <enumMember name="FAULTY">
+                <description>Peer connection is faulty suspected.</description>
+                <value>2</value>
+            </enumMember>
+        </enum>
+        <derivedDataType name="DataHoldTime">
+            <description>Describes the valid range of values to be used as hold time expressed in seconds.</description>
+            <baseType>
+                <uint8>
+                    <range>
+                        <min>1</min>
+                        <max>60</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>1</min>
+                            <max>60</max>
+                        </subrange>
+                    </ranges>
+                    <unit>seconds</unit>
+                </uint8>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="DataSourceName">
+            <description>Describes the name format for a Data Source.
+It is an alphanumeric format made by capital letters which optionally ends with digits</description>
+            <baseType>
+                <string>
+                    <lengthRange>
+                        <min>1</min>
+                        <max>15</max>
+                    </lengthRange>
+                    <stringLength>
+                        <subrange>
+                            <min>1</min>
+                            <max>15</max>
+                        </subrange>
+                    </stringLength>
+                    <validValues>^[A-Z]+[0-9]*$</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="" format="posix_ere" name="Pattern Constraint"><![CDATA[^[A-Z]+[0-9]*$]]></rule>
+            </validationRules>
+        </derivedDataType>
+        <derivedDataType name="IpDNSAddress">
+            <description>The IpDNSAddress type represents an IP address or a DNS domain name.
+
+A unicast IPv4 address is presented in three-digit decimal blocks. It is specified in dotted-quad decimal notation (i.e. three-digit decimal blocks) in accordance with RFC791, The blocks are separated by a dot.
+- The unicast IPV4  address is within range [1-126,128-223].[0-255].[0-255].[0-255], 7-15 characters.
+- The IP address range 127.0.0.0 – 127.255.255.255 is reserved for loopback
+- The IP address range 0– 0.255.255.255 are reserved
+- The IP address range 169.254.1.0 - 169.254.254.255 is used for link-local addresses.
+
+An  IPv6 address is specified by 8 groups of 16 bit hexadecimal values separated by colons as described in RFC 4291. If multiple consecutive groups contain only zeros, the use of “::” indicates one or more groups of 16 bits of zeros, as described in RFC 4291, section 2.2 bullet 2. A link-local address will have prefix fe80::/10. The format of the embedded IPv4/IPv6 addresses is described in RFC 6052.
+- IPv6 minimum length = 3 and maximum length = 39.
+- Valid characters: 0123456789abcdefABCDEF:
+
+A domain name is specified in dot separated alphanumeric notation  as described in RFC 1034. The domain name consists of one or more parts, called labels, that are delimited by dots.
+- Domain Name's length: 253 characters
+- Label's length: 63 characters.
+- Valid characters: a-z, A-Z, 0,1,2,3,4,5,6,7,8,9,-
+- The Label’s first character is a letter.
+- Labels shall not start or end with a hyphen.
+- Labels shall not start with a numbers
+- Labels shall end with a number or a letter.</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <baseType>
+                <string>
+                    <lengthRange>
+                        <min>1</min>
+                        <max>253</max>
+                    </lengthRange>
+                    <stringLength>
+                        <subrange>
+                            <min>1</min>
+                            <max>253</max>
+                        </subrange>
+                    </stringLength>
+                    <validValues>^((([1-9]|[1-9][0-9]|12[012345689]|1[013456789][0-9]|2[0-1][0-9]|22[0-3])\.)(([0-9]|[0-9][0-9]|[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5])\.){2})([0-9]|[0-9][0-9]|[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5])$|^((([0-9A-Fa-f]{1,4}:){1,5}:((25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(([0-9A-Fa-f]{1,4}:){6,7}:)|(([0-9A-Fa-f]{1,4}:){6}((25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3}))|(([0-9A-Fa-f]{1,4}:){6}:[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){5}(:[0-9A-Fa-f]{1,4}){1,2})|(([0-9A-Fa-f]{1,4}:){4}(:[0-9A-Fa-f]{1,4}(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?))|(([0-9A-Fa-f]{1,4}:){4}(:[0-9A-Fa-f]{1,4}){2,3})|((([0-9A-Fa-f]{1,4}:){3}(:[0-9A-Fa-f]{1,4}){1,2})(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(([0-9A-Fa-f]{1,4}:){3}(:[0-9A-Fa-f]{1,4}){3,4})|(([0-9A-Fa-f]{1,4}:){2}(:[0-9A-Fa-f]{1,4}){1,3}(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(([0-9A-Fa-f]{1,4}:){2}(:[0-9A-Fa-f]{1,4}){4,5})|(([0-9A-Fa-f]{1,4}:)(:[0-9A-Fa-f]{1,4}){1,4}(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(([0-9A-Fa-f]{1,4}:)(:[0-9A-Fa-f]{1,4}){5,6})|((:(:[0-9A-Fa-f]{1,4}){1,5})(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(:(:[0-9A-Fa-f]{1,4}){6,7})|(([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4})|(((::FFFF)|(0:0:0:0:0:FFFF))(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})))$|^(([a-zA-Z]|[0-9]*[a-zA-Z]*|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$|^ $</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="Must be a valid Ipv4, Ipv6 or DNS address. Ipv4 Example 164.164.0.0 or Ipv6 Example 2001:0db8:85a3:0000:0000:8a2e:0370:7334 or DNS Example www.ericsson.com." format="posix_ere" name="Pattern Constraint"><![CDATA[^((([1-9]|[1-9][0-9]|12[012345689]|1[013456789][0-9]|2[0-1][0-9]|22[0-3])\.)(([0-9]|[0-9][0-9]|[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5])\.){2})([0-9]|[0-9][0-9]|[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5])$|^((([0-9A-Fa-f]{1,4}:){1,5}:((25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(([0-9A-Fa-f]{1,4}:){6,7}:)|(([0-9A-Fa-f]{1,4}:){6}((25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3}))|(([0-9A-Fa-f]{1,4}:){6}:[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){5}(:[0-9A-Fa-f]{1,4}){1,2})|(([0-9A-Fa-f]{1,4}:){4}(:[0-9A-Fa-f]{1,4}(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?))|(([0-9A-Fa-f]{1,4}:){4}(:[0-9A-Fa-f]{1,4}){2,3})|((([0-9A-Fa-f]{1,4}:){3}(:[0-9A-Fa-f]{1,4}){1,2})(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(([0-9A-Fa-f]{1,4}:){3}(:[0-9A-Fa-f]{1,4}){3,4})|(([0-9A-Fa-f]{1,4}:){2}(:[0-9A-Fa-f]{1,4}){1,3}(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(([0-9A-Fa-f]{1,4}:){2}(:[0-9A-Fa-f]{1,4}){4,5})|(([0-9A-Fa-f]{1,4}:)(:[0-9A-Fa-f]{1,4}){1,4}(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(([0-9A-Fa-f]{1,4}:)(:[0-9A-Fa-f]{1,4}){5,6})|((:(:[0-9A-Fa-f]{1,4}){1,5})(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})?)|(:(:[0-9A-Fa-f]{1,4}){6,7})|(([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4})|(((::FFFF)|(0:0:0:0:0:FFFF))(:(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})){3})))$|^(([a-zA-Z]|[0-9]*[a-zA-Z]*|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$|^ $]]></rule>
+            </validationRules>
+        </derivedDataType>
+        <derivedDataType name="FileTransferDestinationPortRange">
+            <description>Represents the TCP port range for outgoing connections towards remote destinations.</description>
+            <baseType>
+                <uint16>
+                    <range>
+                        <min>1</min>
+                        <max>65535</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>1</min>
+                            <max>65535</max>
+                        </subrange>
+                    </ranges>
+                </uint16>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="TemplateType">
+            <description>Represents the format allowed for the template.
+The template is made by alphanumeric characters, and special characters: plus (+), dash (-) and point (.). Some alphanumeric characters can be surrounded by the percentage symbol (%).</description>
+            <baseType>
+                <string>
+                    <validValues>^(\%?\.?\+?\-?\w+\%?\.?\+?\-?)*$</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="" format="posix_ere" name="Pattern Constraint"><![CDATA[^(\%?\.?\+?\-?\w+\%?\.?\+?\-?)*$]]></rule>
+            </validationRules>
+        </derivedDataType>
+        <derivedDataType name="RetryAttempts">
+            <description>Represents the number of send attempts towards a Peer before considering it faulty.</description>
+            <baseType>
+                <uint8>
+                    <range>
+                        <min>0</min>
+                        <max>100</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>0</min>
+                            <max>100</max>
+                        </subrange>
+                    </ranges>
+                </uint8>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="FileSizeRange">
+            <description>Represents the size range of files stored to the remote destination.</description>
+            <baseType>
+                <uint16>
+                    <range>
+                        <min>64</min>
+                        <max>32768</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>64</min>
+                            <max>32768</max>
+                        </subrange>
+                    </ranges>
+                    <unit>KB</unit>
+                </uint16>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="RetryDelay">
+            <description>Represents the delay between send attempts on connection errors towards the remote destination.
+The delay is expressed in seconds.</description>
+            <baseType>
+                <uint8>
+                    <range>
+                        <min>1</min>
+                        <max>60</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>1</min>
+                            <max>60</max>
+                        </subrange>
+                    </ranges>
+                    <unit>seconds</unit>
+                </uint8>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="EcimEmpty">
+            <description>Represents a leaf that has no value, it conveys information by its presence or absence.</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <baseType>
+                <boolean/>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="PaddingChar">
+            <description>Represents the padding characters in the output data.
+Padding characters are extra bytes used to make the output data conform to its length type and length.</description>
+            <baseType>
+                <uint8>
+                    <range>
+                        <min>0</min>
+                        <max>255</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>0</min>
+                            <max>255</max>
+                        </subrange>
+                    </ranges>
+                </uint8>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="ActionInvocationResult">
+            <description>This is the datatype for the Asychronous Action Id. </description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <baseType>
+                <uint16/>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="RemoteFolderPath">
+            <description>Represents the remote folder path allowed for File Transfer.
+The remote folder path can be empty or made by alphanumeric characters optionally surrounded by slashes</description>
+            <baseType>
+                <string>
+                    <lengthRange>
+                        <min>0</min>
+                        <max>255</max>
+                    </lengthRange>
+                    <stringLength>
+                        <subrange>
+                            <min>0</min>
+                            <max>255</max>
+                        </subrange>
+                    </stringLength>
+                    <validValues>^(\/?\w+\/?)*$</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="" format="posix_ere" name="Pattern Constraint"><![CDATA[^(\/?\w+\/?)*$]]></rule>
+            </validationRules>
+        </derivedDataType>
+        <derivedDataType name="DataSizeRange">
+            <description>Represents the size range, expressed in bytes, of either a Data Source record or of a Data Chunk.</description>
+            <baseType>
+                <uint16>
+                    <range>
+                        <min>512</min>
+                        <max>32768</max>
+                    </range>
+                    <ranges>
+                        <subrange>
+                            <min>512</min>
+                            <max>32768</max>
+                        </subrange>
+                    </ranges>
+                    <unit>byte</unit>
+                </uint16>
+            </baseType>
+        </derivedDataType>
+        <derivedDataType name="DateTime">
+            <description>Represents the international standard for the representation of date and time ( ISO 8601).
+The string format is "YYYY-MM-DDThh:mm:ss.SSSZ" (excluding quotes).
+A DateTime string consists of a date part, a time part, and an optional time zone information part. The time zone part may be a "Z", representing the Coordinated Universal Time (UTC) time zone (equals to +00) or a time zone offset (for example, +02:00).
+If the time zone part is not present, the DateTime value represents local time.
+
+The following pattern describes the DateTime format:
+YYYY-MM-DDThh:mm:ss[.S+][Z|+-hh:mm]
+Where:
+YYYY = Four digit year
+MM = Two digit month (01=January, and so on)
+DD = Two digit day of month (01 through 31)
+T = Time designator (shows start of time component)
+hh = Two digits of hour (00 through 23, AM/PM not allowed)
+mm = Two digits of minute (00 through 59)
+ss = Two digits of second (00 through 59, leap second not allowed)
+S+ = One or more digits of decimal fraction of a second
+Z = Time is UTC
++- = + or - character indicating positive or negative offset to UTC
+
+DateTime values are compliant with ISO 8601 "Representation of dates and times" but are restricted according to RFC 3339 "Date and Time on the Internet: Timestamps". The DateTime format is further restricted as follows:
+- T and Z designators are upper case.
+- . (dot) is used to indicate start of fractions of seconds (ISO 8601 also allows comma)</description>
+            <domainExtension domain="ECIM">
+                <extension name="originatingMimVersion" value="2"/>
+                <extension name="originatingMimRelease" value="7"/>
+                <extension name="originatingMimName" value="ECIM_CommonLibrary"/>
+            </domainExtension>
+            <baseType>
+                <string>
+                    <lengthRange>
+                        <min>19</min>
+                        <max>31</max>
+                    </lengthRange>
+                    <stringLength>
+                        <subrange>
+                            <min>19</min>
+                            <max>31</max>
+                        </subrange>
+                    </stringLength>
+                    <validValues>^([0-9]{4})-(1[0-2]|0[1-9])-(0[1-9]|[1|2][0-9]|3[0-1])T(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])([\.][0-9]+){0,1}(([\+|\-](0[0-9]|1[0-9]|2[0-4])(:[0-5][0-9])?)|(Z)?)$</validValues>
+                </string>
+            </baseType>
+            <validationRules>
+                <rule exceptionText="Must be of the format YYYY-MM-DDTHH:MM:SS[.S+][Z|+-hh:mm] where T separates the time and the date parts and Z indicates the time zone in relation to UTC. Example 2000-08-01T17:17:34.1+01:00." format="posix_ere" name="Pattern Constraint"><![CDATA[^([0-9]{4})-(1[0-2]|0[1-9])-(0[1-9]|[1|2][0-9]|3[0-1])T(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])([\.][0-9]+){0,1}(([\+|\-](0[0-9]|1[0-9]|2[0-4])(:[0-5][0-9])?)|(Z)?)$]]></rule>
+            </validationRules>
+        </derivedDataType>
+        <class name="DirectDataTransferM">
+            <description>Represents the root MOC for the Direct Data Transfer Management function MOM.
+It is system instantiated and it is a container MOC without any attribute. 
+The function aims to receive data records from CP(s), to aggregate them in sequence of chunks in a volatile storage, and after data formatting, to send them to a mediation node either using block based transfer mode or file based transfer mode.</description>
+            <systemCreated/>
+            <root/>
+            <attribute name="directDataTransferMId">
+                <description>Holds the name used when identifying the MO.</description>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string>
+                        <defaultValue>1</defaultValue>
+                    </string>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="DataSource">
+            <description>Represents the source of data produced by application source.
+It allows configuring the maximum size of a data record. The number of data records source that can be handled is limited to two.
+
+Creation or Deletion of MO can fail due to one of the following reasons:
+- DataSource definition is not valid for this system configuration : This message appears when an attempt is made to define data source on a invalid system configuration.
+- DataSource name is already defined for a MessageStore : This message appears when an attempt is made to define data source name same as the existing message store name.
+- Cannot delete a non-empty DataSource, &lt;DN&gt; : This message appears when an attempt is made to delete a data source for which data is not transferred yet or in case the DataSink MO child is defined
+- Cannot delete DataSource, &lt;DN&gt; : This message appears when it is not possible to delete data source.</description>
+            <attribute name="dataSourceId">
+                <description>Holds the name used when identifying the MO.
+This attribute holds the name of the Data Source.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <derivedDataTypeRef name="DataSourceName">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="recordSize">
+                <description>Specifies the maximum size of a record sent by the application source.
+The value is expressed in bytes.</description>
+                <noNotification/>
+                <restricted/>
+                <dataType>
+                    <derivedDataTypeRef name="DataSizeRange">
+                        <defaultValue>4096</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            
+        </class>
+        <class name="DataSink">
+            <description>Represents a set of homogeneous data peers for the direct data transfer.
+It allows configuring parameters controlling the communication with these nodes.
+
+
+Creation or Deletion of MO can fail due to one of the following reasons:
+- Either a FilePeer or BlockPeer must be defined for the DataSink, &lt;DN&gt; : This message appears when an attempt is made to define data sink without file or block peer.
+- Peers must be of same type for the DataSink, &lt;DN&gt; : This message appears when an attempt is made to define DataSink with both FilePeer and BlockPeer.
+- Cannot delete the only available Peer in the DataSink, &lt;DN&gt; : This message appears when an attempt is made to delete only available file or block peer in data sink.
+- dataChunkSize cannot be smaller than recordSize, &lt;DN&gt; : This message appears in case of the value of dataChunkSize attribute is smaller than the value of recordSize attribute of DataSource MO.
+- dataLengthType cannot be set to EVEN for a DataSink where FilePeer is defined, &lt;DN&gt; : This message appears when data sink is defined with file peer and the value of DataLengthType attribute is set to EVEN.
+</description>
+            <action name="switchActivePeer">
+                <description>Switches the active peer.
+The remote destination is switched from the current active peer to the other configured peer which will be marked as active.
+During transfer failures the switch takes effect when all send retries have been performed.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="1"/>
+                </domainExtension>
+                <returnType>
+                    <void/>
+                </returnType>
+            </action>
+            <attribute name="dataSinkId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="retryAttempts">
+                <description>Specifies the number of send attempts to the active peer in case of communication errors.
+This attribute indicates how many times the ME retries to send the data to the active remote destination, when communication errors occur, before considering it faulty.
+If multiple peers are configured, the ME automatically switches to the next available one.
+In case all configured peers are faulty, the ME tries cyclically to reconnect to one of them by interrogating each of them in an alternating way.</description>
+                <dataType>
+                    <derivedDataTypeRef name="RetryAttempts">
+                        <defaultValue>10</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="retryDelay">
+                <description>Specifies the delay in seconds between each send retry in case a communication failure happens.</description>
+                <dataType>
+                    <derivedDataTypeRef name="RetryDelay">
+                        <defaultValue>1</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="progressReport">
+                <description>Specifies the progress report of the switchActivePeer action.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <readOnly/>
+                <isNillable/>
+                <dataType>
+                    <structRef name="AsyncActionProgress">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </structRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="TransferProgress">
+            <description>Representing the progress of data records sending to a specific mediation node.
+</description>
+            <systemCreated/>
+            <attribute name="transferProgressId">
+                <description>Holds the name used when identifying the MO.
+Represents the default name of the application source of the data stream.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="lastReceivedMessage">
+                <description>Specifies the identification number of the last message received from the application source.</description>
+                <readOnly/>
+                <dataType>
+                    <uint64/>
+                </dataType>
+            </attribute>
+            <attribute name="lastSentMessage">
+                <description>Specifies the identification number of the last message successfully sent to the remote destination.</description>
+                <readOnly/>
+                <dataType>
+                    <uint64/>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="BlockPeer">
+            <description>Represents a mediation node supporting the block based transfer mode.
+
+The first defined BlockPeer MO is used for the transfer, hence its status is set to ACTIVE, while the status of the second defined BlockPeer MO acts as a stand-by destination and its status is set to PASSIVE by the ME.
+
+The switch between the ACTIVE and PASSIVE BlockPeer MO can be triggered either by the MS through the switchActivePeer action in the parent DataSink MO or by the ME itself in case the ACTIVE BlockPeer becomes FAULTY.
+
+Creation or Deletion of MO can fail due to one of the following reasons:
+- Cannot define BlockPeer for the DataSink where File Peer is already defined, &lt;DN&gt; : This message appears when block peer is created for a data sink to which file peer already present.
+- Cannot delete BlockPeer with status ACTIVE, &lt;DN&gt; : This message appears when an attempt is made to delete a block peer whose status is active.
+- Cannot delete Peer, &lt;DN&gt; : This message appears when it is not possible to delete block peer.</description>
+            <action name="connectionVerify">
+                <description>Verifies the connection to this peer.
+
+The action can fail due to one of the following reasons: 
+- Error connecting to remote host: When the connection to the configured remote host fails.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="2"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+            </action>
+            <attribute name="blockPeerId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="ipAddress">
+                <description>Specifies the address of the remote system for the data to be sent to. The argument can be either an Internet Protocol Version 4 (IPv4) address or an Internet Protocol Version 6 (IPv6) address.&#13;
+&#13;
+An IPv4 address is a 32-bit address written in dot-decimal notation expressed as a.b.c.d&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d fields is a decimal value representing 8-bit part of the address. "a" is the most significant field. &#13;
+&#13;
+	The allowed decimal range for each field is 0-255.&#13;
+&#13;
+An IPv6 address is a 128-bit address written in colon-hexadecimal notation expressed as as a:b:c:d:e:f:g:h&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d, e, f, g, h fields is one to four hexadecimal digits representing 16-bit part of the 128-bit address. "a" is the most significant field.&#13;
+&#13;
+	The allowed hexadecimal digits are 0-9, a-f, A-F.&#13;
+&#13;
+	One or more consecutive 16-bit fields of zeros can be replaced by "::". The "::" can only appear once in an address.&#13;
+&#13;
+	Leading zeroes in a field are optional, but there must be at least one numeral in every field (except in fields for which "::" notation is used).</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <dataType>
+                    <derivedDataTypeRef name="IpDNSAddress">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+                <specification>RFC 791</specification>
+            </attribute>
+            <attribute name="status">
+                <description>Specifies whether this BlockPeer MO is currently used for the data transfer.</description>
+                <readOnly/>
+                <dataType>
+                    <enumRef name="PeerStatus">
+                        <defaultValue>PASSIVE</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </enumRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="FilePeer">
+            <description>Represents a mediation node supporting the file based transfer mode.
+
+The first defined FilePeer MO is used for the transfer, hence its status is set to ACTIVE, while the status of the second defined FilePeer MO acts as a stand-by destination and its status is set to PASSIVE by the ME.
+
+The switch between the ACTIVE and PASSIVE FilePeer MO can be triggered either by the MS through the switchActivePeer action in the parent DataSink MO or by the ME itself in case the ACTIVE FilePeer MO becomes FAULTY.
+
+Creation or Deletion of MO can fail due to one of the following reasons:
+- Cannot define FilePeer for the DataSink where BlockPeer is already defined, &lt;DN&gt; : This message appears when file peer is created for a data sink to which block peer already present.
+- FileFormat is mandatory for the DataSink where FilePeer is defined, &lt;DN&gt; : This message appears when the FileFormat instance is not defined during file peer creation.
+- Cannot delete FilePeer with status ACTIVE, &lt;DN&gt; : This message appears when an attempt is made to delete a file peer whose status is active.
+- Cannot delete Peer, &lt;DN&gt; : This message appears when it is not possible to delete file peer.</description>
+            <action name="connectionVerify">
+                <description>Verifies the connection to this peer.
+
+The action can fail due to one of the following reasons: 
+- Error connecting to remote host: When the connection to the configured remote host fails;
+- Logon failure on remote host: When the login to remote host fails.</description>
+                <domainExtension domain="CoreMW">
+                    <extension name="admOpId" value="3"/>
+                </domainExtension>
+                <returnType>
+                    <boolean/>
+                </returnType>
+            </action>
+            <attribute name="filePeerId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="ipAddress">
+                <description>Specifies the address of the remote system for the data to be sent to. The argument can be either an Internet Protocol Version 4 (IPv4) address or an Internet Protocol Version 6 (IPv6) address.&#13;
+&#13;
+An IPv4 address is a 32-bit address written in dot-decimal notation expressed as a.b.c.d&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d fields is a decimal value representing 8-bit part of the address. "a" is the most significant field. &#13;
+&#13;
+	The allowed decimal range for each field is 0-255.&#13;
+&#13;
+An IPv6 address is a 128-bit address written in colon-hexadecimal notation expressed as as a:b:c:d:e:f:g:h&#13;
+where:&#13;
+&#13;
+	Each of a, b, c, d, e, f, g, h fields is one to four hexadecimal digits representing 16-bit part of the 128-bit address. "a" is the most significant field.&#13;
+&#13;
+	The allowed hexadecimal digits are 0-9, a-f, A-F.&#13;
+&#13;
+	One or more consecutive 16-bit fields of zeros can be replaced by "::". The "::" can only appear once in an address.&#13;
+&#13;
+	Leading zeroes in a field are optional, but there must be at least one numeral in every field (except in fields for which "::" notation is used).</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <dataType>
+                    <derivedDataTypeRef name="IpDNSAddress">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+                <specification>RFC 791</specification>
+            </attribute>
+            <attribute name="password">
+                <description>Specifies a password for the login to the remote host.</description>
+                <mandatory/>
+                <dataType>
+                    <structRef name="EcimPassword">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </structRef>
+                </dataType>
+            </attribute>
+            <attribute name="portNumber">
+                <description>Specifies the TCP port number on the remote system to connect to.
+
+The default value is 22 for SFTP.
+
+The default value is 21 for FTP.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="FileTransferDestinationPortRange">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="remoteFolderPath">
+                <description>Specifies the path to the folder in the remote FTP or SFTP area.</description>
+                <domainExtension domain="ECIM">
+                    <extension name="isNillable" value="true"/>
+                </domainExtension>
+                <noNotification/>
+                <isNillable/>
+                <dataType>
+                    <derivedDataTypeRef name="RemoteFolderPath">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="status">
+                <description>Specifies whether this FilePeer MO is currently used for the data transfer.</description>
+                <readOnly/>
+                <dataType>
+                    <enumRef name="PeerStatus">
+                        <defaultValue>PASSIVE</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </enumRef>
+                </dataType>
+            </attribute>
+            <attribute name="transferProtocol">
+                <description>Specifies the transfer type to be used for file transfer.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <dataType>
+                    <enumRef name="FileTransferProtocol">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </enumRef>
+                </dataType>
+            </attribute>
+            <attribute name="username">
+                <description>Specifies the user name for the login to the remote host.</description>
+                <mandatory/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="OutputFormat">
+            <description>Representing the logic for data chunks aggregation. It allows defining the size of chunks and the size of blocks/files.</description>
+            <attribute name="outputFormatId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="dataChunkSize">
+                <description>Specifies the maximum size of a data chunk sent to the remote destination.
+The value is expressed in bytes.</description>
+                <dataType>
+                    <derivedDataTypeRef name="DataSizeRange">
+                        <defaultValue>32768</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="dataLengthType">
+                <description>Specifies whether the data length is fixed, variable or variable with even number of bytes.</description>
+                <dataType>
+                    <enumRef name="LenghtType">
+                        <defaultValue>VARIABLE</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </enumRef>
+                </dataType>
+            </attribute>
+            <attribute name="holdTime">
+                <description>Specifies the data hold time, expressed in seconds, before data is sent to the remote destination.</description>
+                <dataType>
+                    <derivedDataTypeRef name="DataHoldTime">
+                        <defaultValue>1</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="paddingChar">
+                <description>Holds the padding character.
+This attribute specifies the decimal value of a character that is intended to represent the padding characters to be used as extra bytes to make the output data conform to its length type.
+Padding characters are used to fill the unused bytes in an output data having either fixed or even length type.</description>
+                <dataType>
+                    <derivedDataTypeRef name="PaddingChar">
+                        <defaultValue>0</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <class name="FileFormat">
+            <description>Represents the advanced settings for the files generated during a File Transfer.
+A file contains at least one data chunk and can reach the maximum size specified by the fileSize attribute.
+File names are based on the template attribute in which the Management System can set the use of sequence numbers helpful to sort files in the receiving system. 
+In detail, sequence numbers can be either transient, meaning that numbering restarts in case of AP restart, or persistent, meaning that numbering persists on AP restart.
+
+
+
+Creation or Deletion of MO can fail due to one of the following reasons:
+- Cannot define FileFormat for the DataSink where BlockPeer is defined, &lt;DN&gt; : This message appears when an attempt is made to create a file format instance for block peer.
+- Cannot delete FileFormat for the DataSink where FilePeer is defined, &lt;DN&gt; : This message appears when an attempt is made to delete FileFormat instance from OutputFormat MO present in data sink to which file peer is present.
+- template is invalid for FileFormat, &lt;DN&gt; : This message appears when an attempt is made to set the value of template attribute to a invalid value.</description>
+            <attribute name="fileFormatId">
+                <description>Holds the name used when identifying the MO.</description>
+                <mandatory/>
+                <noNotification/>
+                <restricted/>
+                <key/>
+                <dataType>
+                    <string/>
+                </dataType>
+            </attribute>
+            <attribute name="fileSize">
+                <description>Specifies the maximum size that a file, to be stored into the remote destination, can reach.
+The value is expressed in kilobytes (KB).</description>
+                <dataType>
+                    <derivedDataTypeRef name="FileSizeRange">
+                        <defaultValue>1024</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+            <attribute name="startupSequenceNumber">
+                <description>Specifies the start value and rollover value of the transient or persistent sequence number. 
+The sequence number format and placement in the file name is specified in the template attribute.
+When the sequence number reaches its maximum value it starts again from a rollover value as specified in the startup sequence number attribute. 
+The transient or persistent sequence number format should be specified in the template attribute.
+For template format having n,nnnn,p or pppp maximum value is 9999, for nnnnnn or pppppp maximum value is 999999, for nnnnnnnn or pppppppp maximum value is 99999999.
+This attribute is considered only if any sequence number is specified in the template attribute.
+
+</description>
+                <dataType>
+                    <uint32>
+                        <defaultValue>0</defaultValue>
+                    </uint32>
+                </dataType>
+            </attribute>
+            <attribute name="template">
+                <description>Specifies the template for file naming on the remote destination.
+The template is made of a combination of tag elements and strings.
+A string is a user defined custom text.
+
+Tag elements are surrounded by two percentage symbols as shown below:
+%CpName%
+This element is the default name of the CP source of data.
+
+%YYYY%
+This element gives the year in four digits
+
+%YY%
+This element gives the year in two digits
+
+%MM%
+This element gives the month (01 through 12)
+
+%DD%
+This element gives the day of month (01 through 31)
+
+%hh%
+This element gives the hour (00 through 23) 
+
+%mm% 
+This element gives the minute (00 through 59)
+
+%ss% 
+This element gives the second (00 through 59)
+
+%nnnnnnnn%
+This element gives the transient sequence number with fixed length (00000000 through 99999999)
+
+%nnnnnn%
+This element gives the transient sequence number with fixed length (000000 through 999999)
+
+%nnnn%
+This element gives the transient sequence number with fixed length (0000 through 9999)
+
+%n%
+This element gives the transient sequence number with flexible length (0 through 9999)
+
+%pppppppp%
+This element gives the persistent sequence number with fixed length (00000000 through 99999999)
+
+%pppppp%
+This element gives the persistent sequence number with fixed length (000000 through 999999)
+
+%pppp%
+This element gives the persistent sequence number with fixed length (range 0000 - 9999)
+
+%p%
+This element gives the persistent sequence number with flexible length (range 0 - 9999)
+
+Each element may only be used once. Only one of %YYYY% and %YY% can be used.
+Only one of %nnnnnnnn%, %nnnnnn%, %nnnn%, %n%, %pppppppp%, %pppppp%, %pppp% and %p% can be used.
+Transient sequence number means that it gets reset whenever the node is rebooted, while persistent sequence number means that it does not get reset when the node is rebooted. 
+The template is case sensitive.
+
+
+Following examples show the usage of the template attribute.
+
+Example 1:
+The output for a template set to: %CpName%+MSC_NE-%MM%%DD%-%hh%%mm%.%pppp% 
+will be like: BC1+MSC_NE-0131-2310.3451
+
+Example 2:
+The output for a template set to: MSC_NE-%YYYY%-%MM%-%DD%-%hh%.%mm%.%ss%.%n%
+will be like: MSC_NE-2015-01-29-11.20.15.304 </description>
+                <dataType>
+                    <derivedDataTypeRef name="TemplateType">
+                        <defaultValue>%CpName%+DDT-%YY%%MM%%DD%%hh%%mm%%ss%%pppp%</defaultValue>
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </derivedDataTypeRef>
+                </dataType>
+            </attribute>
+        </class>
+        <relationship name="DataSink_to_BlockPeer">
+            <containment>
+                <parent>
+                    <hasClass name="DataSink">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="BlockPeer">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>2</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+                <noNotification/>
+            </containment>
+        </relationship>
+        <relationship name="DataSink_to_FilePeer">
+            <containment>
+                <parent>
+                    <hasClass name="DataSink">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="FilePeer">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>2</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+                <noNotification/>
+            </containment>
+        </relationship>
+        <relationship name="DataSink_to_OutputFormat">
+            <containment>
+                <parent>
+                    <hasClass name="DataSink">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="OutputFormat">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+                <noNotification/>
+            </containment>
+        </relationship>
+        <relationship name="OutputFormat_to_FileFormat">
+            <containment>
+                <parent>
+                    <hasClass name="OutputFormat">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="FileFormat">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+                <noNotification/>
+            </containment>
+        </relationship>
+        <relationship name="DataSource_to_TransferProgress">
+            <containment>
+                <parent>
+                    <hasClass name="DataSource">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="TransferProgress">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+                <noNotification/>
+            </containment>
+        </relationship>
+        <relationship name="DirectDataTransferM_to_DataSource">
+            <containment>
+                <parent>
+                    <hasClass name="DirectDataTransferM">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="DataSource">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>2</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+                <noNotification/>
+            </containment>
+        </relationship>
+        <relationship name="DataSource_to_DataSink">
+            <containment>
+                <parent>
+                    <hasClass name="DataSource">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="DataSink">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>0</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+                <noNotification/>
+            </containment>
+        </relationship>
+    </mim>
+    <interMim>
+        <relationship name="DataOutputHandling_to_DirectDataTransfer">
+            <domainExtension domain="CoreMW">
+                <extension name="splitImmDn" value="true"/>
+            </domainExtension>
+            <containment>
+                <parent>
+                    <hasClass name="DataOutputHandling">
+                        <mimName>AxeFunctions</mimName>
+                    </hasClass>
+                </parent>
+                <child>
+                    <hasClass name="DirectDataTransferM">
+                        <mimName>AxeDirectDataTransfer</mimName>
+                    </hasClass>
+                    <cardinality>
+                        <min>1</min>
+                        <max>1</max>
+                    </cardinality>
+                </child>
+                <domainExtension domain="ECIM">
+                    <extension name="canCreate" value="true"/>
+                    <extension name="canDelete" value="true"/>
+                </domainExtension>
+                <noNotification/>
+            </containment>
+        </relationship>
+    </interMim>
+</models>

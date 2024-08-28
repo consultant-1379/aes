@@ -1,0 +1,1473 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "complex"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DD9C801DF"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Parameterized_Class "_Ctr"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	20))
+	    quid       	"370C851001FB"
+	    operations 	(list Operations
+		(object Operation "_Cosh"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E530ADDCFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty")
+			(object Parameter "_Y"
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Exp"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9096A892FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_P"
+			    type       	"_Ty*")
+			(object Parameter "_Y"
+			    type       	"_Ty")
+			(object Parameter "_E"
+			    type       	"short"))
+		    result     	"short"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Infv"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"50B8F60CFEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Isinf"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0B04E54AFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Isnan"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"EF6CC69FFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty"))
+		    result     	"bool"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Nanv"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"33518310FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Sinh"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1858A132FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty")
+			(object Parameter "_Y"
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "atan2"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E5614B73FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Y"
+			    type       	"_Ty")
+			(object Parameter "_X"
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "cos"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7BD8CA64FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "exp"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2E9258A3FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ldexp"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C13C3281FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"_Ty")
+			(object Parameter "_E"
+			    type       	"int"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "log"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5E9EB008FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "pow"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BED1BB7CFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty")
+			(object Parameter "_Y"
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "sin"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C0F6A19FFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "sqrt"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B0072CAEFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"_Ty"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class")))
+	(object Parameterized_Class "_Complex_base"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	168))
+	    quid       	"370C85100230"
+	    operations 	(list Operations
+		(object Operation "_Complex_base"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6D0D561AFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const _Ty&")
+			(object Parameter "_I"
+			    type       	"const _Ty&"))
+		    result     	"_Complex_base"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator +="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9CFB28C3FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"_Complex_base::_Myt&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator -="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"79EAE126FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"_Complex_base::_Myt&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator *="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C9C0D5ADFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"_Complex_base::_Myt&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator /="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8399A267FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"_Complex_base::_Myt&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "real"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8EE47BACFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "real"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"DC652571FEED"
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "imag"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"FEA75223FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const _Ty&"))
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "imag"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3BE510C5FEED"
+		    result     	"_Ty"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "_Re"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C8510036F"
+		    type       	"_Ty"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "_Im"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"370C85100370"
+		    type       	"_Ty"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Instantiated_Class "_Myt"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_Complex_base<_Ty>")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	170))
+		    quid       	"370C85100232"
+		    module     	"Component View::STL::complex (module spec)"
+		    quidu      	"370C851001BF"
+		    language   	"C++"
+		    parameters 	(list Parameters
+			(object Parameter "_Ty"))
+		    nonclassname 	"_Complex_base<_Ty>")
+		(object Instantiated_Class "_Myctr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_Ctr<_Ty>")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	171))
+		    quid       	"370C85100234"
+		    module     	"Component View::STL::complex (module spec)"
+		    quidu      	"370C851001BF"
+		    language   	"C++"
+		    parameters 	(list Parameters
+			(object Parameter "_Ty"))
+		    nonclassname 	"_Ctr<_Ty>")
+		(object Class "value_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	172)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_Ty"))
+		    quid       	"370C8510036E"
+		    module     	"Component View::STL::complex (module spec)"
+		    quidu      	"370C851001BF"
+		    language   	"C++"
+		    nonclassname 	"_Ty")))
+	(object Instantiated_Class "(_Ctr< long double >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	59))
+	    quid       	"370C8510022A"
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "long double")))
+	(object Instantiated_Class "(_Ctr< double >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	94))
+	    quid       	"370C8510022C"
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "double")))
+	(object Instantiated_Class "(_Ctr< float >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	128))
+	    quid       	"370C8510022E"
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "float")))
+	(object Instantiated_Class "(complex< float >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	203))
+	    quid       	"370C85100382"
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "float")))
+	(object Instantiated_Class "(complex< double >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	216))
+	    quid       	"370C85100384"
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "double")))
+	(object Instantiated_Class "(complex< long double >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	229))
+	    quid       	"370C85100386"
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "long double")))
+	(object Parameterized_Class "complex"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	256)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206)))
+	    quid       	"370C8510038C"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _Ty >"))
+		    quid       	"370C85100396"
+		    supplier   	"Logical View::include::complex::_Complex_base"
+		    quidu      	"370C85100230"))
+	    operations 	(list Operations
+		(object Operation "complex"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BE1F2DC1FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"const _Ty&"
+			    initv      	"0")
+			(object Parameter "_I"
+			    type       	"const _Ty&"
+			    initv      	"0"))
+		    result     	"complex"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "complex"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9C17EA71FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const complex&"))
+		    result     	"complex"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5114557CFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_X"
+			    type       	"const complex&"))
+		    result     	"complex&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_Ty"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Class "_U"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	260)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_Ty"))
+		    quid       	"370C85100395"
+		    module     	"Component View::STL::complex (module spec)"
+		    quidu      	"370C851001BF"
+		    language   	"C++"
+		    nonclassname 	"_Ty")))
+	(object Instantiated_Class "(_Complex_base< float >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	203))
+	    quid       	"370C851003A0"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"370C851003A4"
+		supplier   	"Logical View::include::complex::_Complex_base"
+		quidu      	"370C85100230")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C851003A3"
+		    label      	"_Ty"
+		    supplier   	"Logical View::<unspecified>::float"
+		    quidu      	"370C851003A2"))
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "float")))
+	(object Instantiated_Class "(_Complex_base< double >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	216))
+	    quid       	"370C851003A5"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"370C851003A9"
+		supplier   	"Logical View::include::complex::_Complex_base"
+		quidu      	"370C85100230")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C851003A8"
+		    label      	"_Ty"
+		    supplier   	"Logical View::<unspecified>::double"
+		    quidu      	"370C851003A7"))
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "double")))
+	(object Instantiated_Class "(_Complex_base< long double >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	229))
+	    quid       	"370C851003AA"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"370C851003AE"
+		supplier   	"Logical View::include::complex::_Complex_base"
+		quidu      	"370C85100230")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"370C851003AD"
+		    label      	"_Ty"
+		    supplier   	"Logical View::<unspecified>::long double"
+		    quidu      	"370C851003AC"))
+	    module     	"Component View::STL::complex (module spec)"
+	    quidu      	"370C851001BF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "long double"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "complex"
+	    quid       	"370DE6500264"
+	    title      	"complex"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ParameterizedClass" "Logical View::include::complex::_Ctr" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(160, 1568)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(79, 1538)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"_Ctr")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851001FB"
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::complex::_Complex_base" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1040, 688)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(881, 608)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	318
+			justify    	0
+			label      	"_Complex_base")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85100230"
+		    width      	336
+		    height     	260
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::complex::(_Ctr< long double >)" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(656, 1504)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(440, 1453)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	432
+			justify    	0
+			label      	"(_Ctr< long double >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8510022A"
+		    width      	450
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::complex::(_Ctr< double >)" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1200, 1504)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1038, 1453)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	324
+			justify    	0
+			label      	"(_Ctr< double >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8510022C"
+		    width      	342
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::complex::(_Ctr< float >)" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1664, 1504)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1520, 1453)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	288
+			justify    	0
+			label      	"(_Ctr< float >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8510022E"
+		    width      	306
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::complex::(complex< float >)" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2160, 1504)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1976, 1453)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	368
+			justify    	0
+			label      	"(complex< float >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85100382"
+		    width      	386
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::complex::(complex< double >)" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(2720, 1504)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(2510, 1453)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	420
+			justify    	0
+			label      	"(complex< double >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85100384"
+		    width      	438
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::include::complex::(complex< long double >)" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(3360, 1504)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(3112, 1453)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	496
+			justify    	0
+			label      	"(complex< long double >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C85100386"
+		    width      	514
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::complex::complex" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1040, 1248)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(948, 1218)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	184
+			justify    	0
+			label      	"complex")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C8510038C"
+		    width      	202
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C85100396"
+		    client     	@9
+		    supplier   	@2
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::complex::(_Complex_base< float >)" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(336, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(83, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	506
+			justify    	0
+			label      	"(_Complex_base< float >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851003A0"
+		    width      	524
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InstantiateView "" @12
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851003A4"
+		    client     	@11
+		    supplier   	@2
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::complex::(_Complex_base< double >)" @13
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1040, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(763, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	554
+			justify    	0
+			label      	"(_Complex_base< double >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851003A5"
+		    width      	572
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InstantiateView "" @14
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851003A9"
+		    client     	@13
+		    supplier   	@2
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::include::complex::(_Complex_base< long double >)" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1792, 144)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1478, 93)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	628
+			justify    	0
+			label      	"(_Complex_base< long double >)")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851003AA"
+		    width      	646
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InstantiateView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851003AE"
+		    client     	@15
+		    supplier   	@2
+		    line_style 	0)))))

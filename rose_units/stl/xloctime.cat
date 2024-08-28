@@ -1,0 +1,1465 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 6.0.8321.10"
+    charSet    	0)
+
+(object Class_Category "xloctime"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"370DB02302D0"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Parameterized_Class "time_put_byname"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	242)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"370C851D0108"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _E,_OI >"))
+		    quid       	"370C851D010F"
+		    supplier   	"Logical View::include::xloctime::time_put"
+		    quidu      	"370C851D00E1"))
+	    operations 	(list Operations
+		(object Operation "time_put_byname"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F78FAD1DFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_S"
+			    type       	"const char*")
+			(object Parameter "_R"
+			    type       	"size_t"
+			    initv      	"0"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~time_put_byname"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0883D27FFEED"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::xloctime (module spec)"
+	    quidu      	"370C851C03AF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_E"
+		    type       	"class")
+		(object Parameter "_OI"
+		    type       	"class"
+		    initv      	"ostreambuf_iterator<_E, char_traits<_E> > ")))
+	(object Class "time_base"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	17)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ClassKey"
+		    value      	"struct"))
+	    quid       	"370C851C03B1"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"370C851D0075"
+		    supplier   	"Logical View::include::xlocale::locale::facet"
+		    quidu      	"370C85150257"))
+	    operations 	(list Operations
+		(object Operation "time_base"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"DA57ACECFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"size_t"
+			    initv      	"0"))
+		    result     	"time_base"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::xloctime (module spec)"
+	    quidu      	"370C851C03AF"
+	    language   	"C++"
+	    nestedClasses 	(list nestedClasses
+		(object Class "_Dateorder"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	18)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"enum _Dateorder {no_order, dmy, mdy, ymd, ydm}"))
+		    quid       	"370C851C03B2"
+		    module     	"Component View::STL::xloctime (module spec)"
+		    quidu      	"370C851C03AF"
+		    language   	"C++"
+		    nonclassname 	"enum _Dateorder {no_order, dmy, mdy, ymd, ydm}")))
+	(object Parameterized_Class "time_get_byname"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	164)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"370C851D00D9"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< _E,_II >"))
+		    quid       	"370C851D00E0"
+		    supplier   	"Logical View::include::xloctime::time_get"
+		    quidu      	"370C851D0076"))
+	    operations 	(list Operations
+		(object Operation "time_get_byname"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7E3842D8FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_S"
+			    type       	"const char*")
+			(object Parameter "_R"
+			    type       	"size_t"
+			    initv      	"0"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~time_get_byname"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"35F6BD75FEED"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::STL::xloctime (module spec)"
+	    quidu      	"370C851C03AF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_E"
+		    type       	"class")
+		(object Parameter "_II"
+		    type       	"class"
+		    initv      	"istreambuf_iterator<_E, char_traits<_E> > ")))
+	(object Parameterized_Class "time_get"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	27)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"370C851D0076"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"370C851D00D8"
+		    supplier   	"Logical View::include::xloctime::time_base"
+		    quidu      	"370C851C03B1"))
+	    operations 	(list Operations
+		(object Operation "time_get"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"909BD82DFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"size_t"
+			    initv      	"0"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "time_get"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2376BBD5FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Lobj"
+			    type       	"const _Locinfo&")
+			(object Parameter "_R"
+			    type       	"size_t"
+			    initv      	"0"))
+		    result     	"time_get"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "date_order"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F71EEAD3FEED"
+		    result     	"time_base::dateorder"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "do_date_order"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8B28F804FEED"
+		    result     	"time_base::dateorder"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "get_time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"DE908A0EFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "do_get_time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1C02955BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "get_date"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AD159571FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "do_get_date"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1C1692E6FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "get_weekday"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"4B47D00CFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "do_get_weekday"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8564B93BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "get_monthname"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"05FFF5D7FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "do_get_monthname"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D16BF771FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "get_year"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"404CEC85FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "do_get_year"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1C989A19FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II")
+			(object Parameter "_L"
+			    type       	"_II")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_St"
+			    type       	"ios_base::iostate&")
+			(object Parameter "_Tp"
+			    type       	"tm*"))
+		    result     	"_II"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "_Init"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7942BBE5FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Lobj"
+			    type       	"const _Locinfo&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "_Getcat"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"EDB6925CFEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~time_get"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1C7DA9E1FEED"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Getint"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"0F30B74BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_II&")
+			(object Parameter "_L"
+			    type       	"_II&")
+			(object Parameter "_Lo"
+			    type       	"int")
+			(object Parameter "_Hi"
+			    type       	"int")
+			(object Parameter "_V"
+			    type       	"int&"))
+		    result     	"ios_base::iostate"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Private"
+		    uid        	0))
+	    module     	"Component View::STL::xloctime (module spec)"
+	    quidu      	"370C851C03AF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_E"
+		    type       	"class")
+		(object Parameter "_II"
+		    type       	"class"
+		    initv      	"istreambuf_iterator<_E, char_traits<_E> > "))
+	    nestedClasses 	(list nestedClasses
+		(object Class "char_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	29)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_E"))
+		    quid       	"370C851D0080"
+		    module     	"Component View::STL::xloctime (module spec)"
+		    quidu      	"370C851C03AF"
+		    language   	"C++"
+		    nonclassname 	"_E")
+		(object Class "iter_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	30)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_II"))
+		    quid       	"370C851D0081"
+		    module     	"Component View::STL::xloctime (module spec)"
+		    quidu      	"370C851C03AF"
+		    language   	"C++"
+		    nonclassname 	"_II")))
+	(object Parameterized_Class "time_put"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	175)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"370C851D00E1"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"370C851D0107"
+		    supplier   	"Logical View::include::xloctime::time_base"
+		    quidu      	"370C851C03B1"))
+	    operations 	(list Operations
+		(object Operation "time_put"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2E45C395FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_R"
+			    type       	"size_t"
+			    initv      	"0"))
+		    result     	"explicit"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "time_put"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3B43E59BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Lobj"
+			    type       	"const _Locinfo&")
+			(object Parameter "_R"
+			    type       	"size_t"
+			    initv      	"0"))
+		    result     	"time_put"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "_Init"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"EEF6768FFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_Lobj"
+			    type       	"const _Locinfo&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "_Getcat"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"MSVC"
+			    name       	"CallType"
+			    value      	"__cdecl "))
+		    quid       	"71034359FEED"
+		    result     	"size_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    static     	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~time_put"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AF7534E9FEED"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "put"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CEB441B5FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_OI")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_Tp"
+			    type       	"const tm*")
+			(object Parameter "_Ff"
+			    type       	"const _E*")
+			(object Parameter "_Lf"
+			    type       	"const _E*"))
+		    result     	"_OI"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "put"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5D49FBAFFEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_OI")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_Tp"
+			    type       	"const tm*")
+			(object Parameter "_C"
+			    type       	"char")
+			(object Parameter "_M"
+			    type       	"char"
+			    initv      	"0"))
+		    result     	"_OI"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "do_put"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F05C5A66FEED"
+		    parameters 	(list Parameters
+			(object Parameter "_F"
+			    type       	"_OI")
+			(object Parameter "_X"
+			    type       	"ios_base&")
+			(object Parameter "_Tp"
+			    type       	"const tm*")
+			(object Parameter "_C"
+			    type       	"char")
+			(object Parameter "_M"
+			    type       	"char"
+			    initv      	"0"))
+		    result     	"_OI"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0))
+	    module     	"Component View::STL::xloctime (module spec)"
+	    quidu      	"370C851C03AF"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "_E"
+		    type       	"class")
+		(object Parameter "_OI"
+		    type       	"class"
+		    initv      	"ostreambuf_iterator<_E, char_traits<_E> > "))
+	    nestedClasses 	(list nestedClasses
+		(object Class "char_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	177)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_E"))
+		    quid       	"370C851D00E9"
+		    module     	"Component View::STL::xloctime (module spec)"
+		    quidu      	"370C851C03AF"
+		    language   	"C++"
+		    nonclassname 	"_E")
+		(object Class "iter_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	178)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"_OI"))
+		    quid       	"370C851D00EA"
+		    module     	"Component View::STL::xloctime (module spec)"
+		    quidu      	"370C851C03AF"
+		    language   	"C++"
+		    nonclassname 	"_OI"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "xloctime"
+	    quid       	"370DDF130179"
+	    title      	"xloctime"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ParameterizedClass" "Logical View::include::xloctime::time_put_byname" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(624, 1296)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(449, 1266)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	350
+			justify    	0
+			label      	"time_put_byname")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851D0108"
+		    width      	368
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::include::xloctime::time_base" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1056, 208)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(947, 157)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	218
+			justify    	0
+			label      	"time_base")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851C03B1"
+		    width      	236
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::xloctime::time_get_byname" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1584, 1312)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1409, 1282)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	350
+			justify    	0
+			label      	"time_get_byname")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851D00D9"
+		    width      	368
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::include::xloctime::time_get" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1360, 784)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1265, 754)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	190
+			justify    	0
+			label      	"time_get")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851D0076"
+		    width      	208
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @5
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851D00E0"
+		    client     	@3
+		    supplier   	@4
+		    line_style 	0)
+		(object InheritView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851D00D8"
+		    client     	@4
+		    supplier   	@2
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::include::xloctime::time_put" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(720, 784)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(625, 754)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	190
+			justify    	0
+			label      	"time_put")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"370C851D00E1"
+		    width      	208
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @8
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851D010F"
+		    client     	@1
+		    supplier   	@7
+		    line_style 	0)
+		(object InheritView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"370C851D0107"
+		    client     	@7
+		    supplier   	@2
+		    line_style 	0)))))

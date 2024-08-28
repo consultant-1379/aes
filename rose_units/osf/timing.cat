@@ -1,0 +1,6318 @@
+
+(object Petal
+    version    	44
+    _written   	"Rose 7.1.9642.27"
+    charSet    	0)
+
+(object Class_Category "Timing"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3822EBC000E9"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "OSF_Time_Value"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	573)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206)))
+	    quid       	"3822E5560048"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E5560116"
+		    supplier   	"Logical View::osf::pid_t"
+		    quidu      	"3822E5560115")
+		(object Uses_Relationship
+		    quid       	"3822E5560117"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E556018B"
+		    supplier   	"Logical View::os::timespec_t"
+		    quidu      	"3822E5560189")
+		(object Uses_Relationship
+		    quid       	"3822E556019D"
+		    supplier   	"Logical View::<unspecified>::FILETIME"
+		    quidu      	"3822E556019C")
+		(object Uses_Relationship
+		    quid       	"3822E55601A4"
+		    supplier   	"Logical View::os::OSF_timer_t"
+		    quidu      	"3822E55601A3"))
+	    operations 	(list Operations
+		(object Operation "sec"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D6550BDBFEED"
+		    documentation 	
+|Returns the value of the object as a Win32 FILETIME.
+|= The following are accessor/mutator methods.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1001B3"
+			    type       	"void"))
+		    result     	"long"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "sec"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"89DF758BFEED"
+		    documentation 	"Get seconds."
+		    parameters 	(list Parameters
+			(object Parameter "sec"
+			    quid       	"3CA99C1001B5"
+			    type       	"long"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "usec"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"392338D9FEED"
+		    documentation 	"Set seconds."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1001B7"
+			    type       	"void"))
+		    result     	"long"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "usec"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6CC0F004FEED"
+		    documentation 	"Get microseconds."
+		    parameters 	(list Parameters
+			(object Parameter "usec"
+			    quid       	"3CA99C1001B9"
+			    type       	"long"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "OSF_Time_Value"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"374C3742FEED"
+		    documentation 	
+|Constant for maximum time representable.
+|= Initialization methods.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1001BB"
+			    type       	"void"))
+		    result     	"OSF_Time_Value"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5560048")
+		(object Operation "OSF_Time_Value"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"72F0FC0EFEED"
+		    documentation 	"Default Constructor."
+		    parameters 	(list Parameters
+			(object Parameter "sec"
+			    quid       	"3CA99C1001BD"
+			    type       	"long")
+			(object Parameter "usec"
+			    quid       	"3CA99C1001BE"
+			    type       	"long"
+			    initv      	"0"))
+		    result     	"OSF_Time_Value"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5560048")
+		(object Operation "OSF_Time_Value"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8253FCE6FEED"
+		    documentation 	
+|Constructor.
+|= Methods for converting to/from various time formats.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "tv"
+			    quid       	"3CA99C1001C0"
+			    type       	"const timeval&"))
+		    result     	"OSF_Time_Value"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5560048")
+		(object Operation "OSF_Time_Value"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5349939DFEED"
+		    documentation 	"Construct the <OSF_Time_Value> from a <timeval>."
+		    parameters 	(list Parameters
+			(object Parameter "tv"
+			    quid       	"3CA99C1001C2"
+			    type       	"const timespec_t&"))
+		    result     	"OSF_Time_Value"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5560048")
+		(object Operation "OSF_Time_Value"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9F54F48DFEED"
+		    documentation 	"Initializes the <OSF_Time_Value> object from a <timespec_t>."
+		    parameters 	(list Parameters
+			(object Parameter "tv"
+			    quid       	"3CA99C1001C4"
+			    type       	"const OSF_Time_Value&"))
+		    result     	"OSF_Time_Value"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5560048")
+		(object Operation "OSF_Time_Value"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D50B2FADFEED"
+		    documentation 	"Copy constructor."
+		    parameters 	(list Parameters
+			(object Parameter "file_time"
+			    quid       	"3CA99C1001C6"
+			    type       	"const FILETIME&"))
+		    result     	"OSF_Time_Value"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5560048")
+		(object Operation "set"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2B956380FEED"
+		    documentation 	"Initializes the OSF_Time_Value object from a Win32 FILETIME"
+		    parameters 	(list Parameters
+			(object Parameter "sec"
+			    quid       	"3CA99C1001C8"
+			    type       	"long")
+			(object Parameter "usec"
+			    quid       	"3CA99C1001C9"
+			    type       	"long"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BF3F136CFEED"
+		    documentation 	"Construct a <Time_Value> from two <long>s."
+		    parameters 	(list Parameters
+			(object Parameter "d"
+			    quid       	"3CA99C1001CB"
+			    type       	"double"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"8FF95DFFFEED"
+		    documentation 	
+|Construct a <Time_Value> from a <double>, which is assumed to be
+|in second format, with any remainder treated as microseconds.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "tv"
+			    quid       	"3CA99C1001CD"
+			    type       	"const timeval&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B6FA979EFEED"
+		    documentation 	"Construct a <Time_Value> from a <timeval>."
+		    parameters 	(list Parameters
+			(object Parameter "tv"
+			    quid       	"3CA99C1001CF"
+			    type       	"const timespec_t&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E6136A0BFEED"
+		    documentation 	"Initializes the <Time_Value> object from a <timespec_t>."
+		    parameters 	(list Parameters
+			(object Parameter "file_time"
+			    quid       	"3CA99C1001D1"
+			    type       	"const FILETIME&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msec"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F0C89BA8FEED"
+		    documentation 	"Initializes the <Time_Value> object from a <timespec_t>."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1001D3"
+			    type       	"void"))
+		    result     	"long"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "msec"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"4B06F847FEED"
+		    documentation 	"Converts from <Time_Value> format into milli-seconds format."
+		    parameters 	(list Parameters
+			(object Parameter "milliseconds"
+			    quid       	"3CA99C1001D5"
+			    type       	"long"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator timespec_t"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"A7B301A6FEED"
+		    documentation 	"Converts from milli-seconds format into <Time_Value> format."
+		    result     	"timespec_t"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5560189")
+		(object Operation "operator timeval"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"3A3398EBFEED"
+		    documentation 	"Returns the value of the object as a <timespec_t>."
+		    result     	"timeval"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E556017E")
+		(object Operation "operator const timeval*"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"F3EACBF4FEED"
+		    documentation 	"Returns the value of the object as a <timeval>."
+		    result     	"const timeval*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator FILETIME"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"49747674FEED"
+		    documentation 	"Returns a pointer to the object as a <timeval>."
+		    result     	"FILETIME"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E556019C")
+		(object Operation "operator +="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"31369795FEED"
+		    documentation 	
+|Set microseconds.
+|= The following are arithmetic methods for operating on
+|Time_Values.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "tv"
+			    quid       	"3CA99C1001DB"
+			    type       	"const OSF_Time_Value&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator -="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"BDBD0AC2FEED"
+		    documentation 	"Add <tv> to this."
+		    parameters 	(list Parameters
+			(object Parameter "tv"
+			    quid       	"3CA99C1001DD"
+			    type       	"const OSF_Time_Value&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "dump"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9A33DE22FEED"
+		    documentation 	"True if tv1 != tv2."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1001DF"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "normalize"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"6428A177FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1001E1"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "zero"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberMutability"
+			    value      	("DataMemberMutabilitySet" 2))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5560106"
+		    documentation 	"= Useful constants."
+		    type       	"const OSF_Time_Value"
+		    exportControl 	"Public"
+		    Containment 	"By Value"
+		    static     	TRUE)
+		(object ClassAttribute "max_time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberMutability"
+			    value      	("DataMemberMutabilitySet" 2))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5560111"
+		    documentation 	
+|Constant "0".
+		    
+		    type       	"const OSF_Time_Value"
+		    initv      	
+|(LONG_MAX,
+|                                               OSF_ONE_SECOND_IN_USECS - 1)
+		    
+		    exportControl 	"Public"
+		    Containment 	"By Value"
+		    static     	TRUE)
+		(object ClassAttribute "FILETIME_to_timval_skew"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberMutability"
+			    value      	("DataMemberMutabilitySet" 2))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E55601BC"
+		    documentation 	"Dump the state of an object."
+		    type       	"const DWORDLONG"
+		    initv      	"0x19db1ded53e8000"
+		    exportControl 	"Public"
+		    Containment 	"By Value"
+		    static     	TRUE)
+		(object ClassAttribute "tv_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E55601C2"
+		    documentation 	"Put the timevalue into a canonical form."
+		    type       	"timeval"
+		    quidu      	"3822E556017E"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::os (module spec)"
+	    quidu      	"3822E5560052"
+	    module     	"Component View::OSF::osf_caa::src::os (module body)"
+	    quidu      	"3822E55A0383"
+	    module     	"Component View::OSF::osf_caa::src::os0 (module body)"
+	    quidu      	"3822E55E004A"
+	    language   	"C++")
+	(object Instantiated_Class "OSF_Timer_Heap"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"OSF_Timer_Heap_T<OSF_Event_Handler*,OSF_Event_Handler_Handle_Timeout_Upcall<OSF_SYNCH_RECURSIVE_MUTEX>,OSF_SYNCH_RECURSIVE_MUTEX>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	270))
+	    quid       	"3822E57E031A"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"3822E57E032C"
+		supplier   	"Logical View::Timing::OSF_Timer_Heap_T"
+		quidu      	"3822E57E0263")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"3822E57E032A"
+		    label      	"TYPE"
+		    supplier   	"Logical View::EventDispatchers::OSF_Event_Handler"
+		    quidu      	"3822E55503D9")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"3822E57E032B"
+		    label      	"FUNCTOR"
+		    supplier   	"Logical View::UnAssigned::(OSF_Event_Handler_Handle_Timeout_Upcall< OSF_SYNCH_RECURSIVE_MUTEX >)"
+		    quidu      	"3822E56103C1"))
+	    module     	"Component View::OSF::osf_caa::osf::timer_heap (module spec)"
+	    quidu      	"3822E57E0154"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "OSF_Event_Handler*"
+		    quid       	"3CA99C1001F1")
+		(object Parameter "OSF_Event_Handler_Handle_Timeout_Upcall< OSF_SYNCH_RECURSIVE_MUTEX >"
+		    quid       	"3CA99C1001F2")
+		(object Parameter "OSF_SYNCH_RECURSIVE_MUTEX"
+		    quid       	"3CA99C1001F3"))
+	    nonclassname 	"OSF_Timer_Heap_T<OSF_Event_Handler*,OSF_Event_Handler_Handle_Timeout_Upcall<OSF_SYNCH_RECURSIVE_MUTEX>,OSF_SYNCH_RECURSIVE_MUTEX>")
+	(object Instantiated_Class "OSF_Timer_Heap_Iterator"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"OSF_Timer_Heap_Iterator_T<OSF_Event_Handler*,OSF_Event_Handler_Handle_Timeout_Upcall<OSF_SYNCH_RECURSIVE_MUTEX>,OSF_SYNCH_RECURSIVE_MUTEX>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	275))
+	    quid       	"3822E57E031E"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"3822E57E032F"
+		supplier   	"Logical View::Timing::OSF_Timer_Heap_Iterator_T"
+		quidu      	"3822E57E017E")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"3822E57E032D"
+		    label      	"TYPE"
+		    supplier   	"Logical View::EventDispatchers::OSF_Event_Handler"
+		    quidu      	"3822E55503D9")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"3822E57E032E"
+		    label      	"FUNCTOR"
+		    supplier   	"Logical View::UnAssigned::(OSF_Event_Handler_Handle_Timeout_Upcall< OSF_SYNCH_RECURSIVE_MUTEX >)"
+		    quidu      	"3822E56103C1"))
+	    module     	"Component View::OSF::osf_caa::osf::timer_heap (module spec)"
+	    quidu      	"3822E57E0154"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "OSF_Event_Handler*"
+		    quid       	"3CA99C1001FC")
+		(object Parameter "OSF_Event_Handler_Handle_Timeout_Upcall< OSF_SYNCH_RECURSIVE_MUTEX >"
+		    quid       	"3CA99C1001FD")
+		(object Parameter "OSF_SYNCH_RECURSIVE_MUTEX"
+		    quid       	"3CA99C1001FE"))
+	    nonclassname 	"OSF_Timer_Heap_Iterator_T<OSF_Event_Handler*,OSF_Event_Handler_Handle_Timeout_Upcall<OSF_SYNCH_RECURSIVE_MUTEX>,OSF_SYNCH_RECURSIVE_MUTEX>")
+	(object Parameterized_Class "OSF_Timer_Heap_Iterator_T"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	33)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3822E57E017E"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< TYPE,FUNCTOR,OSF_LOCK >"))
+		    quid       	"3822E57E0262"
+		    supplier   	"Logical View::Timing::OSF_Timer_Queue_Iterator_T"
+		    quidu      	"3822E56102BC"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E57E0193"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E57E019A"
+		    supplier   	"Logical View::<unspecified>::OSF_thread_t"
+		    quidu      	"3822E5560016")
+		(object Uses_Relationship
+		    quid       	"3822E57E0244"
+		    supplier   	"Logical View::Timing::(OSF_Timer_Node_T< TYPE >)"
+		    quidu      	"3822E56101DF")
+		(object Uses_Relationship
+		    quid       	"3822E57E0318"
+		    supplier   	"Logical View::Timing::OSF_Timer_Heap_T"
+		    quidu      	"3822E57E0263"
+		    friend     	TRUE))
+	    operations 	(list Operations
+		(object Operation "OSF_Timer_Heap_Iterator_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"218EEDA5FEED"
+		    documentation 	
+|Define some simple macros to clarify the code.
+|Constructor that takes in an <OSF_Timer_Heap_T> to iterate over.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "heap"
+			    quid       	"3CA99C10020B"
+			    type       	"OSF_Timer_Heap_T&"))
+		    result     	"OSF_Timer_Heap_Iterator_T"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E57E017E")
+		(object Operation "first"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"3508D24CFEED"
+		    documentation 	
+|Destructor.
+|Positions the iterator at the first node in the heap array
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10020D"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~OSF_Timer_Heap_Iterator_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"54D4097EFEED"
+		    documentation 	"Constructor."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10020F"
+			    type       	"void"))
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "next"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"2EDCEA73FEED"
+		    documentation 	
+|Positions the iterator at the earliest node in the Timer Queue
+|Positions the iterator at the next node in the heap array
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100211"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "isdone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CE03C85EFEED"
+		    documentation 	
+|Positions the iterator at the next node in the Timer Queue
+|Returns true the <position_> is at the end of the heap array
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100213"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "item"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7191E542FEED"
+		    documentation 	
+|Returns true when there are no more nodes in the sequence
+|Returns the node at the current position in the heap or 0 if at the end
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100215"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "timer_heap_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E024E"
+		    type       	"OSF_Timer_Heap_T&"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "position_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E0252"
+		    documentation 	"Pointer to the <OSF_Timer_Heap> that we are iterating over."
+		    type       	"size_t"
+		    quidu      	"3822E5560278"
+		    exportControl 	"Protected"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::timer_heap (module spec)"
+	    quidu      	"3822E57E0154"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "TYPE"
+		    quid       	"3CA99C100219"
+		    type       	"class")
+		(object Parameter "FUNCTOR"
+		    quid       	"3CA99C10021A"
+		    type       	"class")
+		(object Parameter "OSF_LOCK"
+		    quid       	"3CA99C10021B"
+		    type       	"class")))
+	(object Parameterized_Class "OSF_Timer_Heap_T"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	70)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3822E57E0263"
+	    documentation 	"Position in the array where the iterator is at"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InstanceArguments"
+			    value      	"< TYPE,FUNCTOR,OSF_LOCK >"))
+		    quid       	"3822E57E0319"
+		    supplier   	"Logical View::Timing::OSF_Timer_Queue_T"
+		    quidu      	"3822E56102D3"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E57E0277"
+		    supplier   	"Logical View::<unspecified>::OSF_thread_t"
+		    quidu      	"3822E5560016")
+		(object Uses_Relationship
+		    quid       	"3822E57E0280"
+		    supplier   	"Logical View::Containers::(OSF_Free_List< OSF_Timer_Node_T<TYPE> >)"
+		    quidu      	"3822E56102E2")
+		(object Uses_Relationship
+		    quid       	"3822E57E028A"
+		    supplier   	"Logical View::Timing::(OSF_Timer_Heap_T< TYPE, FUNCTOR, OSF_LOCK >)"
+		    quidu      	"3822E57E0186"
+		    exportControl 	"Private")
+		(object Uses_Relationship
+		    quid       	"3822E57E028D"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E57E0298"
+		    supplier   	"Logical View::Timing::OSF_Time_Value"
+		    quidu      	"3822E5560048")
+		(object Uses_Relationship
+		    quid       	"3822E57E029C"
+		    supplier   	"Logical View::<unspecified>::TYPE"
+		    quidu      	"3822E55A00C3")
+		(object Uses_Relationship
+		    quid       	"3822E57E029D"
+		    supplier   	"Logical View::<unspecified>::const void*"
+		    quidu      	"3822E5560071")
+		(object Uses_Relationship
+		    quid       	"3822E57E02A6"
+		    supplier   	"Logical View::<unspecified>::const void**"
+		    quidu      	"3822E556032F")
+		(object Uses_Relationship
+		    quid       	"3822E57E02AD"
+		    supplier   	"Logical View::Timing::OSF_Timer_Queue_T::ITERATOR"
+		    quidu      	"3822E56102F4"))
+	    operations 	(list Operations
+		(object Operation "OSF_Timer_Heap_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"258449CBFEED"
+		    documentation 	
+|= Initialization and termination methods.
+|Constructor
+		    
+		    parameters 	(list Parameters
+			(object Parameter "size"
+			    quid       	"3CA99C100232"
+			    type       	"size_t"
+			    quidu      	"3822E5560278")
+			(object Parameter "preallocate"
+			    quid       	"3CA99C100233"
+			    type       	"int"
+			    initv      	"0")
+			(object Parameter "upcall_functor"
+			    quid       	"3CA99C100234"
+			    type       	"FUNCTOR*"
+			    initv      	"0")
+			(object Parameter "freelist"
+			    quid       	"3CA99C100235"
+			    type       	"OSF_Free_List*"
+			    initv      	"0"))
+		    result     	"OSF_Timer_Heap_T"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E57E0263")
+		(object Operation "OSF_Timer_Heap_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1F4FF363FEED"
+		    documentation 	
+|The Constructor creates a heap with <size> elements.  If
+|<preallocated> is non-0 then we'll pre-allocate all the memory
+|for the <OSF_Timer_Nodes>.  This saves time and is more
+|predictable (though it requires more space).  Otherwise, we'll
+|just allocate the nodes as we need them.  This can also take in a
+|upcall functor and freelist (if 0, then defaults will be created)
+		    
+		    parameters 	(list Parameters
+			(object Parameter "upcall_functor"
+			    quid       	"3CA99C100237"
+			    type       	"FUNCTOR*"
+			    initv      	"0")
+			(object Parameter "freelist"
+			    quid       	"3CA99C100238"
+			    type       	"OSF_Free_List*"
+			    initv      	"0"))
+		    result     	"OSF_Timer_Heap_T"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E57E0263")
+		(object Operation "OSF_Timer_Heap_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"87EBC120FEED"
+		    documentation 	
+|Set of pointers to the arrays of preallocated timer nodes.
+|Used to delete the allocated memory when required.
+|= Don't allow these operations for now.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10023A"
+			    type       	"const OSF_Timer_Heap_T&"))
+		    result     	"OSF_Timer_Heap_T"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0
+		    quidu      	"3822E57E0263")
+		(object Operation "~OSF_Timer_Heap_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"5B5B0911FEED"
+		    documentation 	
+|Default constructor. <upcall_functor> is the instance of the
+|FUNCTOR to be used by the queue. If <upcall_functor> is 0, Timer
+|Heap will create a default FUNCTOR.  <freelist> the freelist of
+|timer nodes.  If 0, then a default freelist will be created.  The default
+|size will be OSF_DEFAULT_TIMERS and there will be no preallocation.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10023C"
+			    type       	"void"))
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "is_empty"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"669C53C6FEED"
+		    documentation 	
+|Destructor.
+|Checks if queue is empty.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10023E"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "earliest_time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A131380AFEED"
+		    documentation 	
+|True if heap is empty, else false.
+|Returns earliest time in a non-empty queue.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100240"
+			    type       	"void"))
+		    result     	"const OSF_Time_Value&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "schedule"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"07447B84FEED"
+		    documentation 	
+|Returns the time of the earlier node in the Timer_Queue.
+|Insert a new timer that expires at time future_time; if interval is
+|> 0, the handler will be reinvoked periodically.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "type"
+			    quid       	"3CA99C100242"
+			    type       	"const TYPE&")
+			(object Parameter "act"
+			    quid       	"3CA99C100243"
+			    type       	"const void*"
+			    quidu      	"3822E5560071")
+			(object Parameter "future_time"
+			    quid       	"3CA99C100244"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "interval"
+			    quid       	"3CA99C100245"
+			    type       	"const OSF_Time_Value&"
+			    initv      	"OSF_Time_Value::zero"))
+		    result     	"long"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "cancel"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E20E7605FEED"
+		    documentation 	
+|Schedule <type> that will expire after <delay> amount of time.
+|If it expires then <act> is passed in as the value to the
+|<functor>.  If <interval> is != to <OSF_Time_Value::zero> then it
+|is used to reschedule the <type> automatically.  This method
+|returns a <timer_id> that uniquely identifies the the <type>
+|entry in an internal list.  This <timer_id> can be used to cancel
+|the timer before it expires.  The cancellation ensures that
+|<timer_ids> are unique up to values of greater than 2 billion
+|timers.  As long as timers don't stay around longer than this
+|there should be no problems with accidentally deleting the wrong
+|timer.  Returns -1 on failure (which is guaranteed never to be a
+|valid <timer_id>).
+|Locate and remove all values of <type> from the timer queue.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "type"
+			    quid       	"3CA99C100247"
+			    type       	"const TYPE&")
+			(object Parameter "dont_call"
+			    quid       	"3CA99C100248"
+			    type       	"int"
+			    initv      	"1"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "cancel"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B54D22EAFEED"
+		    documentation 	
+|Cancel all timer associated with <type>.  If <dont_call> is 0
+|then the <functor> will be invoked.  Returns number of timers
+|cancelled.
+|Locate and remove the single timer with a value of <timer_id> from
+|the timer queue.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "timer_id"
+			    quid       	"3CA99C10024A"
+			    type       	"long")
+			(object Parameter "act"
+			    quid       	"3CA99C10024B"
+			    type       	"const void**"
+			    quidu      	"3822E556032F"
+			    initv      	"0")
+			(object Parameter "dont_call"
+			    quid       	"3CA99C10024C"
+			    type       	"int"
+			    initv      	"1"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "timer_id"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C5F64F6AFEED"
+		    documentation 	
+|Copy <moved_node> into the <index> slot of <heap_> and move
+|<index> into the corresponding slot in the <timer_id_> array.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10024E"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "iter"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E9729C0EFEED"
+		    documentation 	
+|Cancel the single timer that matches the <timer_id> value (which
+|was returned from the <schedule> method).  If act is non-NULL
+|then it will be set to point to the ``magic cookie'' argument
+|passed in when the timer was registered.  This makes it possible
+|to free up the memory and avoid memory leaks.  If <dont_call> is
+|0 then the <functor> will be invoked.  Returns 1 if cancellation
+|succeeded and 0 if the <timer_id> wasn't found.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100250"
+			    type       	"void"))
+		    result     	"OSF_Timer_Queue_Iterator_T&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "remove_first"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D2660DC4FEED"
+		    documentation 	
+|Returns a pointer to this <OSF_Timer_Queue>'s iterator.
+|Returns the earliest node or returns 0 if the heap is empty.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100252"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "dump"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F4977CC0FEED"
+		    documentation 	"Removes the earliest node from the queue and returns it"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100254"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_first"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9A5F031EFEED"
+		    documentation 	"Dump the state of an object."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100256"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "reschedule"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AAE195E3FEED"
+		    documentation 	
+|Reschedule a periodic timer.  This function must be called with the
+|mutex lock held.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "expired"
+			    quid       	"3CA99C100258"
+			    type       	"OSF_Timer_Node_T*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "alloc_node"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B0E62E37FEED"
+		    documentation 	
+|Reschedule an "interval" <OSF_Timer_Node>.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10025A"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "free_node"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AB78E155FEED"
+		    documentation 	
+|Factory method that allocates a new node (uses operator new if
+|we're *not* preallocating, otherwise uses an internal freelist).
+		    
+		    parameters 	(list Parameters
+			(object Parameter "node"
+			    quid       	"3CA99C10025C"
+			    type       	"OSF_Timer_Node_T*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "remove"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7F8C031BFEED"
+		    parameters 	(list Parameters
+			(object Parameter "index"
+			    quid       	"3CA99C10025E"
+			    type       	"size_t"
+			    quidu      	"3822E5560278"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "insert"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F8E5B96BFEED"
+		    documentation 	
+|Remove and return the <index>th <OSF_Timer_Node> and restore the
+|heap property.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "new_node"
+			    quid       	"3CA99C100260"
+			    type       	"OSF_Timer_Node_T*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "grow_heap"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"52929187FEED"
+		    documentation 	"Insert <new_node> into the heap and restore the heap property."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100262"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "reheap_up"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F59C792EFEED"
+		    documentation 	
+|Doubles the size of the heap and the corresponding timer_ids array.
+|If preallocation is used, will also double the size of the
+|preallocated array of OSF_Timer_Nodes.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "moved_node"
+			    quid       	"3CA99C100264"
+			    type       	"OSF_Timer_Node_T*")
+			(object Parameter "index"
+			    quid       	"3CA99C100265"
+			    type       	"size_t"
+			    quidu      	"3822E5560278")
+			(object Parameter "parent"
+			    quid       	"3CA99C100266"
+			    type       	"size_t"
+			    quidu      	"3822E5560278"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "reheap_down"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1C42E6CDFEED"
+		    documentation 	"Restore the heap property, starting at <index>."
+		    parameters 	(list Parameters
+			(object Parameter "moved_node"
+			    quid       	"3CA99C100268"
+			    type       	"OSF_Timer_Node_T*")
+			(object Parameter "index"
+			    quid       	"3CA99C100269"
+			    type       	"size_t"
+			    quidu      	"3822E5560278")
+			(object Parameter "child"
+			    quid       	"3CA99C10026A"
+			    type       	"size_t"
+			    quidu      	"3822E5560278"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "copy"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"1F35D513FEED"
+		    documentation 	"Restore the heap property, starting at <index>."
+		    parameters 	(list Parameters
+			(object Parameter "index"
+			    quid       	"3CA99C10026C"
+			    type       	"int")
+			(object Parameter "moved_node"
+			    quid       	"3CA99C10026D"
+			    type       	"OSF_Timer_Node_T*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "pop_freelist"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C66B120CFEED"
+		    documentation 	
+|Returns a timer id that uniquely identifies this timer.  This id
+|can be used to cancel a timer via the <cancel (int)> method.  The
+|timer id returned from this method will never == -1 to avoid
+|conflicts with other failure return values.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10026F"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "push_freelist"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CA02265FFEED"
+		    documentation 	"Pops and returns a new timer id from the freelist."
+		    parameters 	(list Parameters
+			(object Parameter "old_id"
+			    quid       	"3CA99C100271"
+			    type       	"int"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"C533FF21FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100273"
+			    type       	"const OSF_Timer_Heap_T&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "max_size_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E02D2"
+		    documentation 	"Pushes <old_id> onto the freelist."
+		    type       	"size_t"
+		    quidu      	"3822E5560278"
+		    Containment 	"By Value")
+		(object ClassAttribute "cur_size_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E02D6"
+		    documentation 	"Maximum size of the heap."
+		    type       	"size_t"
+		    quidu      	"3822E5560278"
+		    Containment 	"By Value")
+		(object ClassAttribute "iterator_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E02E4"
+		    documentation 	"Current size of the heap."
+		    type       	"OSF_Timer_Heap_T::HEAP_ITERATOR*"
+		    Containment 	"By Value")
+		(object ClassAttribute "heap_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E02E9"
+		    documentation 	"Iterator used to expire timers."
+		    type       	"OSF_Timer_Node_T**"
+		    Containment 	"By Value")
+		(object ClassAttribute "timer_ids_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E02ED"
+		    documentation 	
+|Current contents of the Heap, which is organized as a "heap" of
+|<OSF_Timer_Node> *'s.  In this context, a heap is a "partially
+|ordered, almost complete" binary tree, which is stored in an
+|array.
+		    
+		    type       	"long*"
+		    Containment 	"By Value")
+		(object ClassAttribute "timer_ids_freelist_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E02F8"
+		    documentation 	
+|An array of "pointers" that allows each <OSF_Timer_Node> in the
+|<heap_> to be located in O(1) time.  Basically, <timer_id_[i]>
+|contains the index in the <heap_> array where an <OSF_Timer_Node>
+|* with timer id <i> resides.  Thus, the timer id passed back from
+|<schedule> is really an index into the <timer_ids> array.  The
+|<timer_ids_> array serves two purposes: negative values are
+|treated as "pointers" for the <freelist_>, whereas positive
+|values are treated as "pointers" into the <heap_> array.
+		    
+		    type       	"long"
+		    Containment 	"By Value")
+		(object ClassAttribute "preallocated_nodes_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E0302"
+		    documentation 	
+|"Pointer" to the first element in the freelist contained within
+|the <timer_ids_> array, which is organized as a stack.
+		    
+		    type       	"OSF_Timer_Node_T*"
+		    Containment 	"By Value")
+		(object ClassAttribute "preallocated_nodes_freelist_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E030C"
+		    documentation 	
+|If this is non-0, then we preallocate <max_size_> number of
+|<OSF_Timer_Node> objects in order to reduce dynamic allocation
+|costs.  In auto-growing implementation, this points to the
+|last array of nodes allocated.
+		    
+		    type       	"OSF_Timer_Node_T*"
+		    Containment 	"By Value")
+		(object ClassAttribute "preallocated_node_set_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E57E0312"
+		    documentation 	
+|This points to the head of the <preallocated_nodes_> freelist,
+|which is organized as a stack.
+		    
+		    type       	"OSF_Unbounded_Set< OSF_Timer_Node_T* >"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::timer_heap (module spec)"
+	    quidu      	"3822E57E0154"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "TYPE"
+		    quid       	"3CA99C10027E"
+		    type       	"class")
+		(object Parameter "FUNCTOR"
+		    quid       	"3CA99C10027F"
+		    type       	"class")
+		(object Parameter "OSF_LOCK"
+		    quid       	"3CA99C100280"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Instantiated_Class "HEAP_ITERATOR"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"OSF_Timer_Heap_Iterator_T<TYPE,FUNCTOR,OSF_LOCK>")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	85))
+		    quid       	"3822E57E0290"
+		    module     	"Component View::OSF::osf_caa::osf::timer_heap (module spec)"
+		    quidu      	"3822E57E0154"
+		    parameters 	(list Parameters
+			(object Parameter "TYPE"
+			    quid       	"3CA99C100283")
+			(object Parameter "FUNCTOR"
+			    quid       	"3CA99C100284")
+			(object Parameter "OSF_LOCK"
+			    quid       	"3CA99C100285"))
+		    nonclassname 	"OSF_Timer_Heap_Iterator_T<TYPE,FUNCTOR,OSF_LOCK>")
+		(object Parameterized_Class "INHERITED"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	88)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"OSF_Timer_Queue_T< TYPE,FUNCTOR,OSF_LOCK >"))
+		    quid       	"3822E57E0294"
+		    documentation 	"Returns the node at the current position in the sequence"
+		    superclasses 	(list inheritance_relationship_list
+			(object Inheritance_Relationship
+			    quid       	"3822E57E0295"
+			    supplier   	"Logical View::Timing::(OSF_Timer_Queue_T< TYPE, FUNCTOR, OSF_LOCK >)"
+			    quidu      	"3822E56102E8"))
+		    module     	"Component View::OSF::osf_caa::osf::timer_heap (module spec)"
+		    quidu      	"3822E57E0154"
+		    nonclassname 	"OSF_Timer_Queue_T< TYPE,FUNCTOR,OSF_LOCK >")))
+	(object Instantiated_Class "OSF_Timer_Node"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"OSF_Timer_Node_T<OSF_Event_Handler*>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	374))
+	    quid       	"3822E56103A7"
+	    documentation 	
+|This method is called when the timer queue is destroyed and
+|the timer is still contained in it
+	    
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"3822E56103C0"
+		supplier   	"Logical View::Timing::OSF_Timer_Node_T"
+		quidu      	"3822E56101AC")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"3822E56103BF"
+		    label      	"TYPE"
+		    supplier   	"Logical View::EventDispatchers::OSF_Event_Handler"
+		    quidu      	"3822E55503D9"))
+	    module     	"Component View::OSF::osf_caa::osf::timer_queue (module spec)"
+	    quidu      	"3822E55602AB"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "OSF_Event_Handler*"
+		    quid       	"3CA99C100290"))
+	    nonclassname 	"OSF_Timer_Node_T<OSF_Event_Handler*>")
+	(object Parameterized_Class "OSF_Timer_Node_T"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	28)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3822E56101AC"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E56101C0"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E56101C4"
+		    supplier   	"Logical View::<unspecified>::const void*"
+		    quidu      	"3822E5560071")
+		(object Uses_Relationship
+		    quid       	"3822E5610284"
+		    supplier   	"Logical View::os::OSF_MALLOC_T"
+		    quidu      	"3822E556009E"))
+	    operations 	(list Operations
+		(object Operation "OSF_Timer_Node_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A2E87874FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100299"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E56101AC")
+		(object Operation "set"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"0F8B5C29FEED"
+		    documentation 	"Dtor."
+		    parameters 	(list Parameters
+			(object Parameter "type"
+			    quid       	"3CA99C10029B"
+			    type       	"const TYPE&")
+			(object Parameter "a"
+			    quid       	"3CA99C10029C"
+			    type       	"const void*"
+			    quidu      	"3822E5560071")
+			(object Parameter "t"
+			    quid       	"3CA99C10029D"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "i"
+			    quid       	"3CA99C10029E"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "n"
+			    quid       	"3CA99C10029F"
+			    type       	"OSF_Timer_Node_T*")
+			(object Parameter "timer_id"
+			    quid       	"3CA99C1002A0"
+			    type       	"long"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"96648702FEED"
+		    documentation 	"singly linked list"
+		    parameters 	(list Parameters
+			(object Parameter "type"
+			    quid       	"3CA99C1002A2"
+			    type       	"const TYPE&")
+			(object Parameter "a"
+			    quid       	"3CA99C1002A3"
+			    type       	"const void*"
+			    quidu      	"3822E5560071")
+			(object Parameter "t"
+			    quid       	"3CA99C1002A4"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "i"
+			    quid       	"3CA99C1002A5"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "p"
+			    quid       	"3CA99C1002A6"
+			    type       	"OSF_Timer_Node_T*")
+			(object Parameter "n"
+			    quid       	"3CA99C1002A7"
+			    type       	"OSF_Timer_Node_T*")
+			(object Parameter "timer_id"
+			    quid       	"3CA99C1002A8"
+			    type       	"long"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "~OSF_Timer_Node_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9D41EB18FEED"
+		    documentation 	"Default constructor"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002AA"
+			    type       	"void"))
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C251C3DAFEED"
+		    documentation 	
+|doubly linked list version
+|= Accessors
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002AC"
+			    type       	"void"))
+		    result     	"TYPE&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set_type"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A9AC545DFEED"
+		    documentation 	"Get the type."
+		    parameters 	(list Parameters
+			(object Parameter "type"
+			    quid       	"3CA99C1002AE"
+			    type       	"TYPE&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_act"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"ABEB9BB7FEED"
+		    documentation 	"Set the type."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002B0"
+			    type       	"void"))
+		    result     	"const void*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5560071")
+		(object Operation "set_act"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"92516FDDFEED"
+		    documentation 	"Get the asynchronous completion token."
+		    parameters 	(list Parameters
+			(object Parameter "act"
+			    quid       	"3CA99C1002B2"
+			    type       	"void*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_timer_value"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"05F8F8F0FEED"
+		    documentation 	"set the asynchronous completion token."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002B4"
+			    type       	"void"))
+		    result     	"OSF_Time_Value&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set_timer_value"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"37E83869FEED"
+		    documentation 	"get the timer value."
+		    parameters 	(list Parameters
+			(object Parameter "timer_value"
+			    quid       	"3CA99C1002B6"
+			    type       	"OSF_Time_Value"
+			    quidu      	"3822E5560048"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_interval"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"95B007B8FEED"
+		    documentation 	"set the timer value."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002B8"
+			    type       	"void"))
+		    result     	"OSF_Time_Value&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set_interval"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"02DAEB85FEED"
+		    documentation 	"get the timer interval."
+		    parameters 	(list Parameters
+			(object Parameter "interval"
+			    quid       	"3CA99C1002BA"
+			    type       	"OSF_Time_Value"
+			    quidu      	"3822E5560048"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_prev"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"990BD719FEED"
+		    documentation 	"set the timer interval."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002BC"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set_prev"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D98E3734FEED"
+		    documentation 	"get the previous pointer."
+		    parameters 	(list Parameters
+			(object Parameter "prev"
+			    quid       	"3CA99C1002BE"
+			    type       	"OSF_Timer_Node_T*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_next"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CD76F657FEED"
+		    documentation 	"set the previous pointer."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002C0"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set_next"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"9D2642E1FEED"
+		    documentation 	"get the next pointer."
+		    parameters 	(list Parameters
+			(object Parameter "next"
+			    quid       	"3CA99C1002C2"
+			    type       	"OSF_Timer_Node_T*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_timer_id"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F971A4DDFEED"
+		    documentation 	"set the next pointer."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002C4"
+			    type       	"void"))
+		    result     	"long"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "set_timer_id"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7D5DE81FFEED"
+		    documentation 	"get the timer_id."
+		    parameters 	(list Parameters
+			(object Parameter "timer_id"
+			    quid       	"3CA99C1002C6"
+			    type       	"long"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "dump"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"7F8D46EFFEED"
+		    documentation 	"set the timer_id."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002C8"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "type_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E561029D"
+		    type       	"TYPE"
+		    Containment 	"By Value")
+		(object ClassAttribute "act_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E56102A2"
+		    documentation 	"Type of object stored in the Queue"
+		    type       	"const void*"
+		    quidu      	"3822E5560071"
+		    Containment 	"By Value")
+		(object ClassAttribute "timer_value_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E56102A6"
+		    documentation 	"Asynchronous completion token associated with the timer."
+		    type       	"OSF_Time_Value"
+		    quidu      	"3822E5560048"
+		    Containment 	"By Value")
+		(object ClassAttribute "interval_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E56102AA"
+		    documentation 	"Time until the timer expires."
+		    type       	"OSF_Time_Value"
+		    quidu      	"3822E5560048"
+		    Containment 	"By Value")
+		(object ClassAttribute "prev_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E56102B0"
+		    documentation 	
+|If this is a periodic timer this holds the time until the next
+|timeout.
+		    
+		    type       	"OSF_Timer_Node_T*"
+		    Containment 	"By Value")
+		(object ClassAttribute "next_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E56102B4"
+		    documentation 	"Pointer to previous timer."
+		    type       	"OSF_Timer_Node_T*"
+		    Containment 	"By Value")
+		(object ClassAttribute "timer_id_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E56102B8"
+		    documentation 	"Pointer to next timer."
+		    type       	"long"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::timer_queue (module spec)"
+	    quidu      	"3822E55602AB"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "TYPE"
+		    quid       	"3CA99C1002D1"
+		    type       	"class")))
+	(object Class "OSF_Timer_Queue"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"OSF_Timer_Queue_T<OSF_Event_Handler*,OSF_Event_Handler_Handle_Timeout_Upcall<OSF_SYNCH_RECURSIVE_MUTEX>,OSF_SYNCH_RECURSIVE_MUTEX>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	379))
+	    quid       	"3822E5560297"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E56103CA"
+		    label      	"TYPE"
+		    supplier   	"Logical View::EventDispatchers::OSF_Event_Handler"
+		    quidu      	"3822E55503D9")
+		(object Uses_Relationship
+		    quid       	"3822E56103CB"
+		    label      	"FUNCTOR"
+		    supplier   	"Logical View::UnAssigned::(OSF_Event_Handler_Handle_Timeout_Upcall< OSF_SYNCH_RECURSIVE_MUTEX >)"
+		    quidu      	"3822E56103C1"))
+	    module     	"Component View::OSF::osf_caa::osf::timer_queue (module spec)"
+	    quidu      	"3822E55602AB"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "OSF_Event_Handler*"
+		    quid       	"3CA99C1002D8")
+		(object Parameter "OSF_Event_Handler_Handle_Timeout_Upcall< OSF_SYNCH_RECURSIVE_MUTEX >"
+		    quid       	"3CA99C1002D9")
+		(object Parameter "OSF_SYNCH_RECURSIVE_MUTEX"
+		    quid       	"3CA99C1002DA"))
+	    nonclassname 	"OSF_Timer_Queue_T<OSF_Event_Handler*,OSF_Event_Handler_Handle_Timeout_Upcall<OSF_SYNCH_RECURSIVE_MUTEX>,OSF_SYNCH_RECURSIVE_MUTEX>")
+	(object Instantiated_Class "OSF_Timer_Queue_Iterator"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	"OSF_Timer_Queue_Iterator_T<OSF_Event_Handler*,OSF_Event_Handler_Handle_Timeout_Upcall<OSF_SYNCH_RECURSIVE_MUTEX>,OSF_SYNCH_RECURSIVE_MUTEX>")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	384))
+	    quid       	"3822E56103A9"
+	    instantiation_relationship 	(object Instantiation_Relationship
+		quid       	"3822E5760140"
+		supplier   	"Logical View::Timing::OSF_Timer_Queue_Iterator_T"
+		quidu      	"3822E56102BC")
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"3822E576013E"
+		    label      	"TYPE"
+		    supplier   	"Logical View::EventDispatchers::OSF_Event_Handler"
+		    quidu      	"3822E55503D9")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ForwardReferenceOnly"
+			    value      	TRUE))
+		    quid       	"3822E576013F"
+		    label      	"FUNCTOR"
+		    supplier   	"Logical View::UnAssigned::(OSF_Event_Handler_Handle_Timeout_Upcall< OSF_SYNCH_RECURSIVE_MUTEX >)"
+		    quidu      	"3822E56103C1"))
+	    module     	"Component View::OSF::osf_caa::osf::timer_queue (module spec)"
+	    quidu      	"3822E55602AB"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "OSF_Event_Handler*"
+		    quid       	"3CA99C1002E3")
+		(object Parameter "OSF_Event_Handler_Handle_Timeout_Upcall< OSF_SYNCH_RECURSIVE_MUTEX >"
+		    quid       	"3CA99C1002E4")
+		(object Parameter "OSF_SYNCH_RECURSIVE_MUTEX"
+		    quid       	"3CA99C1002E5"))
+	    nonclassname 	"OSF_Timer_Queue_Iterator_T<OSF_Event_Handler*,OSF_Event_Handler_Handle_Timeout_Upcall<OSF_SYNCH_RECURSIVE_MUTEX>,OSF_SYNCH_RECURSIVE_MUTEX>")
+	(object Parameterized_Class "OSF_Timer_Queue_Iterator_T"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	128)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3822E56102BC"
+	    documentation 	"Id of this timer (used to cancel timers before they expire)."
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E56102C4"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E56102CD"
+		    supplier   	"Logical View::<unspecified>::OSF_thread_t"
+		    quidu      	"3822E5560016")
+		(object Uses_Relationship
+		    quid       	"3822E56102D0"
+		    supplier   	"Logical View::Timing::(OSF_Timer_Node_T< TYPE >)"
+		    quidu      	"3822E56101DF"))
+	    operations 	(list Operations
+		(object Operation "OSF_Timer_Queue_Iterator_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"E5B8E96DFEED"
+		    documentation 	"= Initialization and termination methods."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002EE"
+			    type       	"void"))
+		    result     	"OSF_Timer_Queue_Iterator_T"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E56102BC")
+		(object Operation "~OSF_Timer_Queue_Iterator_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"14A367D4FEED"
+		    documentation 	"Constructor."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002F0"
+			    type       	"void"))
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "next"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"1F909AC2FEED"
+		    documentation 	"Positions the iterator at the earliest node in the Timer Queue"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002F2"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "first"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"1851EA31FEED"
+		    documentation 	"Destructor."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002F4"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "isdone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"56C2F250FEED"
+		    documentation 	"Positions the iterator at the next node in the Timer Queue"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002F6"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "item"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"36B58E4EFEED"
+		    documentation 	"Returns true when there are no more nodes in the sequence"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C1002F8"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0))
+	    module     	"Component View::OSF::osf_caa::osf::method_object (module spec)"
+	    quidu      	"3822E5770154"
+	    language   	"C++"
+	    abstract   	TRUE
+	    parameters 	(list Parameters
+		(object Parameter "TYPE"
+		    quid       	"3CA99C1002FA"
+		    type       	"class")
+		(object Parameter "FUNCTOR"
+		    quid       	"3CA99C1002FB"
+		    type       	"class")
+		(object Parameter "OSF_LOCK"
+		    quid       	"3CA99C1002FC"
+		    type       	"class")))
+	(object Parameterized_Class "OSF_Timer_Queue_T"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	160)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateCopyConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateAssignmentOperation"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3822E56102D3"
+	    documentation 	"Returns the node at the current position in the sequence"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3822E56102EC"
+		    supplier   	"Logical View::Timing::(OSF_Timer_Queue_T< TYPE, FUNCTOR, OSF_LOCK >)"
+		    quidu      	"3822E56102E8"
+		    exportControl 	"Private")
+		(object Uses_Relationship
+		    quid       	"3822E56102EF"
+		    supplier   	"Logical View::os::__cdecl"
+		    quidu      	"3822E556000E")
+		(object Uses_Relationship
+		    quid       	"3822E5610300"
+		    supplier   	"Logical View::osf::pid_t"
+		    quidu      	"3822E5560115")
+		(object Uses_Relationship
+		    quid       	"3822E5610301"
+		    supplier   	"Logical View::<unspecified>::TYPE"
+		    quidu      	"3822E55A00C3")
+		(object Uses_Relationship
+		    quid       	"3822E5610302"
+		    supplier   	"Logical View::<unspecified>::const void*"
+		    quidu      	"3822E5560071")
+		(object Uses_Relationship
+		    quid       	"3822E561030B"
+		    supplier   	"Logical View::<unspecified>::const void**"
+		    quidu      	"3822E556032F")
+		(object Uses_Relationship
+		    quid       	"3822E5610323"
+		    supplier   	"Logical View::Timing::OSF_Timer_Queue_T::ITERATOR"
+		    quidu      	"3822E56102F4")
+		(object Uses_Relationship
+		    quid       	"3822E5610326"
+		    supplier   	"Logical View::Timing::(OSF_Timer_Node_T< TYPE >)"
+		    quidu      	"3822E56101DF"))
+	    operations 	(list Operations
+		(object Operation "OSF_Timer_Queue_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"89AC02F3FEED"
+		    documentation 	
+|Type of Iterator.
+|= Initialization and termination methods.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "upcall_functor"
+			    quid       	"3CA99C10030F"
+			    type       	"FUNCTOR*"
+			    initv      	"0")
+			(object Parameter "freelist"
+			    quid       	"3CA99C100310"
+			    type       	"OSF_Free_List*"
+			    initv      	"0"))
+		    result     	"OSF_Timer_Queue_T"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E56102D3")
+		(object Operation "OSF_Timer_Queue_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"A2C3CC9EFEED"
+		    documentation 	
+|Adjusts for timer skew in various clocks.
+|= Don't allow these operations for now.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100312"
+			    type       	"const OSF_Timer_Queue_T&"))
+		    result     	"OSF_Timer_Queue_T"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0
+		    quidu      	"3822E56102D3")
+		(object Operation "~OSF_Timer_Queue_T"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"CC21B993FEED"
+		    documentation 	
+|Default constructor. <upcall_functor> is the instance of the
+|FUNCTOR to be used by the queue. If <upcall_functor> is 0, Timer
+|Queue will create a default FUNCTOR.  <freelist> the freelist of
+|timer nodes.  If 0, then a default freelist will be created.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100314"
+			    type       	"void"))
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "dump"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"28D7C5F4FEED"
+		    documentation 	"Removes the earliest node from the queue and returns it"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100316"
+			    type       	"void"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "upcall_functor"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"A6791813FEED"
+		    documentation 	"Synchronization variable used by the queue"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100318"
+			    type       	"void"))
+		    result     	"FUNCTOR&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "is_empty"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"C20AAB2FFEED"
+		    documentation 	
+|Destructor - make virtual for proper destruction of inherited
+|classes.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10031A"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "earliest_time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"0B5F36C1FEED"
+		    documentation 	"True if queue is empty, else false."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10031C"
+			    type       	"void"))
+		    result     	"const OSF_Time_Value&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "schedule"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"114DB57FFEED"
+		    documentation 	"Returns the time of the earlier node in the Timer_Queue."
+		    parameters 	(list Parameters
+			(object Parameter "type"
+			    quid       	"3CA99C10031E"
+			    type       	"const TYPE&")
+			(object Parameter "act"
+			    quid       	"3CA99C10031F"
+			    type       	"const void*"
+			    quidu      	"3822E5560071")
+			(object Parameter "delay"
+			    quid       	"3CA99C100320"
+			    type       	"const OSF_Time_Value&")
+			(object Parameter "interval"
+			    quid       	"3CA99C100321"
+			    type       	"const OSF_Time_Value&"
+			    initv      	"OSF_Time_Value::zero"))
+		    result     	"long"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "cancel"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"B489B355FEED"
+		    documentation 	
+|Schedule <type> that will expire after <delay> amount of time.
+|If it expires then <act> is passed in as the value to the
+|<functor>.  If <interval> is != to <OSF_Time_Value::zero> then it
+|is used to reschedule the <type> automatically.  This method
+|returns a <timer_id> that uniquely identifies the the <type>
+|entry in an internal list.  This <timer_id> can be used to cancel
+|the timer before it expires.  The cancellation ensures that
+|<timer_ids> are unique up to values of greater than 2 billion
+|timers.  As long as timers don't stay around longer than this
+|there should be no problems with accidentally deleting the wrong
+|timer.  Returns -1 on failure (which is guaranteed never to be a
+|valid <timer_id>).
+		    
+		    parameters 	(list Parameters
+			(object Parameter "type"
+			    quid       	"3CA99C100323"
+			    type       	"const TYPE&")
+			(object Parameter "dont_call_handle_close"
+			    quid       	"3CA99C100324"
+			    type       	"int"
+			    initv      	"1"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "cancel"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"F52A1ADFFEED"
+		    documentation 	
+|Cancel all timer associated with <type>.  If
+|<dont_call_handle_close> is 0 then the <functor> will be invoked,
+|which typically invokes the <handle_close> hook.  Returns number
+|of timers cancelled.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "timer_id"
+			    quid       	"3CA99C100326"
+			    type       	"long")
+			(object Parameter "act"
+			    quid       	"3CA99C100327"
+			    type       	"const void**"
+			    quidu      	"3822E556032F"
+			    initv      	"0")
+			(object Parameter "dont_call_handle_close"
+			    quid       	"3CA99C100328"
+			    type       	"int"
+			    initv      	"1"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "expire"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"4FEFFDE8FEED"
+		    documentation 	
+|Cancel the single timer that matches the <timer_id> value (which
+|was returned from the <schedule> method).  If act is non-NULL
+|then it will be set to point to the ``magic cookie'' argument
+|passed in when the timer was registered.  This makes it possible
+|to free up the memory and avoid memory leaks.  If
+|<dont_call_handle_close> is 0 then the <functor> will be invoked,
+|which typically calls the <handle_close> hook.  Returns 1 if
+|cancellation succeeded and 0 if the <timer_id> wasn't found.
+|Run the <handle_timeout> method for all Timers whose values are <=
+|<cur_time>.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "cur_time"
+			    quid       	"3CA99C10032A"
+			    type       	"const OSF_Time_Value&"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "expire"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"AC4B0DBBFEED"
+		    documentation 	
+|Run the <functor> for all timers whose values are <= <cur_time>.
+|This does not account for <timer_skew>.  Returns the number of
+|timers canceled.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10032C"
+			    type       	"void"))
+		    result     	"int"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "gettimeofday"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"DE943055FEED"
+		    documentation 	
+|Run the <functor> for all timers whose values are <=
+|<OSF_OS::gettimeofday>.  Also accounts for <timer_skew>.  Returns
+|the number of timers canceled.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10032E"
+			    type       	"void"))
+		    result     	"OSF_Time_Value"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0
+		    quidu      	"3822E5560048")
+		(object Operation "gettimeofday"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"88563A33FEED"
+		    documentation 	
+|Returns the current time of day.  This allows different
+|implementations of the timer queue to use special high resolution
+|timers.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "gettimeofday"
+			    quid       	"3CA99C100330"
+			    type       	"OSF_Time_Value (*) (void)"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "calculate_timeout"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"68244CF0FEED"
+		    documentation 	
+|Allows applications to control how the timer queue gets the time
+|of day.
+|Determines the minimum amount of time that the Reactor must wait
+|before timing out.  This is computed as the smaller of (1) the
+|amount the caller requested when calling handle_events() and (2)
+|the earliest time registered in the Timer Queue (if any).  Must be
+|called with an external lock held since it returns a pointer to a
+|Time_Value type stored in the Timer_Queue type itself.  If some
+|external lock isn't held we'll have reentrancy problems!
+		    
+		    parameters 	(list Parameters
+			(object Parameter "max_wait_time"
+			    quid       	"3CA99C100332"
+			    type       	"OSF_Time_Value*"))
+		    result     	"OSF_Time_Value*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "calculate_timeout"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B0DF0025FEED"
+		    documentation 	
+|Determine the next event to timeout.  Returns <max> if there are
+|no pending timers or if all pending timers are longer than max.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "max_wait_time"
+			    quid       	"3CA99C100334"
+			    type       	"OSF_Time_Value*")
+			(object Parameter "the_timeout"
+			    quid       	"3CA99C100335"
+			    type       	"OSF_Time_Value*"))
+		    result     	"OSF_Time_Value*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "timer_skew"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"F63BCAC0FEED"
+		    documentation 	
+|Determine the next event to timeout.  Returns <max> if there are
+|no pending timers or if all pending timers are longer than max.
+|<the_timeout> should be a pointer to storage for the timeout value,
+|and this value is also returned.
+|= Set/get the timer skew for the Timer_Queue.
+		    
+		    parameters 	(list Parameters
+			(object Parameter "skew"
+			    quid       	"3CA99C100337"
+			    type       	"const OSF_Time_Value&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "timer_skew"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"43EE9A5EFEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100339"
+			    type       	"void"))
+		    result     	"const OSF_Time_Value&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    const      	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "mutex"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D75F635BFEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10033B"
+			    type       	"void"))
+		    result     	"OSF_LOCK&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "iter"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"99BE2715FEED"
+		    documentation 	"Accessor to the upcall functor"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10033D"
+			    type       	"void"))
+		    result     	"OSF_Timer_Queue_T::ITERATOR&"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "remove_first"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"D4B3DDFFFEED"
+		    documentation 	"Returns a pointer to this <OSF_Timer_Queue>'s iterator."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10033F"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "get_first"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"6B5CA612FEED"
+		    documentation 	"Dump the state of a object."
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100341"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "return_node"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D97226B1FEED"
+		    documentation 	"Reads the earliest node from the queue and returns it."
+		    parameters 	(list Parameters
+			(object Parameter "node"
+			    quid       	"3CA99C100343"
+			    type       	"OSF_Timer_Node_T*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "upcall"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"D8B6F304FEED"
+		    parameters 	(list Parameters
+			(object Parameter "type"
+			    quid       	"3CA99C100345"
+			    type       	"TYPE&")
+			(object Parameter "act"
+			    quid       	"3CA99C100346"
+			    type       	"const void*"
+			    quidu      	"3822E5560071")
+			(object Parameter "cur_time"
+			    quid       	"3CA99C100347"
+			    type       	"const OSF_Time_Value&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "reschedule"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 202))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"5A467B4FFEED"
+		    documentation 	
+|This method will call the <functor> with the <type>, <act> and
+|<time>
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C100349"
+			    type       	"OSF_Timer_Node_T*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    abstract   	TRUE
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "alloc_node"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"C46848B0FEED"
+		    documentation 	
+|Reschedule an "interval" <OSF_Timer_Node>.
+		    
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10034B"
+			    type       	"void"))
+		    result     	"OSF_Timer_Node_T*"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "free_node"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 201))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"EntryCode"
+			    value      	(value Text ""))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ExitCode"
+			    value      	(value Text "")))
+		    quid       	"B230D45AFEED"
+		    documentation 	"Factory method that allocates a new node."
+		    parameters 	(list Parameters
+			(object Parameter "node"
+			    quid       	"3CA99C10034D"
+			    type       	"OSF_Timer_Node_T*"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    virtual    	TRUE
+		    opExportControl 	"Protected"
+		    uid        	0)
+		(object Operation "operator ="
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationIsConst"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 200))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"Inline"
+			    value      	FALSE))
+		    quid       	"B46FC924FEED"
+		    parameters 	(list Parameters
+			(object Parameter ""
+			    quid       	"3CA99C10034F"
+			    type       	"const OSF_Timer_Queue_T&"))
+		    result     	"void"
+		    protocol   	"C++"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "mutex_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5610337"
+		    documentation 	"Factory method that frees a previously allocated node."
+		    type       	"OSF_LOCK"
+		    quidu      	"3822E5600273"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "free_list_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5610338"
+		    documentation 	
+|Synchronization variable for <OSF_Timer_Queue>.
+|NOTE: the right name would be lock_, but HP/C++ will choke on that!
+		    
+		    type       	"OSF_Free_List*"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "gettimeofday_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E561033D"
+		    documentation 	"Class that implements a free list"
+		    type       	"OSF_Time_Value (*) (void)"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "upcall_functor_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5610341"
+		    documentation 	"Pointer to function that returns the current time of day."
+		    type       	"FUNCTOR*"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "delete_upcall_functor_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5610342"
+		    documentation 	"Upcall functor"
+		    type       	"int"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "delete_free_list_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E5610347"
+		    documentation 	"To delete or not to delete is the question?"
+		    type       	"int"
+		    exportControl 	"Protected"
+		    Containment 	"By Value")
+		(object ClassAttribute "timeout_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E561035B"
+		    type       	"OSF_Time_Value"
+		    quidu      	"3822E5560048"
+		    Containment 	"By Value")
+		(object ClassAttribute "timer_skew_"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetSetByReference"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 211)))
+		    quid       	"3822E561036F"
+		    documentation 	"Returned by <calculate_timeout>."
+		    type       	"OSF_Time_Value"
+		    quidu      	"3822E5560048"
+		    Containment 	"By Value"))
+	    module     	"Component View::OSF::osf_caa::osf::timer_queue (module spec)"
+	    quidu      	"3822E55602AB"
+	    language   	"C++"
+	    abstract   	TRUE
+	    parameters 	(list Parameters
+		(object Parameter "TYPE"
+		    quid       	"3CA99C100359"
+		    type       	"class")
+		(object Parameter "FUNCTOR"
+		    quid       	"3CA99C10035A"
+		    type       	"class")
+		(object Parameter "OSF_LOCK"
+		    quid       	"3CA99C10035B"
+		    type       	"class"))
+	    nestedClasses 	(list nestedClasses
+		(object Instantiated_Class "ITERATOR"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"OSF_Timer_Queue_Iterator_T<TYPE,FUNCTOR,OSF_LOCK>")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeLine"
+			    value      	170))
+		    quid       	"3822E56102F4"
+		    module     	"Component View::OSF::osf_caa::osf::timer_queue (module spec)"
+		    quidu      	"3822E55602AB"
+		    parameters 	(list Parameters
+			(object Parameter "TYPE"
+			    quid       	"3CA99C10035E")
+			(object Parameter "FUNCTOR"
+			    quid       	"3CA99C10035F")
+			(object Parameter "OSF_LOCK"
+			    quid       	"3CA99C100360"))
+		    nonclassname 	"OSF_Timer_Queue_Iterator_T<TYPE,FUNCTOR,OSF_LOCK>")))
+	(object Parameterized_Class "(OSF_Timer_Queue_T< TYPE, FUNCTOR, OSF_LOCK >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	160)
+		(object Attribute
+		    tool       	"analyzer"
+		    name       	"IncompleteType"
+		    value      	TRUE))
+	    quid       	"3822E56102E8"
+	    documentation 	"Returns the node at the current position in the sequence"
+	    module     	"Component View::OSF::osf_caa::osf::timer_queue (module spec)"
+	    quidu      	"3822E55602AB"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "TYPE"
+		    quid       	"3CA99C100363")
+		(object Parameter "FUNCTOR"
+		    quid       	"3CA99C100364")
+		(object Parameter "OSF_LOCK"
+		    quid       	"3CA99C100365")))
+	(object Parameterized_Class "(OSF_Timer_Heap_T< TYPE, FUNCTOR, OSF_LOCK >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	70)
+		(object Attribute
+		    tool       	"analyzer"
+		    name       	"IncompleteType"
+		    value      	TRUE))
+	    quid       	"3822E57E0186"
+	    documentation 	"Position in the array where the iterator is at"
+	    module     	"Component View::OSF::osf_caa::osf::timer_heap (module spec)"
+	    quidu      	"3822E57E0154"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "TYPE"
+		    quid       	"3CA99C100368")
+		(object Parameter "FUNCTOR"
+		    quid       	"3CA99C100369")
+		(object Parameter "OSF_LOCK"
+		    quid       	"3CA99C10036A")))
+	(object Parameterized_Class "(OSF_Timer_Node_T< TYPE >)"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeLine"
+		    value      	28)
+		(object Attribute
+		    tool       	"analyzer"
+		    name       	"IncompleteType"
+		    value      	TRUE))
+	    quid       	"3822E56101DF"
+	    module     	"Component View::OSF::osf_caa::osf::timer_queue (module spec)"
+	    quidu      	"3822E55602AB"
+	    language   	"C++"
+	    parameters 	(list Parameters
+		(object Parameter "TYPE"
+		    quid       	"3CA99C10036D"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "Timing"
+	    quid       	"38298619023A"
+	    title      	"Timing"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "InstantiatedClass" "Logical View::Timing::OSF_Timer_Heap" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(323, 901)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(159, 855)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	328
+			justify    	0
+			label      	"OSF_Timer_Heap")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E57E031A"
+		    width      	346
+		    height     	114
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::Timing::OSF_Timer_Heap_Iterator" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2397, 595)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(2168, 549)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	458
+			justify    	0
+			label      	"OSF_Timer_Heap_Iterator")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E57E031E"
+		    width      	476
+		    height     	114
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::Timing::OSF_Timer_Heap_Iterator_T" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2006, 1088)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1756, 1061)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	500
+			justify    	0
+			label      	"OSF_Timer_Heap_Iterator_T")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E57E017E"
+		    width      	518
+		    height     	145
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InstantiateView "" @4
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E57E032F"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::Timing::OSF_Timer_Heap_T" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1071, 1513)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(891, 1486)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	360
+			justify    	0
+			label      	"OSF_Timer_Heap_T")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E57E0263"
+		    width      	378
+		    height     	145
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InstantiateView "" @6
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E57E032C"
+		    client     	@1
+		    supplier   	@5
+		    line_style 	0)
+		(object UsesView "" @7
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E57E0318"
+		    client     	@3
+		    supplier   	@5
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::Timing::OSF_Timer_Node" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(442, 1275)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(278, 1229)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	328
+			justify    	0
+			label      	"OSF_Timer_Node")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E56103A7"
+		    width      	346
+		    height     	114
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Timing::OSF_Timer_Queue" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(493, 2023)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(321, 1977)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	344
+			justify    	0
+			label      	"OSF_Timer_Queue")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E5560297"
+		    width      	362
+		    height     	114
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::Timing::OSF_Timer_Queue_Iterator" @10
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1598, 221)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1357, 175)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	482
+			justify    	0
+			label      	"OSF_Timer_Queue_Iterator")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E56103A9"
+		    width      	500
+		    height     	114
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ParameterizedClass" "Logical View::Timing::OSF_Timer_Queue_Iterator_T" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1615, 561)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	TRUE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1354, 534)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	522
+			justify    	0
+			label      	"OSF_Timer_Queue_Iterator_T")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E56102BC"
+		    width      	540
+		    height     	145
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @12
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E57E0262"
+		    client     	@3
+		    supplier   	@11
+		    line_style 	0)
+		(object InstantiateView "" @13
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E5760140"
+		    client     	@10
+		    supplier   	@11
+		    line_style 	0)
+		(object ClassView "ParameterizedClass" "Logical View::Timing::OSF_Timer_Node_T" @14
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(544, 1666)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(364, 1639)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	360
+			justify    	0
+			label      	"OSF_Timer_Node_T")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E56101AC"
+		    width      	378
+		    height     	145
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InstantiateView "" @15
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E56103C0"
+		    client     	@8
+		    supplier   	@14
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::Timing::OSF_Time_Value" @16
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2159, 2091)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(1999, 2045)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	320
+			justify    	0
+			label      	"OSF_Time_Value")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E5560048"
+		    width      	338
+		    height     	114
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @17
+		    location   	(2324, 2316)
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E5560107"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @18
+			    Parent_View 	@17
+			    location   	(1406, 1330)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @19
+				Parent_View 	@18
+				location   	(2118, 2216)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E5560108"
+			    client     	@17
+			    supplier   	@16
+			    vertices   	(list Points
+				(2324, 2316)
+				(2159, 2316)
+				(2159, 2148))
+			    line_style 	0
+			    label      	(object SegLabel @20
+				Parent_View 	@18
+				location   	(2213, 2182)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "zero" @21
+			    Parent_View 	@17
+			    location   	(1406, 1330)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @22
+				Parent_View 	@21
+				location   	(2426, 2104)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	113
+				justify    	0
+				label      	"+$zero"
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E5560110"
+			    client     	@17
+			    supplier   	@16
+			    vertices   	(list Points
+				(2324, 2316)
+				(2384, 2316)
+				(2384, 2091)
+				(2328, 2091))
+			    line_style 	0
+			    label      	(object SegLabel @23
+				Parent_View 	@21
+				location   	(2363, 2145)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "" @24
+		    location   	(2324, 2316)
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E5560112"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @25
+			    Parent_View 	@24
+			    location   	(1406, 1330)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @26
+				Parent_View 	@25
+				location   	(2118, 2216)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E5560113"
+			    client     	@24
+			    supplier   	@16
+			    vertices   	(list Points
+				(2324, 2316)
+				(2159, 2316)
+				(2159, 2148))
+			    line_style 	0
+			    label      	(object SegLabel @27
+				Parent_View 	@25
+				location   	(2213, 2182)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "max_time" @28
+			    Parent_View 	@24
+			    location   	(1406, 1330)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @29
+				Parent_View 	@28
+				location   	(2426, 2104)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	220
+				justify    	0
+				label      	"+$max_time"
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E5560114"
+			    client     	@24
+			    supplier   	@16
+			    vertices   	(list Points
+				(2324, 2316)
+				(2384, 2316)
+				(2384, 2091)
+				(2328, 2091))
+			    line_style 	0
+			    label      	(object SegLabel @30
+				Parent_View 	@28
+				location   	(2363, 2145)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object UsesView "" @31
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E57E0298"
+		    client     	@5
+		    supplier   	@16
+		    line_style 	0)
+		(object AssociationViewNew "" @32
+		    location   	(1361, 1879)
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E56102A7"
+		    roleview_list 	(list RoleViews
+			(object RoleView "timer_value_" @33
+			    Parent_View 	@32
+			    location   	(783, 468)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @34
+				Parent_View 	@33
+				location   	(1874, 1971)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	237
+				justify    	0
+				label      	"-timer_value_"
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E56102A9"
+			    client     	@32
+			    supplier   	@16
+			    line_style 	0
+			    label      	(object SegLabel @35
+				Parent_View 	@33
+				location   	(1912, 2079)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "" @36
+			    Parent_View 	@32
+			    location   	(783, 468)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @37
+				Parent_View 	@36
+				location   	(870, 1707)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E56102A8"
+			    client     	@32
+			    supplier   	@14
+			    line_style 	0
+			    label      	(object SegLabel @38
+				Parent_View 	@36
+				location   	(784, 1783)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "" @39
+		    location   	(1361, 1879)
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E56102AB"
+		    roleview_list 	(list RoleViews
+			(object RoleView "interval_" @40
+			    Parent_View 	@39
+			    location   	(783, 468)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @41
+				Parent_View 	@40
+				location   	(1874, 1971)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	165
+				justify    	0
+				label      	"-interval_"
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E56102AD"
+			    client     	@39
+			    supplier   	@16
+			    line_style 	0
+			    label      	(object SegLabel @42
+				Parent_View 	@40
+				location   	(1912, 2079)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "" @43
+			    Parent_View 	@39
+			    location   	(783, 468)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @44
+				Parent_View 	@43
+				location   	(870, 1707)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E56102AC"
+			    client     	@39
+			    supplier   	@14
+			    line_style 	0
+			    label      	(object SegLabel @45
+				Parent_View 	@43
+				location   	(784, 1783)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object ClassView "ParameterizedClass" "Logical View::Timing::OSF_Timer_Queue_T" @46
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1037, 561)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	TRUE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@46
+			location   	(844, 534)
+			fill_color 	13041663
+			nlines     	1
+			max_width  	386
+			justify    	0
+			label      	"OSF_Timer_Queue_T")
+		    icon_style 	"Icon"
+		    line_color 	1187019
+		    fill_color 	13041663
+		    quidu      	"3822E56102D3"
+		    width      	404
+		    height     	145
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @47
+		    location   	(1602, 1333)
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E561035C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "timeout_" @48
+			    Parent_View 	@47
+			    location   	(1262, 1044)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @49
+				Parent_View 	@48
+				location   	(2046, 1868)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	176
+				justify    	0
+				label      	"-timeout_"
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E561035E"
+			    client     	@47
+			    supplier   	@16
+			    line_style 	0
+			    label      	(object SegLabel @50
+				Parent_View 	@48
+				location   	(2021, 1995)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "" @51
+			    Parent_View 	@47
+			    location   	(1262, 1044)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @52
+				Parent_View 	@51
+				location   	(1226, 750)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E561035D"
+			    client     	@47
+			    supplier   	@46
+			    line_style 	0
+			    label      	(object SegLabel @53
+				Parent_View 	@51
+				location   	(1097, 735)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "" @54
+		    location   	(1602, 1333)
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E5610370"
+		    roleview_list 	(list RoleViews
+			(object RoleView "timer_skew_" @55
+			    Parent_View 	@54
+			    location   	(1262, 1044)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @56
+				Parent_View 	@55
+				location   	(2046, 1868)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	251
+				justify    	0
+				label      	"-timer_skew_"
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E5610372"
+			    client     	@54
+			    supplier   	@16
+			    line_style 	0
+			    label      	(object SegLabel @57
+				Parent_View 	@55
+				location   	(2021, 1995)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "" @58
+			    Parent_View 	@54
+			    location   	(1262, 1044)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @59
+				Parent_View 	@58
+				location   	(1226, 750)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	1187019
+			    quidu      	"3822E5610371"
+			    client     	@54
+			    supplier   	@46
+			    line_style 	0
+			    label      	(object SegLabel @60
+				Parent_View 	@58
+				location   	(1097, 735)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object InheritView "" @61
+		    stereotype 	TRUE
+		    line_color 	1187019
+		    quidu      	"3822E57E0319"
+		    client     	@5
+		    supplier   	@46
+		    line_style 	0)))))

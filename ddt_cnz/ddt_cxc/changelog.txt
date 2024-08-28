@@ -1,0 +1,266 @@
+##############################################################################################
+###                                                                                        ###
+### CHANGE-LOG for DDTBIN CXC1371515                                                       ###
+###                                                                                        ###
+### Description:                                                                           ###
+###		All changes to this software block will be documented in this file.                ###
+###		It is composed by one section per LSV.                                             ###
+###		Each section contains one sub-section per block revision.                          ###
+###		"block revision" sections contain the branch name and the impact description.      ###
+###                                                                                        ###
+### Template:                                                                              ###
+###     -------------------------- <LSV-x> --------------------------                      ###
+###     <VERSION>                                                                          ###
+###     	<branch>                                                                       ###
+###     		- <Defect>: <description>                                                  ###
+###     		- <TR ID>: <description>                                                   ###
+###     		- <coding task description>                                                ###
+###     --------------------------------------------------------------                     ###
+###                                                                                        ###
+### Note:                                                                                  ###
+###     Add new changes on top so that the history of                                      ###
+###     changes is in accordance to the temporal order.                                    ###
+###                                                                                        ###
+##############################################################################################
+
+-------------------------- <LSV-10> --------------------------
+CXC1371515_5 R1A08
+	sp1616
+		- SLES12 adaptation
+
+-------------------------- <LSV-09> --------------------------
+CXC1371515_5 R1A07
+	sp1613
+		- Changed File Assembling mechanism.
+			First the File Assembler builds the file into a local buffer, then sends it to the remote destination.
+			Open/Send/Close operations are tighly bound in one transaction from File Assembler perspective
+		
+-------------------------- <LSV-07> --------------------------
+CXC1371515_5 R1A05
+	sp1607
+		- Bugfix HU56597 "AXE17A LSV06 DDTBIN: In some conditions Not able to remove DDT defined traffic"
+		- Support of sequence numbers and possible conflicts among startupsequence nr and the template
+		- Fixed the 'template' attribute's regex in the model
+		- All alarms are fully tested on this revision
+		
+-------------------------- <LSV-06> --------------------------
+CXC1371515_5 R1A04
+	sp1604
+		- Full SFTP Transfer implementation including MCP environment support
+		- Basic FTP Transfer implementation for all configurations
+		- useEncryption flag added to DataSource MO
+
+-------------------------- <LSV-03> --------------------------
+CXC1371515_5 R1A01
+	sp1548
+		- Bug fixing
+		- Preliminary support for FilePeer modify
+
+-------------------------- <SP1548-ID3> --------------------------
+R1A25
+	sp1548
+		- Introduced encryption of data stored in the checkpoint
+
+-------------------------- <INT> -------------------------- 
+R1A24A
+	ddt_sftp_skeleton
+		- Support for creation of FilePeer object
+		- Renamed dataPusher in dataAssembler and introduced BlockAssembler and FileAssembler classes
+
+-------------------------- <SP1548-ID2> -------------------------- 
+R1A24
+	sp1548
+		- ID package
+
+-------------------------- <INT> -------------------------- 
+R1A23A
+	ddt_record_number
+		- Number of records per checkpoint is now variable and depends on the record size 
+		- fixed a bug that was causing unsent records to be automatically deleted after one day
+		- fixed a bug that in MTAP protocol that was causing UNLINK_FILE primitive to be treated as UNLINK_ALL_FILES
+
+-------------------------- <SP1548-ID1> -------------------------- 
+R1A23
+	ddt_integration_sp1548
+		- introduced a check on DataSource name to prevent conflict with ACA message store name
+		- Re-generated model files with new DX tool (3.0)
+
+-------------------------- <LSV-02> -------------------------- 
+R1A22
+	ddt_peer_container
+		- fixed a bug in the count of received/sent messages
+
+-------------------------- <LSV-x> --------------------------
+R1A21
+	ddt_peer_container
+		- fixed a bug that was causing only one alarm raised in case of both peer faulty
+		- changed "Direct Data Transfer Fault" alarm class to A1
+		- modified default number of records per checkpoint to 450 
+		- fixed a bug that was randomly causing deadlock condition
+		- fixed a bug that in data pusher that was not connecting to the first selected active peer
+		- fixed a bug that was causing a data source to not be deleted in case of multiple operations executed within the same transaction
+		- updated the handling of SIGPIPE signal
+
+-------------------------- <LSV-x> -------------------------- 
+R1A20
+	ddt_peer_container
+		- introduced PeerMonitor to monitor connection status towards peers marked as faulty
+		- introduced PeerContainer to maintain the lists of valid and faulty peers and raise/cease the alarms accordingly
+		- implemented a notification mechanism in order to stop dataPushers when all peers are faulty and restart them  
+		  whenever a peer is valid again
+		- fixed a fault when checking available memory after traffic stop/restart
+		- fixed a fault that was causing a crash in case EVEN dataLenghtType was used
+		- fixed a bug that was causing data transmission to be skipped in case of retryAttempts set to 0   
+
+-------------------------- <LSV-x> -------------------------- 
+R1A18
+	sp1542
+		- fixed a bug in store::reader class that was causing checkpoint read hang (ERROR 23)
+--------------------------------------------------------------
+ -------------------------- <LSV-x> -------------------------- 
+R1A17
+	ddt_connection_verify
+		- implemented connectionVerify action for BlockPeers
+--------------------------------------------------------------
+-------------------------- <LSV-x> -------------------------- 
+R1A16
+	ddt_manual_switch
+		- fixed a bug in configurationHelper that was causing the deletion of an empty DataSource to be rejected.
+--------------------------------------------------------------
+
+-------------------------- <LSV-x> -------------------------- 
+R1A15
+	ddt_manual_switch
+		- fixed a bug in dataPusher class that was causing checkpoints to be never committed in case of both peer faulty
+		- fixed a bug in configuationHelper that was causing validate result for modify operations to be ignored
+		- implemented a new validation check in configurationHelper in order to reject the deletion of an active peer
+		- minor adjustments in error handling for verify methods in configurationHelper
+--------------------------------------------------------------
+
+-------------------------- <LSV-x> -------------------------- 
+R1A14
+	ddt_manual_switch
+		- implemented manual switch action
+		- implemented modify operation on retryDelay and retryAttempts attributes
+		- implemented modify operation for all OutputFormat attributes
+		- introduced new ObjectManagerHelper class implementing all OM operations on IMM
+		- improved the handling of scheduled IMM operation in all OI classes and ConfigurationHelper:
+			* Create/Modify/Delete callbacks schedule the corresponding MO operations
+			* Complete callback validates the whole transaction content
+			* Apply callback executes the previously scheduled operations
+		- modified ConfigurationHelper execution in order to not wait for operation result
+		- modified the handling of loop condition in dataPusher class to avoid endless loop in case of both peer faulty
+--------------------------------------------------------------
+
+-------------------------- <LSV-x> -------------------------- 
+R1A13
+	ddt_bug_fix
+		- fixed bug on MTAP protocol handling on write error
+		- fixed bug on change Peer status attribute
+		- fixed bug on DataPusher data formatting
+		- added logic to write records to/from checkpoint into a files under "/data/opt/ap/internal_root/tools/"
+		  Files are named as the checkpoint plus "_W" (data write to checkpoint) or "_R" (data read from checkpoint).
+		  In order to enable this compile the code with "FILE_WRITE" defined
+		- NOTE: MODIFY operations not implemented yet. Do that after the DataSink. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> -------------------------- 
+R1A12
+	ddt_bug_fix
+		- re-factoring of DataPusher logic
+		- improved reader data commit logic
+		- NOTE: MODIFY operations not implemented yet. Do that after the DataSink. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> -------------------------- 
+R1A11
+	ddt_bug_fix
+		- DataPusher hold time handling improved with "timerfd" introduction 
+		- NOTE: MODIFY operations not implemented yet. Do that after the DataSink. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> -------------------------- 
+R1A10
+	ddt_bgwrpc_step2
+		- added com-cli error messages
+		- NOTE: MODIFY operations not implemented yet. Do that after the DataSink. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> -------------------------- 
+R1A09
+	ddt_bgwrpc_step2
+		- added synchronization logic between checkpoint writer and reader.
+		- fixed bug on writer on mtap traffic stop 
+		- NOTE: MODIFY operations not implemented yet. Do that after the DataSink. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> -------------------------- 
+R1A08
+	ddt_bgwrpc_step2
+		- added transmission logic to the DataSink and DataPusher classes
+		- BlockPeer and Peer interface re-factoring to handle status attribute 
+		- NOTE: MODIFY operations not implemented yet. Do that after the DataSink. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> -------------------------- 
+R1A07
+	ddt_bgwrpc_step1
+		- added Peer Interface
+		- added BlockPeer class to handle RPC protocol
+		- added observer pattern to notify DataSink for new data producer
+		- NOTE: MODIFY operations not implemented yet. Do that after the DataSink. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> -------------------------- 
+R1A06
+	datasink_comcli_handling
+		- completed Transfer Progress
+		- NOTE: MODIFY operations not implemented yet. Do that after the DataSink. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> -------------------------- 
+R1A05
+	ddt_sink_skeleton
+		- added checkpoint reader
+		- added DataSink logic
+		- added DataPusher
+		- added deletion logic.
+		- NOTE: MODIFY operations not implemented yet. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> -------------------------- 
+R1A04
+	datasink_comcli_handling
+		- added COM CLI handling and reload
+		- added Transfer Progress - prints the Last Received package
+		- added Encryption when writing MTAP data to the checkpoint 
+		- NOTE: DELETION PART not completed. It must be completed once the DataSink will be a live object.
+		- NOTE: MODIFY operations not implemented yet. Do that after the DataSink. 
+-------------------------------------------------------------- 
+
+-------------------------- <LSV-x> --------------------------
+R1A03
+	ddt_mtap_handling 
+		- added Cp session handling
+		- added MTAP protocol handler
+		- added PDU classes to handle MTAP request
+--------------------------------------------------------------
+
+-------------------------- <LSV-x> -------------------------- 
+R1A02
+	ddtbin_imm_setup
+		- added IMM OI logic
+		- added DataSource MOC handling (create/delete/modify)
+		- added data sources manager
+		- added MTAP server publishing into DSD 
+--------------------------------------------------------------
+
+-------------------------- <LSV-x> --------------------------
+R1A01
+	ddtbin_setup
+		- setup debug launcher with usage: "aes_ddtd --debug"
+		- setup a basic 2N service
+		- added logging and tracing
+		- added operation scheduler for main tasks
+		- added factory pattern for operations
+--------------------------------------------------------------

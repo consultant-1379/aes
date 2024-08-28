@@ -1,0 +1,52 @@
+##
+# ------------------------------------------------------------------------
+#     Copyright (C) 2016 Ericsson AB. All rights reserved.
+# ------------------------------------------------------------------------
+##
+# models.info
+##
+# Description:
+#       Configuration file used to perform IMM model changes during software upgrade for DBO block.
+##
+##
+# Changelog:
+# - 2016-02-08 - Ramakrishna Maturu (XRAMMAT) 
+#       First version
+##
+###################  AXE18A ###################
+
+# APG43L-3.7.0-Rebase of 3.6.2
+VERSION: CXC1371392_9-R1C
+
+# APG43L-3.6.2
+VERSION: CXC1371392_9-R1B
+
+# Adaptations to SwM2.0
+VERSION: CXC1371392_9-R1A04
+VERSION: CXC1371392_9-R1A03
+VERSION: CXC1371392_9-R1A02
+VERSION: CXC1371392_9-R1A01
+
+# APG43L-3.5.3
+VERSION: CXC1371392_5-R1C
+log "No model changes in DBOBIN CXC1371392_5-R1C"
+ 
+VERSION: CXC1371392_5-R1B
+log "No model changes in DBOBIN CXC1371392_5-R1B"
+
+###################  AXE17A ###################
+VERSION: CXC1371392_5-R1A02
+log "No model changes in DBOBIN CXC1371392_5-R1A01"
+
+VERSION: CXC1371392_5-R1A01
+log "No model changes in DBOBIN CXC1371392_5-R1A01"
+
+###################  AXE15A ###################
+VERSION: CXC1371392-R1B
+log "No model changes in DBOBIN CXC1371392-R1B"
+
+VERSION: CXC1371392-R1A36
+log "No model changes in DBOBIN CXC1371392-R1A36"
+
+VERSION: CXC1371392-R1A35
+log "No model changes in DBOBIN CXC1371392-R1A35"
